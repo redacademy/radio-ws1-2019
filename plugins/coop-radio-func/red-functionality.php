@@ -1,16 +1,16 @@
 <?php
  /**
  *
- * @package   [SITE NAME] Functionality
- * @author    Your Name <your_email@email.com>
+ * @package   Co-op Radio Functionality
+ * @author    William L <w-lindvall@outlook.com>, Fiona Y <fyeung21@gmail.com>, Hongsoon K <khsun6226@naver.com>, Graziela M <grazims26@gmail.com>
  * @license   GPL-2.0+
- * @copyright 2015 Your Name or Company
+ * @copyright 2019 William L, Fiona Y, Hongsoon K, Graziela M 
  *
  * @wordpress-plugin
- * Plugin Name: [SITE NAME] Functionality
- * Description: This very important plugin contains all of the core functionality for this website so that it remains theme-independent.
- * Version:     1.0.0
- * Author:      Your Name
+ * Plugin Name: Co-op Radio Functionality
+ * Description: Theme-independent functionality
+ * Version:     0.1.0
+ * Author:      William L <w-lindvall@outlook.com>, Fiona Y <fyeung21@gmail.com>, Hongsoon K <khsun6226@naver.com>, Graziela M <grazims26@gmail.com>
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */

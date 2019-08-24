@@ -1,3 +1,3 @@
-# RED Functionality Plugin
+# Co-op Radio Functionality
 
-A template for a WordPress functionality plugin for RED Academy students.
+Theme-independent functionality

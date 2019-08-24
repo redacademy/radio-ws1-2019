@@ -1,7 +1,7 @@
 {
-  "name": "redstarter",
-  "version": "1.1.0",
-  "description": "A starter theme for RED students, based on Underscores.",
+  "name": "coop-radio",
+  "version": "0.1.0",
+  "description": "Co-op Radio theme based on Underscores",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.23.6",
@@ -22,16 +22,17 @@
     "singleQuote": true
   },
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redacademy/redstarter.git"
+    "url": "git+https://github.com/redacademy/radio-ws1-2019.git"
   },
-  "author": "redacademy",
+  "author": "shwilliam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redacademy/redstarter/issues"
+    "url": "https://github.com/redacademy/radio-ws1-2019/issues"
   },
-  "homepage": "https://github.com/redacademy/redstarter#readme"
+  "homepage": "https://github.com/redacademy/radio-ws1-2019#readme"
 }

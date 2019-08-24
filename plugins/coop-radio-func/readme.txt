@@ -1,6 +1,6 @@
 === Core Functionality ===
 
-This plugin contains all of your site's core functionality so that it remains theme-independent.
+Theme-independent functionality
 
 **Requires at least**: WP 3.8
 **Tested up to**: WP 4.3.1
@@ -8,5 +8,5 @@ This plugin contains all of your site's core functionality so that it remains th
 
 == Changelog ==
 
-= 1.0 =
+= 0.1.0 =
 * Initial release.

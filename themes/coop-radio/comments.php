@@ -2,7 +2,7 @@
 /**
  * The template for displaying comments.
  *
- * @package RED_Starter_Theme
+ * @package coop-radio
  */
 
 /*

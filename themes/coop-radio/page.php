@@ -7,15 +7,15 @@
 
 get_header(); ?>
 
-	<main>
+  <main>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'page' ); ?>
+      <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-		<?php endwhile; // End of the loop. ?>
+    <?php endwhile; // End of the loop. ?>
 
-	</main>
+  </main>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

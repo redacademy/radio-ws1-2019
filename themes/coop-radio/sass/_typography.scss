@@ -2,6 +2,7 @@
 # Typography
 --------------------------------------------------------------*/
 
+html,
 body,
 button,
 input,
@@ -9,7 +10,7 @@ select,
 textarea {
   color: $color__text-main;
   font-family: $font__main;
-  @include font-size(1);
+  font-size: 18px;
   line-height: $font__line-height-body;
 }
 
@@ -23,4 +24,13 @@ blockquote {
 
 address {
   margin: 0 0 $base__space-unit;
+}
+
+h1 {
+  @include font-size(3);
+}
+
+h2,
+h3 {
+  @include font-size(1.8);
 }

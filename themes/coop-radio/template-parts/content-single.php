@@ -8,29 +8,29 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
+  <header>
+    <?php if ( has_post_thumbnail() ) : ?>
+      <?php the_post_thumbnail( 'large' ); ?>
+    <?php endif; ?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    <?php the_title( '<h1>', '</h1>' ); ?>
 
-		<div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+    <div>
+      <?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
+    </div>
+  </header>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+  <div>
+    <?php the_content(); ?>
+    <?php
+      wp_link_pages( array(
+        'before' => '<div>' . esc_html( 'Pages:' ),
+        'after'  => '</div>',
+      ) );
+    ?>
+  </div>
 
-	<footer class="entry-footer">
-		<?php red_starter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+  <footer>
+    <?php red_starter_entry_footer(); ?>
+  </footer>
+</article>

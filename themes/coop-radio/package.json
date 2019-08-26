@@ -30,7 +30,7 @@
     "url": "git+https://github.com/redacademy/radio-ws1-2019.git"
   },
   "author": "shwilliam",
-  "license": "ISC",
+  "license": "GPL-2.0-or-later",
   "bugs": {
     "url": "https://github.com/redacademy/radio-ws1-2019/issues"
   },

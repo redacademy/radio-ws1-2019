@@ -22,7 +22,9 @@ access_log
 !.gitignore
 !plugins/
 !themes/
+
 !README.md
+!LICENSE
 
 # Ignore everything in "plugins" except certain plugins. #
 # ========================================================== #

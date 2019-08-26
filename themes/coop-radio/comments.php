@@ -15,12 +15,10 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
-
-	<?php // You can start editing here -- including this comment! ?>
+<div>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
+		<h2>
 			<?php esc_html( comments_number( '0 Comments', '1 Comment', '% Comments' ) ); ?>
 		</h2>
 
@@ -32,17 +30,17 @@ if ( post_password_required() ) {
 				<div class="nav-previous"><?php previous_comments_link( esc_html( 'Older Comments' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( esc_html( 'Newer Comments' ) ); ?></div>
 
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-above -->
+			</div>
+		</nav>
 		<?php endif; // Check for comment navigation. ?>
 
-		<ol class="comment-list">
+		<ol>
 			<?php
 				wp_list_comments( array(
 					'callback' => 'red_starter_comment_list'
 				) );
 			?>
-		</ol><!-- .comment-list -->
+		</ol>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
@@ -52,8 +50,8 @@ if ( post_password_required() ) {
 				<div class="nav-previous"><?php previous_comments_link( esc_html( 'Older Comments' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( esc_html( 'Newer Comments' ) ); ?></div>
 
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-below -->
+			</div>
+		</nav>
 		<?php endif; // Check for comment navigation. ?>
 
 	<?php endif; // Check for have_comments(). ?>
@@ -62,14 +60,14 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php esc_html( 'Comments are closed.' ); ?></p>
+		<p><?php esc_html( 'Comments are closed.' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form( array(
 		'title_reply'          => esc_html( 'Post a Comment' ),
-		'comment_notes_before' => wp_kses( '<p class="comment-notes">Want to join the discussion? Feel free to contribute!</p>', array( 'p' => array( 'class' => '' ) ) ),
+		'comment_notes_before' => wp_kses( '<p>Want to join the discussion? Feel free to contribute!</p>', array( 'p' => array( 'class' => '' ) ) ),
 		'label_submit'         => esc_html( 'Submit' ),
 		'cancel_reply_link'    => esc_html( '[Cancel reply]' )
 	) ); ?>
 
-</div><!-- #comments -->
+</div>

@@ -9,9 +9,9 @@
   * Prints HTML with meta information for the current post-date/time.
   */
  function red_starter_posted_on() {
- 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+ 	$time_string = '<time class="published updated" datetime="%1$s">%2$s</time>';
  	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
- 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+ 		$time_string = '<time class="published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
  	}
 
  	$time_string = sprintf( $time_string,
@@ -126,43 +126,43 @@
  	?>
 
  	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
- 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+ 		<article id="div-comment-<?php comment_ID(); ?>">
 
- 			<div class="comment-author-avatar">
+ 			<div>
  				<?php echo get_avatar( $comment, 64 ); ?>
  			</div>
 
- 			<div class="comment-content">
- 				<div class="comment-meta">
- 					<div class="comment-author vcard">
+ 			<div>
+ 				<div>
+ 					<div>
  						<?php printf( '<cite class="fn">%s</cite>', get_comment_author() ); ?>
- 					</div><!-- .comment-author -->
+ 					</div>
 
- 					<div class="comment-metadata">
+ 					<div>
  						<time datetime="<?php comment_time( 'c' ); ?>">
  								<?php printf( '%1$s', get_comment_date('d M Y \a\t g:i a') ); ?>
  						</time>
  						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">#</a>
- 					</div><!-- .comment-metadata -->
+ 					</div>
 
  					<?php if ( '0' == $comment->comment_approved ) : ?>
  					<p class="comment-awaiting-moderation">Your comment is awaiting moderation.</p>
  					<?php endif; ?>
- 				</div><!-- .comment-meta -->
+ 				</div>
 
  				<?php comment_text(); ?>
 
- 				<div class="reply">
+ 				<div>
  					<?php comment_reply_link( array_merge( $args, array(
  						'add_below'  => 'div-comment',
  						'depth'      => $depth,
  						'max_depth'  => $args['max_depth'],
  						'reply_text' => 'Reply &rarr;'
  					) ) ); ?>
- 				</div><!-- .reply -->
- 			</div><!-- .comment-content -->
+ 				</div>
+ 			</div>
 
- 		</article><!-- .comment-body -->
+ 		</article>
 
  	<?php
 

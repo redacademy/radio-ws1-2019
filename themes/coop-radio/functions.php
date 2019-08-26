@@ -59,9 +59,9 @@ function red_starter_widgets_init() {
 		'name'          => esc_html( 'Sidebar' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="%2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
+		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	) );
 }

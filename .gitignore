@@ -25,6 +25,7 @@ access_log
 
 !README.md
 !LICENSE
+!.editorconfig
 
 # Ignore everything in "plugins" except certain plugins. #
 # ========================================================== #

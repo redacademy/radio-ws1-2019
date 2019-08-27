@@ -23,7 +23,7 @@ get_header(); ?>
 
         <?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-        <?php if ( red_starter_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+        <?php if ( coop_radio_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
           <div>
             <h2><?php echo esc_html( 'Most Used Categories' ); ?></h2>
             <ul>

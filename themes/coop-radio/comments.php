@@ -37,7 +37,7 @@ if ( post_password_required() ) {
     <ol>
       <?php
         wp_list_comments( array(
-          'callback' => 'red_starter_comment_list'
+          'callback' => 'coop_radio_comment_list'
         ) );
       ?>
     </ol>

@@ -22,7 +22,7 @@ get_header(); ?>
 
       <?php endwhile; ?>
 
-      <?php red_starter_numbered_pagination(); ?>
+      <?php coop_radio_numbered_pagination(); ?>
 
     <?php else : ?>
 

@@ -16,7 +16,7 @@
     <?php the_title( '<h1>', '</h1>' ); ?>
 
     <div>
-      <?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
+      <?php coop_radio_posted_on(); ?> / <?php coop_radio_comment_count(); ?> / <?php coop_radio_posted_by(); ?>
     </div>
   </header>
 
@@ -31,6 +31,6 @@
   </div>
 
   <footer>
-    <?php red_starter_entry_footer(); ?>
+    <?php coop_radio_entry_footer(); ?>
   </footer>
 </article>

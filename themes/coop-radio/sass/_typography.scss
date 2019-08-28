@@ -2,16 +2,25 @@
 # Typography
 --------------------------------------------------------------*/
 
+@mixin font-headline {
+  font-family: $font__heading;
+  font-weight: 700;
+}
+
+@mixin font-body {
+  font-family: $font__body;
+  color: $color__text-main;
+  font-size: 16px;
+  line-height: $font__line-height--body;
+}
+
 html,
 body,
 button,
 input,
 select,
 textarea {
-  color: $color__text-main;
-  font-family: $font__main;
-  font-size: 18px;
-  line-height: $font__line-height-body;
+  @include font-body;
 }
 
 p {
@@ -27,10 +36,16 @@ address {
 }
 
 h1 {
-  @include font-size(3);
+  @include font-headline;
+  font-size: 24px;
 }
 
-h2,
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 h3 {
-  @include font-size(1.8);
+  font-size: 26px;
+  font-weight: bold;
 }

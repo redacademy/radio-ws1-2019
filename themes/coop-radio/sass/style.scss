@@ -20,14 +20,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
-# Embedded Fonts
+# WordPress core
 # Typography
 # Elements
 # Forms
-
 # Navigation
     ## Links
     ## Menus
+# Modules
 
 # Page Templates
     ## Front page
@@ -41,12 +41,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 // CSS included in style.css.
 
 @import 'normalize';
-@import 'fonts';
+@import 'wp-core';
 @import 'typography';
 @import 'elements';
 @import 'forms';
 @import 'navigation';
 @import 'modules';
-@import 'wp-core';
 
 @import 'templates/front-page';

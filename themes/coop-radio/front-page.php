@@ -7,8 +7,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+  <main>
 
     <?php if ( have_posts() ) : ?>
 
@@ -27,8 +26,6 @@ get_header(); ?>
 
     <?php endif; ?>
 
-    </main><!-- #main -->
-</div><!-- #primary -->
-
+  </main>
 
 <?php get_footer(); ?>

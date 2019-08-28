@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Contact us page template.
  *
  * @package coop-radio
  */

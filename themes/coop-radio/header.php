@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme.
+ * Site header.
  *
  * @package coop-radio
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file.
+ * Front page template file.
  *
  * @package coop-radio
  */

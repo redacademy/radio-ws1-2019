@@ -1,6 +1,11 @@
-<!-- Home Page for Artists Scrolly -->
+<?php
+/**
+ * Template file for artists search.
+ *
+ * @package coop-radio
+ */
 
-<?php get_header(); ?>
+get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">

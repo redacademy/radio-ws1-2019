@@ -83,8 +83,6 @@ add_filter( 'stylesheet_uri', 'coop_radio_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function coop_radio_scripts() {
-  wp_enqueue_style( 'coop-radio-starter-style', get_stylesheet_uri() );
-
   wp_enqueue_script( 'coop-radio-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
   wp_enqueue_script( 'coop-radio-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 
@@ -93,6 +91,17 @@ function coop_radio_scripts() {
   }
 }
 add_action( 'wp_enqueue_scripts', 'coop_radio_scripts' );
+
+function coop_radio_styles() {
+  wp_enqueue_style( 'coop-radio-starter-style', get_stylesheet_uri() );
+
+  wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:700&display=swap', false );
+
+  if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+    wp_enqueue_script( 'comment-reply' );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'coop_radio_styles' );
 
 /**
  * Custom template tags for this theme.

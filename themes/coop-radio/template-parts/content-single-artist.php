@@ -16,10 +16,6 @@
     <h2><?= the_title(); ?></h2>
   </header>
 
-  <div>
-    <?php the_content(); ?>
-  </div>
-
   <footer>
     <?php coop_radio_entry_footer(); ?>
   </footer>

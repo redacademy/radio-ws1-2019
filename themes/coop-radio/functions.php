@@ -50,6 +50,15 @@ function coop_radio_content_width() {
 add_action( 'after_setup_theme', 'coop_radio_content_width', 0 );
 
 /**
+ * Remove default posts from admin area
+ */
+function remove_default_post_type() {
+  remove_menu_page( 'edit.php' );
+}
+
+add_action( 'admin_menu', 'remove_default_post_type' );
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar

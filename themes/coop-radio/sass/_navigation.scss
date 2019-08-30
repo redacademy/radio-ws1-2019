@@ -27,11 +27,6 @@ a {
 /* Menus */
 
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-
   ul {
     display: none;
     list-style: none;
@@ -39,8 +34,6 @@ a {
     padding-left: 0;
 
     ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
       position: absolute;
       top: $base__space-unit;
       left: -999rem;
@@ -77,15 +70,14 @@ a {
     }
   }
   li {
-    float: left;
     position: relative;
+    display: inline-block;
 
     &:hover > a,
     &.focus > a {
     }
   }
   a {
-    display: block;
     text-decoration: none;
   }
 
@@ -95,18 +87,52 @@ a {
   }
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.menu-toggle {
   display: block;
 }
 
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none;
+.main-navigation.toggled {
+  & .menu-toggle {
+    display: inline-block;
+    z-index: 999;
+    position: absolute;
+    top: $base__space-unit * 2;
+    right: $base__space-unit * 2;
   }
-  .main-navigation ul {
-    display: block;
+  & ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-navigation {
+    & .menu-toggle,
+    &.toggled .menu-toggle {
+      display: none;
+      position: relative;
+    }
+    & ul,
+    &.toggled ul {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      height: unset;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      background-color: transparent;
+    }
   }
 }
 

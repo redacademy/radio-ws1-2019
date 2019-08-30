@@ -323,8 +323,8 @@ button,
 input,
 select,
 textarea {
-  font-family: Helvetica, Arial, sans-serif;
-  color: #404040;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  color: #2C2C2C;
   font-size: 16px;
   line-height: 1.5; }
 
@@ -338,7 +338,7 @@ address {
   margin: 0 0 1.5rem; }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Oswald", "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 24px; }
 
@@ -475,11 +475,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #2C2C2C; }
   a:visited {
-    color: purple; }
+    color: #2C2C2C; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #8B1F7E; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -605,7 +605,7 @@ a {
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #21759b;
+    color: #2C2C2C;
     display: block;
     font-size: 13.125px;
     font-size: 0.875rem;

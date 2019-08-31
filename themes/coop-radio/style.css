@@ -31,6 +31,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     ## Artist search
     ## Single artist
 --------------------------------------------------------------*/
+@import url(../../fonts/stylesheet.css);
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -317,6 +318,16 @@ a img.aligncenter {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+/* load font files (EOT, WOFF and WOFF2)
+ * oswald
+ *   - regular
+ *   - bold
+ *   - semibold
+ * raleway
+ *   - regular
+ *   - medium
+ *   - bold
+ */
 html,
 body,
 button,
@@ -324,22 +335,13 @@ input,
 select,
 textarea {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
-  color: #2C2C2C;
+  color: #2c2c2c;
   font-size: 16px;
   line-height: 1.5; }
 
-p {
-  margin-bottom: 1.5rem; }
-
-blockquote {
-  margin: 0 1.5rem; }
-
-address {
-  margin: 0 0 1.5rem; }
-
 h1 {
-  font-family: "Oswald", "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
   font-size: 24px; }
 
 h2 {
@@ -347,8 +349,13 @@ h2 {
   font-weight: bold; }
 
 h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
   font-size: 26px;
   font-weight: bold; }
+
+p {
+  margin-bottom: 1.5rem; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -475,11 +482,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #2C2C2C; }
+  color: #2c2c2c; }
   a:visited {
-    color: #2C2C2C; }
+    color: #2c2c2c; }
   a:hover, a:focus, a:active {
-    color: #8B1F7E; }
+    color: #8b1f7e; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -605,7 +612,7 @@ a {
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #2C2C2C;
+    color: #2c2c2c;
     display: block;
     font-size: 13.125px;
     font-size: 0.875rem;

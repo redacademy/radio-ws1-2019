@@ -104,8 +104,6 @@ add_action( 'wp_enqueue_scripts', 'coop_radio_scripts' );
 function coop_radio_styles() {
   wp_enqueue_style( 'coop-radio-style', get_stylesheet_uri() );
 
-  wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:700&display=swap', false );
-
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
   }

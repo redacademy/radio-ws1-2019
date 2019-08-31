@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Front page content template.
  *
  * @package coop-radio
  */
@@ -8,17 +8,17 @@
 ?>
 
 <section class='home-img' style='background-image:url(wp-content/themes/coop-radio/images/front-page-background.jpeg);'>
-	<div>
-        <h1 style='color:#fff;'>Program Name</h1>
+  <header>
+    <h1 style='color:#fff;'>
+      <?= the_title(); ?>
+    </h1>
+  </header>
 
-        <p style='color:#fff;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Pariatur nulla dolor voluptatem suscipit? 
-        Numquam impedit labore sed amet ut aperiam, 
-        a eaque eum qui tempore ab accusantium adipisci deleniti quisquam.</p>
+  <div style='color:#fff;'>
+    <p>
+      <?= the_content(); ?>
+    </p>
 
-        <p>
-            <a href="#program-details" style='color:#fff;'>View</a>
-        </p>
-        
-    </div>
+    <a href="#program-details" style='color:#fff;'>View</a>
+  </div>
 </section>

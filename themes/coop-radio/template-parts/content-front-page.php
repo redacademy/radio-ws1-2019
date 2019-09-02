@@ -4,21 +4,21 @@
  *
  * @package coop-radio
  */
-
 ?>
 
-<section class='home-img' style='background-image:url(wp-content/themes/coop-radio/images/front-page-background.jpeg);'>
+<section class='content-front-page'>
   <header>
-    <h1 style='color:#fff;'>
+    <h1>
       <?= the_title(); ?>
     </h1>
   </header>
 
-  <div style='color:#fff;'>
     <p>
       <?= the_content(); ?>
     </p>
 
-    <a href="#program-details" style='color:#fff;'>View</a>
+    <div>
+        <a href='#program-details'>View</a>
+    </div>
   </div>
 </section>

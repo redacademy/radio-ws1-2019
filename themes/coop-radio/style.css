@@ -642,9 +642,33 @@ a {
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
+.content-front-page {
+  background-image: url("../../images/front-page-background.jpeg"); }
+  .content-front-page h1,
+  .content-front-page p,
+  .content-front-page a {
+    color: #fff; }
+
 /*--------------------------------------------------------------
 # Artist search
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Single artist
 --------------------------------------------------------------*/
+.not-found {
+  height: 100vh;
+  background-color: #dddddd; }
+  .not-found .front-container {
+    display: inline-block;
+    width: 100%; }
+    .not-found .front-container img {
+      position: absolute;
+      top: 35%;
+      left: 15%; }
+    .not-found .front-container div {
+      position: absolute;
+      top: 55%;
+      right: 20%; }
+      .not-found .front-container div p {
+        color: #ffffff;
+        text-transform: uppercase; }

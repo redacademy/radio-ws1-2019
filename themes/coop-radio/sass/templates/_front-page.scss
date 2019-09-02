@@ -1,14 +1,13 @@
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
-.home-image{
-    background-image: url('../../images/front-page-background.jpeg');
-    div{
-        h1, p{
-            color: #fff;
-            a{
-                color: inherit;
-            }
-        }
-    }
+
+.content-front-page {
+  background-image: url('../../images/front-page-background.jpeg');
+
+  h1,
+  p,
+  a {
+    color: #fff;
+  }
 }

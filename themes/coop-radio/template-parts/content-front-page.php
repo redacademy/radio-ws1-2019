@@ -1,24 +1,24 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Front page content template.
  *
  * @package coop-radio
  */
-
 ?>
 
-<section class='home-image'>
-	<div>
-        <h1>Program Name</h1>
+<section class='content-front-page'>
+  <header>
+    <h1>
+      <?= the_title(); ?>
+    </h1>
+  </header>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Pariatur nulla dolor voluptatem suscipit? 
-        Numquam impedit labore sed amet ut aperiam, 
-        a eaque eum qui tempore ab accusantium adipisci deleniti quisquam.</p>
+    <p>
+      <?= the_content(); ?>
+    </p>
 
-        <p>
-            <a href="#program-details">View</a>
-        </p>
-        
+    <div>
+        <a href='#program-details'>View</a>
     </div>
+  </div>
 </section>

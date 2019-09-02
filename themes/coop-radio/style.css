@@ -623,12 +623,12 @@ a {
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
-.home-image {
+.content-front-page {
   background-image: url("../../images/front-page-background.jpeg"); }
-  .home-image div h1, .home-image div p {
+  .content-front-page h1,
+  .content-front-page p,
+  .content-front-page a {
     color: #fff; }
-    .home-image div h1 a, .home-image div p a {
-      color: inherit; }
 
 /*--------------------------------------------------------------
 # Artist search

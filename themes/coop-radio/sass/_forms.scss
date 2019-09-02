@@ -2,41 +2,69 @@
 # Forms
 --------------------------------------------------------------*/
 
-/* Buttons */
+/*** Buttons ***/
 
 button,
-input[type='button'],
-input[type='reset'],
-input[type='submit'] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 15px 17px rgba(255, 255, 255, 0.5),
-    inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  @include font-size(0.75);
-  line-height: 1;
-  padding: 0.6rem 1rem 0.4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  height: 44px;
+  font-family: $font__heading;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 2px;
+  border: 2px solid $color__btn-default;
+  text-decoration: none;
+}
 
-  &:hover {
-    border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
-      inset 0 15px 17px rgba(255, 255, 255, 0.8),
-      inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-  }
+/* Button Sizes */
 
-  &:active,
+.btn-small {
+  width: 108px;
+}
+.btn-large {
+  width: 128px;
+}
+
+/* Button Colours */
+
+.btn-primary {
+  background-color: $color__btn-default;
+  color: $color__btn-primary-text;
+
   &:focus {
-    border-color: #aaa #bbb #bbb;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5),
-      inset 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-color: $color__btn-focus;
+    background-color: $color__btn-focus;
+  }
+  &:hover {
+    border-color: $color__btn-hover;
+    background-color: $color__btn-hover;
+  }
+  &:disabled {
+    border-color: $color__btn-disabled;
+    background-color: $color__btn-disabled;
   }
 }
 
-/* Fields */
+.btn-secondary {
+  background-color: $color__background-body;
+  color: $color__btn-default;
+
+  &:focus {
+    border-color: $color__btn-focus;
+    color: $color__btn-focus;
+  }
+  &:hover {
+    border-color: $color__btn-hover;
+    color: $color__btn-hover;
+  }
+  &:disabled {
+    border-color: $color__btn-disabled;
+    color: $color__btn-disabled;
+  }
+}
+
+/*** Fields ***/
 
 input[type='text'],
 input[type='email'],

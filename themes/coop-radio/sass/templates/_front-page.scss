@@ -1,3 +1,13 @@
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
+
+.content-front-page {
+  background-image: url('../../images/front-page-background.jpeg');
+
+  h1,
+  p,
+  a {
+    color: #fff;
+  }
+}

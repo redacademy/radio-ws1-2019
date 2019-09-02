@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme.
+ * Site header.
  *
  * @package coop-radio
  */
@@ -17,7 +17,7 @@
   </head>
 
   <body <?php body_class(); ?>>
-    <div class="hfeed site">
+    <div class="hfeed">
       <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
       <header role="banner">

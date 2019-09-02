@@ -1,6 +1,6 @@
 === Co-op Radio ===
 
-Contributors: shwilliam
+Contributors: William L <w-lindvall@outlook.com>, Fiona Y <fyeung21@gmail.com>, Hongsoon K <khsun6226@naver.com>, Graziela M <grazims26@gmail.com>
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0

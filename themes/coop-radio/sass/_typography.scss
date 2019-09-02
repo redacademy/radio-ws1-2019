@@ -2,9 +2,21 @@
 # Typography
 --------------------------------------------------------------*/
 
+/* load font files (EOT, WOFF and WOFF2)
+ * oswald
+ *   - regular
+ *   - bold
+ *   - semibold
+ * raleway
+ *   - regular
+ *   - medium
+ *   - bold
+ */
+@import '../../fonts/stylesheet.css';
+
 @mixin font-headline {
   font-family: $font__heading;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 @mixin font-body {
@@ -23,18 +35,6 @@ textarea {
   @include font-body;
 }
 
-p {
-  margin-bottom: $base__space-unit;
-}
-
-blockquote {
-  margin: 0 $base__space-unit;
-}
-
-address {
-  margin: 0 0 $base__space-unit;
-}
-
 h1 {
   @include font-headline;
   font-size: 24px;
@@ -46,6 +46,11 @@ h2 {
 }
 
 h3 {
+  @include font-headline;
   font-size: 26px;
   font-weight: bold;
+}
+
+p {
+  margin-bottom: $base__space-unit;
 }

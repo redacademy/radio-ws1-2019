@@ -15,15 +15,32 @@ input[type="submit"] {
   border-radius: 2px;
   border: 2px solid $color__btn-default;
   text-decoration: none;
+  @include desktop {
+    height: 56px;
+    font-size: 22px;
+    border-radius: 4px;
+  }
 }
 
 /* Button Sizes */
 
 .btn-small {
   width: 108px;
+  @include desktop {
+    width: 120px;
+  }
+}
+.btn-medium {
+  width: 108px;
+  @include desktop {
+    width: 168px;
+  }
 }
 .btn-large {
   width: 128px;
+  @include desktop {
+    width: 220px;
+  }
 }
 
 /* Button Colours */
@@ -66,11 +83,11 @@ input[type="submit"] {
 
 /*** Fields ***/
 
-input[type='text'],
-input[type='email'],
-input[type='url'],
-input[type='password'],
-input[type='search'],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
 textarea {
   color: #666;
   border: 1px solid #ccc;
@@ -81,11 +98,11 @@ textarea {
   }
 }
 
-input[type='text'],
-input[type='email'],
-input[type='url'],
-input[type='password'],
-input[type='search'] {
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
   padding: 3px;
 }
 

@@ -13,12 +13,9 @@
     </h1>
   </header>
 
-    <p>
-      <?= the_content(); ?>
-    </p>
-
-    <div>
-        <a href='#program-details'>View</a>
-    </div>
+  <?= the_content(); ?>
+  
+  <div>
+    <a href='#program-details'>View</a>
   </div>
 </section>

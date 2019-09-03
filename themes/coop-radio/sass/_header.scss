@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.main-navigation {
+    max-height: $base__space-unit * 3;
+    display: flex;
+    justify-content: space-between;
+    button {
+        background-image: url('../../images/menu-bar.png');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border: none;
+        height: $base__space-unit * 1.25;
+        width: $base__space-unit * 1.25;
+        position: absolute;
+        top: 10%;
+        right: 5%;
+    }
+    img {
+        display: none;
+        @include tablet {
+            display: block;
+            max-width: 10%;
+            height: auto;
+        }
+    }
+}
+
+.menu-header-navigation-container {
+    background-color: transparent;
+    @include tablet {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        background-color: #000000;
+        a{
+            color: #ffffff;
+        }
+    }
+}

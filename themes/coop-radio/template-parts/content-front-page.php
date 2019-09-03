@@ -7,15 +7,18 @@
 ?>
 
 <section class='content-front-page'>
-  <header>
-    <h1>
-      <?= the_title(); ?>
-    </h1>
-  </header>
+  <div class='content-container'>
+    <header>
+      <h1>
+        <?= the_title(); ?>
+      </h1>
+    </header>
 
-  <?= the_content(); ?>
+    <?= the_content(); ?>
   
-  <div>
-    <a href='#program-details'>View</a>
+    <div>
+      <a href='#program-details'>View</a>
+    </div>
   </div>
+
 </section>

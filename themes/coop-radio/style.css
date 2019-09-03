@@ -467,16 +467,19 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  textarea:focus {
-    color: #111; }
+  background-color: rgba(190, 190, 190, 0.8);
+  color: rgba(23, 23, 23, 0.8);
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  height: 44px; }
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="url"]:hover,
+  input[type="password"]:hover,
+  input[type="search"]:hover,
+  textarea:hover {
+    border: 2px solid #8b1f7e;
+    border-radius: 2px; }
 
 input[type="text"],
 input[type="email"],
@@ -488,6 +491,15 @@ input[type="search"] {
 textarea {
   padding-left: 3px;
   width: 100%; }
+
+/* Dropdown */
+.dropdown {
+  background-color: rgba(190, 190, 190, 0.8);
+  color: rgba(23, 23, 23, 0.8);
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 20px; }
+  .dropdown .dropdown-item:hover {
+    background-color: rgba(139, 31, 126, 0.5); }
 
 /*--------------------------------------------------------------
 # Navigation

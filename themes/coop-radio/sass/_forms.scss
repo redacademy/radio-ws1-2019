@@ -66,30 +66,47 @@ input[type="submit"] {
 
 /*** Fields ***/
 
-input[type='text'],
-input[type='email'],
-input[type='url'],
-input[type='password'],
-input[type='search'],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  background-color: $color__input-background;
+  color: $color__input-text;
+  font-family: $font__body;
+  font-size: 20px;
+  height:44px;
 
-  &:focus {
-    color: #111;
+  &:hover {
+    border: 2px solid $color__brand-purple;
+    border-radius: 2px;
   }
 }
 
-input[type='text'],
-input[type='email'],
-input[type='url'],
-input[type='password'],
-input[type='search'] {
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
   padding: 3px;
 }
 
 textarea {
   padding-left: 3px;
   width: 100%;
+}
+
+/* Dropdown */
+
+.dropdown {
+  background-color:$color__input-background;
+  color: $color__input-text;
+  font-family: $font__body;
+  font-size: 20px;
+  .dropdown-item {
+    &:hover {
+      background-color: rgba(139, 31, 126, 0.5);
+    }
+  }
 }

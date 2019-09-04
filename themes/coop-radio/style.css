@@ -425,13 +425,33 @@ input[type="submit"] {
   border-radius: 2px;
   border: 2px solid #8b1f7e;
   text-decoration: none; }
+  @media (min-width: 1080px) {
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+      height: 56px;
+      font-size: 22px;
+      border-radius: 4px; } }
 
 /* Button Sizes */
 .btn-small {
   width: 108px; }
+  @media (min-width: 1080px) {
+    .btn-small {
+      width: 120px; } }
+
+.btn-medium {
+  width: 108px; }
+  @media (min-width: 1080px) {
+    .btn-medium {
+      width: 168px; } }
 
 .btn-large {
   width: 128px; }
+  @media (min-width: 1080px) {
+    .btn-large {
+      width: 220px; } }
 
 /* Button Colours */
 .btn-primary {
@@ -553,8 +573,8 @@ a {
   display: inline-block;
   z-index: 999;
   position: absolute;
-  top: 3rem;
-  right: 3rem; }
+  top: 10%;
+  right: 5%; }
 
 .main-navigation.toggled ul {
   position: absolute;
@@ -579,7 +599,7 @@ a {
   text-align: center;
   background-color: #fff; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .main-navigation .menu-toggle,
   .main-navigation.toggled .menu-toggle {
     display: none;
@@ -652,14 +672,98 @@ a {
     /* Above WP toolbar. */ }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.main-navigation {
+  max-height: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .main-navigation button {
+    background-image: url("../../images/menu-bar.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+    height: 1.875rem;
+    width: 1.875rem;
+    position: absolute;
+    top: 10%;
+    right: 5%; }
+  .main-navigation img {
+    display: none; }
+    @media (min-width: 600px) {
+      .main-navigation img {
+        display: block;
+        max-width: 10%;
+        height: auto; } }
+
+.menu-header-navigation-container {
+  background-color: transparent; }
+  @media (min-width: 600px) {
+    .menu-header-navigation-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 90%;
+      background-color: #000000; }
+      .menu-header-navigation-container a {
+        color: #ffffff; } }
+
+/*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
+.home {
+  height: 100vh;
+  background-image: url("../../images/front-page-background.jpeg");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-position: top; }
+
 .content-front-page {
-  background-image: url("../../images/front-page-background.jpeg"); }
-  .content-front-page h1,
-  .content-front-page p,
-  .content-front-page a {
-    color: #fff; }
+  position: absolute;
+  width: 100vw;
+  top: 60%; }
+  .content-front-page .content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .content-front-page .content-container h1, .content-front-page .content-container p, .content-front-page .content-container a {
+      color: #fff; }
+    .content-front-page .content-container p {
+      max-width: 60%;
+      text-align: center; }
+  @media (min-width: 600px) {
+    .content-front-page {
+      position: relative;
+      background: rgba(255, 255, 255, 0.8); }
+      .content-front-page .content-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .content-front-page .content-container h1, .content-front-page .content-container p, .content-front-page .content-container a {
+          color: #000000; }
+        .content-front-page .content-container p {
+          max-width: 100%; }
+        .content-front-page .content-container div {
+          -ms-flex-item-align: center;
+              align-self: center; } }
 
 /*--------------------------------------------------------------
 # Artist search

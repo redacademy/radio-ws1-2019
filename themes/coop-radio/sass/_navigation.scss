@@ -96,8 +96,8 @@ a {
     display: inline-block;
     z-index: 999;
     position: absolute;
-    top: $base__space-unit * 2;
-    right: $base__space-unit * 2;
+    top: 10%;
+    right: 5%;
   }
   & ul {
     position: absolute;
@@ -115,7 +115,7 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .main-navigation {
     & .menu-toggle,
     &.toggled .menu-toggle {

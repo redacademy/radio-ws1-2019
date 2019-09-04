@@ -23,11 +23,11 @@
       <header role="banner">
         <div>
           <h1 class="screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-          <p><?php bloginfo( 'description' ); ?></p>
         </div>
 
         <nav id="site-navigation" class="main-navigation" role="navigation">
-          <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
+          <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+          <img src="<?php echo get_stylesheet_directory_uri().'/images/co-op logo.svg'; ?>" alt="">
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
         </nav>
       </header>

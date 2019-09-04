@@ -5,9 +5,9 @@
 /*** Buttons ***/
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   height: 44px;
   font-family: $font__heading;
   font-size: 16px;
@@ -83,17 +83,18 @@ input[type="submit"] {
 
 /*** Fields ***/
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
 textarea {
   background-color: $color__input-background;
   color: $color__input-text;
   font-family: $font__body;
   font-size: 20px;
-  height:44px;
+  height: 44px;
 
   &:hover {
     border: 2px solid $color__brand-purple;
@@ -101,11 +102,12 @@ textarea {
   }
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='tel'] {
   padding: 3px;
 }
 
@@ -117,7 +119,7 @@ textarea {
 /* Dropdown */
 
 .dropdown {
-  background-color:$color__input-background;
+  background-color: $color__input-background;
   color: $color__input-text;
   font-family: $font__body;
   font-size: 20px;

@@ -24,12 +24,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Elements
 # Forms
 # Navigation
+# Widgets
 # Modules
 
 # Page Templates
     ## Front page
     ## Artist search
     ## Single artist
+    ## 404 page
+    ## Contact us
 --------------------------------------------------------------*/
 @import url(../../fonts/stylesheet.css);
 html {
@@ -427,9 +430,9 @@ input[type='submit'] {
   text-decoration: none; }
   @media (min-width: 1080px) {
     button,
-    input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
       height: 56px;
       font-size: 22px;
       border-radius: 4px; } }
@@ -644,6 +647,46 @@ a {
   width: 50%; }
 
 /*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* Audio player */
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  padding: 1rem; }
+
+.audio-player__progress-container {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  margin: 0 1rem; }
+
+.audio-player__progress {
+  position: relative;
+  width: 0%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #8b1f7e; }
+
+.audio-player__progress-marker {
+  position: absolute;
+  right: 0;
+  top: -50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #8b1f7e; }
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -799,21 +842,24 @@ a {
 # Contact Page
 --------------------------------------------------------------*/
 /*remove header on mobile*/
-header {
+.page-id-14 header {
   display: none; }
 
-iframe {
+.page-id-14 iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   margin: 0;
   border-width: 0;
   padding: 0; }
 
-form {
+.page-id-14 form {
   position: relative;
   top: 80vh;
   background-color: #fff;
   text-align: center; }
+
+.page-id-14 textarea {
+  width: 493px;
+  height: 88px; }

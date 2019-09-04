@@ -425,13 +425,33 @@ input[type="submit"] {
   border-radius: 2px;
   border: 2px solid #8b1f7e;
   text-decoration: none; }
+  @media (min-width: 1080px) {
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+      height: 56px;
+      font-size: 22px;
+      border-radius: 4px; } }
 
 /* Button Sizes */
 .btn-small {
   width: 108px; }
+  @media (min-width: 1080px) {
+    .btn-small {
+      width: 120px; } }
+
+.btn-medium {
+  width: 108px; }
+  @media (min-width: 1080px) {
+    .btn-medium {
+      width: 168px; } }
 
 .btn-large {
   width: 128px; }
+  @media (min-width: 1080px) {
+    .btn-large {
+      width: 220px; } }
 
 /* Button Colours */
 .btn-primary {
@@ -684,3 +704,26 @@ a {
       .not-found .front-container div p {
         color: #ffffff;
         text-transform: uppercase; }
+
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+/*remove header on mobile*/
+header {
+  display: none; }
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-width: 0;
+  padding: 0; }
+
+form {
+  position: relative;
+  top: 80vh;
+  background-color: #fff;
+  text-align: center; }

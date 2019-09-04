@@ -121,6 +121,20 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
+ * Register audio player sidebar.
+ */
+function audio_player_widget_init() {
+  register_sidebar( array(
+    'name'          => __( 'Audio player', 'textdomain' ),
+    'id'            => 'audio-player',
+    'description'   => __( 'Audio player footer', 'textdomain' ),
+    'before_title'  => '<h2 class="screen-reader-text">',
+    'after_title'   => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'audio_player_widget_init' );
+
+/**
  * Register artist post type
  */
 function artist_post_type() {

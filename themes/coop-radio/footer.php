@@ -13,7 +13,7 @@
         }
         ?>
 
-        <div role="complementary">
+        <div class="audio-player" role="complementary">
           <?php dynamic_sidebar( 'audio-player' ); ?>
         </div>
       </footer>

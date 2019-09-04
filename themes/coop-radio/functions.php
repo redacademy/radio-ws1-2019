@@ -68,7 +68,7 @@ function coop_radio_widgets_init() {
     'name'          => esc_html( 'Audio player' ),
     'id'            => 'audio-player',
     'description'   => __( 'Audio player footer', 'textdomain' ),
-    'before_widget' => '<aside id="%1$s">',
+    'before_widget' => '<aside id="audio-player">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h2 class="screen-reader-text">',
     'after_title'   => '</h2>',
@@ -94,6 +94,7 @@ add_filter( 'stylesheet_uri', 'coop_radio_minified_css', 10, 2 );
 function coop_radio_scripts() {
   wp_enqueue_script( 'coop-radio-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
   wp_enqueue_script( 'coop-radio-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+  wp_enqueue_script( 'coop-radio-audio-player', get_template_directory_uri() . '/build/js/audio-player.min.js', array(), '20151215', true );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );

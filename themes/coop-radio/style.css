@@ -678,13 +678,14 @@ a {
 # Header
 --------------------------------------------------------------*/
 .main-navigation {
-  max-height: 4.5rem;
+  max-height: 4.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #000000; }
   .main-navigation button {
     background-image: url("../../images/menu-bar.png");
     background-repeat: no-repeat;
@@ -695,13 +696,16 @@ a {
     position: absolute;
     top: 10%;
     right: 5%; }
-  .main-navigation img {
+  .main-navigation .logo-link {
     display: none; }
     @media (min-width: 600px) {
-      .main-navigation img {
-        display: block;
-        max-width: 10%;
-        height: auto; } }
+      .main-navigation .logo-link {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .main-navigation .logo-link img {
+          max-height: 4.875rem;
+          width: auto; } }
 
 .menu-header-navigation-container {
   background-color: transparent; }
@@ -713,8 +717,7 @@ a {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      width: 90%;
-      background-color: #000000; }
+      width: 80%; }
       .menu-header-navigation-container a {
         color: #ffffff; } }
 

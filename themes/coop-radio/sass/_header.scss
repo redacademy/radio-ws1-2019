@@ -2,9 +2,10 @@
 # Header
 --------------------------------------------------------------*/
 .main-navigation {
-    max-height: $base__space-unit * 3;
+    max-height: $base__space-unit * 3.25;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    background-color: #000000;
     button {
         background-image: url('../../images/menu-bar.png');
         background-repeat: no-repeat;
@@ -16,12 +17,14 @@
         top: 10%;
         right: 5%;
     }
-    img {
+    .logo-link {
         display: none;
         @include tablet {
-            display: block;
-            max-width: 10%;
-            height: auto;
+            display: flex;
+            img{
+                max-height: $base__space-unit * 3.25;
+                width: auto;
+            }
         }
     }
 }
@@ -31,8 +34,7 @@
     @include tablet {
         display: flex;
         align-items: center;
-        width: 90%;
-        background-color: #000000;
+        width: 80%;
         a{
             color: #ffffff;
         }

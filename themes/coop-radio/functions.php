@@ -68,7 +68,7 @@ function coop_radio_widgets_init() {
     'name'          => esc_html( 'Audio player' ),
     'id'            => 'audio-player',
     'description'   => __( 'Audio player footer', 'textdomain' ),
-    'before_widget' => '<aside id="audio-player">',
+    'before_widget' => '<aside id="audio-player" class="audio-player">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h2 class="screen-reader-text">',
     'after_title'   => '</h2>',

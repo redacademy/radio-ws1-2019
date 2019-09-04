@@ -415,9 +415,9 @@ img {
 --------------------------------------------------------------*/
 /*** Buttons ***/
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   height: 44px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -425,13 +425,33 @@ input[type="submit"] {
   border-radius: 2px;
   border: 2px solid #8b1f7e;
   text-decoration: none; }
+  @media (min-width: 1080px) {
+    button,
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
+      height: 56px;
+      font-size: 22px;
+      border-radius: 4px; } }
 
 /* Button Sizes */
 .btn-small {
   width: 108px; }
+  @media (min-width: 1080px) {
+    .btn-small {
+      width: 120px; } }
+
+.btn-medium {
+  width: 108px; }
+  @media (min-width: 1080px) {
+    .btn-medium {
+      width: 168px; } }
 
 .btn-large {
   width: 128px; }
+  @media (min-width: 1080px) {
+    .btn-large {
+      width: 220px; } }
 
 /* Button Colours */
 .btn-primary {
@@ -461,31 +481,34 @@ input[type="submit"] {
     color: #8B8B8B; }
 
 /*** Fields ***/
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
 textarea {
   background-color: rgba(190, 190, 190, 0.8);
   color: rgba(23, 23, 23, 0.8);
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 20px;
   height: 44px; }
-  input[type="text"]:hover,
-  input[type="email"]:hover,
-  input[type="url"]:hover,
-  input[type="password"]:hover,
-  input[type="search"]:hover,
+  input[type='text']:hover,
+  input[type='email']:hover,
+  input[type='url']:hover,
+  input[type='password']:hover,
+  input[type='search']:hover,
+  input[type='tel']:hover,
   textarea:hover {
     border: 2px solid #8b1f7e;
     border-radius: 2px; }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='tel'] {
   padding: 3px; }
 
 textarea {
@@ -684,3 +707,29 @@ a {
       .not-found .front-container div p {
         color: #ffffff;
         text-transform: uppercase; }
+
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+/*remove header on mobile*/
+.page-id-14 header {
+  display: none; }
+
+.page-id-14 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  border-width: 0;
+  padding: 0; }
+
+.page-id-14 form {
+  position: relative;
+  top: 80vh;
+  background-color: #fff;
+  text-align: center; }
+
+.page-id-14 textarea {
+  width: 493px;
+  height: 88px; }

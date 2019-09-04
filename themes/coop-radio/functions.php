@@ -59,18 +59,18 @@ function remove_default_post_type() {
 add_action( 'admin_menu', 'remove_default_post_type' );
 
 /**
- * Register widget area.
+ * Register widgets.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function coop_radio_widgets_init() {
   register_sidebar( array(
-    'name'          => esc_html( 'Sidebar' ),
-    'id'            => 'sidebar-1',
-    'description'   => '',
-    'before_widget' => '<aside id="%1$s" class="%2$s">',
+    'name'          => esc_html( 'Audio player' ),
+    'id'            => 'audio-player',
+    'description'   => __( 'Audio player footer', 'textdomain' ),
+    'before_widget' => '<aside id="%1$s">',
     'after_widget'  => '</aside>',
-    'before_title'  => '<h2>',
+    'before_title'  => '<h2 class="screen-reader-text">',
     'after_title'   => '</h2>',
   ) );
 }
@@ -119,20 +119,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Register audio player sidebar.
- */
-function audio_player_widget_init() {
-  register_sidebar( array(
-    'name'          => __( 'Audio player', 'textdomain' ),
-    'id'            => 'audio-player',
-    'description'   => __( 'Audio player footer', 'textdomain' ),
-    'before_title'  => '<h2 class="screen-reader-text">',
-    'after_title'   => '</h2>',
-  ) );
-}
-add_action( 'widgets_init', 'audio_player_widget_init' );
 
 /**
  * Register artist post type

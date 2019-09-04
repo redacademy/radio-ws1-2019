@@ -5,10 +5,13 @@
  *
  */
 
+// TODO: refactor this monster
+
 (function() {
   const container = document.getElementById('audio-player')
   const defaultAudioPlayer = container.getElementsByTagName('audio')[0]
   const audioSrc = defaultAudioPlayer.currentSrc
+  let audioDuration
 
   if (!container) { return }
 
@@ -30,7 +33,6 @@
 
   // TODO: check if track is same
   const progress = window.localStorage.getItem('audio-player-progress')
-
   if (progress) {
     progressBar.style.width = `${progress}%`
   }
@@ -39,7 +41,9 @@
   playButton.addEventListener('click', () => {
     if (progress && defaultAudioPlayer.currentTime === 0) {
       defaultAudioPlayer.addEventListener('loadedmetadata', () => {
-        defaultAudioPlayer.currentTime = (progress / 100) * defaultAudioPlayer.duration
+        audioDuration = defaultAudioPlayer.duration
+        defaultAudioPlayer.currentTime = (progress / 100) * audioDuration
+        progressBarContainer.style.cursor = 'pointer'
       })
     }
 
@@ -63,6 +67,14 @@
       playButton.innerText = 'play'
       window.localStorage.removeItem('audio-player-progress')
     }
+  })
+  progressBarContainer.addEventListener('click', function(e) {
+    // TODO: fetch audio metadata on load, not play
+    if (!audioDuration || !this.classList.contains('audio-player__progress-container')) { return }
+    const progressPercent = 
+    (e.clientX - this.offsetLeft) / this.clientWidth
+    defaultAudioPlayer.currentTime = progressPercent * audioDuration
+    progressBar.style.width = `${progressPercent}%`
   })
   shareButton.addEventListener('click', () => {
     // TODO: handle share

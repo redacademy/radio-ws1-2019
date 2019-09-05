@@ -708,6 +708,12 @@ a {
       -webkit-transform: scale(1) translateY(-5px);
               transform: scale(1) translateY(-5px); } }
 
+.audio-player__time {
+  position: relative;
+  top: 0.16rem;
+  color: #bebebe;
+  font-weight: bold; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

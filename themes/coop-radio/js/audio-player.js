@@ -1,6 +1,6 @@
 /**
  *
- * Replaces the default WP audio player with a customized one.
+ * Replaces the default WP audio player widget with a customized one.
  * Falls back to default audio player if JS disabled.
  *
  */
@@ -25,6 +25,11 @@
   progressBar.classList.add('audio-player__progress')
   const progressBarFill = document.createElement('div')
   progressBarFill.classList.add('audio-player__progress-fill')
+  const progressBarMarker = document.createElement('span')
+  progressBarMarker.classList.add('audio-player__progress-marker')
+  const currentTime = document.createElement('p')
+  currentTime.classList.add('audio-player__time')
+  currentTime.innerText = '00:00'
   const playButton = document.createElement('button')
   playButton.name = 'Audio player toggle'
   playButton.classList.add('audio-player__play-button')
@@ -33,8 +38,6 @@
   const playButtonIconPauseSrc = `${stylesheetURI}/images/button-pause.svg`
   playButtonIcon.src = playButtonIconPlaySrc
   playButtonIcon.alt = 'Play audio'
-  const progressBarMarker = document.createElement('span')
-  progressBarMarker.classList.add('audio-player__progress-marker')
   const shareButton = document.createElement('button')
   shareButton.name = 'Share recording'
   shareButton.innerText = 'share'
@@ -65,6 +68,17 @@
     }
   })
   defaultAudioPlayer.addEventListener('timeupdate', () => {
+    const padNum = num => num
+      ? num.toString().length === 1
+        ? `0${num}`
+        : num
+      : '00'
+    
+    const timeTotalSeconds = defaultAudioPlayer.currentTime
+    const timeMinutes = Math.floor(timeTotalSeconds / 60)
+    const timeSeconds = Math.floor(timeTotalSeconds - (timeMinutes * 60)) 
+
+    currentTime.innerText = `${padNum(timeMinutes)}:${padNum(timeSeconds)}`
     const progressPercent = (
       defaultAudioPlayer.currentTime / defaultAudioPlayer.duration
     ) * 100
@@ -96,6 +110,7 @@
   defaultAudioPlayer.classList.add('screen-reader-text')
   playButton.appendChild(playButtonIcon)
   container.appendChild(playButton)
+  container.appendChild(currentTime)
   progressBar.appendChild(progressBarMarker)
   progressBarContainer.appendChild(progressBarFill)
   progressBarContainer.appendChild(progressBar)

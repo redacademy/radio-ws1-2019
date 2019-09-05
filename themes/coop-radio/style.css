@@ -686,6 +686,18 @@ a {
   border-radius: 50%;
   background-color: #8b1f7e; }
 
+.audio-player__play-button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  -webkit-transform: scale(0.8) translateY(-10px);
+          transform: scale(0.8) translateY(-10px); }
+  @media (min-width: 1080px) {
+    .audio-player__play-button {
+      -webkit-transform: scale(1) translateY(-5px);
+              transform: scale(1) translateY(-5px); } }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

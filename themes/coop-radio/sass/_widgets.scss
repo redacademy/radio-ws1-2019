@@ -39,3 +39,14 @@
   border-radius: 50%;
   background-color: $color__brand-purple;
 }
+
+.audio-player__play-button {
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  transform: scale(0.8) translateY(-10px);
+
+  @include desktop {
+    transform: scale(1) translateY(-5px);
+  }
+}

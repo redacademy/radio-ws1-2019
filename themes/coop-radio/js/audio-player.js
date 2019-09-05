@@ -5,15 +5,18 @@
  *
  */
 
+/* global WP_GLOBALS */
+
 // TODO: refactor this monster
 
-(function() {
+(function({ stylesheetURI }) {
   const container = document.getElementById('audio-player')
+
+  if (!container) { return }
+
   const defaultAudioPlayer = container.getElementsByTagName('audio')[0]
   const audioSrc = defaultAudioPlayer.currentSrc
   let audioDuration
-
-  if (!container) { return }
 
   // set up els
   const progressBarContainer = document.createElement('div')
@@ -22,8 +25,12 @@
   progressBar.classList.add('audio-player__progress')
   const playButton = document.createElement('button')
   playButton.name = 'Audio player toggle'
-  playButton.innerText = 'play'
   playButton.classList.add('audio-player__play-button')
+  const playButtonIcon = document.createElement('img')
+  const playButtonIconPlaySrc = `${stylesheetURI}/images/button-play.svg`
+  const playButtonIconPauseSrc = `${stylesheetURI}/images/button-pause.svg`
+  playButtonIcon.src = playButtonIconPlaySrc
+  playButtonIcon.alt = 'Play audio'
   const progressBarMarker = document.createElement('span')
   progressBarMarker.classList.add('audio-player__progress-marker')
   const shareButton = document.createElement('button')
@@ -48,10 +55,10 @@
     }
 
     if (defaultAudioPlayer.paused) {
-      playButton.innerText = 'pause'
+      playButtonIcon.src = playButtonIconPauseSrc
       defaultAudioPlayer.play()
     } else {
-      playButton.innerText = 'play'
+      playButtonIcon.src = playButtonIconPlaySrc
       defaultAudioPlayer.pause()
     }
   })
@@ -64,7 +71,7 @@
     window.localStorage.setItem('audio-player-progress', progressPercent)
 
     if (progressPercent === 100) {
-      playButton.innerText = 'play'
+      playButtonIcon.src = playButtonIconPlaySrc
       window.localStorage.removeItem('audio-player-progress')
     }
   })
@@ -86,10 +93,11 @@
   // render
   container.innerHTML = ''
   defaultAudioPlayer.classList.add('screen-reader-text')
+  playButton.appendChild(playButtonIcon)
   container.appendChild(playButton)
   progressBar.appendChild(progressBarMarker)
   progressBarContainer.appendChild(progressBar)
   container.appendChild(progressBarContainer)
   container.appendChild(shareButton)
   container.appendChild(defaultAudioPlayer)
-})()
+})(WP_GLOBALS)

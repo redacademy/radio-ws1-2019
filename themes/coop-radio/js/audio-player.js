@@ -31,7 +31,6 @@
   currentTime.classList.add('audio-player__time')
   currentTime.innerText = '00:00'
   const playButton = document.createElement('button')
-  playButton.name = 'Audio player toggle'
   playButton.classList.add('audio-player__play-button')
   const playButtonIcon = document.createElement('img')
   const playButtonIconPlaySrc = `${stylesheetURI}/images/button-play.svg`
@@ -39,9 +38,10 @@
   playButtonIcon.src = playButtonIconPlaySrc
   playButtonIcon.alt = 'Play audio'
   const shareButton = document.createElement('button')
-  shareButton.name = 'Share recording'
-  shareButton.innerText = 'share'
   shareButton.classList.add('audio-player__share-button')
+  const shareButtonIcon = document.createElement('img')
+  shareButtonIcon.src = `${stylesheetURI}/images/share-icon.svg`
+  shareButtonIcon.alt = 'Share'
 
   // TODO: check if track is same
   const progress = window.localStorage.getItem('audio-player-progress')
@@ -110,6 +110,8 @@
   defaultAudioPlayer.classList.add('screen-reader-text')
   playButton.appendChild(playButtonIcon)
   container.appendChild(playButton)
+  shareButton.appendChild(shareButtonIcon)
+  container.appendChild(shareButton)
   container.appendChild(currentTime)
   progressBar.appendChild(progressBarMarker)
   progressBarContainer.appendChild(progressBarFill)

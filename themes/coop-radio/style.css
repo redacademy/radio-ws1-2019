@@ -649,7 +649,6 @@ a {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-/* Audio player */
 .audio-player {
   position: fixed;
   bottom: 0;
@@ -713,6 +712,18 @@ a {
   top: 0.16rem;
   color: #bebebe;
   font-weight: bold; }
+
+.audio-player__share-button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  -webkit-transform: scale(0.8) translateY(2.3px);
+          transform: scale(0.8) translateY(2.3px); }
+  @media (min-width: 1080px) {
+    .audio-player__share-button {
+      -webkit-transform: scale(1) translateY(3px);
+              transform: scale(1) translateY(3px); } }
 
 /*--------------------------------------------------------------
 # Accessibility

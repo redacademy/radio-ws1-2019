@@ -1,12 +1,18 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
+// Style navigation bar as a whole //
+
 .main-navigation {
     max-height: $base__space-unit * 3.25;
     display: flex;
     justify-content: space-evenly;
     background-color: #000000;
-    button {
+
+    // Nav-menu button for mobile (hamburger) //
+
+    .menu-toggle {
         background-image: url('../../images/menu-bar.png');
         background-repeat: no-repeat;
         background-position: 50% 50%;
@@ -17,6 +23,9 @@
         top: 10%;
         right: 5%;
     }
+
+    // Company logo for tablet/desktop //
+
     .logo-link {
         display: none;
         @include tablet {
@@ -29,6 +38,8 @@
     }
 }
 
+// Main navigation to all pages //
+
 .menu-header-navigation-container {
     background-color: transparent;
     @include tablet {
@@ -39,4 +50,57 @@
             color: #ffffff;
         }
     }
+}
+
+// Search button for the whole site //
+
+.header-search {
+    display: none;
+    @include tablet {
+        display: flex;
+        width: 10%;
+
+        // Search button //
+
+        .search-toggle{
+            img{
+                height: 2.75rem;
+                width: auto;
+            }
+            background-color: transparent;
+            border: none;
+            float: left;
+        }
+
+        label{
+            width: 0;
+            margin: 0;
+            transition: width 1s;
+            float: left;
+            input{
+                color: #ffffff;
+                width: 0;
+                transition: width 1s;
+                background: transparent;
+                border: 0;
+                padding: 0;
+                text-transform: uppercase;
+                margin-left: 0.75rem;
+                font-weight: normal;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        // fieldset //
+
+        fieldset {
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+    }
+
 }

@@ -103,6 +103,8 @@ function coop_radio_scripts() {
     )
   );
   wp_enqueue_script('coop-radio-audio-player');
+  wp_enqueue_script( 'coop-radio-audio-player', get_template_directory_uri() . '/build/js/audio-player.min.js', array(), '20151215', true );
+  wp_enqueue_script( 'coop-radio-search-form', get_template_directory_uri() . '/build/js/search-form.min.js', array('jquery'), '20151215', true );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );

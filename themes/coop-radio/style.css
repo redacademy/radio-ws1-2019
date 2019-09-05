@@ -768,7 +768,7 @@ a {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-color: #000000; }
-  .main-navigation button {
+  .main-navigation .menu-toggle {
     background-image: url("../../images/menu-bar.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -802,6 +802,45 @@ a {
       width: 80%; }
       .menu-header-navigation-container a {
         color: #ffffff; } }
+
+.header-search {
+  display: none; }
+  @media (min-width: 600px) {
+    .header-search {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 10%; }
+      .header-search .search-toggle {
+        background-color: transparent;
+        border: none;
+        float: left; }
+        .header-search .search-toggle img {
+          height: 2.75rem;
+          width: auto; }
+      .header-search label {
+        width: 0;
+        margin: 0;
+        -webkit-transition: width 1s;
+        transition: width 1s;
+        float: left; }
+        .header-search label input {
+          color: #ffffff;
+          width: 0;
+          -webkit-transition: width 1s;
+          transition: width 1s;
+          background: transparent;
+          border: 0;
+          padding: 0;
+          text-transform: uppercase;
+          margin-left: 0.75rem;
+          font-weight: normal; }
+          .header-search label input:focus {
+            outline: none; }
+      .header-search fieldset {
+        border: 0;
+        padding: 0;
+        margin: 0; } }
 
 /*--------------------------------------------------------------
 # Front Page

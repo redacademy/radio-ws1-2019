@@ -31,5 +31,8 @@
             <img src="<?php echo get_stylesheet_directory_uri().'/images/co-op logo-dark.png'; ?>" alt="">
           </a>
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+          <div class='header-search'>
+							<?php get_search_form(); ?>
+					</div>
         </nav>
       </header>

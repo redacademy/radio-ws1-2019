@@ -2,8 +2,6 @@
 # Widgets
 --------------------------------------------------------------*/
 
-/* Audio player */
-
 .audio-player {
   position: fixed;
   bottom: 0;
@@ -16,10 +14,21 @@
 }
 
 .audio-player__progress-container {
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 1rem 0;
   margin: 0 1rem;
+}
+
+.audio-player__progress-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  border-radius: 5px;
+  background-color: $color__brand-gray;
+  z-index: -1;
 }
 
 .audio-player__progress {
@@ -32,10 +41,39 @@
 
 .audio-player__progress-marker {
   position: absolute;
-  right: 0;
+  right: -5px;
   top: -50%;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: $color__brand-purple;
+}
+
+.audio-player__play-button {
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  transform: scale(0.8) translateY(-10px);
+
+  @include desktop {
+    transform: scale(1) translateY(-5px);
+  }
+}
+
+.audio-player__time {
+  position: relative;
+  top: 0.16rem;
+  color: $color__brand-gray;
+  font-weight: bold;
+}
+
+.audio-player__share-button {
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  transform: scale(0.8) translateY(2.3px);
+
+  @include desktop {
+    transform: scale(1) translateY(3px);
+  }
 }

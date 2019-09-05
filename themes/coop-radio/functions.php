@@ -94,6 +94,15 @@ add_filter( 'stylesheet_uri', 'coop_radio_minified_css', 10, 2 );
 function coop_radio_scripts() {
   wp_enqueue_script( 'coop-radio-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
   wp_enqueue_script( 'coop-radio-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+  wp_register_script( 'coop-radio-audio-player', get_template_directory_uri() . '/build/js/audio-player.min.js', array(), '20151215', true );
+  wp_localize_script(
+    'coop-radio-audio-player',
+    'WP_GLOBALS',
+    array(
+      'stylesheetURI' => get_stylesheet_directory_uri()
+    )
+  );
+  wp_enqueue_script('coop-radio-audio-player');
   wp_enqueue_script( 'coop-radio-audio-player', get_template_directory_uri() . '/build/js/audio-player.min.js', array(), '20151215', true );
   wp_enqueue_script( 'coop-radio-search-form', get_template_directory_uri() . '/build/js/search-form.min.js', array('jquery'), '20151215', true );
 

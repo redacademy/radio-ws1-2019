@@ -16,10 +16,21 @@
 }
 
 .audio-player__progress-container {
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 1rem 0;
   margin: 0 1rem;
+}
+
+.audio-player__progress-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  border-radius: 5px;
+  background-color: $color__brand-gray;
+  z-index: -1;
 }
 
 .audio-player__progress {
@@ -32,7 +43,7 @@
 
 .audio-player__progress-marker {
   position: absolute;
-  right: 0;
+  right: -5px;
   top: -50%;
   width: 10px;
   height: 10px;

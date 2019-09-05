@@ -23,6 +23,8 @@
   progressBarContainer.classList.add('audio-player__progress-container')
   const progressBar = document.createElement('div')
   progressBar.classList.add('audio-player__progress')
+  const progressBarFill = document.createElement('div')
+  progressBarFill.classList.add('audio-player__progress-fill')
   const playButton = document.createElement('button')
   playButton.name = 'Audio player toggle'
   playButton.classList.add('audio-player__play-button')
@@ -63,7 +65,6 @@
     }
   })
   defaultAudioPlayer.addEventListener('timeupdate', () => {
-    if (defaultAudioPlayer.currentTime < 0.4) { return }
     const progressPercent = (
       defaultAudioPlayer.currentTime / defaultAudioPlayer.duration
     ) * 100
@@ -96,6 +97,7 @@
   playButton.appendChild(playButtonIcon)
   container.appendChild(playButton)
   progressBar.appendChild(progressBarMarker)
+  progressBarContainer.appendChild(progressBarFill)
   progressBarContainer.appendChild(progressBar)
   container.appendChild(progressBarContainer)
   container.appendChild(shareButton)

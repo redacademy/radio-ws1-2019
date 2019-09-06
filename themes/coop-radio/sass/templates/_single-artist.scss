@@ -1,3 +1,49 @@
 /*--------------------------------------------------------------
 # Single artist
 --------------------------------------------------------------*/
+
+.single-artist {
+    .text-container {
+      max-width: 430px;
+      margin: 3rem auto;
+    }
+    .artist-image-container {
+        background-color:gray;
+        height:600px;
+    }
+
+    .artist-hero {
+      position: relative;
+      height:600px;
+      .artist-name {
+        position: absolute;
+        bottom: 30%;
+        z-index: 99;
+      }
+      .artist-bio {
+        max-width: 400px;
+        position: absolute;
+        bottom: 1.5rem;
+        z-index: 99;
+      }
+    }
+
+    .featured-video {
+      background-color:gray;
+      height: 450px;
+      margin:0 auto;
+    }
+    
+    footer {
+      p {
+        text-transform: capitalize;
+        text-align:center;
+        margin-top:3rem;
+      }
+      .social-links {
+        display: flex;
+        justify-content: space-between;
+        list-style:none;
+      }
+    }
+  }

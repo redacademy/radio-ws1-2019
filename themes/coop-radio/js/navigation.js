@@ -107,3 +107,17 @@
     }
   })(container);
 })();
+
+jQuery(document).ready(function($) {
+  const $nav = $('#site-navigation');
+  const $content = $('.content-front-page');
+  const $button = $('.menu-toggle');
+
+  $button.on('click', function() {
+    if ($nav.hasClass('toggled')) {
+      $content.css('display', 'none');
+    } else {
+      $content.css('display', 'block');
+    }
+  })
+})

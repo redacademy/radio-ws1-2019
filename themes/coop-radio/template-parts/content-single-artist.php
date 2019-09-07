@@ -9,28 +9,31 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header>
-    <div class="artist-hero artist-image-container">
+  <div class="artist-hero artist-image-container">
+    <header>
       <?php if (has_post_thumbnail()) : ?>
         <?php the_post_thumbnail('large'); ?>
       <?php endif; ?>
 
-      <div class="text-container">
-        <h2 class="artist-name">
-          <?= CFS()->get('artist_name'); ?>
-          <h2>
+      <div class="text-container grid">
+        <article class="top-text-container">
+          <h2 class="artist-name">
+            <?= CFS()->get('artist_name'); ?>
+            <h2>
 
-            <div class="artist-bio">
-              <?= CFS()->get('bio_text'); ?>
-            </div>
+              <div class="artist-bio">
+                <?= CFS()->get('bio_text'); ?>
+              </div>
+        </article>
       </div>
-    </div>
-  </header>
+    </header>
+  </div>
 
-  <section class="text-container">
-    <h3>
+  <section class="text-container journey-text">
+    <h3 class="intro-title">
       <?= CFS()->get('intro_title'); ?>
     </h3>
+    <h1>----------</h1>
 
     <?= CFS()->get('intro_text'); ?>
   </section>
@@ -40,25 +43,29 @@
     <?= CFS()->get('youtube_url'); ?>
   </section>
 
-  <section class="text-container">
-    <h3>
-      <?= CFS()->get('full_name'); ?>
-    </h3>
+  <article class="full-description-container">
+    <div class="description">
+      <section class="text-container">
+        <h3>
+          <?= CFS()->get('full_name'); ?>
+        </h3>
 
-    <?= CFS()->get('bio_text_secondary'); ?>
-  </section>
+        <?= CFS()->get('bio_text_secondary'); ?>
+      </section>
 
-  <section class="text-container">
-    <h3>
-      <?= CFS()->get('additional_info_title'); ?>
-    </h3>
+      <section class="text-container">
+        <h3>
+          <?= CFS()->get('additional_info_title'); ?>
+        </h3>
 
-    <?= CFS()->get('additional_info_text'); ?>
-  </section>
+        <?= CFS()->get('additional_info_text'); ?>
+      </section>
+    </div><!-- description-->
 
-  <section class="artist-image-container">
-    <!-- additional image? -->
-</section>
+    <section class="artist-image-container">
+      <!-- additional image? -->
+    </section>
+  </article>
 
   <footer>
     <div class="text-container">

@@ -6,10 +6,17 @@
     .text-container {
       max-width: 430px;
       margin: 3rem auto;
+      @include tablet {
+          max-width:auto;
+          p {
+              margin:0 auto;
+              text-align: center;
+          }
+      }
     }
-    .artist-image-container {
-        background-color:gray;
-        height:600px;
+    
+    .top-text-container {
+       align-items:left;
     }
 
     .artist-hero {
@@ -19,19 +26,64 @@
         position: absolute;
         bottom: 30%;
         z-index: 99;
+        @include tablet {
+            border-bottom:2px solid black;
+            // bottom:50%;
+        }
       }
       .artist-bio {
         max-width: 400px;
         position: absolute;
         bottom: 1.5rem;
         z-index: 99;
+        @include tablet {
+            // bottom:40%;
+        }
       }
+    }
+
+    .intro-title {
+        @include tablet {
+            font-size:40px;
+            text-align: center;
+            text-decoration:underline;
+        }
+    }
+    .journey-text {
+        @include tablet {
+            max-width:900px;
+        }
     }
 
     .featured-video {
       background-color:gray;
       height: 450px;
       margin:0 auto;
+      @include tablet {
+          width:800px;
+          border-radius:15px;
+          overflow: hidden;
+      }
+    }
+    .full-description-container {
+        @include tablet {
+            display:flex;
+            align-items: left;
+            margin:8rem;
+        }
+        .description {
+            @include tablet {
+                 left:50%;
+            }
+        }
+    }
+
+    .artist-image-container {
+        background-color:gray;
+        height:600px;
+        @include tablet {
+            width:100%;
+        }
     }
     
     footer {

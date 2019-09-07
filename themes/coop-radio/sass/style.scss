@@ -25,12 +25,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Elements
 # Forms
 # Navigation
+# Widgets
 # Modules
 
 # Page Templates
     ## Front page
     ## Artist search
     ## Single artist
+    ## 404 page
+    ## Contact us
 --------------------------------------------------------------*/
 
 // Imported but not included in the stylesheet.
@@ -46,6 +49,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'elements';
 @import 'forms';
 @import 'navigation';
+@import 'widgets';
 @import 'modules';
 @import 'header';
 

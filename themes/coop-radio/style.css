@@ -883,9 +883,17 @@ a {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
-                flex-direction: column; }
+                flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
+        .content-front-page .content-container header {
+          margin-top: 1.5rem; }
         .content-front-page .content-container p {
-          max-width: 100%; }
+          max-width: 100%;
+          margin-bottom: 6rem; }
         .content-front-page .content-container div {
           -ms-flex-item-align: center;
               align-self: center; } }

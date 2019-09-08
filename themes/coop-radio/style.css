@@ -907,28 +907,24 @@ a {
         text-align: center; } }
 
 .single-artist .top-text-container {
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left; }
+  position: absolute; }
+  @media (min-width: 600px) {
+    .single-artist .top-text-container {
+      margin-left: 800px; } }
 
 .single-artist .artist-hero {
   position: relative;
   height: 600px; }
   .single-artist .artist-hero .artist-name {
-    position: absolute;
-    bottom: 30%;
-    z-index: 99; }
-    @media (min-width: 600px) {
-      .single-artist .artist-hero .artist-name {
-        border-bottom: 2px solid black; } }
+    text-align: left;
+    bottom: 50%; }
   .single-artist .artist-hero .artist-bio {
     max-width: 400px;
-    position: absolute;
-    bottom: 1.5rem;
-    z-index: 99; }
+    bottom: 1.5rem; }
 
 @media (min-width: 600px) {
-  .single-artist .intro-title {
+  .single-artist .intro-title,
+  .single-artist .artist-name {
     font-size: 40px;
     text-align: center;
     text-decoration: underline; } }
@@ -949,24 +945,30 @@ a {
 
 @media (min-width: 600px) {
   .single-artist .full-description-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
-    margin: 8rem; } }
+    position: relative; } }
 
 @media (min-width: 600px) {
   .single-artist .full-description-container .description {
-    left: 50%; } }
+    display: inline-block;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    max-width: 500px; } }
 
-.single-artist .artist-image-container {
+@media (min-width: 600px) {
+  .single-artist .full-description-container .description .full-name {
+    font-size: 48px;
+    text-transform: uppercase; } }
+
+.single-artist .artist-img-container {
   background-color: gray;
   height: 600px; }
-  @media (min-width: 600px) {
-    .single-artist .artist-image-container {
-      width: 100%; } }
+
+.single-artist .additional-artist-img {
+  margin: 4.5rem auto; }
 
 .single-artist footer p {
   text-transform: capitalize;

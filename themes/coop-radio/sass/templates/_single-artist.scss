@@ -3,99 +3,102 @@
 --------------------------------------------------------------*/
 
 .single-artist {
-    .text-container {
-      max-width: 430px;
-      margin: 3rem auto;
-      @include tablet {
-          max-width:auto;
-          p {
-              margin:0 auto;
-              text-align: center;
-          }
-      }
-    }
-    
-    .top-text-container {
-       align-items:left;
-    }
-
-    .artist-hero {
-      position: relative;
-      height:600px;
-      .artist-name {
-        position: absolute;
-        bottom: 30%;
-        z-index: 99;
-        @include tablet {
-            border-bottom:2px solid black;
-            // bottom:50%;
-        }
-      }
-      .artist-bio {
-        max-width: 400px;
-        position: absolute;
-        bottom: 1.5rem;
-        z-index: 99;
-        @include tablet {
-            // bottom:40%;
-        }
-      }
-    }
-
-    .intro-title {
-        @include tablet {
-            font-size:40px;
-            text-align: center;
-            text-decoration:underline;
-        }
-    }
-    .journey-text {
-        @include tablet {
-            max-width:900px;
-        }
-    }
-
-    .featured-video {
-      background-color:gray;
-      height: 450px;
-      margin:0 auto;
-      @include tablet {
-          width:800px;
-          border-radius:15px;
-          overflow: hidden;
-      }
-    }
-    .full-description-container {
-        @include tablet {
-            display:flex;
-            align-items: left;
-            margin:8rem;
-        }
-        .description {
-            @include tablet {
-                 left:50%;
-            }
-        }
-    }
-
-    .artist-image-container {
-        background-color:gray;
-        height:600px;
-        @include tablet {
-            width:100%;
-        }
-    }
-    
-    footer {
+  .text-container {
+    max-width: 430px;
+    margin: 3rem auto;
+    @include tablet {
+      max-width: auto;
       p {
-        text-transform: capitalize;
-        text-align:center;
-        margin-top:3rem;
-      }
-      .social-links {
-        display: flex;
-        justify-content: space-between;
-        list-style:none;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }
+
+  .top-text-container {
+      position:absolute;
+      @include tablet {
+          margin-left:800px;
+      }
+  }
+
+  .artist-hero {
+    position: relative;
+    height: 600px;
+    .artist-name {
+        text-align:left;
+        bottom:50%;
+    }
+    .artist-bio {
+      max-width: 400px;
+      bottom:1.5rem;
+    }
+  }
+
+  .intro-title,
+  .artist-name {
+    @include tablet {
+      font-size: 40px;
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
+  .journey-text {
+    @include tablet {
+      max-width: 900px;
+    }
+  }
+
+  .featured-video {
+    background-color: gray;
+    height: 450px;
+    margin: 0 auto;
+    @include tablet {
+      width: 800px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+  }
+  .full-description-container {
+    @include tablet {
+      position: relative;
+    }
+    .description {
+      @include tablet {
+        display: inline-block;
+        align-items: left;
+        position: absolute;
+        left: 15%;
+        top: 10%;
+        max-width: 500px;
+      }
+      .full-name {
+        @include tablet {
+          font-size: 48px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .artist-img-container {
+    background-color: gray;
+    height: 600px;
+  }
+  .additional-artist-img {
+    margin: 4.5rem auto;
+  }
+
+  footer {
+    p {
+      text-transform: capitalize;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .social-links {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+    }
+  }
+}

@@ -9,31 +9,29 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="artist-hero artist-image-container">
+  <div class="artist-hero artist-img-container">
     <header>
       <?php if (has_post_thumbnail()) : ?>
         <?php the_post_thumbnail('large'); ?>
       <?php endif; ?>
 
-      <div class="text-container grid">
-        <article class="top-text-container">
-          <h2 class="artist-name">
-            <?= CFS()->get('artist_name'); ?>
-            <h2>
+      <div class="text-container top-text-container">
+        <h2 class="artist-name">
+          <?= CFS()->get('artist_name'); ?>
+        <h2>
 
-              <div class="artist-bio">
-                <?= CFS()->get('bio_text'); ?>
-              </div>
-        </article>
-      </div>
+        <div class="artist-bio">
+          <?= CFS()->get('bio_text'); ?>
+        </div>
+
+      </div><!-- text-container top-text-container-->
     </header>
-  </div>
+  </div><!-- img containers -->
 
   <section class="text-container journey-text">
     <h3 class="intro-title">
       <?= CFS()->get('intro_title'); ?>
     </h3>
-    <h1>----------</h1>
 
     <?= CFS()->get('intro_text'); ?>
   </section>
@@ -46,7 +44,7 @@
   <article class="full-description-container">
     <div class="description">
       <section class="text-container">
-        <h3>
+        <h3 class="full-name">
           <?= CFS()->get('full_name'); ?>
         </h3>
 
@@ -62,7 +60,7 @@
       </section>
     </div><!-- description-->
 
-    <section class="artist-image-container">
+    <section class="additional-artist-img artist-img-container">
       <!-- additional image? -->
     </section>
   </article>

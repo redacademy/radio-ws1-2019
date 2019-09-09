@@ -3,12 +3,14 @@
 --------------------------------------------------------------*/
 
 // Style navigation bar as a whole //
-
-.main-navigation {
-    max-height: $base__space-unit * 3.25;
-    display: flex;
-    justify-content: space-evenly;
+.banner {
     background-color: #000000;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
 
     // Nav-menu button for mobile (hamburger) //
 
@@ -25,14 +27,15 @@
     }
 
     // Company logo for tablet/desktop //
-
-    .logo-link {
+    .logo-container {
         display: none;
         @include tablet {
-            display: flex;
-            img{
-                max-height: $base__space-unit * 3.25;
-                width: auto;
+            display: block;
+            .logo-link {
+                img{
+                    height: $base__space-unit * 3.25;
+                    width: auto;
+                }
             }
         }
     }
@@ -40,31 +43,47 @@
 
 // Main navigation to all pages //
 
-.menu-header-navigation-container {
-    background-color: transparent;
+.main-navigation {
     @include tablet {
         display: flex;
-        align-items: center;
-        width: 80%;
-        a{
-            color: #ffffff;
+        margin: 0 auto;
+        width: 70%;
+        .menu-header-navigation-container {
+            width: 100%;
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                padding: 0;
+                li {
+                    float: left;
+                    padding-right: 1.5rem;
+                    a{
+                        color: #ffffff;
+                    }
+                }
+                li:last-child {
+                    display: none;
+                }
+            }
         }
     }
 }
+
 
 // Search button for the whole site //
 
 .header-search {
     display: none;
-    @include tablet {
-        display: flex;
-        width: 10%;
+    @include desktop {
+        display: block;
+        line-height: 1;
+        margin: 0 auto;
 
         // Search button //
 
         .search-toggle{
             img{
-                height: 2.75rem;
+                height: 1.25rem;
                 width: auto;
             }
             background-color: transparent;
@@ -87,6 +106,8 @@
                 text-transform: uppercase;
                 margin-left: 0.75rem;
                 font-weight: normal;
+                font-size: 1rem;
+                padding-top: 0.25rem;
                 &:focus {
                     outline: none;
                 }
@@ -102,5 +123,20 @@
         }
 
     }
+}
 
+.search-icon {
+    display: none;
+    @include tablet {
+        display: block;
+        line-height: 1;
+        margin: 0 auto;
+        img {
+            height: 1.25rem;
+            width: auto;
+        }
+    }
+    @include desktop {
+        display: none;
+    }
 }

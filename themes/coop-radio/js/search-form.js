@@ -6,8 +6,8 @@ jQuery(document).ready(function($) {
     const $input = $('.search-field');
 
     $('.search-toggle').on('click', function() {
-      $label.css('width', '200');
-      $input.css('width', '195');
+      $label.css('width', '165');
+      $input.css('width', '165');
       $input.focus();
     });
   

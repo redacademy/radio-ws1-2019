@@ -20,19 +20,29 @@
     <div class="hfeed">
       <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
-      <header role="banner">
+      <header class='banner' role="banner">
         <div>
           <h1 class="screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
         </div>
+        <div class='header-container'>
+          <div class='logo-container'>
+            <a class='logo-link' href="<?php echo esc_url(home_url('/')); ?>">
+              <img src="<?php echo get_stylesheet_directory_uri().'/images/co-op logo-dark.png'; ?>" alt="co-op radio logo">
+            </a>
+          </div>
+          <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-          <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
-          <a class='logo-link' href="<?php echo esc_url(home_url('/')); ?>">
-            <img src="<?php echo get_stylesheet_directory_uri().'/images/co-op logo-dark.png'; ?>" alt="">
-          </a>
-          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+          </nav>
           <div class='header-search'>
-							<?php get_search_form(); ?>
-					</div>
-        </nav>
+						<?php get_search_form(); ?>
+          </div>
+          <div class='search-icon'>
+            <a href="">
+              <img src="<?php echo get_stylesheet_directory_uri().'/images/search-icon-white.svg'; ?>" alt="search icon">
+            </a>
+          </div>
+        </div>
+        
       </header>

@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-position: top;
 }
+
 .content-front-page {
   position: absolute;
   width: 100vw;
@@ -35,9 +36,16 @@
     .content-container {
       display: flex;
       flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+      align-items: flex-start;
 
+      header {
+        margin-top: 1.5rem;
+      }
       p {
         max-width: 100%;
+        margin-bottom: 6rem;
       }
       div {
         align-self: center;

@@ -39,8 +39,8 @@
 						<?php get_search_form(); ?>
           </div>
           <div class='search-icon'>
-            <a href="/">
-              <img src="<?php echo get_stylesheet_directory_uri().'images/search-icon-white.svg'; ?>" alt="search icon">
+            <a href="">
+              <img src="<?php echo get_stylesheet_directory_uri().'/images/search-icon-white.svg'; ?>" alt="search icon">
             </a>
           </div>
         </div>

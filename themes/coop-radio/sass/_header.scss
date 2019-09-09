@@ -46,27 +46,23 @@
 .main-navigation {
     @include tablet {
         display: flex;
-        padding-left: 3rem;
-        ul {
-            display: block;
-            padding: 0;
-            li {
-                float: left;
-                padding-right: 1.5rem;
-                a{
-                    color: #ffffff;
-                }
-            }
-        } 
-
-    }
-    @include desktop {
-        padding-left: 7rem;
-        width: 60%;
+        margin: 0 auto;
+        width: 70%;
         .menu-header-navigation-container {
+            width: 100%;
             ul {
+                display: flex;
+                justify-content: space-evenly;
+                padding: 0;
                 li {
-                    padding-right: 3rem;
+                    float: left;
+                    padding-right: 1.5rem;
+                    a{
+                        color: #ffffff;
+                    }
+                }
+                li:last-child {
+                    display: none;
                 }
             }
         }
@@ -133,6 +129,12 @@
     display: none;
     @include tablet {
         display: block;
+        line-height: 1;
+        margin: 0 auto;
+        img {
+            height: 1.25rem;
+            width: auto;
+        }
     }
     @include desktop {
         display: none;

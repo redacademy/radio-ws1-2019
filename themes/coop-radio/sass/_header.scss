@@ -46,19 +46,28 @@
 .main-navigation {
     @include tablet {
         display: flex;
+        padding-left: 3rem;
+        ul {
+            display: block;
+            padding: 0;
+            li {
+                float: left;
+                padding-right: 1.5rem;
+                a{
+                    color: #ffffff;
+                }
+            }
+        } 
+
+    }
+    @include desktop {
         padding-left: 7rem;
         width: 60%;
         .menu-header-navigation-container {
             ul {
-                display: block;
-                padding: 0;
                 li {
-                    float: left;
                     padding-right: 3rem;
                 }
-            }
-            a{
-                color: #ffffff;
             }
         }
     }
@@ -69,7 +78,7 @@
 
 .header-search {
     display: none;
-    @include tablet {
+    @include desktop {
         display: block;
         line-height: 1;
         margin: 0 auto;
@@ -118,5 +127,14 @@
         }
 
     }
+}
 
+.search-icon {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+    @include desktop {
+        display: none;
+    }
 }

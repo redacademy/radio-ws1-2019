@@ -793,20 +793,26 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-left: 7rem;
-    width: 60%; }
-    .main-navigation .menu-header-navigation-container ul {
+    padding-left: 3rem; }
+    .main-navigation ul {
       display: block;
       padding: 0; }
-      .main-navigation .menu-header-navigation-container ul li {
+      .main-navigation ul li {
         float: left;
-        padding-right: 3rem; }
-    .main-navigation .menu-header-navigation-container a {
-      color: #ffffff; } }
+        padding-right: 1.5rem; }
+        .main-navigation ul li a {
+          color: #ffffff; } }
+
+@media (min-width: 1080px) {
+  .main-navigation {
+    padding-left: 7rem;
+    width: 60%; }
+    .main-navigation .menu-header-navigation-container ul li {
+      padding-right: 3rem; } }
 
 .header-search {
   display: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 1080px) {
     .header-search {
       display: block;
       line-height: 1;
@@ -843,6 +849,15 @@ a {
         border: 0;
         padding: 0;
         margin: 0; } }
+
+.search-icon {
+  display: none; }
+  @media (min-width: 600px) {
+    .search-icon {
+      display: block; } }
+  @media (min-width: 1080px) {
+    .search-icon {
+      display: none; } }
 
 /*--------------------------------------------------------------
 # Front Page

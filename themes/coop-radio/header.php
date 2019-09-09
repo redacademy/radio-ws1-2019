@@ -27,7 +27,7 @@
         <div class='header-container'>
           <div class='logo-container'>
             <a class='logo-link' href="<?php echo esc_url(home_url('/')); ?>">
-              <img src="<?php echo get_stylesheet_directory_uri().'/images/co-op logo-dark.png'; ?>" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri().'/images/co-op logo-dark.png'; ?>" alt="co-op radio logo">
             </a>
           </div>
           <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -36,8 +36,13 @@
 
           </nav>
           <div class='header-search'>
-							<?php get_search_form(); ?>
-					</div>
+						<?php get_search_form(); ?>
+          </div>
+          <div class='search-icon'>
+            <a href="/">
+              <img src="<?php echo get_stylesheet_directory_uri().'images/search-icon-white.svg'; ?>" alt="search icon">
+            </a>
+          </div>
         </div>
         
       </header>

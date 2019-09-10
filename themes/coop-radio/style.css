@@ -29,6 +29,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 # Page Templates
     ## Front page
+    ## Program details
     ## Artist search
     ## Single artist
     ## 404 page
@@ -923,6 +924,17 @@ a {
           -ms-flex-item-align: center;
               align-self: center; } }
 
+/*--------------------------------------------------------------
+# Program details 
+--------------------------------------------------------------*/
+/* header */
+/* overview */
+/* get started */
+/* video */
+/* requirements */
+/* timeline */
+/* training */
+/* enroll */
 /*--------------------------------------------------------------
 # Artist search
 --------------------------------------------------------------*/

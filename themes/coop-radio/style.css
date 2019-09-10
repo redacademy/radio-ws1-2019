@@ -906,6 +906,10 @@ a {
         margin: 0 auto;
         text-align: center; } }
 
+.single-artist .artist-img-container {
+  background-color: gray;
+  height: 600px; }
+
 .single-artist .top-text-container {
   position: absolute; }
   @media (min-width: 600px) {
@@ -913,12 +917,11 @@ a {
       margin-left: 800px; } }
 
 .single-artist .artist-hero {
-  position: relative;
-  height: 600px; }
+  position: relative; }
   .single-artist .artist-hero .artist-name {
     text-align: left;
     bottom: 50%; }
-  .single-artist .artist-hero .artist-bio {
+  .single-artist .artist-hero .artist-description {
     max-width: 400px;
     bottom: 1.5rem; }
 
@@ -930,7 +933,7 @@ a {
     text-decoration: underline; } }
 
 @media (min-width: 600px) {
-  .single-artist .journey-text {
+  .single-artist .my-journey-text {
     max-width: 900px; } }
 
 .single-artist .featured-video {
@@ -962,10 +965,6 @@ a {
   .single-artist .full-description-container .description .full-name {
     font-size: 48px;
     text-transform: uppercase; } }
-
-.single-artist .artist-img-container {
-  background-color: gray;
-  height: 600px; }
 
 .single-artist .additional-artist-img {
   margin: 4.5rem auto; }

@@ -18,28 +18,28 @@
       <div class="text-container top-text-container">
         <h2 class="artist-name">
           <?= CFS()->get('artist_name'); ?>
-        <h2>
+        </h2>
 
-        <div class="artist-bio">
+        <div class="artist-description">
           <?= CFS()->get('bio_text'); ?>
         </div>
 
       </div><!-- text-container top-text-container-->
     </header>
-  </div><!-- img containers -->
+  </div><!-- artist-img-container -->
 
-  <section class="text-container journey-text">
+  <section class="text-container my-journey-text">
     <h3 class="intro-title">
       <?= CFS()->get('intro_title'); ?>
     </h3>
 
     <?= CFS()->get('intro_text'); ?>
-  </section>
+  </section><!-- text container my-journey-text -->
 
   <section class="featured-video">
     <!-- music video -->
     <?= CFS()->get('youtube_url'); ?>
-  </section>
+  </section><!-- featured-video -->
 
   <article class="full-description-container">
     <div class="description">
@@ -57,13 +57,15 @@
         </h3>
 
         <?= CFS()->get('additional_info_text'); ?>
-      </section>
-    </div><!-- description-->
+      </section><!-- text-container -->
+
+    </div><!-- description -->
 
     <section class="additional-artist-img artist-img-container">
       <!-- additional image? -->
     </section>
-  </article>
+
+  </article><!-- full-description-container -->
 
   <footer>
     <div class="text-container">

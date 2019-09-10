@@ -932,28 +932,75 @@ a {
 .single-artist .text-container {
   max-width: 430px;
   margin: 3rem auto; }
+  @media (min-width: 600px) {
+    .single-artist .text-container {
+      max-width: auto; }
+      .single-artist .text-container p {
+        margin: 0 auto;
+        text-align: center; } }
 
-.single-artist .artist-image-container {
+.single-artist .artist-img-container {
   background-color: gray;
   height: 600px; }
 
+.single-artist .top-text-container {
+  position: absolute; }
+  @media (min-width: 600px) {
+    .single-artist .top-text-container {
+      margin-left: 800px; } }
+
 .single-artist .artist-hero {
-  position: relative;
-  height: 600px; }
+  position: relative; }
   .single-artist .artist-hero .artist-name {
-    position: absolute;
-    bottom: 30%;
-    z-index: 99; }
-  .single-artist .artist-hero .artist-bio {
+    text-align: left;
+    bottom: 50%; }
+  .single-artist .artist-hero .artist-description {
     max-width: 400px;
-    position: absolute;
-    bottom: 1.5rem;
-    z-index: 99; }
+    bottom: 1.5rem; }
+
+@media (min-width: 600px) {
+  .single-artist .intro-title,
+  .single-artist .artist-name {
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline; } }
+
+@media (min-width: 600px) {
+  .single-artist .my-journey-text {
+    max-width: 900px; } }
 
 .single-artist .featured-video {
   background-color: gray;
   height: 450px;
   margin: 0 auto; }
+  @media (min-width: 600px) {
+    .single-artist .featured-video {
+      width: 800px;
+      border-radius: 15px;
+      overflow: hidden; } }
+
+@media (min-width: 600px) {
+  .single-artist .full-description-container {
+    position: relative; } }
+
+@media (min-width: 600px) {
+  .single-artist .full-description-container .description {
+    display: inline-block;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    max-width: 500px; } }
+
+@media (min-width: 600px) {
+  .single-artist .full-description-container .description .full-name {
+    font-size: 48px;
+    text-transform: uppercase; } }
+
+.single-artist .additional-artist-img {
+  margin: 4.5rem auto; }
 
 .single-artist footer p {
   text-transform: capitalize;

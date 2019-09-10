@@ -461,27 +461,27 @@ input[type='submit'] {
   background-color: #8b1f7e;
   color: #fff; }
   .btn-primary:focus {
-    border-color: #99488F;
-    background-color: #99488F; }
+    border-color: #99488f;
+    background-color: #99488f; }
   .btn-primary:hover {
-    border-color: #7E3575;
-    background-color: #7E3575; }
+    border-color: #7e3575;
+    background-color: #7e3575; }
   .btn-primary:disabled {
-    border-color: #8B8B8B;
-    background-color: #8B8B8B; }
+    border-color: #8b8b8b;
+    background-color: #8b8b8b; }
 
 .btn-secondary {
   background-color: #fff;
   color: #8b1f7e; }
   .btn-secondary:focus {
-    border-color: #99488F;
-    color: #99488F; }
+    border-color: #99488f;
+    color: #99488f; }
   .btn-secondary:hover {
-    border-color: #7E3575;
-    color: #7E3575; }
+    border-color: #7e3575;
+    color: #7e3575; }
   .btn-secondary:disabled {
-    border-color: #8B8B8B;
-    color: #8B8B8B; }
+    border-color: #8b8b8b;
+    color: #8b8b8b; }
 
 /*** Fields ***/
 input[type='text'],
@@ -1009,6 +1009,10 @@ a {
   top: 80vh;
   background-color: #fff;
   text-align: center; }
+
+.page-id-14 textarea {
+  width: 420px;
+  height: 150px; }
 
 .btn {
   height: 44px;

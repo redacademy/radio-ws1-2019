@@ -26,15 +26,15 @@
     <h2><?= CFS()->get( 'actions_title' ); ?></h2>
     <p><?= CFS()->get( 'actions_text' ); ?></p>
 
+    <a href="<?php echo esc_url(home_url('/donate')); ?>">
+      <img class="logo-link-involved" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-06.svg'; ?>" alt="">
+      <p>Donations</p></a>      
     <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img class="logo-link-involved" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-06.svg'; ?>" alt="">
-            <p>Donations</p></a>      
-          <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img class="logo-link-involved" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-07.svg'; ?>" alt="">
-          <p>Become a Volunteer Programmer</p></a>
-          <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img class="logo-link-involved3" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-05.svg'; ?>" alt="">
-          <p>Start a new show on Co-Op Radio</p></a>
+      <img class="logo-link-involved" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-07.svg'; ?>" alt="">
+    <p>Become a Volunteer Programmer</p></a>
+    <a href="<?php echo esc_url(home_url('/')); ?>">
+      <img class="logo-link-involved3" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-05.svg'; ?>" alt="">
+    <p>Start a new show on Co-Op Radio</p></a>
   </section>
 
   <?php

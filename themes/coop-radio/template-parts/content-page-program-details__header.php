@@ -24,4 +24,17 @@
   <p>
     <?= CFS()->get( 'featured_content_subtitle' ); ?>
   </p>
+
+  <div class="program-details__actions">
+    <button
+      class="btn-medium btn-primary program-details__action"
+      type="button"
+    >
+      Sign up
+    </button>
+
+    <a href="/">
+      Watch the film
+    </a>
+  </div>
 </header>

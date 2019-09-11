@@ -928,6 +928,11 @@ a {
 # Program details 
 --------------------------------------------------------------*/
 /* header */
+.program-details__header {
+  height: 100vh;
+  background-size: cover;
+  background-position: top center; }
+
 /* overview */
 /* get started */
 /* video */

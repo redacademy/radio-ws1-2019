@@ -7,7 +7,12 @@
 
 ?>
 
-<header>
+<header
+  class="program-details__header"
+  style="background-image: url(
+    <?= wp_get_attachment_url( get_post_thumbnail_id( $post->ID )); ?>
+  );"
+>
   <h1>
     <?= CFS()->get( 'program_title' ); ?>
   </h1>

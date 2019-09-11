@@ -110,7 +110,7 @@
 
 jQuery(document).ready(function($) {
   const $nav = $('#site-navigation');
-  const $content = $('.content-front-page');
+  const $content = $('main');
   const $button = $('.menu-toggle');
 
   $button.on('click', function() {

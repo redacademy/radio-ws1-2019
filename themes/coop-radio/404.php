@@ -13,8 +13,8 @@ get_header(); ?>
     <div class='front-container'>
       <img src='<?php echo get_stylesheet_directory_uri().'/images/404.PNG'; ?>' alt="404 image">
       <div>
-        <p>Oops!</p>
-        <p>Page not found</p>
+        <p>Oops! Page</p>
+        <p>not found</p>
         <p><a href="<?php echo esc_url(home_url('/')); ?>">Back to Home</a></p>
       </div>
     </div>

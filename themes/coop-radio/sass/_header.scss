@@ -2,141 +2,177 @@
 # Header
 --------------------------------------------------------------*/
 
-// Style navigation bar as a whole //
 .banner {
-    background-color: #000000;
-}
-.header-container {
-    display: flex;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
+  background-color: transparent;
+  color: $color__text-screen;
 
-    // Nav-menu button for mobile (hamburger) //
-
-    .menu-toggle {
-        background-image: url('../../images/menu-bar.png');
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        border: none;
-        height: $base__space-unit * 1.25;
-        width: $base__space-unit * 1.25;
-        position: absolute;
-        top: 10%;
-        right: 5%;
-    }
-
-    // Company logo for tablet/desktop //
-    .logo-container {
-        display: none;
-        @include tablet {
-            display: block;
-            .logo-link {
-                img{
-                    height: $base__space-unit * 3.25;
-                    width: auto;
-                }
-            }
-        }
-    }
+  @include tablet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
 }
 
-// Main navigation to all pages //
+.banner--dark {
+  background-color: #000;
+
+  @include tablet {
+    position: initial;
+  }
+}
+
+.banner--desktop-transparent {
+  @include tablet {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.banner--desktop-light {
+  @include tablet {
+    background-color: $color__background-body;
+
+    a {
+      color: #000 !important;
+    }
+  }
+}
+
+.banner__container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+// 🍔
+.menu-toggle {
+  background-image: url('../../images/menu-bar.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  height: $base__space-unit * 1.25;
+  width: $base__space-unit * 1.25;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+// Company logo for tablet/desktop //
+.banner__logo-container {
+  display: none;
+
+  @include tablet {
+    display: block;
+
+    .banner__logo-link {
+      img{
+        height: $base__space-unit * 3.25;
+        width: auto;
+      }
+    }
+  }
+}
 
 .main-navigation {
-    @include tablet {
+  @include tablet {
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+
+    .menu-header-navigation-container {
+      width: 100%;
+
+      ul {
         display: flex;
-        margin: 0 auto;
-        width: 70%;
-        .menu-header-navigation-container {
-            width: 100%;
-            ul {
-                display: flex;
-                justify-content: space-evenly;
-                padding: 0;
-                li {
-                    float: left;
-                    padding-right: 1.5rem;
-                    a{
-                        color: #ffffff;
-                    }
-                }
-                li:last-child {
-                    display: none;
-                }
-            }
+        justify-content: space-evenly;
+        padding: 0;
+
+        li {
+          float: left;
+          padding-right: 1.5rem;
+
+          a {
+            color: #ffffff;
+          }
         }
+        li:last-child {
+          display: none;
+        }
+      }
     }
+  }
 }
 
 
-// Search button for the whole site //
-
 .header-search {
-    display: none;
-    @include desktop {
-        display: block;
-        line-height: 1;
-        margin: 0 auto;
+  display: none;
 
-        // Search button //
+  @include desktop {
+    display: block;
+    line-height: 1;
+    margin: 0 auto;
 
-        .search-toggle{
-            img{
-                height: 1.25rem;
-                width: auto;
-            }
-            background-color: transparent;
-            border: none;
-            float: left;
-        }
-
-        label{
-            width: 0;
-            margin: 0;
-            transition: width 1s;
-            float: left;
-            input{
-                color: #ffffff;
-                width: 0;
-                transition: width 1s;
-                background: transparent;
-                border: 0;
-                padding: 0;
-                text-transform: uppercase;
-                margin-left: 0.75rem;
-                font-weight: normal;
-                font-size: 1rem;
-                padding-top: 0.25rem;
-                &:focus {
-                    outline: none;
-                }
-            }
-        }
-
-        // fieldset //
-
-        fieldset {
-            border: 0;
-            padding: 0;
-            margin: 0;
-        }
-
+    .search-toggle {
+      img {
+        height: 1.25rem;
+        width: auto;
+      }
+      background-color: transparent;
+      border: none;
+      float: left;
     }
+
+    label {
+      width: 0;
+      margin: 0;
+      transition: width 1s;
+      float: left;
+
+      input {
+        color: #ffffff;
+        width: 0;
+        transition: width 1s;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        text-transform: uppercase;
+        margin-left: 0.75rem;
+        font-weight: normal;
+        font-size: 1rem;
+        padding-top: 0.25rem;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
 }
 
 .search-icon {
+  display: none;
+
+  @include tablet {
+    display: block;
+    line-height: 1;
+    margin: 0 auto;
+    img {
+      height: 1.25rem;
+      width: auto;
+    }
+  }
+
+  @include desktop {
     display: none;
-    @include tablet {
-        display: block;
-        line-height: 1;
-        margin: 0 auto;
-        img {
-            height: 1.25rem;
-            width: auto;
-        }
-    }
-    @include desktop {
-        display: none;
-    }
+  }
 }

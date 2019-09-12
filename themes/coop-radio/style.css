@@ -938,9 +938,8 @@ a {
 /*--------------------------------------------------------------
 # Artist search
 --------------------------------------------------------------*/
-.artist-search .artist {
-  background-color: grey;
-  height: 500px; }
+.artist-search-page .artist {
+  border: 1px solid #000; }
 
 /*--------------------------------------------------------------
 # Single artist

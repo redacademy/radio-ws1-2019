@@ -759,9 +759,36 @@ a {
 # Header
 --------------------------------------------------------------*/
 .banner {
-  background-color: #000000; }
+  background-color: transparent;
+  color: #2c2c2c; }
+  @media (min-width: 600px) {
+    .banner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0; } }
 
-.header-container {
+.banner--dark {
+  background-color: #000; }
+  @media (min-width: 600px) {
+    .banner--dark {
+      position: initial; } }
+
+@media (min-width: 600px) {
+  .banner--desktop-transparent {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0; } }
+
+@media (min-width: 600px) {
+  .banner--desktop-light {
+    background-color: #fff; }
+    .banner--desktop-light a {
+      color: #000 !important; } }
+
+.banner__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -770,24 +797,26 @@ a {
           align-items: center;
   width: 90%;
   margin: 0 auto; }
-  .header-container .menu-toggle {
-    background-image: url("../../images/menu-bar.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    border: none;
-    height: 1.875rem;
-    width: 1.875rem;
-    position: absolute;
-    top: 10%;
-    right: 5%; }
-  .header-container .logo-container {
-    display: none; }
-    @media (min-width: 600px) {
-      .header-container .logo-container {
-        display: block; }
-        .header-container .logo-container .logo-link img {
-          height: 4.875rem;
-          width: auto; } }
+
+.menu-toggle {
+  background-image: url("../../images/menu-bar.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  height: 1.875rem;
+  width: 1.875rem;
+  position: absolute;
+  top: 10%;
+  right: 5%; }
+
+.banner__logo-container {
+  display: none; }
+  @media (min-width: 600px) {
+    .banner__logo-container {
+      display: block; }
+      .banner__logo-container .banner__logo-link img {
+        height: 4.875rem;
+        width: auto; } }
 
 @media (min-width: 600px) {
   .main-navigation {

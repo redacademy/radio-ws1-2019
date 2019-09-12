@@ -6,7 +6,7 @@
   background-color: transparent;
   color: $color__text-screen;
 
-  @include tablet {
+  @include desktop {
     position: absolute;
     top: 0;
     right: 0;
@@ -17,13 +17,13 @@
 .banner--dark {
   background-color: #000;
 
-  @include tablet {
+  @include desktop {
     position: initial;
   }
 }
 
 .banner--desktop-transparent {
-  @include tablet {
+  @include desktop {
     background-color: transparent;
     position: absolute;
     top: 0;
@@ -33,7 +33,7 @@
 }
 
 .banner--desktop-light {
-  @include tablet {
+  @include desktop {
     background-color: $color__background-body;
 
     a {
@@ -66,7 +66,7 @@
 .banner__logo-container {
   display: none;
 
-  @include tablet {
+  @include desktop {
     display: block;
 
     .banner__logo-link {
@@ -79,7 +79,7 @@
 }
 
 .main-navigation {
-  @include tablet {
+  @include desktop {
     display: flex;
     margin: 0 auto;
     width: 70%;
@@ -98,6 +98,7 @@
 
           a {
             color: #ffffff;
+            white-space: nowrap;
           }
         }
         li:last-child {
@@ -162,7 +163,7 @@
 .search-icon {
   display: none;
 
-  @include tablet {
+  @include desktop {
     display: block;
     line-height: 1;
     margin: 0 auto;

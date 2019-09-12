@@ -605,7 +605,7 @@ a {
   text-align: center;
   background-color: #fff; }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 1080px) {
   .main-navigation .menu-toggle,
   .main-navigation.toggled .menu-toggle {
     display: none;
@@ -761,7 +761,7 @@ a {
 .banner {
   background-color: transparent;
   color: #2c2c2c; }
-  @media (min-width: 600px) {
+  @media (min-width: 1080px) {
     .banner {
       position: absolute;
       top: 0;
@@ -770,11 +770,11 @@ a {
 
 .banner--dark {
   background-color: #000; }
-  @media (min-width: 600px) {
+  @media (min-width: 1080px) {
     .banner--dark {
       position: initial; } }
 
-@media (min-width: 600px) {
+@media (min-width: 1080px) {
   .banner--desktop-transparent {
     background-color: transparent;
     position: absolute;
@@ -782,7 +782,7 @@ a {
     right: 0;
     left: 0; } }
 
-@media (min-width: 600px) {
+@media (min-width: 1080px) {
   .banner--desktop-light {
     background-color: #fff; }
     .banner--desktop-light a {
@@ -811,14 +811,14 @@ a {
 
 .banner__logo-container {
   display: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 1080px) {
     .banner__logo-container {
       display: block; }
       .banner__logo-container .banner__logo-link img {
         height: 4.875rem;
         width: auto; } }
 
-@media (min-width: 600px) {
+@media (min-width: 1080px) {
   .main-navigation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -839,7 +839,8 @@ a {
           float: left;
           padding-right: 1.5rem; }
           .main-navigation .menu-header-navigation-container ul li a {
-            color: #ffffff; }
+            color: #ffffff;
+            white-space: nowrap; }
         .main-navigation .menu-header-navigation-container ul li:last-child {
           display: none; } }
 
@@ -885,7 +886,7 @@ a {
 
 .search-icon {
   display: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 1080px) {
     .search-icon {
       display: block;
       line-height: 1;
@@ -928,7 +929,7 @@ a {
     .content-front-page .content-container p {
       max-width: 60%;
       text-align: center; }
-  @media (min-width: 600px) {
+  @media (min-width: 1080px) {
     .content-front-page {
       position: relative; }
       .content-front-page .content-container {

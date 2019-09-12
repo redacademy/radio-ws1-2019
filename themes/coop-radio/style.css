@@ -929,7 +929,7 @@ a {
     .content-front-page .content-container p {
       max-width: 60%;
       text-align: center; }
-  @media (min-width: 600px) {
+  @media (min-width: 1080px) {
     .content-front-page {
       position: relative; }
       .content-front-page .content-container {

@@ -4,8 +4,9 @@ $(document).ready(function(){
     $('.artist-search').slick({
         centerMode: true,
         centerPadding: '100px',
-        slidesToShow: 1,
+        slidesToShow: 3,
         infinite: true,
+        arrows: true,
         responsive: [
           {
             breakpoint: 768,

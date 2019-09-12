@@ -9,8 +9,6 @@ get_header(); ?>
 
   <main>
 
-    <h1>Artists</h1>
-
     <div class="artist-search">
     <?php
       $artists = get_posts( array(

@@ -960,6 +960,13 @@ a {
 /*remove header on mobile*/
 .page-id-14 header {
   display: none; }
+  @media (min-width: 1080px) {
+    .page-id-14 header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .page-id-14 header h2 {
+        display: none; } }
 
 .page-id-14 iframe {
   position: absolute;
@@ -970,16 +977,34 @@ a {
   margin: 0;
   border-width: 0;
   padding: 0; }
+  @media (min-width: 1080px) {
+    .page-id-14 iframe {
+      position: relative;
+      width: 700px;
+      height: 420px;
+      -webkit-transform: translateY(13%);
+              transform: translateY(13%); } }
 
 .page-id-14 form {
   position: relative;
   top: 80vh;
   background-color: #fff;
   text-align: center; }
+  @media (min-width: 1080px) {
+    .page-id-14 form {
+      position: initial; } }
 
 .page-id-14 textarea {
   width: 420px;
   height: 150px; }
+
+@media (min-width: 1080px) {
+  .grazi {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; } }
 
 .btn {
   height: 44px;

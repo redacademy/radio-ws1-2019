@@ -114,7 +114,7 @@ a {
   }
 }
 
-@media screen and (min-width: 600px) {
+@include desktop {
   .main-navigation {
     & .menu-toggle,
     &.toggled .menu-toggle {

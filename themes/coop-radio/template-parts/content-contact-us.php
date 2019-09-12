@@ -17,7 +17,12 @@
 
   </header>
 
-  <div>
-    <?php the_excerpt(); ?>
+  <div class="grazi">
+    <?php the_content(); ?>
   </div>
+
+  
 </article>
+
+
+

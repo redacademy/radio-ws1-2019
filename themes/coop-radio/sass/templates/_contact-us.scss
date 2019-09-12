@@ -6,6 +6,13 @@
 .page-id-14 {
   header {
     display: none;
+
+    @include desktop {
+      display: flex;
+      h2 {
+        display: none;
+      }
+    }
   }
   iframe {
     position: absolute;
@@ -16,15 +23,33 @@
     margin: 0;
     border-width: 0;
     padding: 0;
+
+    @include desktop {
+      position: relative;
+      width: 700px;
+      height: 420px;
+      transform: translateY(13%);
+    }
   }
   form {
     position: relative;
     top: 80vh;
     background-color: #fff;
     text-align: center;
+
+    @include desktop {
+      position: initial;
+    }
   }
+
   textarea {
     width: 420px;
     height: 150px;
+  }
+}
+.grazi {
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
   }
 }

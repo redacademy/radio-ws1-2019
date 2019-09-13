@@ -6,6 +6,7 @@
 
 a {
   color: $color__link;
+  text-decoration:none;
 
   &:visited {
     color: $color__link-visited;
@@ -75,9 +76,6 @@ a {
     &:hover > a,
     &.focus > a {
     }
-  }
-  a {
-    text-decoration: none;
   }
 
   .current_page_item > a,

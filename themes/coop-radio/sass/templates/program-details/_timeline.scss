@@ -8,6 +8,10 @@ $timeline__marker-width: $base__space-unit * 2;
   list-style: none;
   padding: 0;
   margin: 0 $base__space-unit/2 0 0;
+
+  @include desktop {
+    width: 50%;
+  }
 }
 
 .timeline__list-item {
@@ -26,6 +30,16 @@ $timeline__marker-width: $base__space-unit * 2;
     border: $timeline__width/1.5 solid $color__background-screen;
     border-radius: 50%;
     background-color: $color__brand-purple;
+  }
+
+  @include desktop {
+    &:nth-child(even) {
+      .timeline__list-item-wrapper {
+        position: relative;
+        left: 100%;
+        margin-left: $timeline__marker-width;
+      }
+    }
   }
 }
 

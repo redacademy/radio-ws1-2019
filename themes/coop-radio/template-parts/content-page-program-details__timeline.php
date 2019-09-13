@@ -19,11 +19,13 @@
       <ul class="timeline__list">
         <?php $i = 0; foreach ( $events as $event ) { $i++; ?>
           <li class="timeline__list-item">
-            <p class="timeline__list-item-phase">Phase <?= $i; ?></p>
-            <h3 class="timeline__list-item-title"><?= $event['title']; ?></h3>
-            <p class="timeline__list-item-description">
-              <?= $event['description']; ?>
-            </p>
+            <div class="timeline__list-item-wrapper">
+              <p class="timeline__list-item-phase">Phase <?= $i; ?></p>
+              <h3 class="timeline__list-item-title"><?= $event['title']; ?></h3>
+              <p class="timeline__list-item-content">
+                <?= $event['description']; ?>
+              </p>
+            </div>
           </li>
         <?php } ?>
       </ul>

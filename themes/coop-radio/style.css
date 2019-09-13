@@ -1022,6 +1022,9 @@ a {
   list-style: none;
   padding: 0;
   margin: 0 0.75rem 0 0; }
+  @media (min-width: 1080px) {
+    .timeline__list {
+      width: 50%; } }
 
 .timeline__list-item {
   position: relative;
@@ -1039,6 +1042,11 @@ a {
     border: 0.5rem solid #f1f1f1;
     border-radius: 50%;
     background-color: #8b1f7e; }
+  @media (min-width: 1080px) {
+    .timeline__list-item:nth-child(even) .timeline__list-item-wrapper {
+      position: relative;
+      left: 100%;
+      margin-left: 3rem; } }
 
 .timeline__list-item-phase {
   text-transform: uppercase;

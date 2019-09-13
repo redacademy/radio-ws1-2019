@@ -1284,15 +1284,6 @@ a {
 .page-id-26 article {
   text-align: center; }
 
-.page-id-26 .main-navigation {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: 5%;
-  margin-top: 5%; }
-  .page-id-26 .main-navigation .menu-toggle {
-    position: unset; }
-
 .page-id-26 .logo-link-involved {
   border: none;
   border-radius: 50%;
@@ -1315,9 +1306,6 @@ a {
   .page-id-26 .logo-link-involved3:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#b079aa), to(#d8d8d8));
     background-image: linear-gradient(#b079aa, #d8d8d8); }
-
-.page-id-26 a {
-  text-decoration: none; }
 
 .page-id-26 .btnfaq {
   width: 300px;

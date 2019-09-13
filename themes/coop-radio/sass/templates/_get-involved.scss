@@ -2,15 +2,6 @@
   article {
     text-align: center;
   }
-  .main-navigation {
-    justify-content: flex-end;
-    margin-right: 5%;
-    margin-top: 5%;
-
-    .menu-toggle {
-      position: unset;
-    }
-  }
   .logo-link-involved {
     border: none;
     border-radius: 50%;
@@ -29,9 +20,6 @@
     &:hover {
       background-image: linear-gradient(#b079aa, #d8d8d8);
     }
-  }
-  a {
-    text-decoration: none;
   }
   .btnfaq {
     width: 300px;

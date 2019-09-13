@@ -946,7 +946,7 @@ a {
   text-align: center; }
 
 .artist-search-page .artist-search {
-  margin: 1.5rem auto;
+  margin: 5rem auto;
   max-width: 1000px; }
 
 .artist-search-page .artist {
@@ -955,7 +955,6 @@ a {
 .artist-search-page .slick-slide img {
   height: 300px;
   width: 200px;
-  background-position: center;
   border-radius: 10px;
   -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3); }

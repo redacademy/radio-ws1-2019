@@ -4,7 +4,10 @@
 .artist-search-page {
   h2 {
     text-align:center;
-    text-decoration:none;
+    text-transform: uppercase;
+  }
+  p {
+    text-align:center;
   }
   .artist-search {
     margin:1.5rem auto;
@@ -12,6 +15,13 @@
   }
   .artist {
     border:1px solid #000;
+  }
+  .slick-slide img {
+    height:300px;
+    width: 200px;
+    background-position:center;
+    border-radius:10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3)
   }
 
 }

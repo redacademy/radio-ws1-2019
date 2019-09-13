@@ -940,7 +940,10 @@ a {
 --------------------------------------------------------------*/
 .artist-search-page h2 {
   text-align: center;
-  text-decoration: none; }
+  text-transform: uppercase; }
+
+.artist-search-page p {
+  text-align: center; }
 
 .artist-search-page .artist-search {
   margin: 1.5rem auto;
@@ -948,6 +951,14 @@ a {
 
 .artist-search-page .artist {
   border: 1px solid #000; }
+
+.artist-search-page .slick-slide img {
+  height: 300px;
+  width: 200px;
+  background-position: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3); }
 
 /*--------------------------------------------------------------
 # Single artist

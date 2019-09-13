@@ -1017,6 +1017,36 @@ a {
 /* video */
 /* requirements */
 /* timeline */
+.timeline__list {
+  border-right: 0.75rem solid #8b1f7e;
+  list-style: none;
+  padding: 0;
+  margin: 0 0.75rem 0 0; }
+
+.timeline__list-item {
+  position: relative;
+  margin-bottom: 3rem; }
+  .timeline__list-item::after {
+    content: '';
+    -webkit-box-shadow: 0 0.5rem 0.25rem -0.25rem #2c2c2c;
+            box-shadow: 0 0.5rem 0.25rem -0.25rem #2c2c2c;
+    position: absolute;
+    right: -1.875rem;
+    top: -5px;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border: 0.5rem solid #f1f1f1;
+    border-radius: 50%;
+    background-color: #8b1f7e; }
+
+.timeline__list-item-phase {
+  text-transform: uppercase;
+  margin: 0; }
+
+.timeline__list-item-title {
+  margin: 0; }
+
 /* training */
 /* enroll */
 /*--------------------------------------------------------------

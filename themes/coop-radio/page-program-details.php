@@ -40,7 +40,7 @@ get_header(); ?>
 
           get_template_part(
             'template-parts/content',
-            'page-program-detail__timeline'
+            'page-program-details__timeline'
           );
 
           get_template_part(

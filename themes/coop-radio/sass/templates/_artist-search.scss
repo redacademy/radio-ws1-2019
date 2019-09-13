@@ -1,3 +1,25 @@
 /*--------------------------------------------------------------
 # Artist search
 --------------------------------------------------------------*/
+.artist-search-page {
+  h2 {
+    text-align:center;
+    text-transform: uppercase;
+  }
+  p {
+    text-align:center;
+  }
+  .artist-search {
+    margin:5rem auto;
+    max-width:1000px;
+  }
+  .artist {
+    border:1px solid #000;
+  }
+  .slick-slide img {
+    height:300px;
+    width: 200px;
+    border-radius:10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3)
+  }
+}

@@ -4,18 +4,39 @@
 
 .banner {
   background-color: transparent;
-  color: $color__text-screen;
+
+  &, a {
+    color: $color__text-screen !important;
+  }
 
   @include desktop {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
+
+    &, a {
+      color: $color__background-body !important;
+    }
+  }
+}
+
+.banner--light {
+  background-color: $color__background-body;
+  height: 3 * $base__space-unit;
+
+  &, a {
+    color: $color__text-screen !important;
   }
 }
 
 .banner--dark {
-  background-color: #000;
+  background-color: $color__text-screen;
+  height: 3 * $base__space-unit;
+
+  &, a {
+    color: $color__background-body !important;
+  }
 
   @include desktop {
     position: initial;
@@ -29,15 +50,20 @@
     top: 0;
     right: 0;
     left: 0;
+
+    &, a {
+      color: $color__background-body !important;
+    }
   }
 }
 
 .banner--desktop-light {
   @include desktop {
+    position: initial;
     background-color: $color__background-body;
 
-    a {
-      color: #000 !important;
+    &, a {
+      color: $color__text-screen !important;
     }
   }
 }
@@ -58,8 +84,8 @@
   height: $base__space-unit * 1.25;
   width: $base__space-unit * 1.25;
   position: absolute;
-  top: 10%;
-  right: 5%;
+  top: $base__space-unit;
+  right: $base__space-unit;
 }
 
 // Company logo for tablet/desktop //
@@ -97,7 +123,6 @@
           padding-right: 1.5rem;
 
           a {
-            color: #ffffff;
             white-space: nowrap;
           }
         }

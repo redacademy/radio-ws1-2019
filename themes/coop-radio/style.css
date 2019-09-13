@@ -577,10 +577,7 @@ a {
 
 .main-navigation.toggled .menu-toggle {
   display: inline-block;
-  z-index: 999;
-  position: absolute;
-  top: 10%;
-  right: 5%; }
+  z-index: 999; }
 
 .main-navigation.toggled ul {
   position: absolute;

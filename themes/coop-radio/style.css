@@ -822,7 +822,8 @@ a {
   width: 1.875rem;
   position: absolute;
   top: 1.5rem;
-  right: 1.5rem; }
+  right: 1.5rem;
+  z-index: 9999; }
 
 .banner__logo-container {
   display: none; }
@@ -1161,17 +1162,6 @@ a {
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
-/*remove header on mobile*/
-.page-id-14 header {
-  display: none; }
-  @media (min-width: 1080px) {
-    .page-id-14 header {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .page-id-14 header h2 {
-        display: none; } }
-
 .page-id-14 iframe {
   position: absolute;
   top: 0;

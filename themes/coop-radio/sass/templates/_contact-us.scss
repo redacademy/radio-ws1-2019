@@ -2,18 +2,7 @@
 # Contact Page
 --------------------------------------------------------------*/
 
-/*remove header on mobile*/
 .page-id-14 {
-  header {
-    display: none;
-
-    @include desktop {
-      display: flex;
-      h2 {
-        display: none;
-      }
-    }
-  }
   iframe {
     position: absolute;
     top: 0;

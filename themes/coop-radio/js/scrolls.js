@@ -1,29 +1,20 @@
 jQuery(function() {
 $(document).ready(function(){
-    console.log('slick');
     $('.artist-search').slick({
         centerMode: true,
         centerPadding: '100px',
         slidesToShow: 3,
         infinite: true,
         arrows: true,
+        dots:true,
         responsive: [
           {
-            breakpoint: 768,
+            breakpoint: 400,
             settings: {
-              arrows: false,
+              arrows: true,
               centerMode: true,
               centerPadding: '40px',
               slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
             }
           }
         ]

@@ -655,7 +655,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  padding: 1rem; }
+  padding: 0 1rem; }
 
 .audio-player__progress-container {
   position: relative;
@@ -909,6 +909,13 @@ a {
       display: none; } }
 
 /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  position: fixed;
+  bottom: 0; }
+
+/*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
 .home {
@@ -1112,6 +1119,9 @@ a {
           justify-content: space-between;
   list-style: none; }
 
+/*--------------------------------------------------------------
+# 404 Page
+--------------------------------------------------------------*/
 .not-found {
   height: 100vh;
   background-color: #dddddd; }
@@ -1306,3 +1316,46 @@ a {
   margin: 0 auto;
   -webkit-padding-start: 0;
           padding-inline-start: 0; }
+
+/*--------------------------------------------------------------
+# Search-result Page
+--------------------------------------------------------------*/
+.search-results main {
+  max-height: 85vh;
+  overflow: auto;
+  background-color: black; }
+  @media (min-width: 600px) {
+    .search-results main {
+      max-height: 74vh; } }
+  .search-results main .search-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    color: white; }
+    .search-results main .search-container a {
+      color: inherit; }
+    .search-results main .search-container article {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 1rem auto;
+      width: 80%;
+      border: 1px solid #ffffff; }
+      .search-results main .search-container article p {
+        text-align: center; }

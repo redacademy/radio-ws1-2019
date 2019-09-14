@@ -1,6 +1,7 @@
 <?php
 /**
  * Artist search template.
+ * Template Name: artists
  *
  * @package coop-radio
  */

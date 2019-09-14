@@ -17,7 +17,7 @@
 
   </header>
 
-  <div class="grazi">
+  <div class="container-contact">
     <?php the_content(); ?>
   </div>
 

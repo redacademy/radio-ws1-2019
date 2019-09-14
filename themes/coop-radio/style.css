@@ -1257,7 +1257,7 @@ footer {
   height: 150px; }
 
 @media (min-width: 1080px) {
-  .grazi {
+  .container-contact {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1338,6 +1338,61 @@ footer {
 .page-id-26 article {
   text-align: center; }
 
+.page-id-26 .header-container {
+  /* Style the button that is used to open and close the collapsible content */
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  /* Style the collapsible content. Note: hidden by default */ }
+  @media (min-width: 1080px) {
+    .page-id-26 .header-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%; }
+      .page-id-26 .header-container .container2 {
+        width: 50%;
+        height: 50%; }
+      .page-id-26 .header-container .container-1 {
+        width: 50%; } }
+  .page-id-26 .header-container .collapsible {
+    background-color: #fff;
+    color: #8b1f7e;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px; }
+  .page-id-26 .header-container .active,
+  .page-id-26 .header-container .collapsible:hover {
+    background-color: #ccc; }
+  .page-id-26 .header-container .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #b079aa;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 200px; }
+
+@media (min-width: 1080px) {
+  .page-id-26 .participate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; } }
+
+.page-id-26 .main-navigation {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 5%;
+  margin-top: 5%; }
+  .page-id-26 .main-navigation .menu-toggle {
+    position: unset; }
+
 .page-id-26 .logo-link-involved {
   border: none;
   border-radius: 50%;
@@ -1361,12 +1416,39 @@ footer {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#b079aa), to(#d8d8d8));
     background-image: linear-gradient(#b079aa, #d8d8d8); }
 
+@media (min-width: 1080px) {
+  .page-id-26 .faq-container {
+    text-align: start; } }
+
 .page-id-26 .btnfaq {
   width: 300px;
   margin-bottom: 0.5rem;
   background-color: #fff;
   border: none;
   border-bottom: solid, 4px, #e9d4e6; }
+  @media (min-width: 1080px) {
+    .page-id-26 .btnfaq {
+      width: 90%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      text-align: center; } }
+
+.page-id-26 .seta {
+  display: none; }
+  @media (min-width: 1080px) {
+    .page-id-26 .seta {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 90px; } }
+
+@media (min-width: 1080px) {
+  .page-id-26 .tooltip {
+    text-align: flex-end; } }
 
 .page-id-26 li {
   list-style-type: none; }

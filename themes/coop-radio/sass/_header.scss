@@ -35,7 +35,7 @@
   height: 3 * $base__space-unit;
 
   &, a {
-    color: $color__background-body !important;
+    color: $color__background-body;
   }
 
   @include desktop {
@@ -80,6 +80,11 @@
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  .main-navigation.toggled ul {
+    a {
+      color: $color__text-screen;
+    }
+  }
 }
 
 // 🍔

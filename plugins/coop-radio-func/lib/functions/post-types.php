@@ -62,3 +62,61 @@ function artist_post_type() {
 }
 
 add_action( 'init', 'artist_post_type', 0 );
+
+/**
+ * Register track post type
+ */
+function track_post_type() {
+  $labels = array(
+    'name'                  => 'Tracks',
+    'singular_name'         => 'Track',
+    'menu_name'             => 'Tracks',
+    'name_admin_bar'        => 'Track',
+    'archives'              => 'Track Archives',
+    'attributes'            => 'Track Attributes',
+    'parent_item_colon'     => 'Parent Track:',
+    'all_items'             => 'All Tracks',
+    'add_new_item'          => 'Add New Track',
+    'add_new'               => 'Add New',
+    'new_item'              => 'New Track',
+    'edit_item'             => 'Edit Track',
+    'update_item'           => 'Update Track',
+    'view_item'             => 'View Track',
+    'view_items'            => 'View Tracks',
+    'search_items'          => 'Search Track',
+    'not_found'             => 'Not found',
+    'not_found_in_trash'    => 'Not found in Trash',
+    'featured_image'        => 'Featured Image',
+    'set_featured_image'    => 'Set featured image',
+    'remove_featured_image' => 'Remove featured image',
+    'use_featured_image'    => 'Use as featured image',
+    'insert_into_item'      => 'Insert into track',
+    'uploaded_to_this_item' => 'Uploaded to this track',
+    'items_list'            => 'Tracks list',
+    'items_list_navigation' => 'Tracks list navigation',
+    'filter_items_list'     => 'Filter tracks list',
+  );
+  $args = array(
+    'label'                 => 'Track',
+    'description'           => 'Audio tracks',
+    'labels'                => $labels,
+    'supports'              => array( 'title' ),
+    'taxonomies'            => array( 'genre' ),
+    'hierarchical'          => false,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'menu_position'         => 5,
+    'show_in_admin_bar'     => true,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => true,
+    'exclude_from_search'   => false,
+    'publicly_queryable'    => true,
+    'capability_type'       => 'post',
+    'show_in_rest'          => true,
+  );
+  register_post_type( 'track', $args );
+}
+
+add_action( 'init', 'track_post_type', 0 );

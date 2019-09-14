@@ -380,11 +380,11 @@ body {
   /* Fallback for when there is no custom background color defined. */ }
 
 main {
-  max-height: 85vh;
+  max-height: 77vh;
   overflow: auto; }
   @media (min-width: 600px) {
     main {
-      max-height: 77vh; } }
+      max-height: 82vh; } }
 
 blockquote,
 q {

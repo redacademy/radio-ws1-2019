@@ -9,7 +9,7 @@ get_header(); ?>
 
   <main>
 
-    <div class="artist-search">
+    <div class="artist-library">
     <?php
       $artists = get_posts( array(
         'post_type' => 'artist',
@@ -18,12 +18,12 @@ get_header(); ?>
       foreach ( $artists as $post ) : setup_postdata( $post );?>
 
         <div class="artist">
-        <?php get_template_part( 'template-parts/content', 'artist-search' );?>
+        <?php get_template_part( 'template-parts/content', 'artist-library' );?>
         </div>
         
       <?php endforeach; wp_reset_postdata();?>
       
-    </div><!-- artist-search -->
+    </div><!-- artist-library -->
 
   </main>
 

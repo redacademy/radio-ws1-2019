@@ -1067,21 +1067,21 @@ footer {
 /*--------------------------------------------------------------
 # Artist search
 --------------------------------------------------------------*/
-.artist-search-page h2 {
+.artist-library-page h2 {
   text-align: center;
   text-transform: uppercase; }
 
-.artist-search-page p {
+.artist-library-page p {
   text-align: center; }
 
-.artist-search-page .artist-search {
+.artist-library-page .artist-library {
   margin: 5rem auto;
   max-width: 1000px; }
 
-.artist-search-page .artist {
+.artist-library-page .artist {
   border: 1px solid #000; }
 
-.artist-search-page .slick-slide img {
+.artist-library-page .slick-slide img {
   height: 300px;
   width: 200px;
   border-radius: 10px;

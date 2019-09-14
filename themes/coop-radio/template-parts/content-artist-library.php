@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for single artist in artist search.
+ * Template part for single artist in artist library.
  *
  * @package coop-radio
  */

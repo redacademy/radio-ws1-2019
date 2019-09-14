@@ -28,7 +28,7 @@
           ) {
             echo 'banner--dark ';
           } elseif (
-            is_page_template('page-artist-search.php')
+            is_page_template('page-artist-library.php')
               || is_page_template('page-search.php')
           ) {
             echo 'banner--light ';

@@ -16,6 +16,9 @@ function coop_radio_body_classes( $classes ) {
   if ( is_multi_author() ) {
     $classes[] = 'group-blog';
   }
+  if ( is_page('artist-search')) {
+		$classes[] = 'artist-search-page';
+	}
 
   return $classes;
 }

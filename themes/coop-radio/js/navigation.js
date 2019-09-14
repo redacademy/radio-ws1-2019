@@ -106,18 +106,28 @@
       }
     }
   })(container);
-})();
 
-jQuery(document).ready(function($) {
-  const $nav = $('#site-navigation');
-  const $content = $('.content-front-page');
-  const $button = $('.menu-toggle');
+  // close nav on resize to desktop
+  const $nav = jQuery('#site-navigation');
+  const $content = jQuery('main');
+  const $button = jQuery('.menu-toggle');
 
   $button.on('click', function() {
     if ($nav.hasClass('toggled')) {
       $content.css('display', 'none');
+      window.addEventListener('resize', handleResizeNav)
     } else {
       $content.css('display', 'block');
+      window.removeEventListener('resize', handleResizeNav)
     }
   })
-})
+
+  function handleResizeNav() {
+    if (this.innerWidth >= 1080) {
+      $content.css('display', 'block');
+      container.className = container.className.replace(' toggled', '');
+      button.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-expanded', 'false');
+    }
+  }
+})();

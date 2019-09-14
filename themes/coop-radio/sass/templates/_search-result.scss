@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+# Search-result Page
+--------------------------------------------------------------*/
+.search-results {
+    main {
+        max-height: 85vh;
+        overflow: auto;
+        background-color: black;
+
+        @include tablet {
+            max-height: 74vh;
+        }
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            width: 80%;
+            color: white;
+            a {
+                color: inherit;
+            }
+
+            article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 1rem auto;
+                width: 80%;
+                border: 1px solid #ffffff;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

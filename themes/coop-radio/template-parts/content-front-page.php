@@ -17,7 +17,7 @@
     <?= the_content(); ?>
   
     <div>
-      <a href='#program-details'>View</a>
+      <a href='<?php echo esc_url( home_url('/program-details')); ?>'>View</a>
     </div>
   </div>
 

@@ -1,0 +1,35 @@
+/* header */
+
+.program-details__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  color: $color__background-body;
+  height: 100vh;
+  background-size: cover;
+  background-position: top center;
+
+  @include desktop {
+    text-align: unset;
+    padding-right: 20%;
+  }
+}
+
+.program-details__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    color: $color__background-body;
+  }
+
+  @include desktop {
+    * + * {
+      margin-left: 3rem;
+    }
+    display: inline-block;
+    flex-direction: row;
+  }
+}

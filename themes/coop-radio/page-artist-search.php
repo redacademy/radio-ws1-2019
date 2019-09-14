@@ -9,19 +9,21 @@ get_header(); ?>
 
   <main>
 
-    <h1>Artists</h1>
-
+    <div class="artist-search">
     <?php
       $artists = get_posts( array(
         'post_type' => 'artist',
       ) );
 
-      foreach ( $artists as $post ) : setup_postdata( $post );
+      foreach ( $artists as $post ) : setup_postdata( $post );?>
 
-        get_template_part( 'template-parts/content', 'artist-search' );
-
-      endforeach; wp_reset_postdata();
-    ?>
+        <div class="artist">
+        <?php get_template_part( 'template-parts/content', 'artist-search' );?>
+        </div>
+        
+      <?php endforeach; wp_reset_postdata();?>
+      
+    </div><!-- artist-search -->
 
   </main>
 

@@ -9,56 +9,63 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header>
-    <div class="artist-hero artist-image-container">
+  <div class="artist-hero artist-img-container">
+    <header>
       <?php if (has_post_thumbnail()) : ?>
         <?php the_post_thumbnail('large'); ?>
       <?php endif; ?>
 
-      <div class="text-container">
+      <div class="text-container top-text-container">
         <h2 class="artist-name">
           <?= CFS()->get('artist_name'); ?>
-          <h2>
+        </h2>
 
-            <div class="artist-bio">
-              <?= CFS()->get('bio_text'); ?>
-            </div>
-      </div>
-    </div>
-  </header>
+        <div class="artist-description">
+          <?= CFS()->get('bio_text'); ?>
+        </div>
 
-  <section class="text-container">
-    <h3>
+      </div><!-- text-container top-text-container-->
+    </header>
+  </div><!-- artist-img-container -->
+
+  <section class="text-container my-journey-text">
+    <h3 class="intro-title">
       <?= CFS()->get('intro_title'); ?>
     </h3>
 
     <?= CFS()->get('intro_text'); ?>
-  </section>
+  </section><!-- text container my-journey-text -->
 
   <section class="featured-video">
     <!-- music video -->
     <?= CFS()->get('youtube_url'); ?>
-  </section>
+  </section><!-- featured-video -->
 
-  <section class="text-container">
-    <h3>
-      <?= CFS()->get('full_name'); ?>
-    </h3>
+  <article class="full-description-container">
+    <div class="description">
+      <section class="text-container">
+        <h3 class="full-name">
+          <?= CFS()->get('full_name'); ?>
+        </h3>
 
-    <?= CFS()->get('bio_text_secondary'); ?>
-  </section>
+        <?= CFS()->get('bio_text_secondary'); ?>
+      </section>
 
-  <section class="text-container">
-    <h3>
-      <?= CFS()->get('additional_info_title'); ?>
-    </h3>
+      <section class="text-container">
+        <h3>
+          <?= CFS()->get('additional_info_title'); ?>
+        </h3>
 
-    <?= CFS()->get('additional_info_text'); ?>
-  </section>
+        <?= CFS()->get('additional_info_text'); ?>
+      </section><!-- text-container -->
 
-  <section class="artist-image-container">
-    <!-- additional image? -->
-</section>
+    </div><!-- description -->
+
+    <section class="additional-artist-img artist-img-container">
+      <!-- additional image? -->
+    </section>
+
+  </article><!-- full-description-container -->
 
   <footer>
     <div class="text-container">

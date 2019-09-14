@@ -6,6 +6,7 @@
 
 a {
   color: $color__link;
+  text-decoration:none;
 
   &:visited {
     color: $color__link-visited;
@@ -71,14 +72,10 @@ a {
   }
   li {
     position: relative;
-    display: inline-block;
 
     &:hover > a,
     &.focus > a {
     }
-  }
-  a {
-    text-decoration: none;
   }
 
   .current_page_item > a,
@@ -95,9 +92,6 @@ a {
   & .menu-toggle {
     display: inline-block;
     z-index: 999;
-    position: absolute;
-    top: 10%;
-    right: 5%;
   }
   & ul {
     position: absolute;
@@ -115,14 +109,13 @@ a {
   }
 }
 
-@media screen and (min-width: 600px) {
+@include desktop {
   .main-navigation {
     & .menu-toggle,
     &.toggled .menu-toggle {
       display: none;
       position: relative;
     }
-    & ul,
     &.toggled ul {
       width: 80%;
       margin: 0 auto;

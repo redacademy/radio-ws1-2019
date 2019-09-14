@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# Artist search
+# Artist library
 --------------------------------------------------------------*/
 .artist-library-page {
   h2 {
@@ -21,5 +21,24 @@
     width: 200px;
     border-radius:10px;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3)
+  }
+
+  /* Artist Search bar */
+
+  .artist-search-bar {
+    margin:10rem 5rem 5rem;
+    text-align:center;
+
+    .artist-search-toggle {
+      background: none;
+      border:none;
+      margin:0 0.5rem;
+    }
+    .artist-search-field {
+      background:none;
+      border:none;
+      border-bottom:1px solid $color__headline;
+      color:$color__text-main;
+    }
   }
 }

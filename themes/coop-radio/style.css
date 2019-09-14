@@ -799,6 +799,11 @@ a {
       color: #fff !important; } }
 
 @media (min-width: 1080px) {
+  .banner--desktop-dark {
+    background-color: #2c2c2c;
+    position: initial; } }
+
+@media (min-width: 1080px) {
   .banner--desktop-light {
     position: initial;
     background-color: #fff; }

@@ -57,6 +57,13 @@
   }
 }
 
+.banner--desktop-dark {
+    @include desktop {
+      background-color: $color__background-dark;
+      position: initial;
+    }
+}
+
 .banner--desktop-light {
   @include desktop {
     position: initial;

@@ -25,7 +25,6 @@
           if (
             is_page_template('page-get-involved.php')
               || is_search()
-              || is_front_page()
           ) {
             echo 'banner--dark ';
           } elseif (
@@ -33,6 +32,10 @@
               || is_page_template('page-search.php')
           ) {
             echo 'banner--light ';
+          } elseif (
+            is_front_page()
+          ) {
+            echo 'banner--desktop-dark';
           }
 
           if ( is_page_template('page-get-involved.php') ) {

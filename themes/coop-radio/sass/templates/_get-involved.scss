@@ -2,6 +2,56 @@
   article {
     text-align: center;
   }
+  .header-container {
+    @include desktop {
+      display: flex;
+      width: 100%;
+
+      .container2 {
+        width: 50%;
+        height: 50%;
+      }
+      .container-1 {
+        width: 50%;
+      }
+    }
+    /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+      background-color: #fff;
+      color: #8b1f7e;
+      cursor: pointer;
+      padding: 18px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active,
+    .collapsible:hover {
+      background-color: #ccc;
+    }
+
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #b079aa;
+      flex-direction: column;
+      width: 200px;
+    }
+    // .fab {
+    //   color: red;
+    // }
+  }
+  .participate {
+    @include desktop {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
   .main-navigation {
     justify-content: flex-end;
     margin-right: 5%;
@@ -30,8 +80,10 @@
       background-image: linear-gradient(#b079aa, #d8d8d8);
     }
   }
-  a {
-    text-decoration: none;
+  .faq-container {
+    @include desktop {
+      text-align: start;
+    }
   }
   .btnfaq {
     width: 300px;
@@ -39,6 +91,25 @@
     background-color: #fff;
     border: none;
     border-bottom: solid, 4px, #e9d4e6;
+
+    @include desktop {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+  }
+  .seta {
+    display: none;
+    @include desktop {
+      display: flex;
+      width: 90px;
+    }
+  }
+  .tooltip {
+    @include desktop {
+      text-align: flex-end;
+    }
   }
   li {
     list-style-type: none;

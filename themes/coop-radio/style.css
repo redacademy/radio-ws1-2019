@@ -937,6 +937,9 @@ footer {
   width: 100vw;
   bottom: 14%;
   background: rgba(255, 255, 255, 0.8); }
+  @media (min-width: 1080px) {
+    .content-front-page {
+      width: unset; } }
   .content-front-page .content-container {
     display: -webkit-box;
     display: -ms-flexbox;

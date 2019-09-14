@@ -15,7 +15,9 @@
   width: 100vw;
   bottom: 14%;
   background: rgba(255, 255, 255, 0.8);
-
+  @include desktop {
+    width: unset;
+  }
   
   .content-container {
     display: flex;

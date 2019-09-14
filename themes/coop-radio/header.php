@@ -23,20 +23,20 @@
       <header
         class="banner <?php 
           if (
-            is_page_template('page-get-involved.php')
+            is_page_template( 'page-get-involved.php' )
               || is_front_page()
           ) {
             echo 'banner--dark ';
           } elseif (
-            is_page_template('page-artist-search.php')
-              || is_page_template('page-search.php')
+            is_page_template( 'page-artist-search.php' )
+              || is_page_template( 'page-search.php' )
           ) {
             echo 'banner--light ';
           }
 
-          if ( is_page_template('page-get-involved.php') ) {
+          if ( is_page_template( 'page-get-involved.php' ) ) {
             echo 'banner--desktop-transparent ';
-          } elseif (is_page_template('page-contact-us.php')) {
+          } elseif ( is_page_template( 'page-contact-us.php' ) ) {
             echo 'banner--desktop-light ';
           }
         ?>"
@@ -57,7 +57,10 @@
           </div>
           <nav id="site-navigation" class="main-navigation" role="navigation">
             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
-            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+            <?php wp_nav_menu( array(
+              'theme_location' => 'primary',
+              'menu_id' => 'primary-menu'
+            ) ); ?>
           </nav>
           <div class="header-search">
             <?php get_search_form(); ?>

@@ -1,6 +1,7 @@
 <?php
 /**
  * Contact us page template.
+ * Template Name: contact
  *
  * @package coop-radio
  */

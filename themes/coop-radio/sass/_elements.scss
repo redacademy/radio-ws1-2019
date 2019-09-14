@@ -18,12 +18,10 @@ body {
 }
 
 main {
-  max-height: 77vh;
+  max-height: 76vh;
   overflow: auto;
-  @include tablet {
-    max-height: 82vh;
-  }
 }
+
 blockquote,
 q {
   quotes: '' '';

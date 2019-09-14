@@ -380,11 +380,8 @@ body {
   /* Fallback for when there is no custom background color defined. */ }
 
 main {
-  max-height: 77vh;
+  max-height: 76vh;
   overflow: auto; }
-  @media (min-width: 600px) {
-    main {
-      max-height: 82vh; } }
 
 blockquote,
 q {
@@ -1478,6 +1475,15 @@ footer {
 --------------------------------------------------------------*/
 .search-results main {
   background-color: #2c2c2c; }
+  @media (min-height: 650px) {
+    .search-results main {
+      max-height: 79vh; } }
+  @media (min-height: 750px) {
+    .search-results main {
+      max-height: 82vh; } }
+  @media (min-height: 1000px) {
+    .search-results main {
+      max-height: 86vh; } }
   .search-results main .search-container {
     display: -webkit-box;
     display: -ms-flexbox;

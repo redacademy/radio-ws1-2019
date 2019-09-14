@@ -24,6 +24,7 @@
         class="banner <?php 
           if (
             is_page_template('page-get-involved.php')
+              || is_search()
               || is_front_page()
           ) {
             echo 'banner--dark ';

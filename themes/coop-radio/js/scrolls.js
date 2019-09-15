@@ -1,6 +1,6 @@
 jQuery(function() {
 $(document).ready(function(){
-    $('.artist-search').slick({
+    $('.artist-libary').slick({
         centerMode: true,
         centerPadding: '100px',
         slidesToShow: 3,

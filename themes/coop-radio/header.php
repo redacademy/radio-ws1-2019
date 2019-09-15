@@ -28,7 +28,8 @@
           ) {
             echo 'banner--dark';
           } elseif (
-            basename($template) === 'page-artist-search.php'
+            basename($template) === 'page-artist-library.php'
+              || basename($template) === 'page-artist-search.php'
           ) {
             echo 'banner--light ';
           } elseif (

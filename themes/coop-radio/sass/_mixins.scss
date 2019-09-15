@@ -23,3 +23,21 @@
     @content;
   }
 }
+
+@mixin short {
+  @media (min-height: 650px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-height: 750px) {
+    @content;
+  }
+}
+
+@mixin tall {
+  @media (min-height: 1000px) {
+    @content;
+  }
+}

@@ -57,6 +57,13 @@
   }
 }
 
+.banner--desktop-dark {
+    @include desktop {
+      background-color: $color__background-dark;
+      position: initial;
+    }
+}
+
 .banner--desktop-light {
   @include desktop {
     position: initial;
@@ -73,6 +80,11 @@
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  .main-navigation.toggled ul {
+    a {
+      color: $color__text-screen;
+    }
+  }
 }
 
 // 🍔
@@ -98,7 +110,7 @@
 
     .banner__logo-link {
       img{
-        height: $base__space-unit * 3.25;
+        height: 4rem;
         width: auto;
       }
     }

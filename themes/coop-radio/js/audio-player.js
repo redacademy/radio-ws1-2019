@@ -1,47 +1,44 @@
 /**
  *
- * Replaces the default WP audio player widget with a customized one.
- * Falls back to default audio player if JS disabled.
+ * Site-wide audio player.
  *
  */
 
 /* global WP_GLOBALS */
 
-// TODO: refactor this monster
-
-(function({ stylesheetURI }) {
-  const container = document.getElementById('audio-player')
-
+(function({ apiNonce, apiURL }) {
+  const container = document.getElementById('audio-player__container')
   if (!container) { return }
 
-  const defaultAudioPlayer = container.getElementsByTagName('audio')[0]
-  const audioSrc = defaultAudioPlayer.currentSrc
-  let audioDuration
+  const audioPlayer = document.getElementById('audio-player')
 
-  // set up els
-  const progressBarContainer = document.createElement('div')
-  progressBarContainer.classList.add('audio-player__progress-container')
-  const progressBar = document.createElement('div')
-  progressBar.classList.add('audio-player__progress')
-  const progressBarFill = document.createElement('div')
-  progressBarFill.classList.add('audio-player__progress-fill')
-  const progressBarMarker = document.createElement('span')
-  progressBarMarker.classList.add('audio-player__progress-marker')
-  const currentTime = document.createElement('p')
-  currentTime.classList.add('audio-player__time')
-  currentTime.innerText = '00:00'
-  const playButton = document.createElement('button')
-  playButton.classList.add('audio-player__play-button')
-  const playButtonIcon = document.createElement('img')
-  const playButtonIconPlaySrc = `${stylesheetURI}/images/button-play.svg`
-  const playButtonIconPauseSrc = `${stylesheetURI}/images/button-pause.svg`
-  playButtonIcon.src = playButtonIconPlaySrc
-  playButtonIcon.alt = 'Play audio'
-  const shareButton = document.createElement('button')
-  shareButton.classList.add('audio-player__share-button')
-  const shareButtonIcon = document.createElement('img')
-  shareButtonIcon.src = `${stylesheetURI}/images/share-icon.svg`
-  shareButtonIcon.alt = 'Share'
+  const progressBarContainer = document.getElementById('audio-player__progress-container')
+  const progressBar = document.getElementById('audio-player__progress')
+  const shareButton = document.getElementById('audio-player__share-button')
+  const currentTime = document.getElementById('audio-player__time')
+  const playButton = document.getElementById('audio-player__play-button')
+  const playButtonIcon = document.getElementById('audio-player__play-button-icon')
+
+  let i = localStorage.getItem('audio-player-index') || 0
+
+  fetch(`${apiURL}track`, {
+    'X-WP-Nonce': apiNonce
+  })
+    .then(res => res.json())
+    .then(data => 
+      fetch(data[i]._links['wp:attachment'][0].href)
+        .then(res => res.json())
+        .then(data => {
+          audioPlayer.src = data[0].source_url
+        })
+    )
+
+  const togglePlayButtonIcon = action => {
+    const newSrc = playButtonIcon.dataset.altSrc
+    playButtonIcon.dataset.altSrc = playButtonIcon.src
+    playButtonIcon.src = newSrc
+    playButtonIcon.alt = `${action} track`
+  }
 
   // TODO: check if track is same
   const progress = window.localStorage.getItem('audio-player-progress')
@@ -51,72 +48,55 @@
 
   // set up event listeners
   playButton.addEventListener('click', () => {
-    if (progress && defaultAudioPlayer.currentTime === 0) {
-      defaultAudioPlayer.addEventListener('loadedmetadata', () => {
-        audioDuration = defaultAudioPlayer.duration
-        defaultAudioPlayer.currentTime = (progress / 100) * audioDuration
+    if (progress && audioPlayer.currentTime === 0) {
+      audioPlayer.addEventListener('loadedmetadata', () => {
+        audioPlayer.currentTime = (progress / 100) * audioPlayer.duration
         progressBarContainer.style.cursor = 'pointer'
       })
     }
 
-    if (defaultAudioPlayer.paused) {
-      playButtonIcon.src = playButtonIconPauseSrc
-      defaultAudioPlayer.play()
+    if (audioPlayer.paused) {
+      togglePlayButtonIcon('Play')
+      audioPlayer.play()
     } else {
-      playButtonIcon.src = playButtonIconPlaySrc
-      defaultAudioPlayer.pause()
+      togglePlayButtonIcon('Pause')
+      audioPlayer.pause()
     }
   })
-  defaultAudioPlayer.addEventListener('timeupdate', () => {
+  audioPlayer.addEventListener('timeupdate', () => {
     const padNum = num => num
       ? num.toString().length === 1
         ? `0${num}`
         : num
       : '00'
     
-    const timeTotalSeconds = defaultAudioPlayer.currentTime
+    const timeTotalSeconds = audioPlayer.currentTime
     const timeMinutes = Math.floor(timeTotalSeconds / 60)
     const timeSeconds = Math.floor(timeTotalSeconds - (timeMinutes * 60)) 
 
     currentTime.innerText = `${padNum(timeMinutes)}:${padNum(timeSeconds)}`
     const progressPercent = (
-      defaultAudioPlayer.currentTime / defaultAudioPlayer.duration
+      audioPlayer.currentTime / audioPlayer.duration
     ) * 100
     progressBar.style.width = `${progressPercent}%`
     window.localStorage.setItem('audio-player-progress', progressPercent)
 
     if (progressPercent === 100) {
-      playButtonIcon.src = playButtonIconPlaySrc
+      togglePlayButtonIcon('Play')
       window.localStorage.removeItem('audio-player-progress')
     }
   })
+
   progressBarContainer.addEventListener('click', function(e) {
-    // TODO: fetch audio metadata on load, not play
-    if (!audioDuration || !this.classList.contains('audio-player__progress-container')) { return }
+    // FIXME: fetch audio metadata on load, not play
+    if (!audioPlayer.duration) { return }
     const progressPercent = 
-    (e.clientX - this.offsetLeft) / this.clientWidth
-    defaultAudioPlayer.currentTime = progressPercent * audioDuration
+      (e.clientX - this.offsetLeft) / this.clientWidth
+    audioPlayer.currentTime = progressPercent * audioPlayer.duration
     progressBar.style.width = `${progressPercent}%`
   })
   shareButton.addEventListener('click', () => {
     // TODO: handle share
-    alert(audioSrc)
+    alert('hello')
   })
-
-  // TODO: hide non-sr els for ats
-
-  // render
-  container.innerHTML = ''
-  defaultAudioPlayer.classList.add('screen-reader-text')
-  playButton.appendChild(playButtonIcon)
-  container.appendChild(playButton)
-  shareButton.appendChild(shareButtonIcon)
-  container.appendChild(shareButton)
-  container.appendChild(currentTime)
-  progressBar.appendChild(progressBarMarker)
-  progressBarContainer.appendChild(progressBarFill)
-  progressBarContainer.appendChild(progressBar)
-  container.appendChild(progressBarContainer)
-  container.appendChild(shareButton)
-  container.appendChild(defaultAudioPlayer)
 })(WP_GLOBALS)

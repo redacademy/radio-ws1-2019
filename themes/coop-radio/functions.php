@@ -74,7 +74,8 @@ function coop_radio_scripts() {
     'coop-radio-audio-player',
     'WP_GLOBALS',
     array(
-      'stylesheetURI' => get_stylesheet_directory_uri()
+      'apiNonce' => wp_create_nonce('wp_rest'),
+      'apiURL' => esc_url_raw(rest_url()).'wp/v2/', 
     )
   );
   wp_enqueue_script('coop-radio-audio-player');

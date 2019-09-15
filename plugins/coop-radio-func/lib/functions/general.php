@@ -141,3 +141,31 @@ class RF_General {
 }
 
 new RF_General();
+
+/**
+ * Remove default posts from admin area
+ */
+function remove_default_post_type() {
+  remove_menu_page( 'edit.php' );
+}
+
+add_action( 'admin_menu', 'remove_default_post_type' );
+
+/**
+ * Register widgets.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function coop_radio_widgets_init() {
+  register_sidebar( array(
+    'name'          => esc_html( 'Audio player' ),
+    'id'            => 'audio-player',
+    'description'   => __( 'Audio player footer', 'textdomain' ),
+    'before_widget' => '<aside id="audio-player" class="audio-player">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h2 class="screen-reader-text">',
+    'after_title'   => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'coop_radio_widgets_init' );
+

@@ -1,3 +1,43 @@
+.page-id-55 {
+  .header-container {
+    @include desktop {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.donate-container {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    // padding: 3rem 0 3rem 0;
+    width: 80%;
+  }
+}
+.donate-container2 {
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    // padding: 3rem 0 3rem 0;
+    width: 80%;
+  }
+}
+
+.side-text {
+  @include desktop {
+    width: 500px;
+    transform: translateX(50%);
+    padding-top: 7rem;
+  }
+}
+.side-text2 {
+  @include desktop {
+    width: 500px;
+    transform: translateX(-20%);
+    padding-top: 7rem;
+  }
+}
+
 .btn {
   height: 44px;
   font-family: $font__heading;
@@ -14,6 +54,12 @@
   position: absolute;
   margin-left: 10px;
   margin-top: 10px;
+
+  @include desktop {
+    width: 300px;
+    height: 300px;
+    transform: translateY(15%);
+  }
 }
 .ball-a {
   height: 90px;
@@ -23,6 +69,11 @@
   display: flex;
   position: relative;
   z-index: -1;
+
+  @include desktop {
+    height: 190px;
+    width: 190px;
+  }
 }
 .ball-b {
   height: 150px;
@@ -33,6 +84,12 @@
   position: relative;
   z-index: -1;
   transform: translateX(60%);
+
+  @include desktop {
+    height: 250px;
+    width: 250px;
+    transform: translateX(50%);
+  }
 }
 .ball-a1 {
   height: 150px;
@@ -43,6 +100,11 @@
   position: relative;
   transform: translateX(60%);
   z-index: -1;
+  @include desktop {
+    height: 250px;
+    width: 250px;
+    transform: translateX(50%);
+  }
 }
 .ball-b1 {
   height: 100px;
@@ -53,4 +115,8 @@
   transform: translateY(-20%);
   position: relative;
   z-index: -1;
+  @include desktop {
+    height: 200px;
+    width: 200px;
+  }
 }

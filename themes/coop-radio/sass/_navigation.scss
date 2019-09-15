@@ -106,6 +106,10 @@ a {
     flex-direction: column;
     text-align: center;
     background-color: #fff;
+
+    .menu-item a {
+      color: $color__text-screen;
+    }
   }
 }
 

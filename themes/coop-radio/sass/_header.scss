@@ -5,8 +5,8 @@
 .banner {
   background-color: transparent;
 
-  &, a {
-    color: $color__text-screen !important;
+  .menu-item a {
+    color: $color__text-screen;
   }
 
   @include desktop {
@@ -15,8 +15,8 @@
     right: 0;
     left: 0;
 
-    &, a {
-      color: $color__background-body !important;
+    .menu-item a {
+      color: $color__background-body;
     }
   }
 }
@@ -25,8 +25,8 @@
   background-color: $color__background-body;
   height: 3 * $base__space-unit;
 
-  &, a {
-    color: $color__text-screen !important;
+  .menu-item a {
+    color: $color__text-screen;
   }
 }
 
@@ -34,8 +34,8 @@
   background-color: $color__text-screen;
   height: 3 * $base__space-unit;
 
-  &, a {
-    color: $color__background-body !important;
+  .menu-item a {
+    color: $color__background-body;
   }
 
   @include desktop {
@@ -51,10 +51,17 @@
     right: 0;
     left: 0;
 
-    &, a {
-      color: $color__background-body !important;
+    .menu-item a {
+      color: $color__background-body;
     }
   }
+}
+
+.banner--desktop-dark {
+    @include desktop {
+      background-color: $color__background-dark;
+      position: initial;
+    }
 }
 
 .banner--desktop-light {
@@ -62,8 +69,8 @@
     position: initial;
     background-color: $color__background-body;
 
-    &, a {
-      color: $color__text-screen !important;
+    .menu-item a {
+      color: $color__text-screen;
     }
   }
 }
@@ -73,6 +80,11 @@
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  .main-navigation.toggled ul {
+    a {
+      color: $color__text-screen;
+    }
+  }
 }
 
 // 🍔
@@ -98,7 +110,7 @@
 
     .banner__logo-link {
       img{
-        height: $base__space-unit * 3.25;
+        height: 4rem;
         width: auto;
       }
     }

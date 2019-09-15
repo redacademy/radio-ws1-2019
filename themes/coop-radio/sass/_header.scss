@@ -5,8 +5,8 @@
 .banner {
   background-color: transparent;
 
-  &, a {
-    color: $color__text-screen !important;
+  .menu-item a {
+    color: $color__text-screen;
   }
 
   @include desktop {
@@ -15,8 +15,8 @@
     right: 0;
     left: 0;
 
-    &, a {
-      color: $color__background-body !important;
+    .menu-item a {
+      color: $color__background-body;
     }
   }
 }
@@ -25,8 +25,8 @@
   background-color: $color__background-body;
   height: 3 * $base__space-unit;
 
-  &, a {
-    color: $color__text-screen !important;
+  .menu-item a {
+    color: $color__text-screen;
   }
 }
 
@@ -34,7 +34,7 @@
   background-color: $color__text-screen;
   height: 3 * $base__space-unit;
 
-  &, a {
+  .menu-item a {
     color: $color__background-body;
   }
 
@@ -51,8 +51,8 @@
     right: 0;
     left: 0;
 
-    &, a {
-      color: $color__background-body !important;
+    .menu-item a {
+      color: $color__background-body;
     }
   }
 }
@@ -69,8 +69,8 @@
     position: initial;
     background-color: $color__background-body;
 
-    &, a {
-      color: $color__text-screen !important;
+    .menu-item a {
+      color: $color__text-screen;
     }
   }
 }

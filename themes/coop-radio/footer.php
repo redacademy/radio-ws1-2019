@@ -69,8 +69,8 @@
         </div>
 
         <button
-          id="audio-player__share-button"
-          class="audio-player__share-button"
+          id="audio-player__action--share"
+          class="audio-player__action audio-player__action--share"
           type="button"
         >
           <img

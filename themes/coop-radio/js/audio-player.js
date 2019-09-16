@@ -13,7 +13,7 @@
   const audioPlayer = document.getElementById('audio-player')
   const prograssBarContainer = document.getElementById('audio-player__progress-container')
   const progressBar = document.getElementById('audio-player__progress')
-  const shareButton = document.getElementById('audio-player__share-button')
+  const shareButton = document.getElementById('audio-player__action--share')
   const currentTime = document.getElementById('audio-player__time')
   const playButton = document.getElementById('audio-player__action--play')
   const playButtonIcon = document.getElementById('audio-player__action-icon--play')

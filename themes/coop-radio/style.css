@@ -919,7 +919,7 @@ footer {
   color: #bebebe;
   font-weight: bold; }
 
-.audio-player__share-button {
+.audio-player__action--share {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background-color: transparent;
@@ -927,7 +927,7 @@ footer {
   -webkit-transform: scale(0.8) translateY(2.3px);
           transform: scale(0.8) translateY(2.3px); }
   @media (min-width: 1080px) {
-    .audio-player__share-button {
+    .audio-player__action--share {
       -webkit-transform: scale(1) translateY(3px);
               transform: scale(1) translateY(3px); } }
 

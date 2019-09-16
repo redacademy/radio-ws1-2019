@@ -1079,6 +1079,23 @@ footer {
   margin: 0; }
 
 /* training */
+.program-details-training {
+  text-align: center; }
+  .program-details-training h2 {
+    font-size: 40px; }
+  .program-details-training .training-core {
+    margin: 20px auto;
+    max-width: 550px; }
+    .program-details-training .training-core .core-img {
+      display: block;
+      margin: 2.5rem auto; }
+    .program-details-training .training-core .core-text {
+      width: 400px;
+      margin: 0 auto;
+      text-align: left; }
+      .program-details-training .training-core .core-text h3 {
+        font-size: 28px; }
+
 /* enroll */
 /*--------------------------------------------------------------
 # Artist library

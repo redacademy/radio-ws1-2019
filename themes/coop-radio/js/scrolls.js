@@ -20,7 +20,7 @@ $(document).ready(function(){
         ]
       });
 
-      $('.program-details-training').slick({
+      $('.training-core-main').slick({
         slidesToShow: 1,
         slidesToScroll:1,
         infinite: false,

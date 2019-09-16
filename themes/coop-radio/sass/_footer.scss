@@ -18,6 +18,19 @@ footer {
   padding: 0 1rem;
 }
 
+.audio-player__actions {
+  display: flex;
+  margin-right: $base__space-unit;
+}
+
+.audio-player__action {
+  flex-shrink: 0;
+  border: none;
+  background-color: transparent;
+  padding-right: $base__space-unit / 4;
+  padding-left: $base__space-unit / 4;
+}
+
 .audio-player__progress-container {
   position: relative;
   width: 100%;
@@ -54,7 +67,7 @@ footer {
   background-color: $color__brand-purple;
 }
 
-.audio-player__play-button {
+.audio-player__action--play {
   flex-shrink: 0;
   background-color: transparent;
   border: none;

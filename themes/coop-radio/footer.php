@@ -13,18 +13,42 @@
         role="complementary"
       >
 
-        <button
-          id="audio-player__play-button"
-          class="audio-player__play-button"
-          type="button"
-        >
-          <img
-            id="audio-player__play-button-icon"
-            src="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
-            data-alt-src="<?= get_template_directory_uri().'/images/button-pause.svg'; ?>"
-            alt="Play track"
-          />
-        </button>
+        <div class="audio-player__actions">
+          <button
+            id="audio-player__action--prev"
+            class="audio-player__action audio-player__action--prev"
+            type="button"
+          >
+            <img
+              src="<?= get_template_directory_uri().'/images/button-prev.svg'; ?>"
+              alt="Previous track"
+            />
+          </button>
+
+          <button
+            id="audio-player__action--play"
+            class="audio-player__action audio-player__action--play"
+            type="button"
+          >
+            <img
+              id="audio-player__action-icon--play"
+              src="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
+              data-alt-src="<?= get_template_directory_uri().'/images/button-pause.svg'; ?>"
+              alt="Play track"
+            />
+          </button>
+
+          <button
+            id="audio-player__action--next"
+            class="audio-player__action audio-player__action--next"
+            type="button"
+          >
+            <img
+              src="<?= get_template_directory_uri().'/images/button-next.svg'; ?>"
+              alt="Next track"
+            />
+          </button>
+        </div>
 
         <p
           id="audio-player__time"
@@ -57,8 +81,9 @@
         <audio
           id="audio-player"
           src="<?= get_stylesheet_directory_uri() . '/'; ?>"
+          autoplay
         >
-          <a href="">Download recent track</a>
+          <a href="">Download track</a>
         </audio>
       </footer>
     </div>

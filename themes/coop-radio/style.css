@@ -855,6 +855,20 @@ footer {
   background-color: #fff;
   padding: 0 1rem; }
 
+.audio-player__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1.5rem; }
+
+.audio-player__action {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border: none;
+  background-color: transparent;
+  padding-right: 0.375rem;
+  padding-left: 0.375rem; }
+
 .audio-player__progress-container {
   position: relative;
   width: 100%;
@@ -887,7 +901,7 @@ footer {
   border-radius: 50%;
   background-color: #8b1f7e; }
 
-.audio-player__play-button {
+.audio-player__action--play {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background-color: transparent;
@@ -895,7 +909,7 @@ footer {
   -webkit-transform: scale(0.8) translateY(-10px);
           transform: scale(0.8) translateY(-10px); }
   @media (min-width: 1080px) {
-    .audio-player__play-button {
+    .audio-player__action--play {
       -webkit-transform: scale(1) translateY(-5px);
               transform: scale(1) translateY(-5px); } }
 

@@ -1,1 +1,25 @@
 /* training */
+
+.program-details-training {
+  text-align: center;
+  h2 {
+      font-size:40px;
+  }
+
+  .training-core {
+    margin: 20px auto;
+    max-width: 550px;
+    .core-img {
+      display: block;
+      margin: 2.5rem auto;
+    }
+    .core-text {
+      width: 400px;
+      margin: 0 auto;
+      text-align: left;
+      h3 {
+          font-size:28px;
+      }
+    }
+  }
+}

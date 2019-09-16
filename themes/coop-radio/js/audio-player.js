@@ -95,22 +95,27 @@
   })
 
   // update time
-  audioPlayer.addEventListener('timeupdate', () => {
+  const updateTime = () => {
     const padNum = num => num
       ? num.toString().length === 1
         ? `0${num}`
         : num
       : '00'
     
-    const timeTotalSeconds = audioPlayer.currentTime
+    const timeTotalSeconds = audioPlayer.currentTime || lastPlayedTime
     const timeMinutes = Math.floor(timeTotalSeconds / 60)
     const timeSeconds = Math.floor(timeTotalSeconds - (timeMinutes * 60)) 
 
     currentTime.innerText = `${padNum(timeMinutes)}:${padNum(timeSeconds)}`
+  }
+  updateTime()
+  
+  audioPlayer.addEventListener('timeupdate', () => {
+    updateTime()
+
     const progressPercent = (
       audioPlayer.currentTime / audioPlayer.duration
     ) * 100
-
     progressBar.style.width = `${progressPercent}%`
 
     lastPlayedPercent = progressPercent

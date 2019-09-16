@@ -11,6 +11,7 @@
   if (!container) { return }
 
   const audioPlayer = document.getElementById('audio-player')
+  const trackTitle = document.getElementById('audio-player__info--title')
   const prograssBarContainer = document.getElementById('audio-player__progress-container')
   const progressBar = document.getElementById('audio-player__progress')
   const shareButton = document.getElementById('audio-player__action--share')
@@ -31,6 +32,7 @@
     .then(res => res.json())
     .then(data => {
       audioPlayer.src = data[0].source_url
+      trackTitle.innerText = data[0].title.rendered
     })
 
   fetch(`${apiURL}track`, {

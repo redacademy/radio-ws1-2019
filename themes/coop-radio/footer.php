@@ -12,6 +12,20 @@
         class="audio-player"
         role="complementary"
       >
+        <div class="audio-player__info-container">
+          <div class="audio-player__info-artist-img-container">
+            <img
+              id="audio-player__info-artist-img"
+              class="audio-player__info-artist-img-container"
+              src=""
+              alt=""
+            />
+          </div>
+          <div class="audio-player__info">
+            <p id="audio-player__info--title" class="audio-player__info--title"></p>
+            <p id="audio-player__info--artist"></p>
+          </div>
+        </div>
 
         <div class="audio-player__actions">
           <button

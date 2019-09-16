@@ -855,6 +855,9 @@ footer {
   background-color: #fff;
   padding: 0 1rem; }
 
+.audio-player__info--title {
+  font-weight: bold; }
+
 .audio-player__actions {
   display: -webkit-box;
   display: -ms-flexbox;

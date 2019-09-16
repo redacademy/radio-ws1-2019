@@ -19,5 +19,20 @@ $(document).ready(function(){
           }
         ]
       });
+
+      $('.program-details-training').slick({
+        slidesToShow: 1,
+        slidesToScroll:1,
+        infinite: false,
+        arrows: true,
+        dots:true,
+        mobileFirst:true,
+        responsive: [
+          {
+            breakpoint: 500,
+            settings: 'unslick'
+          }
+        ]
+      });
   });
 });

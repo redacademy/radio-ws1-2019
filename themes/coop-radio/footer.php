@@ -33,7 +33,8 @@
             <img
               id="audio-player__action-icon--play"
               src="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
-              data-alt-src="<?= get_template_directory_uri().'/images/button-pause.svg'; ?>"
+              data-pause-icon="<?= get_template_directory_uri().'/images/button-pause.svg'; ?>"
+              data-play-icon="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
               alt="Play track"
             />
           </button>

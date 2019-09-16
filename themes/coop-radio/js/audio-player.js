@@ -21,11 +21,11 @@
   const prevButton = document.getElementById('audio-player__action--prev')
 
   let tracks = []
-  const lastPlayedTime =
+  let lastPlayedTime =
     window.localStorage.getItem('audio-player-time') || 0
-  const lastPlayedPercent =
+  let lastPlayedPercent =
     window.localStorage.getItem('audio-player-progress') || 0
-  let i = localStorage.getItem('audio-player-index') || 0
+  let lastPlayedIndex = localStorage.getItem('audio-player-index') || 0
 
   const loadTrack = (tracks, i) => fetch(tracks[i]._links['wp:attachment'][0].href)
     .then(res => res.json())
@@ -39,49 +39,59 @@
     .then(res => res.json())
     .then(data => {
       tracks = data
-      loadTrack(data, i)
+      loadTrack(data, lastPlayedIndex)
     }) 
 
   const togglePlayButtonIcon = action => {
-    const newSrc = playButtonIcon.dataset.altSrc
-    playButtonIcon.dataset.altSrc = playButtonIcon.src
-    playButtonIcon.src = newSrc
-    playButtonIcon.alt = `${action} track`
+    switch (action) {
+      case 'PLAY':
+        playButtonIcon.src = playButtonIcon.dataset.playIcon 
+        playButtonIcon.alt = 'Play track'
+        break
+      case 'PAUSE':
+          playButtonIcon.src = playButtonIcon.dataset.pauseIcon
+          playButtonIcon.alt = 'Pause track'
+        break
+      default:
+        break
+    }
   }
 
   // TODO: check if track is same
   progressBar.style.width = `${lastPlayedPercent}%`
 
-  playButton.addEventListener('click', e => {
-    e.preventDefault()
+  playButton.addEventListener('click', () => {
     audioPlayer.currentTime = lastPlayedTime
 
     if (audioPlayer.paused) {
-      togglePlayButtonIcon('Play')
       audioPlayer.play()
+      togglePlayButtonIcon('PAUSE')
     } else {
-      togglePlayButtonIcon('Pause')
       audioPlayer.pause()
+      togglePlayButtonIcon('PLAY')
     }
   })
 
   prevButton.addEventListener('click', () => {
-    if (i > 0) {
-      loadTrack(tracks, --i)
+    togglePlayButtonIcon('PAUSE')
+    if (lastPlayedIndex > 0) {
+      loadTrack(tracks, --lastPlayedIndex)
     } else {
-      i = tracks.length - 1
-      loadTrack(tracks, i)
+      lastPlayedIndex = tracks.length - 1
+      loadTrack(tracks, lastPlayedIndex)
     }
-    togglePlayButtonIcon('Pause')
+    localStorage.setItem('audio-player-index', lastPlayedIndex)
   })
+
   nextButton.addEventListener('click', () => {
-    if (i < tracks.length - 1) {
-      loadTrack(tracks, ++i)
+    togglePlayButtonIcon('PAUSE')
+    if (lastPlayedIndex < tracks.length - 1) {
+      loadTrack(tracks, ++lastPlayedIndex)
     } else {
-      i = 0
-      loadTrack(tracks, i)
+      lastPlayedIndex = 0
+      loadTrack(tracks, lastPlayedIndex)
     } 
-    togglePlayButtonIcon('Pause')
+    localStorage.setItem('audio-player-index', lastPlayedIndex)
   })
 
   // update time
@@ -100,12 +110,16 @@
     const progressPercent = (
       audioPlayer.currentTime / audioPlayer.duration
     ) * 100
+
     progressBar.style.width = `${progressPercent}%`
+
+    lastPlayedPercent = progressPercent
     window.localStorage.setItem('audio-player-progress', progressPercent)
+    lastPlayedTime = audioPlayer.currentTime
     window.localStorage.setItem('audio-player-time', audioPlayer.currentTime)
 
     if (progressPercent === 100) {
-      togglePlayButtonIcon('Play')
+      togglePlayButtonIcon('PLAY')
       window.localStorage.removeItem('audio-player-progress')
       window.localStorage.removeItem('audio-player-time')
     }

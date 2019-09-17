@@ -82,7 +82,7 @@
         <li>
           <button class="btnfaq" aria-expanded="false">
             <?= $field['question']; ?>  
-            <img class="seta" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-04.svg'; ?>" alt="">
+            <img class="arrow" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-04.svg'; ?>" alt="">
           </button>
           <p hidden="" class="tooltip"><?= $field['answer']; ?></p>
         </li>

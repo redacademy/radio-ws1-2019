@@ -1,6 +1,6 @@
 jQuery(function() {
 $(document).ready(function(){
-    $('.artist-search').slick({
+    $('.artist-libary').slick({
         centerMode: true,
         centerPadding: '100px',
         slidesToShow: 3,
@@ -16,6 +16,21 @@ $(document).ready(function(){
               centerPadding: '40px',
               slidesToShow: 3
             }
+          }
+        ]
+      });
+
+      $('.training-core-main').slick({
+        slidesToShow: 1,
+        slidesToScroll:1,
+        infinite: false,
+        arrows: true,
+        dots:true,
+        mobileFirst:true,
+        responsive: [
+          {
+            breakpoint: 500,
+            settings: 'unslick'
           }
         ]
       });

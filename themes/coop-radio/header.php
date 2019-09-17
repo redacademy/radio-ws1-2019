@@ -22,21 +22,24 @@
 
       <header
         class="banner <?php 
-          if (
-            is_page_template( 'page-get-involved.php' )
-              || is_front_page()
-          ) {
-            echo 'banner--dark ';
-          } elseif (
-            is_page_template( 'page-artist-search.php' )
-              || is_page_template( 'page-search.php' )
-          ) {
-            echo 'banner--light ';
-          }
+        global $template;
 
-          if ( is_page_template( 'page-get-involved.php' ) ) {
+          if ( basename( $template ) === 'page-search.php' || is_search() || is_page_template('page-get-involved.php') || basename($template) === 'single-artist.php'
+          ) {
+            echo 'banner--dark';
+          } else if (basename($template) === 'page-artist-library.php') {
+            echo 'banner--light';
+          } elseif (
+            is_front_page()
+          ) {
+            echo 'banner--desktop-dark';
+          }
+          
+          if ( is_page_template('page-get-involved.php') 
+          ) {
             echo 'banner--desktop-transparent ';
-          } elseif ( is_page_template( 'page-contact-us.php' ) ) {
+          } elseif (basename($template) === 'page-contact-us.php'
+          ) {
             echo 'banner--desktop-light ';
           }
         ?>"

@@ -8,21 +8,21 @@
 get_header(); ?>
 
   <main>
-
-    <div class='custom-search'>
-      <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-	      <fieldset>
-		      <button type='button' class="search-toggle" aria-hidden="true">
-            <img src="<?php echo get_stylesheet_directory_uri().'/images/search-icon-white.svg'; ?>" alt="">
-	        </button>
-		      <span class="screen-reader-text"><?php echo esc_html( 'Search' ); ?></span>
-		      <label class='search-label'>
-			      <input type="search" class="search-field" placeholder="Type and hit enter..." value="<?php the_search_query(); ?>" name="s" title="Search for:" />
-		      </label>
-	      </fieldset>
-      </form>
-    </div>
-
+	<div class='search-background'>
+		<div class='search-intro'>
+			<p>Looking for something?</p>
+		</div>
+		<div class='custom-search'>
+			<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+				<fieldset>
+					<span class="screen-reader-text"><?php echo esc_html( 'Search' ); ?></span>
+					<label class='custom-search-label'>
+						<input type="search" class="custom-input" placeholder="Type and hit enter..." value="<?php the_search_query(); ?>" name="s" title="Search for:" />
+					</label>
+				</fieldset>
+			</form>
+		</div>
+	</div>
   </main>
 
 <?php get_footer(); ?>

@@ -52,15 +52,15 @@ article {
     justify-content: space-around;
   }
 }
-.main-navigation {
-  justify-content: flex-end;
-  margin-right: 5%;
-  margin-top: 5%;
+// .main-navigation {
+//   justify-content: flex-end;
+//   margin-right: 5%;
+//   margin-top: 5%;
 
-  .menu-toggle {
-    position: unset;
-  }
-}
+//   .menu-toggle {
+//     position: unset;
+//   }
+// }
 .logo-link-involved {
   border: none;
   border-radius: 50%;
@@ -99,8 +99,9 @@ article {
     text-align: center;
   }
 }
-.seta {
+.arrow {
   display: none;
+
   @include desktop {
     display: flex;
     width: 90px;

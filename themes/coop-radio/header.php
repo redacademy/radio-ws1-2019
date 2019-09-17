@@ -24,10 +24,12 @@
         class="banner <?php 
         global $template;
 
-          if ( basename( $template ) === 'page-search.php' || is_search() || is_page_template('page-get-involved.php') || basename($template) === 'page-artist-library.php'
+          if ( basename( $template ) === 'page-search.php' || is_search() || is_page_template('page-get-involved.php') || basename($template) === 'single-artist.php'
           ) {
             echo 'banner--dark';
-          }  elseif (
+          } else if (basename($template) === 'page-artist-library.php') {
+            echo 'banner--light';
+          } elseif (
             is_front_page()
           ) {
             echo 'banner--desktop-dark';

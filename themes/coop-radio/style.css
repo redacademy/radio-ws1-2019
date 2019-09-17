@@ -1616,3 +1616,53 @@ ul {
       border: 1px solid #ffffff; }
       .search-results main .search-container article p {
         text-align: center; }
+
+/*--------------------------------------------------------------
+# Search Page
+--------------------------------------------------------------*/
+.search-background {
+  background-image: url("../../images/search-background.jpg");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative; }
+  .search-background .search-intro {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 300;
+    position: absolute;
+    top: 6.5rem; }
+    @media (min-width: 600px) {
+      .search-background .search-intro {
+        font-size: 1.5rem;
+        font-weight: 400;
+        top: 5.5rem; } }
+    @media (min-width: 1080px) {
+      .search-background .search-intro {
+        font-size: 1.75rem;
+        top: 4.5rem; } }
+    .search-background .search-intro p {
+      text-align: center; }
+  .search-background .custom-search {
+    position: absolute;
+    top: 10rem; }
+    .search-background .custom-search fieldset {
+      border: none; }
+      .search-background .custom-search fieldset .custom-input {
+        width: 60vw;
+        background-color: #dddddd;
+        font-size: 1rem; }
+        @media (min-width: 600px) {
+          .search-background .custom-search fieldset .custom-input {
+            font-size: 1.25rem; } }
+        @media (min-width: 1080px) {
+          .search-background .custom-search fieldset .custom-input {
+            font-size: 1.5rem; } }

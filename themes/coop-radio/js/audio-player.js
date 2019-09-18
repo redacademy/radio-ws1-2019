@@ -51,6 +51,7 @@
             coverImg.src = coverURL
             trackTitle.innerText = tags.title
             trackArtist.innerText = tags.artist
+            audioPlayer.setAttribute('autoplay', true)
           },
           // eslint-disable-next-line
           onError: e => console.error(e.type, e.info)

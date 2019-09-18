@@ -2,10 +2,14 @@
 # Footer
 --------------------------------------------------------------*/
 
+$footer_height: $base__space-unit * 3;
+
 footer {
   position: fixed;
   bottom: 0;
 }
+
+// FIXME: mobile styles
 
 .audio-player {
   position: fixed;
@@ -18,8 +22,40 @@ footer {
   padding: 0 1rem;
 }
 
+.audio-player__info-container {
+  display: flex;
+  height: $footer_height;
+  justify-content: space-between;
+}
+
+.audio-player__info-artist-img-container {
+  width: $footer_height / 1.75;
+  display: flex;
+  margin-right: $base__space-unit;
+  align-items: center;
+}
+
+.audio-player__info-artist-img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.audio-player__info {
+  margin-right: $base__space-unit;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .audio-player__info--title {
   font-weight: bold;
+}
+
+.audio-player__info--title,
+.audio-player__info--artist {
+  margin: 0;
+  white-space: nowrap;
 }
 
 .audio-player__actions {

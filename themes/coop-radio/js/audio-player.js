@@ -36,6 +36,7 @@
     .then(data => {
       const track = data[0]
       audioPlayer.src = track.source_url
+      prograssBarContainer.style.cursor = 'pointer'
       
       // get audio file's id3 tags
       new jsmediatags.Reader(track.source_url)
@@ -155,12 +156,12 @@
 
   // handle click to timestamp
   prograssBarContainer.addEventListener('click', function(e) {
-    // FIXME: fetch audio metadata on load, not play
     if (!audioPlayer.duration) { return }
     const progressPercent = 
       (e.clientX - this.offsetLeft) / this.clientWidth
     audioPlayer.currentTime = progressPercent * audioPlayer.duration
     progressBar.style.width = `${progressPercent}%`
+    togglePlayButtonIcon('PAUSE')
   })
   shareButton.addEventListener('click', () => {
     // TODO: handle share

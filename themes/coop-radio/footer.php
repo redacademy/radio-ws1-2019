@@ -103,7 +103,6 @@
         <audio
           id="audio-player"
           src="<?= get_stylesheet_directory_uri() . '/'; ?>"
-          autoplay
         >
           <a href="">Download track</a>
         </audio>

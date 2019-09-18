@@ -160,8 +160,12 @@
     if (!audioPlayer.duration) { return }
     const progressPercent = 
       (e.clientX - this.offsetLeft) / this.clientWidth
+
     audioPlayer.currentTime = progressPercent * audioPlayer.duration
     progressBar.style.width = `${progressPercent}%`
+
+    // force play due to autoplay inconsistencies
+    audioPlayer.play()
     togglePlayButtonIcon('PAUSE')
   })
   shareButton.addEventListener('click', () => {

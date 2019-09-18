@@ -24,13 +24,8 @@
   const nextButton = document.getElementById('audio-player__action--next')
   const prevButton = document.getElementById('audio-player__action--prev')
 
+  // load tracks
   let tracks = []
-  let lastPlayedTime =
-    window.localStorage.getItem('audio-player-time') || 0
-  let lastPlayedPercent =
-    window.localStorage.getItem('audio-player-progress') || 0
-  let lastPlayedIndex = localStorage.getItem('audio-player-index') || 0
-
   const loadTrack = (tracks, i) => fetch(tracks[i]._links['wp:attachment'][0].href)
     .then(res => res.json())
     .then(data => {
@@ -67,6 +62,16 @@
       loadTrack(data, lastPlayedIndex)
     }) 
 
+  // progress bar
+  let lastPlayedTime =
+    window.localStorage.getItem('audio-player-time') || 0
+  let lastPlayedPercent =
+    window.localStorage.getItem('audio-player-progress') || 0
+  let lastPlayedIndex = localStorage.getItem('audio-player-index') || 0
+
+  // TODO: check if track is same
+  progressBar.style.width = `${lastPlayedPercent}%`
+
   const togglePlayButtonIcon = action => {
     switch (action) {
       case 'PLAY':
@@ -81,9 +86,6 @@
         break
     }
   }
-
-  // TODO: check if track is same
-  progressBar.style.width = `${lastPlayedPercent}%`
 
   playButton.addEventListener('click', () => {
     audioPlayer.currentTime = lastPlayedTime
@@ -118,8 +120,8 @@
     } 
     localStorage.setItem('audio-player-index', lastPlayedIndex)
   })
-
-  // update time
+  
+  // current time
   const updateTime = () => {
     const padNum = num => num
       ? num.toString().length === 1
@@ -133,8 +135,9 @@
 
     currentTime.innerText = `${padNum(timeMinutes)}:${padNum(timeSeconds)}`
   }
+
   updateTime()
-  
+
   audioPlayer.addEventListener('timeupdate', () => {
     updateTime()
 
@@ -155,7 +158,7 @@
     }
   })
 
-  // handle click to timestamp
+  // click to timestamp
   prograssBarContainer.addEventListener('click', function(e) {
     if (!audioPlayer.duration) { return }
     const progressPercent = 
@@ -168,6 +171,7 @@
     audioPlayer.play()
     togglePlayButtonIcon('PAUSE')
   })
+
   shareButton.addEventListener('click', () => {
     // TODO: handle share
     alert('hello')

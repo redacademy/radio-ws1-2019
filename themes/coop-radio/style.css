@@ -866,10 +866,54 @@ footer {
   background-color: #fff;
   padding: 0 1rem; }
 
+.audio-player__info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.audio-player__info-artist-img-container {
+  width: 2.57143rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.audio-player__info-artist-img {
+  width: 100%;
+  border-radius: 50%; }
+
+.audio-player__info {
+  margin-right: 1.5rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .audio-player__info--title {
   font-weight: bold; }
 
+.audio-player__info--title,
+.audio-player__info--artist {
+  margin: 0;
+  white-space: nowrap; }
+
 .audio-player__actions {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -928,6 +972,8 @@ footer {
               transform: scale(1) translateY(-5px); } }
 
 .audio-player__time {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
   top: 0.16rem;
   color: #bebebe;

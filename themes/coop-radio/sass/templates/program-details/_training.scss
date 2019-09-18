@@ -2,8 +2,17 @@
 
 .program-details-training {
   text-align: center;
+
+  .training-core-main {
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin:0 100px;
+    }
+  }
+
   h2 {
-      font-size:40px;
+    font-size: 40px;
   }
 
   .training-core {
@@ -18,7 +27,7 @@
       margin: 0 auto;
       text-align: left;
       h3 {
-          font-size:28px;
+        font-size: 28px;
       }
     }
   }

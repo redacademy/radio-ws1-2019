@@ -1309,6 +1309,11 @@ footer {
 /* training */
 .program-details-training {
   text-align: center; }
+  @media (min-width: 600px) {
+    .program-details-training .training-core-main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 100px; } }
   .program-details-training h2 {
     font-size: 40px; }
   .program-details-training .training-core {

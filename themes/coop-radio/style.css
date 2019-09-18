@@ -912,6 +912,8 @@ footer {
   white-space: nowrap; }
 
 .audio-player__actions {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -970,6 +972,8 @@ footer {
               transform: scale(1) translateY(-5px); } }
 
 .audio-player__time {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
   top: 0.16rem;
   color: #bebebe;

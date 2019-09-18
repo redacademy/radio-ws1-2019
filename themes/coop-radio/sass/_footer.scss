@@ -59,6 +59,7 @@ footer {
 }
 
 .audio-player__actions {
+  flex-shrink: 0;
   display: flex;
   margin-right: $base__space-unit;
 }
@@ -119,6 +120,7 @@ footer {
 }
 
 .audio-player__time {
+  flex-shrink: 0;
   position: relative;
   top: 0.16rem;
   color: $color__brand-gray;

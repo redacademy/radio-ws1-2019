@@ -5,15 +5,12 @@ jQuery(document).ready(function ($) {
     slidesToShow: 3,
     infinite: true,
     arrows: true,
-    dots: true,
     responsive: [
       {
-        breakpoint: 400,
+        breakpoint: 600,
         settings: {
-          arrows: true,
-          centerMode: true,
+          dots: true,
           centerPadding: '40px',
-          slidesToShow: 3
         }
       }
     ]

@@ -9,6 +9,7 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 600,
         settings: {
+          slidesToShow: 1,
           dots: true,
           centerPadding: '40px',
         }

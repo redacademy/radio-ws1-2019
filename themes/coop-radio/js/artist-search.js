@@ -9,6 +9,8 @@ jQuery(document).ready(function ($) {
   if (!artistSearchInput) { return }
 
   const artistCards = [...document.getElementsByClassName('artist-search-card')]
+  const artistScrollBtnPrev = document.getElementById('artist-library__action--prev')
+  const artistScrollBtnNext = document.getElementById('artist-library__action--next')
   const artistScroll = $('.artist-library')
 
   artistSearchInput.addEventListener('input', e => {
@@ -26,4 +28,13 @@ jQuery(document).ready(function ($) {
         .forEach(el => el.parentElement.style.display = 'initial') 
     }
   })
+
+  artistScrollBtnPrev.addEventListener(
+    'click',
+    () => artistScroll.slick('slickPrev')
+  )
+  artistScrollBtnNext.addEventListener(
+    'click',
+    () => artistScroll.slick('slickNext')
+  )
 })

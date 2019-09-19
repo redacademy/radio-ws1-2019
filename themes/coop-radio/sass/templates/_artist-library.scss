@@ -42,3 +42,26 @@
   }
 }
 
+.artist-library__container {
+  position: relative;
+  padding: 0 4 * $base__space-unit;
+}
+
+.artist-libary {
+  width: 80%;
+}
+
+.artist-library__action {
+  position: absolute;
+  top: 50%;
+  border: none;
+  background-color: transparent;
+}
+
+.artist-library__action--prev {
+  left: 0;
+}
+
+.artist-library__action--next {
+  right: 0;
+}

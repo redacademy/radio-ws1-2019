@@ -84,12 +84,15 @@ function coop_radio_scripts() {
   );
   wp_enqueue_script('coop-radio-audio-player');
 
-  // artist search
-  wp_enqueue_script( 'coop-radio-artist-search', get_template_directory_uri() . '/build/js/artist-search.min.js', array(), '20151215', true );
-
+  // slick
   wp_enqueue_script( 'slick-carousel', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array(), '20151215', true );
+
+  // artist search scroll
   wp_enqueue_script( 'coop-radio-scrolls', get_template_directory_uri() . '/build/js/scrolls.min.js', array(), '20151215', true );
   
+  // artist search
+  wp_enqueue_script( 'coop-radio-artist-search', get_template_directory_uri() . '/build/js/artist-search.min.js', array('jquery'), '20151215', true );
+
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
   }

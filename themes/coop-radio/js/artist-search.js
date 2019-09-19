@@ -16,16 +16,15 @@ jQuery(document).ready(function ($) {
   artistSearchInput.addEventListener('input', e => {
     const input = e.target.value.trim()
 
+    // HACK: unfilter not working unless triggered on every input
+    artistScroll.slick('slickUnfilter')
     if (input.length) {
       artistScroll.slick('slickGoTo', 0)
-      artistCards
-        .forEach(el => el.innerText.toLowerCase().includes(input.toLowerCase())
-          ? el.parentElement.style.display = 'initial'
-          : el.parentElement.style.display = 'none'
-        )
-    } else {
-      artistCards
-        .forEach(el => el.parentElement.style.display = 'initial') 
+      artistScroll.slick(
+        'slickFilter',
+        (i, el) =>
+          el.innerText.toLowerCase().includes(input.toLowerCase())
+      )
     }
   })
 

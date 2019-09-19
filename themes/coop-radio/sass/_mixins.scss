@@ -41,3 +41,8 @@
     @content;
   }
 }
+
+@mixin container {
+  margin:0 $base__space-unit;
+  background-color:grey;
+}

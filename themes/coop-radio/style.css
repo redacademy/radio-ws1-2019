@@ -1059,6 +1059,10 @@ footer {
 .program-details-page h3 {
   font-size: 28px; }
 
+.program-details-page .program-container {
+  margin: 0 1.5rem;
+  background-color: grey; }
+
 /* overview */
 /* get started */
 /* video */

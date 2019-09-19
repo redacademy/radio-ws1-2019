@@ -12,13 +12,13 @@ get_header(); ?>
     <?php while ( have_posts() ) : the_post(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <?php
-          get_template_part(
+        <?php get_template_part(
             'template-parts/content',
             'page-program-details__header'
-          );
+          );?>
 
-          get_template_part(
+        <div class="program-container">
+        <?php get_template_part(
             'template-parts/content',
             'page-program-details__overview'
           );
@@ -52,7 +52,7 @@ get_header(); ?>
             'template-parts/content',
             'page-program-details__enroll'
           );
-        ?>
+        ?> </div>
 
       </article>
     <?php endwhile; ?>

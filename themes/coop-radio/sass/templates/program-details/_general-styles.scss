@@ -7,4 +7,7 @@
     h3 {
         font-size:28px;
     }
+    .program-container {
+        @include container 
+    }
 }

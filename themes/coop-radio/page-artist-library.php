@@ -30,21 +30,45 @@ get_header(); ?>
       />
     </div><!-- artist-search-bar -->
 
-    <div class="artist-library">
-    <?php
-      $artists = get_posts( array(
-        'post_type' => 'artist',
-      ) );
+    <div class="artist-library__container">
+      <button
+        id="artist-library__action--prev"
+        class="artist-library__action artist-library__action--prev"
+      >
+        <img
+          alt="Previous artist"
+          class="artist-library__action-icon"
+          src="<?php echo get_stylesheet_directory_uri().'/images/floating-button-prev-dark.svg'; ?>"
+        />
+      </button>
 
-      foreach ( $artists as $post ) : setup_postdata( $post );?>
+      <div class="artist-library">
+        <?php
+          $artists = get_posts( array(
+            'post_type' => 'artist',
+          ) );
 
-        <div class="artist">
-        <?php get_template_part( 'template-parts/content', 'artist-library' );?>
-        </div>
+          foreach ( $artists as $post ) : setup_postdata( $post );?>
+
+            <div class="artist">
+            <?php get_template_part( 'template-parts/content', 'artist-library' );?>
+            </div>
+            
+        <?php endforeach; wp_reset_postdata();?>
         
-      <?php endforeach; wp_reset_postdata();?>
-      
-    </div><!-- artist-library -->
+      </div><!-- artist-library -->
+
+      <button
+        id="artist-library__action--next"
+        class="artist-library__action artist-library__action--next"
+      >
+        <img
+          alt="Next artist"
+          class="artist-library__action-icon"
+          src="<?php echo get_stylesheet_directory_uri().'/images/floating-button-next-dark.svg'; ?>"
+        />
+      </button>
+    </div>
 
   </main>
 

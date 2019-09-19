@@ -1059,9 +1059,15 @@ footer {
 .program-details-page h3 {
   font-size: 28px; }
 
-.program-details-page .program-container {
-  margin: 0 1.5rem;
-  background-color: grey; }
+@media (min-width: 600px) {
+  .program-details-page .program-container {
+    margin: 0 6rem;
+    background-color: grey; } }
+
+@media (min-width: 600px) {
+  .program-details-page .program-text-container {
+    margin: 0 19.5rem;
+    background-color: yellow; } }
 
 /* overview */
 /* get started */

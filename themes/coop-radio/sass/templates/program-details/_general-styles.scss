@@ -8,6 +8,13 @@
         font-size:28px;
     }
     .program-container {
-        @include container 
+        @include tablet {
+            @include page-container 
+        }
+    }
+    .program-text-container {
+        @include tablet {
+            @include text-container
+        }
     }
 }

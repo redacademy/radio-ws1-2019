@@ -1202,9 +1202,7 @@ footer {
   .artist-library-page .artist-search-bar {
     margin: 10rem 5rem 5rem;
     text-align: center; }
-    .artist-library-page .artist-search-bar .artist-search-toggle {
-      background: none;
-      border: none;
+    .artist-library-page .artist-search-bar .artist-search-icon {
       margin: 0 0.5rem; }
     .artist-library-page .artist-search-bar .artist-search-field {
       background: none;

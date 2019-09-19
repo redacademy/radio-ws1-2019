@@ -10,12 +10,22 @@ get_header(); ?>
   <main>
 
     <div class="artist-search-bar">
-		  <button type='button' class="artist-search-toggle" aria-hidden="true">
-        <img src="<?php echo get_stylesheet_directory_uri().'/images/menu-bar.png'; ?>" alt="">
-      </button>
+		  <span class="artist-search-icon">
+        <img
+          src="<?php echo get_stylesheet_directory_uri().'/images/menu-bar.png'; ?>"
+          alt=""
+        />
+      </span>
     
 		  <span class="screen-reader-text"><?php echo esc_html( 'Search Artist' ); ?></span>
-        <input type="text" class="artist-search-field" placeholder="Search Artist..." value="" name="post_type" id="post_type" />
+        <input
+          type="text"
+          class="artist-search-field"
+          placeholder="Search Artist..."
+          value=""
+          name="post_type"
+          id="post_type"
+        />
     </div><!-- artist-search-bar -->
 
     <div class="artist-library">

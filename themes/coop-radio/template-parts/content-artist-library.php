@@ -6,7 +6,7 @@
  */ 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('artist-search-card'); ?>>
 
   <a href="<?= esc_url( get_post_permalink( get_the_ID() ) ); ?>"
       rel="bookmark">

@@ -1204,7 +1204,7 @@ footer {
     text-align: center; }
     .artist-library-page .artist-search-bar .artist-search-icon {
       margin: 0 0.5rem; }
-    .artist-library-page .artist-search-bar .artist-search-field {
+    .artist-library-page .artist-search-bar .artist-search-input {
       background: none;
       border: none;
       border-bottom: 1px solid #171717;

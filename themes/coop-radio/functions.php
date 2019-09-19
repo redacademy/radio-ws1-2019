@@ -70,6 +70,9 @@ function coop_radio_scripts() {
   wp_enqueue_script( 'coop-radio-faq', get_template_directory_uri() . '/build/js/faq.min.js', array('jquery'), '20151215', true );
   wp_enqueue_script( 'coop-radio-socials', get_template_directory_uri() . '/build/js/socials.min.js', array('jquery'), '20151215', true );
   wp_enqueue_script( 'jsmediatags', 'https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.0/jsmediatags.min.js', array(), '20151215', true );
+  wp_enqueue_script( 'coop-radio-search-form', get_template_directory_uri() . '/build/js/search-form.min.js', array('jquery'), '20151215', true );
+
+  // audio player
   wp_register_script( 'coop-radio-audio-player', get_template_directory_uri() . '/build/js/audio-player.min.js', array(), '20151215', true );
   wp_localize_script(
     'coop-radio-audio-player',
@@ -80,7 +83,9 @@ function coop_radio_scripts() {
     )
   );
   wp_enqueue_script('coop-radio-audio-player');
-  wp_enqueue_script( 'coop-radio-search-form', get_template_directory_uri() . '/build/js/search-form.min.js', array('jquery'), '20151215', true );
+
+  // artist search
+  wp_enqueue_script( 'coop-radio-artist-search', get_template_directory_uri() . '/build/js/artist-search.min.js', array(), '20151215', true );
 
   wp_enqueue_script( 'slick-carousel', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array(), '20151215', true );
   wp_enqueue_script( 'coop-radio-scrolls', get_template_directory_uri() . '/build/js/scrolls.min.js', array(), '20151215', true );

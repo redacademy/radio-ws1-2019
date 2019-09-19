@@ -17,15 +17,17 @@ get_header(); ?>
         />
       </span>
     
-		  <span class="screen-reader-text"><?php echo esc_html( 'Search Artist' ); ?></span>
-        <input
-          type="text"
-          class="artist-search-field"
-          placeholder="Search Artist..."
-          value=""
-          name="post_type"
-          id="post_type"
-        />
+      <label for="artist-search-input" class="screen-reader-text">
+        <?php echo esc_html( 'Search Artist' ); ?>
+      </label>
+
+      <input
+        id="artist-search-input"
+        name="artist-search-input"
+        class="artist-search-input"
+        placeholder="Search Artist..."
+        type="text"
+      />
     </div><!-- artist-search-bar -->
 
     <div class="artist-library">

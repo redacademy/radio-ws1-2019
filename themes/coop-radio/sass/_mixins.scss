@@ -44,10 +44,8 @@
 
 @mixin page-container {
   margin:0 4*$base__space-unit;
-  background-color:grey;
 }
 
 @mixin text-container {
   margin: 0 13*$base__space-unit;
-  background-color:yellow;
 }

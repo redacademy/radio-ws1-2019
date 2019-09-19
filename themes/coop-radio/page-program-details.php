@@ -26,16 +26,14 @@ get_header(); ?>
           get_template_part(
             'template-parts/content',
             'page-program-details__get-started'
-          );?></div>
-
-          <div class="program-text-container">
-          <?php get_template_part(
+          );
+          
+          get_template_part(
             'template-parts/content',
             'page-program-details__video'
-          );?></div>
+          );
 
-          <div class="program-container">
-          <?php get_template_part(
+          get_template_part(
             'template-parts/content',
             'page-program-details__requirements'
           );

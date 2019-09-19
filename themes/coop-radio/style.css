@@ -1061,13 +1061,11 @@ footer {
 
 @media (min-width: 600px) {
   .program-details-page .program-container {
-    margin: 0 6rem;
-    background-color: grey; } }
+    margin: 0 6rem; } }
 
 @media (min-width: 600px) {
   .program-details-page .program-text-container {
-    margin: 0 19.5rem;
-    background-color: yellow; } }
+    margin: 0 19.5rem; } }
 
 /* overview */
 /* get started */
@@ -1118,22 +1116,15 @@ footer {
   @media (min-width: 600px) {
     .program-details-training .training-core-main {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 0 100px; } }
-  .program-details-training h2 {
-    font-size: 40px; }
+      grid-template-columns: repeat(2, 1fr); } }
   .program-details-training .training-core {
-    margin: 20px auto;
-    max-width: 550px; }
+    margin: 20px 0; }
     .program-details-training .training-core .core-img {
       display: block;
       margin: 2.5rem auto; }
     .program-details-training .training-core .core-text {
-      width: 400px;
       margin: 0 auto;
       text-align: left; }
-      .program-details-training .training-core .core-text h3 {
-        font-size: 28px; }
 
 /* enroll */
 /*--------------------------------------------------------------

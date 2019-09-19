@@ -8,6 +8,12 @@
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: top;
+
+  main {
+    position: absolute;
+    top: 4.5rem;
+    width: 100vw;
+  }
 }
 
 .content-front-page {

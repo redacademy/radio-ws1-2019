@@ -4,20 +4,14 @@
 
 .banner {
   background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
 
   .menu-item a {
-    color: $color__text-screen;
-  }
-
-  @include desktop {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-
-    .menu-item a {
-      color: $color__background-body;
-    }
+    color: $color__background-body;
   }
 }
 
@@ -31,46 +25,12 @@
 }
 
 .banner--dark {
-  background-color: $color__text-screen;
-  height: 3 * $base__space-unit;
-
-  .menu-item a {
-    color: $color__background-body;
-  }
-
-  @include desktop {
-    position: initial;
-  }
-}
-
-.banner--desktop-transparent {
-  @include desktop {
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-
+  @include tablet {
+    background-color: $color__text-screen;
+    height: 3 * $base__space-unit;
+  
     .menu-item a {
       color: $color__background-body;
-    }
-  }
-}
-
-.banner--desktop-dark {
-    @include desktop {
-      background-color: $color__background-dark;
-      position: initial;
-    }
-}
-
-.banner--desktop-light {
-  @include desktop {
-    position: initial;
-    background-color: $color__background-body;
-
-    .menu-item a {
-      color: $color__text-screen;
     }
   }
 }

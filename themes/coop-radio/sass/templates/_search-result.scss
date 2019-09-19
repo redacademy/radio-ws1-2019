@@ -5,15 +5,7 @@
     main {
         
         background-color: #2c2c2c;
-        @include short {
-            max-height: 79vh;
-        }
-        @include medium {
-            max-height: 82vh;
-        }
-        @include tall {
-            max-height: 86vh;
-        }
+
 
         .search-container {
             display: flex;

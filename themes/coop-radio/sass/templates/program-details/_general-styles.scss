@@ -18,6 +18,14 @@
       font-size: 32px;
     }
   }
+  p {
+    text-align: left;
+
+    @include desktop {
+        text-align: center;
+    }
+  }
+
   .program-container {
     @include mobile-page-container;
 

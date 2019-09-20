@@ -14,9 +14,11 @@
     rel="bookmark"
   >
 
-    <?php if ( has_post_thumbnail() ) :
-      the_post_thumbnail( 'large' );
-    endif; ?>
+    <div class="artist-card__img-container">
+      <?php if ( has_post_thumbnail() ) :
+        the_post_thumbnail( 'large' );
+      endif; ?>
+    </div>
 
     <h2 class="artist-card__title"><?= the_title(); ?></h2>
   

@@ -18,6 +18,9 @@ function coop_radio_body_classes( $classes ) {
   }
   if ( is_page('artist-library')) {
 		$classes[] = 'artist-library-page';
+  }
+  if ( is_page('program-details')) {
+		$classes[] = 'program-details-page';
 	}
 
   return $classes;

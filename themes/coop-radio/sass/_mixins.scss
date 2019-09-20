@@ -41,3 +41,11 @@
     @content;
   }
 }
+
+@mixin page-container {
+  margin:0 4*$base__space-unit;
+}
+
+@mixin text-container {
+  margin: 0 13*$base__space-unit;
+}

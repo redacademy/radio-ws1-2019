@@ -23,31 +23,9 @@
     <p>
       <?php the_content(); ?>
     </p> 
-    <button class="collapsible">Socials</button>
-      <div class="content">  
-        <ul>
-          <li>
-            <a href="#"><i class="fab fa-facebook"></i>
-              <span class="name">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-twitter-square"></i>
-              <span class="socials-icons">Twitter</span>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-instagram"></i>
-              <span class="name">Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-vimeo"></i>
-              <span class="name">Vimeo</span>
-            </a>
-          </li>
-          </ul> 
-      </div>
-</div>
+    <?php get_template_part( 'template-parts/content-socials-collapse' ); ?>
+    </div>
+    </div>
   </header>
 
   <section>

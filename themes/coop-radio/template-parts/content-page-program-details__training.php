@@ -20,6 +20,7 @@
         <div class="training-core">
             <img class="core-img" src="<?= $section['icon']; ?>" alt="" />
           <div class="core-text">
+            <h4><?= $section['core_step_num']; ?></h4>
             <h3><?= $section['title']; ?></h3>
             <p><?= $section['description']; ?></p>
           </div>

@@ -1126,9 +1126,11 @@ footer {
     .program-details-page h3 {
       font-size: 32px; } }
 
-@media (min-width: 600px) {
-  .program-details-page .program-container {
-    margin: 0 6rem; } }
+.program-details-page .program-container {
+  margin: 0 1.5rem; }
+  @media (min-width: 600px) {
+    .program-details-page .program-container {
+      margin: 0 6rem; } }
 
 @media (min-width: 600px) {
   .program-details-page .program-text-container {

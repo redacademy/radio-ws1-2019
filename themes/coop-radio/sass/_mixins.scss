@@ -12,18 +12,19 @@
 }
 
 // Media Screens
-@mixin desktop {
-  @media (min-width: $desktop-width) {
-    @content;
-  }
-}
-
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
   }
 }
 
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+// Heights for Main Content
 @mixin short {
   @media (min-height: 650px) {
     @content;
@@ -40,6 +41,11 @@
   @media (min-height: 1000px) {
     @content;
   }
+}
+
+// General Containers
+@mixin mobile-page-container {
+  margin:0 $base__space-unit;
 }
 
 @mixin page-container {

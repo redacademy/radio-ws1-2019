@@ -2,18 +2,18 @@
 
 .program-details-page {
   h2 {
-    font-size:38px;
     @include font_headline;
+    font-size: 38px;
     font-weight: bold;
-    @include desktop {
-      font-size: 48px;
-    }
+        @include desktop {
+        font-size: 48px;
+        }
   }
   h3 {
     @include font_headline;
     font-weight: bold;
     @include desktop {
-        font-size: 32px;
+      font-size: 32px;
     }
   }
   .program-container {

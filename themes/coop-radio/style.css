@@ -1108,10 +1108,10 @@ footer {
 
 /* general styling */
 .program-details-page h2 {
-  font-size: 38px;
   font-family: "Oswald", sans-serif;
   font-weight: normal;
   color: #171717;
+  font-size: 38px;
   font-weight: bold; }
   @media (min-width: 1080px) {
     .program-details-page h2 {

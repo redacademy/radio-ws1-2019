@@ -17,12 +17,13 @@
 @mixin font-headline {
   font-family: $font__heading;
   font-weight: normal;
+  color:$color__headline
 }
 
 @mixin font-body {
   font-family: $font__body;
-  color: $color__text-main;
   font-size: 16px;
+  color: $color__text-main;
   line-height: $font__line-height-body;
 }
 

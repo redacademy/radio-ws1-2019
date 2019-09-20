@@ -339,13 +339,14 @@ input,
 select,
 textarea {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
-  color: #2c2c2c;
   font-size: 16px;
+  color: #2c2c2c;
   line-height: 1.5; }
 
 h1 {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
+  color: #171717;
   font-size: 24px; }
 
 h2 {
@@ -355,6 +356,7 @@ h2 {
 h3 {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
+  color: #171717;
   font-size: 26px;
   font-weight: bold; }
 
@@ -1065,6 +1067,9 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   color: #fff;
   height: 100vh;
@@ -1073,6 +1078,9 @@ footer {
   @media (min-width: 1080px) {
     .program-details__header {
       text-align: unset;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
       padding-right: 20%; } }
 
 .program-details__actions {
@@ -1100,10 +1108,23 @@ footer {
 
 /* general styling */
 .program-details-page h2 {
-  font-size: 38px; }
+  font-size: 38px;
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  color: #171717;
+  font-weight: bold; }
+  @media (min-width: 1080px) {
+    .program-details-page h2 {
+      font-size: 48px; } }
 
 .program-details-page h3 {
-  font-size: 28px; }
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  color: #171717;
+  font-weight: bold; }
+  @media (min-width: 1080px) {
+    .program-details-page h3 {
+      font-size: 32px; } }
 
 @media (min-width: 600px) {
   .program-details-page .program-container {

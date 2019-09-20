@@ -20,7 +20,7 @@
         <?php $i = 0; foreach ( $events as $event ) { $i++; ?>
           <li class="timeline__list-item">
             <div class="timeline__list-item-wrapper">
-              <p class="timeline__list-item-phase">Phase <?= $i; ?></p>
+              <h4 class="timeline__list-item-phase">Phase <?= $i; ?></h4>
               <h3 class="timeline__list-item-title"><?= $event['title']; ?></h3>
               <p class="timeline__list-item-content">
                 <?= $event['description']; ?>

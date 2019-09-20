@@ -13,7 +13,7 @@
   h3 {
     @include font_headline;
     font-weight: bold;
-    
+
     @include desktop {
       font-size: 32px;
     }

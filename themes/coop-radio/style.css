@@ -1145,11 +1145,11 @@ footer {
 
 .program-details-page .program-container {
   margin: 0 1.5rem; }
-  @media (min-width: 600px) {
+  @media (min-width: 1080px) {
     .program-details-page .program-container {
       margin: 0 6rem; } }
 
-@media (min-width: 600px) {
+@media (min-width: 600px) and (min-width: 1080px) {
   .program-details-page .program-text-container {
     margin: 0 19.5rem; } }
 

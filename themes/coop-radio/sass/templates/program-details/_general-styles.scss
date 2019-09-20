@@ -27,11 +27,7 @@
   }
 
   .program-container {
-    @include mobile-page-container;
-
-    @include tablet {
-      @include page-container;
-    }
+    @include page-container;
   }
   .program-text-container {
     @include tablet {

@@ -44,14 +44,15 @@
 }
 
 // General Containers
-@mixin mobile-page-container {
-  margin:0 $base__space-unit;
-}
-
 @mixin page-container {
-  margin:0 4*$base__space-unit;
+  margin:0 $base__space-unit;
+  @include desktop {
+    margin:0 4*$base__space-unit;
+  }
 }
 
 @mixin text-container {
-  margin: 0 13*$base__space-unit;
+  @include desktop {
+    margin: 0 13*$base__space-unit;
+  }
 }

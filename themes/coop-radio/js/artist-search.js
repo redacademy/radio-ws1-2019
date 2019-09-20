@@ -12,6 +12,10 @@ jQuery(document).ready(function ($) {
   const artistScrollBtnNext = document.getElementById('artist-library__action--next')
   const artistScroll = $('.artist-library')
 
+  const noResultsText = document.createElement('p')
+  noResultsText.innerText = 'No artists found'
+  noResultsText.classList.add('artist-library__not-found')
+
   artistSearchInput.addEventListener('input', e => {
     const input = e.target.value.trim()
 
@@ -24,6 +28,16 @@ jQuery(document).ready(function ($) {
         (i, el) =>
           el.innerText.toLowerCase().includes(input.toLowerCase())
       )
+    }
+
+    if (document.getElementsByClassName('artist-card').length === 0) {
+      artistScroll.append(noResultsText)
+      artistScrollBtnPrev.style.display = 'none'
+      artistScrollBtnNext.style.display = 'none'
+    } else {
+      noResultsText.remove()
+      artistScrollBtnPrev.style.display = 'initial'
+      artistScrollBtnNext.style.display = 'initial'
     }
   })
 

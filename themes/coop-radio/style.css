@@ -1238,6 +1238,12 @@ footer {
 .artist-library__search-icon {
   margin: 0 0.5rem; }
 
+.artist-library__not-found {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 800;
+  opacity: 0.2; }
+
 .artist-library__action {
   position: absolute;
   top: 50%;

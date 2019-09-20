@@ -13,7 +13,7 @@
 
     <section class="program-details-training">
       <h2><?= CFS()->get( 'training_title' ); ?></h2>
-      <p><?= CFS()->get( 'training_description' ); ?></p>
+      <p class="text-description text-container"><?= CFS()->get( 'training_description' ); ?></p>
       
       <div class="training-core-main">
       <?php foreach ( $sections as $section ) { ?>

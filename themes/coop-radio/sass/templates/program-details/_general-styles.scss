@@ -18,11 +18,10 @@
       font-size: 32px;
     }
   }
-  p {
+  .text-container {
     text-align: left;
-
     @include desktop {
-        text-align: center;
+    text-align: center;
     }
   }
 
@@ -31,7 +30,7 @@
   }
   .program-text-container {
     @include tablet {
-      @include text-container;
+      @include text-container
     }
   }
 }

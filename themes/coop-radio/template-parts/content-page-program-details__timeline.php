@@ -13,7 +13,7 @@
 
     <section class="timeline">
       <h2><?= CFS()->get( 'timeline_title' ); ?></h2>
-      <p><?= CFS()->get( 'timeline_description' ); ?></p>
+      <p class="text-description text-container"><?= CFS()->get( 'timeline_description' ); ?></p>
       <a href="/">Learn more</a>
 
       <ul class="timeline__list">

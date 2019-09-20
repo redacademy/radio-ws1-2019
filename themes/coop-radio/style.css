@@ -1137,10 +1137,10 @@ footer {
     .program-details-page h3 {
       font-size: 32px; } }
 
-.program-details-page p {
+.program-details-page .text-container {
   text-align: left; }
   @media (min-width: 1080px) {
-    .program-details-page p {
+    .program-details-page .text-container {
       text-align: center; } }
 
 .program-details-page .program-container {

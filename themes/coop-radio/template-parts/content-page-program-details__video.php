@@ -8,5 +8,5 @@
 ?>
 
 <section>
-  <div>youtube vid at: <?= CFS()->get( 'featured_video_url' ); ?></div>
+  <div class="text-container">youtube vid at: <?= CFS()->get( 'featured_video_url' ); ?></div>
 </section>

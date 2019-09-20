@@ -5,10 +5,9 @@
  */
 
 jQuery(document).ready(function ($) {
-  const artistSearchInput = document.getElementById('artist-search-input')
+  const artistSearchInput = document.getElementById('artist-library__search-input')
   if (!artistSearchInput) { return }
 
-  const artistCards = [...document.getElementsByClassName('artist-search-card')]
   const artistScrollBtnPrev = document.getElementById('artist-library__action--prev')
   const artistScrollBtnNext = document.getElementById('artist-library__action--next')
   const artistScroll = $('.artist-library')

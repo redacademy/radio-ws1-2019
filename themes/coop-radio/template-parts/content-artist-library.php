@@ -6,16 +6,19 @@
  */ 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('artist-search-card'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('artist-card'); ?>>
 
-  <a href="<?= esc_url( get_post_permalink( get_the_ID() ) ); ?>"
-      rel="bookmark">
+  <a
+    class="artist-card__link"
+    href="<?= esc_url( get_post_permalink( get_the_ID() ) ); ?>"
+    rel="bookmark"
+  >
 
-    <?php if ( has_post_thumbnail() ) : ?>
-    <?php the_post_thumbnail( 'large' ); ?>
-    <?php endif; ?>
+    <?php if ( has_post_thumbnail() ) :
+      the_post_thumbnail( 'large' );
+    endif; ?>
 
-    <h2><?= the_title(); ?></h2>
+    <h2 class="artist-card__title"><?= the_title(); ?></h2>
   
   </a>
 
@@ -24,12 +27,12 @@
       if ( gettype( $terms ) == 'array' ) : 
         foreach ( $terms as $term  ) : ?>
 
-          <p><?= $term->name; ?></p>
+          <p class="artist-card__genre"><?= $term->name; ?></p>
 
-      <?php endforeach; else : ?>
+        <?php endforeach; else : ?>
 
-          <p>Misc</p>
+          <p class="artist-card__genre">Misc</p>
 
-        <?php endif; ?>
+      <?php endif; ?>
 
 </article>

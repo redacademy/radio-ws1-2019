@@ -21,6 +21,9 @@
   }
 }
 
+.wrap-photo {
+  position: relative;
+}
 .side-text {
   @include desktop {
     width: 500px;

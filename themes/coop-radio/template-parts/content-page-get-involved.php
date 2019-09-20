@@ -9,12 +9,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <header class="header-container">
+  <header>
+    <div class="header-container">
     <div class="container2">
   <?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
     <?php endif; ?>
-</div>
+    </div>
     <div class="container-1">
     <h1>
       <?= the_title(); ?>

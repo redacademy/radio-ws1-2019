@@ -1607,6 +1607,9 @@ footer {
             flex-direction: row-reverse;
     width: 80%; } }
 
+.wrap-photo {
+  position: relative; }
+
 @media (min-width: 1080px) {
   .side-text {
     width: 500px;
@@ -1721,43 +1724,21 @@ footer {
 article {
   text-align: center; }
 
-.header-container {
-  /* Style the button that is used to open and close the collapsible content */
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  /* Style the collapsible content. Note: hidden by default */ }
-  @media (min-width: 1080px) {
-    .header-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      width: 100%; }
-      .header-container .container2 {
-        width: 50%;
-        height: 50%; }
-      .header-container .container-1 {
-        width: 50%; } }
-  .header-container .collapsible {
-    background-color: #fff;
-    color: #8b1f7e;
-    cursor: pointer;
-    padding: 18px;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px; }
-  .header-container .active,
-  .header-container .collapsible:hover {
-    background-color: #ccc; }
-  .header-container .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #b079aa;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 200px; }
+@media (min-width: 1080px) {
+  .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 600px; }
+    .header-container .container2 {
+      width: 50%; }
+    .header-container .container-1 {
+      width: 50%;
+      background-color: black; }
+    .header-container .wp-post-image {
+      height: -webkit-fill-available;
+      width: -webkit-fill-available; } }
 
 @media (min-width: 1080px) {
   .participate {

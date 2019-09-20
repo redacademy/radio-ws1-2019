@@ -9,22 +9,23 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <header class="header-container">
-    <div class="container2">
-  <?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-    <?php endif; ?>
-    </div>
+  <header>
+    <div class="header-container">
+      <div class="container2">
+        <?php if ( has_post_thumbnail() ) : ?>
+			    <?php the_post_thumbnail( 'large' ); ?>
+          <?php endif; ?>
+        </div>
 
-    <div class="container-1">
-    <h1>
-      <?= the_title(); ?>
-    </h1>
-
-    <p>
-      <?php the_content(); ?>
-    </p> 
-    <a href="#" class="btn">Donate Now</a>
+      <div class="container-1">
+        <h1>
+          <?= the_title(); ?>
+        </h1>
+        <p>
+          <?php the_content(); ?>
+        </p> 
+          <a href="#" class="btn">Donate Now</a>
+      </div>
     </div>
   </header>
 </article>
@@ -62,7 +63,6 @@
       <div class="side-text">
         <h2><?= CFS()->get( 'education_title' ); ?></h2>
         <p><?= CFS()->get( 'education_text' ); ?></p>
-        <div class="line2"></div>
       </div>
     </div>
 

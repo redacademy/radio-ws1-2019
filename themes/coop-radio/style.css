@@ -1202,14 +1202,15 @@ footer {
   .requirements-main .requirement-img {
     margin: 4.5rem 0; } }
 
+.requirements-main .requirement-img img {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
+          box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
+
 @media (min-width: 1080px) {
   .requirements-main .requirement-img {
     width: 50%;
-    margin: 1.5rem; }
-    .requirements-main .requirement-img img {
-      border-radius: 15px;
-      -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
-              box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; } }
+    margin: 1.5rem; } }
 
 .requirements-main .requirement-list {
   text-align: left; }
@@ -1274,6 +1275,35 @@ footer {
     text-align: left; }
 
 /* enroll */
+.enroll {
+  margin: 3rem 0; }
+  @media (min-width: 1080px) {
+    .enroll .enroll-main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .enroll .enroll-main .enroll-img {
+    margin: 1.5rem 0; }
+    @media (min-width: 1080px) {
+      .enroll .enroll-main .enroll-img {
+        width: 50%; } }
+    .enroll .enroll-main .enroll-img img {
+      border-radius: 10px;
+      -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
+              box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
+  @media (min-width: 1080px) {
+    .enroll .enroll-main .enroll-text {
+      width: 50%;
+      margin: 1.5rem; } }
+  .enroll .enroll-main .enroll-descript-desk {
+    display: none; }
+    @media (min-width: 1080px) {
+      .enroll .enroll-main .enroll-descript-desk {
+        display: block; } }
+  @media (min-width: 1080px) {
+    .enroll .enroll-main .enroll-descript-mob {
+      display: none; } }
+
 /*--------------------------------------------------------------
 # Artist library
 --------------------------------------------------------------*/

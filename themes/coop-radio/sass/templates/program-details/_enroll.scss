@@ -1,1 +1,37 @@
 /* enroll */
+
+.enroll {
+  margin: 2 * $base__space-unit 0;
+  .enroll-main {
+    @include desktop {
+      display: flex;
+    }
+    .enroll-img {
+      margin: $base__space-unit 0;
+      @include desktop {
+        width: 50%;
+      }
+      img {
+        border-radius: 10px;
+        box-shadow: $img_box-shadow;
+      }
+    }
+    .enroll-text {
+      @include desktop {
+        width: 50%;
+        margin:$base__space-unit;
+      }
+    }
+    .enroll-descript-desk {
+        display:none;
+        @include desktop {
+            display:block;
+        }
+    }
+    .enroll-descript-mob {
+        @include desktop {
+            display:none;
+        }
+    }
+  }
+}

@@ -1065,6 +1065,9 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   color: #fff;
   height: 100vh;
@@ -1073,6 +1076,9 @@ footer {
   @media (min-width: 1080px) {
     .program-details__header {
       text-align: unset;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
       padding-right: 20%; } }
 
 .program-details__actions {
@@ -1114,6 +1120,18 @@ footer {
     margin: 0 19.5rem; } }
 
 /* overview */
+.overview-main {
+  margin: 4.5rem 0; }
+  .overview-main .overview-item {
+    width: 400px;
+    margin: 0 auto; }
+    .overview-main .overview-item .overview-img {
+      display: block;
+      margin: 0 auto;
+      height: 200px; }
+    .overview-main .overview-item .overview-text {
+      text-align: left; }
+
 /* get started */
 .get-started .get-started-core {
   width: 450px;

@@ -1207,14 +1207,16 @@ footer {
     width: 50%;
     margin: 1.5rem; }
     .requirements-main .requirement-img img {
-      border-radius: 15px; } }
+      border-radius: 15px;
+      -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
+              box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; } }
 
 .requirements-main .requirement-list {
   text-align: left; }
   @media (min-width: 1080px) {
     .requirements-main .requirement-list {
-      margin: 0 1.5rem;
-      width: 50%; } }
+      width: 50%;
+      margin: 0 1.5rem; } }
 
 /* timeline */
 .timeline__list {

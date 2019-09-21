@@ -11,14 +11,15 @@
       margin: $base__space-unit;
       img {
         border-radius: 15px;
+        box-shadow: 0 0.5rem 0.5rem -0.25rem $color__text-main;
       }
     }
   }
   .requirement-list {
     text-align: left;
     @include desktop {
-      margin: 0 $base__space-unit;
       width: 50%;
+      margin: 0 $base__space-unit;
     }
   }
 }

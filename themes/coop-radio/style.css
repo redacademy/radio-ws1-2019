@@ -993,16 +993,18 @@ footer {
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
-.home {
+.home-main {
   height: 100vh;
-  background-image: url("../../images/front-page-background.jpeg");
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: top; }
-  .home main {
-    position: absolute;
-    top: 4.5rem;
-    width: 100vw; }
+
+.home-container {
+  width: 100vw; }
+  @media (min-width: 1080px) {
+    .home-container {
+      position: absolute;
+      top: 4.5rem; } }
 
 .content-front-page {
   position: absolute;
@@ -1023,7 +1025,9 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .content-front-page .content-container h1, .content-front-page .content-container p, .content-front-page .content-container a {
+    .content-front-page .content-container h1,
+    .content-front-page .content-container p,
+    .content-front-page .content-container a {
       color: #000000; }
     .content-front-page .content-container p {
       max-width: 60%;

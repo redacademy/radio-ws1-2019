@@ -3,8 +3,14 @@
 .terms-conditions {
   background-color: $color__brand-gray;
   padding: $base__space-unit;
+  @include desktop {
+    padding: 1.5*$base__space-unit;
+  }
   .terms-text-container {
     text-align: left;
     font-family: Arial, sans-serif;
+    @include desktop {
+      margin: $base__space-unit 3*$base__space-unit;
+    }
   }
 }

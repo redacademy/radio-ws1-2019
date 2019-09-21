@@ -1298,9 +1298,15 @@ footer {
 .terms-conditions {
   background-color: #bebebe;
   padding: 1.5rem; }
+  @media (min-width: 1080px) {
+    .terms-conditions {
+      padding: 2.25rem; } }
   .terms-conditions .terms-text-container {
     text-align: left;
     font-family: Arial, sans-serif; }
+    @media (min-width: 1080px) {
+      .terms-conditions .terms-text-container {
+        margin: 1.5rem 4.5rem; } }
 
 /*--------------------------------------------------------------
 # Artist library

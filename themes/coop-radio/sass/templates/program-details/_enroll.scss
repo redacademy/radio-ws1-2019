@@ -2,12 +2,36 @@
 
 .enroll {
   margin: 2 * $base__space-unit 0;
-}
-.enroll-img {
-  @include full-width;
-  img {
-    margin: $base__space-unit 0;
-    border-radius: 10px;
-    box-shadow: 0 0.5rem 0.5rem -0.25rem $color__text-main;
+  .enroll-main {
+    @include desktop {
+      display: flex;
+    }
+    .enroll-img {
+      margin: $base__space-unit 0;
+      @include desktop {
+        width: 50%;
+      }
+      img {
+        border-radius: 10px;
+        box-shadow: 0 0.5rem 0.5rem -0.25rem $color__text-main;
+      }
+    }
+    .enroll-text {
+      @include desktop {
+        width: 50%;
+        margin:$base__space-unit;
+      }
+    }
+    .enroll-descript-desk {
+        display:none;
+        @include desktop {
+            display:block;
+        }
+    }
+    .enroll-descript-mob {
+        @include desktop {
+            display:none;
+        }
+    }
   }
 }

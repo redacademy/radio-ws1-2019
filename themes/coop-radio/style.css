@@ -1870,8 +1870,7 @@ ul {
 /*--------------------------------------------------------------
 # Search Page
 --------------------------------------------------------------*/
-.search-background {
-  background-image: url("../../images/search-background.jpg");
+.search-container {
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -1883,7 +1882,7 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative; }
-  .search-background .search-intro {
+  .search-container .search-intro {
     color: white;
     text-transform: uppercase;
     font-size: 1.25rem;
@@ -1891,28 +1890,28 @@ ul {
     position: absolute;
     top: 6.5rem; }
     @media (min-width: 600px) {
-      .search-background .search-intro {
+      .search-container .search-intro {
         font-size: 1.5rem;
         font-weight: 400;
         top: 5.5rem; } }
     @media (min-width: 1080px) {
-      .search-background .search-intro {
+      .search-container .search-intro {
         font-size: 1.75rem;
         top: 4.5rem; } }
-    .search-background .search-intro p {
+    .search-container .search-intro p {
       text-align: center; }
-  .search-background .custom-search {
+  .search-container .custom-search {
     position: absolute;
     top: 10rem; }
-    .search-background .custom-search fieldset {
+    .search-container .custom-search fieldset {
       border: none; }
-      .search-background .custom-search fieldset .custom-input {
+      .search-container .custom-search fieldset .custom-input {
         width: 60vw;
         background-color: #dddddd;
         font-size: 1rem; }
         @media (min-width: 600px) {
-          .search-background .custom-search fieldset .custom-input {
+          .search-container .custom-search fieldset .custom-input {
             font-size: 1.25rem; } }
         @media (min-width: 1080px) {
-          .search-background .custom-search fieldset .custom-input {
+          .search-container .custom-search fieldset .custom-input {
             font-size: 1.5rem; } }

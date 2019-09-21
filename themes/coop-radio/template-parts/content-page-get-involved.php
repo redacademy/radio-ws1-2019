@@ -23,6 +23,7 @@
     <p>
       <?php the_content(); ?>
     </p> 
+<<<<<<< Updated upstream
     <!-- <button class="collapsible">Socials</button>
       <div class="content">  
         <ul>
@@ -47,6 +48,10 @@
           </li>
           </ul> 
       </div> -->
+=======
+    <?php get_template_part( 'template-parts/content-socials-collapse' ); ?>
+    </div>
+>>>>>>> Stashed changes
     </div>
   </header>
 

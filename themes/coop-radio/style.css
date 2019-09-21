@@ -1193,11 +1193,28 @@ footer {
 /* video */
 /* requirements */
 @media (min-width: 1080px) {
+  .requirements-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media (min-width: 1080px) {
   .requirements-main .requirement-img {
     margin: 4.5rem 0; } }
 
+@media (min-width: 1080px) {
+  .requirements-main .requirement-img {
+    width: 50%;
+    margin: 1.5rem; }
+    .requirements-main .requirement-img img {
+      border-radius: 15px; } }
+
 .requirements-main .requirement-list {
   text-align: left; }
+  @media (min-width: 1080px) {
+    .requirements-main .requirement-list {
+      margin: 0 1.5rem;
+      width: 50%; } }
 
 /* timeline */
 .timeline__list {

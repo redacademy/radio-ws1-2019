@@ -1,1 +1,25 @@
 /* overview */
+
+.overview-main {
+  margin: 3 * $base__space-unit 0;
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    margin: 3 * $base__space-unit 0;
+  }
+  .overview-item {
+    width: 400px;
+    margin: 0 auto;
+    @include desktop {
+      margin: 0 $base__space-unit;
+    }
+    .overview-img {
+      display: block;
+      margin: 0 auto;
+      height: 200px;
+    }
+    .overview-text {
+      text-align: left;
+    }
+  }
+}

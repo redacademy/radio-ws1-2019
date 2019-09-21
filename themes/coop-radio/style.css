@@ -1154,6 +1154,30 @@ footer {
     margin: 0 19.5rem; } }
 
 /* overview */
+.overview-main {
+  margin: 4.5rem 0; }
+  @media (min-width: 1080px) {
+    .overview-main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: 4.5rem 0; } }
+  .overview-main .overview-item {
+    width: 400px;
+    margin: 0 auto; }
+    @media (min-width: 1080px) {
+      .overview-main .overview-item {
+        margin: 0 1.5rem; } }
+    .overview-main .overview-item .overview-img {
+      display: block;
+      margin: 0 auto;
+      height: 200px; }
+    .overview-main .overview-item .overview-text {
+      text-align: left; }
+
 /* get started */
 .get-started .get-started-core {
   width: 450px;

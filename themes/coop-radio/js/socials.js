@@ -18,12 +18,11 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-document.getElementById("foto2").style.display = "none";
+const div = document.getElementById('div');
+const foto1 = document.getElementById('foto1');
+const foto2 = (document.getElementById('foto2').style.display = 'none');
 
-document.getElementById("foto1").onclick = function() { 
-  
-  document.getElementById("foto1").style.display = "none", 
-
-}
-
-// document.getElementById("foto2").style.display = "show";
+div.onclick(() => {
+  foto1.style.display = 'none';
+  foto2.style.display = 'block';
+});

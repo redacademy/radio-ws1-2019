@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>pullup_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artist-1.2-Copy" transform="translate(-1269.000000, -937.000000)">
+            <g id="pullup_icon" transform="translate(1269.000000, 937.000000)">
+                <g id="circle" fill="#434343" fill-rule="nonzero">
+                    <circle id="Oval" cx="25" cy="25" r="25"></circle>
+                </g>
+                <g id="Group" stroke-linecap="square" transform="translate(10.000000, 16.000000)" stroke="#FFFFFF" stroke-width="3">
+                    <path d="M0.5,12.5 L15.5,0.375" id="Line-2"></path>
+                    <path d="M15.9,12.5 L30.5,0.375" id="Line-2" transform="translate(23.200000, 6.437500) scale(-1, 1) translate(-23.200000, -6.437500) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

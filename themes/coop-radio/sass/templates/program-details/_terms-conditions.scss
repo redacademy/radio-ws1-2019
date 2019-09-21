@@ -1,5 +1,10 @@
 /* terms & conditions */
 
 .terms-conditions {
-    background-color: gray;
+  background-color: $color__brand-gray;
+  padding: $base__space-unit;
+  .terms-text-container {
+    text-align: left;
+    font-family: Arial, sans-serif;
+  }
 }

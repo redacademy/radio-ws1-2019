@@ -1296,7 +1296,11 @@ footer {
 
 /* terms & conditions */
 .terms-conditions {
-  background-color: gray; }
+  background-color: #bebebe;
+  padding: 1.5rem; }
+  .terms-conditions .terms-text-container {
+    text-align: left;
+    font-family: Arial, sans-serif; }
 
 /*--------------------------------------------------------------
 # Artist library

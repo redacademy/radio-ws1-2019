@@ -18,8 +18,16 @@ body {
 }
 
 main {
-  max-height: 76vh;
   overflow: auto;
+  @include short {
+    max-height: 79vh;
+  }
+  @include medium {
+      max-height: 82vh;
+  }
+  @include tall {
+      max-height: 86vh;
+  }
 }
 
 blockquote,

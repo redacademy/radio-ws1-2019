@@ -22,9 +22,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+   
   a {
+    font-family:$font__heading;
+    font-size:22px;
     color: $color__background-body;
+    margin:$base__space-unit;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @include desktop {
@@ -33,5 +39,29 @@
     }
     display: inline-block;
     flex-direction: row;
+  }
+}
+
+.program-header-info {
+  margin:2.5*$base__space-unit 0;
+  .program-header-text {
+    max-width: 300px;
+    margin-bottom: $base__space-unit;
+
+    h3.program-title {
+      color: $color__background-body;
+      margin: 0;
+      line-height:40px;
+    }
+    h2.featured-title {
+      color: $color__background-body;
+      text-transform: uppercase;
+      margin: 0;
+      line-height:40px;
+    }
+    h1.featured-subtitle {
+      color: $color__background-body;
+      margin: 0;
+    }
   }
 }

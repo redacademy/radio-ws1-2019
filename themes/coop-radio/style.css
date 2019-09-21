@@ -1096,7 +1096,12 @@ footer {
       -ms-flex-align: center;
           align-items: center; }
   .program-details__actions a {
-    color: #fff; }
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    color: #fff;
+    margin: 1.5rem; }
+    .program-details__actions a:hover {
+      text-decoration: underline; }
   @media (min-width: 1080px) {
     .program-details__actions {
       display: inline-block;
@@ -1106,6 +1111,24 @@ footer {
               flex-direction: row; }
       .program-details__actions * + * {
         margin-left: 3rem; } }
+
+.program-header-info {
+  margin: 3.75rem 0; }
+  .program-header-info .program-header-text {
+    max-width: 300px;
+    margin-bottom: 1.5rem; }
+    .program-header-info .program-header-text h3.program-title {
+      color: #fff;
+      margin: 0;
+      line-height: 40px; }
+    .program-header-info .program-header-text h2.featured-title {
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 40px; }
+    .program-header-info .program-header-text h1.featured-subtitle {
+      color: #fff;
+      margin: 0; }
 
 /* general styling */
 .program-details-page h2 {
@@ -1630,6 +1653,9 @@ footer {
   border: 2px solid #8b1f7e;
   text-decoration: none; }
 
+.wrap-photo {
+  position: relative; }
+
 .community-photo {
   width: 200px;
   height: 200px;
@@ -1919,52 +1945,3 @@ ul {
         @media (min-width: 1080px) {
           .search-background .custom-search fieldset .custom-input {
             font-size: 1.5rem; } }
-
-.socials {
-  position: relative;
-  display: inline-block;
-  -webkit-transform: translateY(300%);
-          transform: translateY(300%); }
-
-/* Style the button that is used to open and close the collapsible content */
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.collapsible:hover {
-  background-color: #ccc; }
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  display: block;
-  position: absolute;
-  top: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  right: 0;
-  -webkit-box-shadow: 0 10px white;
-          box-shadow: 0 10px white;
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #fff;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 200px;
-  text-align: start; }
-  .content a {
-    color: #8b1f7e;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .content .lista {
-    margin: 10%; }
-
-.fab {
-  font-size: 48px; }

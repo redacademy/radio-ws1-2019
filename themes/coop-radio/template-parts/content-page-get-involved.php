@@ -27,6 +27,10 @@
     </div>
     </div>
 >>>>>>> Stashed changes
+=======
+    <?php get_template_part( 'template-parts/content-socials-collapse' ); ?>
+    </div>
+>>>>>>> Stashed changes
     </div>
   </header>
 

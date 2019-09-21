@@ -25,9 +25,6 @@
     </p> 
     <?php get_template_part( 'template-parts/content-socials-collapse' ); ?>
     </div>
-    </div>
->>>>>>> Stashed changes
-    </div>
   </header>
 
   <section>

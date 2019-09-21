@@ -31,6 +31,7 @@
         Sign up
       </button>
       <a href="/">Watch the film</a>
+    </div>
 
   </article>
 </header>

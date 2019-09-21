@@ -19,6 +19,7 @@
       <?php foreach ( $sections as $section ) { ?>
         <div class="get-started-core">
           <img src="<?= $section['icon']; ?>" alt="" />
+            <h4><?= $section['how_to_step_num']; ?></h4>
             <h3><?= $section['title']; ?></h3>
             <p><?= $section['description']; ?></p>
         </div>
@@ -27,7 +28,8 @@
 
 <?php endif; ?>
 
-<section>
+<section class="signup-descript">
   <h2><?= CFS()->get( 'sign_up_title' ); ?></h2>
+  <button id="enrollNow" class="btn-primary btn-large">Enroll Now</button>
 </section>
 

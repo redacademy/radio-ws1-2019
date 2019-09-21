@@ -11,14 +11,22 @@
   $sections = CFS()->get( 'info_sections' );
   if ( isset( $sections ) && sizeof( $sections ) > 0 ) : ?>
 
-    <section>
-      <h2><?= CFS()->get( 'info_title' ); ?></h2>
+    <section class="overview">
+      <h2 class="text-container"><?= CFS()->get( 'info_title' ); ?></h2>
 
+    <section class="overview-main">
       <?php foreach ( $sections as $section ) { ?>
-        <img src="<?= $section['icon']; ?>" alt="" />
-        <h3><?= $section['title']; ?></h3>
-        <p><?= $section['description']; ?></p>
+
+        <div class="overview-item">
+            <img class="overview-img" src="<?= $section['icon']; ?>" alt="" />
+          <div class="overview-text">
+            <h3><?= $section['title']; ?></h3>
+            <p><?= $section['description']; ?></p>
+          </div>
+        </div>
+
       <?php } ?>
+      </section>
     </section>
 
 <?php endif; ?>

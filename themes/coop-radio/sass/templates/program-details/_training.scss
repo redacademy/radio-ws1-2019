@@ -1,34 +1,20 @@
 /* training */
 
-.program-details-training {
-  text-align: center;
-
-  .training-core-main {
-    @include tablet {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin:0 100px;
-    }
+.training-core-main {
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  h2 {
-    font-size: 40px;
+.training-core {
+  margin: 20px 0;
+  .core-img {
+    display: block;
+    margin: 2.5rem auto;
   }
-
-  .training-core {
-    margin: 20px auto;
-    max-width: 550px;
-    .core-img {
-      display: block;
-      margin: 2.5rem auto;
-    }
-    .core-text {
-      width: 400px;
-      margin: 0 auto;
-      text-align: left;
-      h3 {
-        font-size: 28px;
-      }
-    }
+  .core-text {
+    margin: 0 auto;
+    text-align: left;
   }
 }

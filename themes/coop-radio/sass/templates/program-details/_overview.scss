@@ -1,1 +1,23 @@
 /* overview */
+
+.overview-main {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+  .overview-item {
+    width: 400px;
+    margin: 0 auto;
+    @include desktop {
+      margin: 0 $base__space-unit;
+    }
+    .overview-img {
+      display: block;
+      margin: 0 auto;
+      height: 200px;
+    }
+    .overview-text {
+      text-align: left;
+    }
+  }
+}

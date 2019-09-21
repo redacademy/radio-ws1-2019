@@ -12,18 +12,19 @@
 }
 
 // Media Screens
-@mixin desktop {
-  @media (min-width: $desktop-width) {
-    @content;
-  }
-}
-
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
   }
 }
 
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+// Heights for Main Content
 @mixin short {
   @media (min-height: 650px) {
     @content;
@@ -39,5 +40,25 @@
 @mixin tall {
   @media (min-height: 1000px) {
     @content;
+  }
+}
+
+// General Containers
+@mixin page-container {
+  margin:0 $base__space-unit;
+  @include desktop {
+    margin:3*$base__space-unit 4*$base__space-unit;
+  }
+}
+
+@mixin text-container {
+  @include desktop {
+    margin: 3*$base__space-unit 4*$base__space-unit;
+  }
+}
+
+@mixin full-width {
+  @include desktop {
+    margin:3*$base__space-unit 0;
   }
 }

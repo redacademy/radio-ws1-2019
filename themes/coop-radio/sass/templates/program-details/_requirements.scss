@@ -1,1 +1,25 @@
 /* requirements */
+
+.requirements-main {
+  @include desktop {
+    display: flex;
+  }
+  .requirement-img {
+    @include full-width;
+    img {
+      border-radius: 10px;
+      box-shadow: $img_box-shadow;
+    }
+    @include desktop {
+      width: 50%;
+      margin: $base__space-unit;
+    }
+  }
+  .requirement-list {
+    text-align: left;
+    @include desktop {
+      width: 50%;
+      margin: 0 $base__space-unit;
+    }
+  }
+}

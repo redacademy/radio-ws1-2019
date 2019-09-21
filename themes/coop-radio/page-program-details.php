@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Program details page template.
  * Template Name: program-details
@@ -8,54 +9,66 @@
 
 get_header(); ?>
 
-  <main>
-    <?php while ( have_posts() ) : the_post(); ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<main>
+  <?php while (have_posts()) : the_post(); ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <?php
-          get_template_part(
-            'template-parts/content',
-            'page-program-details__header'
-          );
+      <?php get_template_part(
+          'template-parts/content',
+          'page-program-details__header'
+        ); ?>
 
-          get_template_part(
+      <div class="page-container">
+        <?php get_template_part(
             'template-parts/content',
             'page-program-details__overview'
-          );
+          ); ?>
+      </div>
 
-          get_template_part(
+      <div class="page-container">
+        <?php get_template_part(
             'template-parts/content',
             'page-program-details__get-started'
-          );
+          ); ?>
+      </div>
 
-          get_template_part(
+      <div class="full-width">
+        <?php get_template_part(
             'template-parts/content',
             'page-program-details__video'
-          );
+          ); ?>
+      </div>
 
-          get_template_part(
+      <div class="page-container">
+        <?php get_template_part(
             'template-parts/content',
             'page-program-details__requirements'
-          );
+          ); ?>
+      </div>
 
-          get_template_part(
+      <div class="page-container">
+        <?php get_template_part(
             'template-parts/content',
             'page-program-details__timeline'
-          );
+          ); ?>
+      </div>
 
-          get_template_part(
+      <div class="page-container">
+        <?php get_template_part(
             'template-parts/content',
             'page-program-details__training'
-          );
+          ); ?>
+      </div>
 
-          get_template_part(
+      <div class="page-container">
+        <?php get_template_part(
             'template-parts/content',
             'page-program-details__enroll'
-          );
-        ?>
+          ); ?>
+      </div>
 
-      </article>
-    <?php endwhile; ?>
-  </main>
+    </article>
+  <?php endwhile; ?>
+</main>
 
 <?php get_footer(); ?>

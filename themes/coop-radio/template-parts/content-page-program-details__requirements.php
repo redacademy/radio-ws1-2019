@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for program details page requirements section.
  *
@@ -8,17 +9,28 @@
 ?>
 
 <?php
-  $requirements = CFS()->get( 'requirements' );
-  if ( isset( $requirements ) && sizeof( $requirements ) > 0 ) : ?>
+$requirements = CFS()->get('requirements');
+if (isset($requirements) && sizeof($requirements) > 0) : ?>
 
-    <section>
-      <h2><?= CFS()->get( 'requirements_title' ); ?></h2>
-      <p><?= CFS()->get( 'requirements_description' ); ?></p>
+  <section class="requirements">
+    <div class="text-container">
+      <h2><?= CFS()->get('requirements_title'); ?></h2>
+      <p class="text-description"><?= CFS()->get('requirements_description'); ?></p>
+    </div>
 
-      <?php foreach ( $requirements as $requirement ) { ?>
-        <h3><?= $requirement['title']; ?></h3>
-        <p><?= $requirement['description']; ?></p>
-      <?php } ?>
-    </section>
+    <article class="requirements-main">
+      <div class="requirement-img">
+        <img src="<?= CFS()->get('requirements_img'); ?>">
+      </div>
+
+      <div class="requirement-list">
+        <?php foreach ($requirements as $requirement) { ?>
+          <h3><?= $requirement['title']; ?></h3>
+          <p><?= $requirement['description']; ?></p>
+        <?php } ?>
+      </div>
+
+    </article><!-- requirements-main -->
+  </section><!-- requirements -->
 
 <?php endif; ?>

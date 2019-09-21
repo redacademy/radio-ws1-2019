@@ -10,7 +10,6 @@
   @include desktop {
     display: flex;
     flex-direction: row;
-    // padding: 3rem 0 3rem 0;
     width: 80%;
   }
 }
@@ -18,7 +17,6 @@
   @include desktop {
     display: flex;
     flex-direction: row-reverse;
-    // padding: 3rem 0 3rem 0;
     width: 80%;
   }
 }
@@ -46,6 +44,9 @@
   border-radius: 2px;
   border: 2px solid $color__btn-default;
   text-decoration: none;
+}
+.wrap-photo {
+  position: relative;
 }
 .community-photo {
   width: 200px;

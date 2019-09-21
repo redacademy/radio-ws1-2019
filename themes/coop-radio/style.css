@@ -1195,9 +1195,7 @@ footer {
     .get-started .get-started-item {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex;
-      -ms-flex-line-pack: left;
-          align-content: left; }
+      display: flex; }
       .get-started .get-started-item:nth-child(odd) {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;

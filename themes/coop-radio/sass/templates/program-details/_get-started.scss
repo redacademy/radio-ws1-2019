@@ -1,7 +1,6 @@
 /* get started */
 
 .get-started {
-  
   .get-started-item {
     justify-content:space-between;
     @include desktop {
@@ -9,7 +8,6 @@
       &:nth-child(odd){
         flex-direction:row-reverse;
       }
-      align-content:left;
     }
     .get-started-img {
       img {

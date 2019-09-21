@@ -1170,17 +1170,21 @@ footer {
             justify-content: space-between; } }
 
 .overview-main .overview-item {
-  width: 400px;
+  max-width: 600px;
   margin: 0 auto; }
   @media (min-width: 1080px) {
     .overview-main .overview-item {
+      width: 400px;
       margin: 0 1.5rem; } }
   .overview-main .overview-item .overview-img {
     display: block;
     margin: 0 auto;
-    height: 200px; }
+    max-height: 200px; }
   .overview-main .overview-item .overview-text {
     text-align: left; }
+    @media (min-width: 1080px) {
+      .overview-main .overview-item .overview-text {
+        text-align: center; } }
 
 /* get started */
 .get-started .get-started-item {

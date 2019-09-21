@@ -25,12 +25,15 @@
     }
   }
 
-  .program-container {
+  .page-container {
     @include page-container;
   }
-  .program-text-container {
-    @include tablet {
+  .text-container {
+    @include desktop {
       @include text-container
     }
+  }
+  .full-width {
+    @include full-width
   }
 }

@@ -49,6 +49,12 @@
   .main-navigation.toggled ul {
     a {
       color: $color__text-screen;
+      font-family: $font__heading;
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -103,6 +109,7 @@
 
           a {
             white-space: nowrap;
+            font-family: $font__heading;
           }
         }
         li:last-child {
@@ -112,6 +119,7 @@
     }
   }
 }
+
 
 
 .header-search {

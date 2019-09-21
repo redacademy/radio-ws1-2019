@@ -80,7 +80,17 @@ function coop_radio_scripts() {
     )
   );
   wp_enqueue_script('coop-radio-audio-player');
+
   wp_enqueue_script( 'coop-radio-search-form', get_template_directory_uri() . '/build/js/search-form.min.js', array('jquery'), '20151215', true );
+  wp_register_script( 'coop-radio-headerScroll', get_template_directory_uri() . '/build/js/headerScroll.min.js', array('jquery'), '20151215', true );
+  wp_localize_script(
+    'coop-radio-headerScroll',
+    'WP_GLOBALS',
+    array(
+      'url' => get_stylesheet_directory_uri(),
+    )
+  );
+  wp_enqueue_script('coop-radio-headerScroll');
 
   wp_enqueue_script( 'slick-carousel', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array(), '20151215', true );
   wp_enqueue_script( 'coop-radio-scrolls', get_template_directory_uri() . '/build/js/scrolls.min.js', array(), '20151215', true );

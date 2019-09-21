@@ -28,6 +28,8 @@
             echo 'banner--dark';
           } elseif (basename($template) === 'page-artist-library.php' || basename($template) === 'page-contact-us.php') {
             echo 'banner--light';
+          } elseif (basename($template) === 'page-program-details.php' || basename($template) === 'page-get-involved.php' || basename($template) === 'single-artist.php') {
+            echo 'banner--transparent';
           }
         
         ?>"
@@ -43,7 +45,7 @@
         <div class="banner__container">
           <div class="banner__logo-container">
             <a class="banner__logo-link" href="<?php echo esc_url(home_url('/')); ?>">
-              <img src="<?php echo get_stylesheet_directory_uri().'/images/co-op logo-dark.png'; ?>" alt="co-op radio logo">
+              <img src="<?php echo get_stylesheet_directory_uri().'/images/logo-dark.png'; ?>" alt="co-op radio logo">
             </a>
           </div>
           <nav id="site-navigation" class="main-navigation" role="navigation">

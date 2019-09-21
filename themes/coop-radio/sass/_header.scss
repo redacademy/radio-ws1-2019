@@ -5,6 +5,7 @@
 .banner {
   background-color: transparent;
   position: absolute;
+  height: 3 * $base__space-unit;
   top: 0;
   right: 0;
   left: 0;
@@ -17,17 +18,22 @@
 
 .banner--light {
   background-color: $color__background-body;
-  height: 3 * $base__space-unit;
 
   .menu-item a {
     color: $color__text-screen;
   }
 }
 
+.banner--transparent {
+  background-color: transparent;
+ 
+  .menu-item a {
+    color: $color__background-body;
+  }
+}
 .banner--dark {
   @include tablet {
     background-color: $color__text-screen;
-    height: 3 * $base__space-unit;
   
     .menu-item a {
       color: $color__background-body;

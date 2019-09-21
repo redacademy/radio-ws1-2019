@@ -1624,14 +1624,11 @@ footer {
             transform: translateX(-20%);
     padding-top: 7rem; } }
 
-.btn {
-  height: 44px;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 2px;
-  border: 2px solid #8b1f7e;
-  text-decoration: none; }
+.donate-title {
+  text-align: center; }
+
+.wrap-photo {
+  position: relative; }
 
 .community-photo {
   width: 200px;
@@ -1645,7 +1642,8 @@ footer {
       width: 300px;
       height: 300px;
       -webkit-transform: translateY(15%);
-              transform: translateY(15%); } }
+              transform: translateY(15%);
+      max-width: none; } }
 
 .ball-a {
   height: 90px;
@@ -1732,10 +1730,12 @@ article {
     width: 100%;
     height: 600px; }
     .header-container .container2 {
-      width: 50%; }
+      width: 50%;
+      position: relative; }
     .header-container .container-1 {
       width: 50%;
-      background-color: black; }
+      background-color: black;
+      position: relative; }
     .header-container .wp-post-image {
       height: -webkit-fill-available;
       width: -webkit-fill-available; } }
@@ -1751,9 +1751,8 @@ article {
 .logo-link-involved {
   border: none;
   border-radius: 50%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 170px;
+  height: 170px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
   .logo-link-involved:hover {
@@ -1761,10 +1760,10 @@ article {
     background-image: linear-gradient(#b079aa, #d8d8d8); }
 
 .logo-link-involved3 {
-  width: 145px;
+  width: 170px;
+  height: 170px;
   border: none;
   border-radius: 50%;
-  height: 145px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
   .logo-link-involved3:hover {
@@ -1902,12 +1901,14 @@ ul {
             font-size: 1.5rem; } }
 
 .socials {
-  position: relative;
+  position: absolute;
   display: inline-block;
-  -webkit-transform: translateY(300%);
-          transform: translateY(300%); }
+  bottom: 10%;
+  left: 80%; }
 
-/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  display: contents; }
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .collapsible:hover {
@@ -1932,7 +1933,10 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 200px;
-  text-align: start; }
+  text-align: start;
+  border-radius: 5%;
+  -webkit-box-shadow: 0px 0px 10px 3px #fff;
+          box-shadow: 0px 0px 10px 3px #fff; }
   .content a {
     color: #8b1f7e;
     cursor: pointer;

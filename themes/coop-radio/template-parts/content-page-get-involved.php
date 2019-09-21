@@ -36,7 +36,7 @@
     <a href="<?php echo esc_url(home_url('/donate')); ?>">
       <img class="logo-link-involved" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-06.svg'; ?>" alt="">
       <p>Donations</p></a>      
-    <a href="<?php echo esc_url(home_url('/')); ?>">
+    <a href="http://www.coopradio.org/member">
       <img class="logo-link-involved" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-07.svg'; ?>" alt="">
     <p>Become a Volunteer Programmer</p></a>
     <a href="<?php echo esc_url(home_url('/')); ?>">

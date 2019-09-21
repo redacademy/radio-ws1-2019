@@ -10,10 +10,12 @@ article {
 
     .container2 {
       width: 50%;
+      position: relative;
     }
     .container-1 {
       width: 50%;
       background-color: black;
+      position: relative;
     }
     .wp-post-image {
       height: -webkit-fill-available;
@@ -21,7 +23,7 @@ article {
     }
   }
 }
-//--add socials button here--//
+
 .participate {
   @include desktop {
     display: flex;
@@ -31,17 +33,18 @@ article {
 .logo-link-involved {
   border: none;
   border-radius: 50%;
-  width: fit-content;
+  width: 170px;
+  height: 170px;
   background-image: linear-gradient(#b4b4b4, #fff);
   &:hover {
     background-image: linear-gradient(#b079aa, #d8d8d8);
   }
 }
 .logo-link-involved3 {
-  width: 145px;
+  width: 170px;
+  height: 170px;
   border: none;
   border-radius: 50%;
-  height: 145px;
   background-image: linear-gradient(#b4b4b4, #fff);
   &:hover {
     background-image: linear-gradient(#b079aa, #d8d8d8);

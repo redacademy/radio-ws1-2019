@@ -11,15 +11,17 @@
   $sections = CFS()->get( 'how_to_sections' );
   if ( isset( $sections ) && sizeof( $sections ) > 0 ) : ?>
 
-    <section>
+    <section class="get-started">
       <h2>
         <?= CFS()->get( 'how_to_title' ); ?>
       </h2>
 
       <?php foreach ( $sections as $section ) { ?>
-        <img src="<?= $section['icon']; ?>" alt="" />
-        <h3><?= $section['title']; ?></h3>
-        <p><?= $section['description']; ?></p>
+        <div class="get-started-core">
+          <img src="<?= $section['icon']; ?>" alt="" />
+            <h3><?= $section['title']; ?></h3>
+            <p><?= $section['description']; ?></p>
+        </div>
       <?php } ?>
     </section>
 

@@ -866,10 +866,54 @@ footer {
   background-color: #fff;
   padding: 0 1rem; }
 
+.audio-player__info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.audio-player__info-artist-img-container {
+  width: 2.57143rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.audio-player__info-artist-img {
+  width: 100%;
+  border-radius: 50%; }
+
+.audio-player__info {
+  margin-right: 1.5rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .audio-player__info--title {
   font-weight: bold; }
 
+.audio-player__info--title,
+.audio-player__info--artist {
+  margin: 0;
+  white-space: nowrap; }
+
 .audio-player__actions {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -928,6 +972,8 @@ footer {
               transform: scale(1) translateY(-5px); } }
 
 .audio-player__time {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
   top: 0.16rem;
   color: #bebebe;
@@ -1054,6 +1100,13 @@ footer {
 
 /* overview */
 /* get started */
+.get-started .get-started-core {
+  width: 450px;
+  text-align: left;
+  margin: 0 auto; }
+  .get-started .get-started-core img {
+    height: 400px; }
+
 /* video */
 /* requirements */
 /* timeline */
@@ -1101,57 +1154,124 @@ footer {
   @media (min-width: 600px) {
     .program-details-training .training-core-main {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 0 100px; } }
-  .program-details-training h2 {
-    font-size: 40px; }
+      grid-template-columns: repeat(2, 1fr); } }
   .program-details-training .training-core {
-    margin: 20px auto;
-    max-width: 550px; }
+    margin: 20px 0; }
     .program-details-training .training-core .core-img {
       display: block;
       margin: 2.5rem auto; }
     .program-details-training .training-core .core-text {
-      width: 400px;
       margin: 0 auto;
       text-align: left; }
-      .program-details-training .training-core .core-text h3 {
-        font-size: 28px; }
 
 /* enroll */
 /*--------------------------------------------------------------
 # Artist library
 --------------------------------------------------------------*/
-.artist-library-page {
-  /* Artist Search bar */ }
-  .artist-library-page h2 {
-    text-align: center;
-    text-transform: uppercase; }
-  .artist-library-page p {
-    text-align: center; }
-  .artist-library-page .artist-library {
-    margin: 5rem auto;
-    max-width: 1000px; }
-  .artist-library-page .artist {
-    border: 1px solid #000; }
-  .artist-library-page .slick-slide img {
-    height: 300px;
-    width: 200px;
+.artist-library__container {
+  position: absolute;
+  top: 8vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 650px; }
+
+.artist-library__scroll-container {
+  position: relative;
+  padding: 0 6rem;
+  min-height: 440px; }
+  .artist-library__scroll-container .slick-slide img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: none;
     border-radius: 10px;
-    -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-            box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3); }
-  .artist-library-page .artist-search-bar {
-    margin: 10rem 5rem 5rem;
-    text-align: center; }
-    .artist-library-page .artist-search-bar .artist-search-toggle {
-      background: none;
-      border: none;
-      margin: 0 0.5rem; }
-    .artist-library-page .artist-search-bar .artist-search-field {
-      background: none;
-      border: none;
-      border-bottom: 1px solid #171717;
-      color: #2c2c2c; }
+    -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
+            box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
+
+.artist-libary {
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto; }
+
+.artist-library__search-container {
+  margin: 1rem 5rem 3rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .artist-library__search-container .artist-library__search-input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #171717;
+    color: #2c2c2c; }
+
+.artist-library__search-icon {
+  margin: 0 0.5rem; }
+
+.artist-library__not-found {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 800;
+  opacity: 0.2; }
+
+.artist-library__action {
+  position: absolute;
+  top: 50%;
+  border: none;
+  background-color: transparent; }
+
+.artist-library__action--prev {
+  left: 0; }
+
+.artist-library__action--next {
+  right: 0; }
+
+.artist-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.artist-card__link {
+  display: inline-block;
+  margin: 0 auto; }
+
+.artist-card__img-container {
+  height: 300px;
+  width: 200px; }
+
+.artist-card__title {
+  text-transform: uppercase; }
+
+.artist-card__title,
+.artist-card__genre {
+  text-align: center;
+  white-space: nowrap; }
 
 /*--------------------------------------------------------------
 # Single artist

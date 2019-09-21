@@ -1631,7 +1631,7 @@ footer {
 .wrap-photo {
   position: relative; }
 
-.community-photo {
+.donate-photo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -1639,7 +1639,7 @@ footer {
   margin-left: 10px;
   margin-top: 10px; }
   @media (min-width: 1080px) {
-    .community-photo {
+    .donate-photo {
       width: 300px;
       height: 300px;
       -webkit-transform: translateY(15%);

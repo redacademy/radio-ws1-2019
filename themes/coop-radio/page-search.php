@@ -10,7 +10,7 @@ get_header(); ?>
 <main>
   <div
     class="search-container"
-    style="background-image: url('<?= get_stylesheet_directory_uri().'/images/search-background.jpg'; ?>'); "
+    style="background-image: url('<?= the_post_thumbnail_url( 'large' ); ?>'); "
   >
     <div class="search-intro">
       <p>Looking for something?</p>

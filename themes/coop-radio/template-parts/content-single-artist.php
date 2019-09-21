@@ -1,11 +1,9 @@
 <?php
-
 /**
  * Template part for displaying single artist.
  *
  * @package coop-radio
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -63,6 +61,40 @@
 
     <section class="additional-artist-img artist-img-container">
       <!-- additional image? -->
+    </section>
+
+    <section class="artist-tracks">
+      <h3>My Songs</h3>
+      <?php
+        $track_ids = CFS()->get_reverse_related( $post->ID, array(
+          'field_name' => 'artist',
+          'post_type' => 'track'
+        ) );
+
+        if ( sizeof( $track_ids ) ) :
+
+          $track_artist = CFS()->get('artist_name');
+          $tracks = new WP_Query( array(
+            'post__in' => $track_ids,
+            'post_type' => 'track',
+          ) );
+
+          if ( $tracks->have_posts() ) :
+            while ( $tracks->have_posts() ) : $tracks->the_post();
+              $track_file = CFS()->get('file'); ?>
+
+              <h4><?php the_title(); ?></h4> 
+              <p><?= $track_artist; ?></p>
+
+              <audio
+                class="artist-track"
+                src="<?= $track_file; ?>"
+              >
+                <a href="<?= $track_file; ?>">Download track</a>
+              </audio>
+
+            <?php endwhile; wp_reset_postdata();
+        endif; endif; ?>
     </section>
 
   </article><!-- full-description-container -->

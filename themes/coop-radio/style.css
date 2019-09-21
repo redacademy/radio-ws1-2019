@@ -339,13 +339,14 @@ input,
 select,
 textarea {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
-  color: #2c2c2c;
   font-size: 16px;
+  color: #2c2c2c;
   line-height: 1.5; }
 
 h1 {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
+  color: #171717;
   font-size: 24px; }
 
 h2 {
@@ -355,8 +356,20 @@ h2 {
 h3 {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
+  color: #171717;
   font-size: 26px;
   font-weight: bold; }
+
+h4 {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #2c2c2c;
+  line-height: 1.5;
+  font-size: 22px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #8b8b8b;
+  margin: 0; }
 
 p {
   margin-bottom: 1.5rem; }
@@ -1065,6 +1078,9 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   color: #fff;
   height: 100vh;
@@ -1073,6 +1089,9 @@ footer {
   @media (min-width: 1080px) {
     .program-details__header {
       text-align: unset;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
       padding-right: 20%; } }
 
 .program-details__actions {
@@ -1098,6 +1117,42 @@ footer {
       .program-details__actions * + * {
         margin-left: 3rem; } }
 
+/* general styling */
+.program-details-page h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  color: #171717;
+  font-size: 38px;
+  font-weight: bold; }
+  @media (min-width: 1080px) {
+    .program-details-page h2 {
+      font-size: 48px; } }
+
+.program-details-page h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  color: #171717;
+  font-weight: bold; }
+  @media (min-width: 1080px) {
+    .program-details-page h3 {
+      font-size: 32px; } }
+
+.program-details-page .text-container {
+  text-align: left; }
+  @media (min-width: 1080px) {
+    .program-details-page .text-container {
+      text-align: center; } }
+
+.program-details-page .program-container {
+  margin: 0 1.5rem; }
+  @media (min-width: 1080px) {
+    .program-details-page .program-container {
+      margin: 0 6rem; } }
+
+@media (min-width: 600px) and (min-width: 1080px) {
+  .program-details-page .program-text-container {
+    margin: 0 19.5rem; } }
+
 /* overview */
 /* get started */
 .get-started .get-started-core {
@@ -1114,7 +1169,8 @@ footer {
   border-right: 0.75rem solid #8b1f7e;
   list-style: none;
   padding: 0;
-  margin: 0 0.75rem 0 0; }
+  margin: 0 0.75rem 0 0;
+  text-align: left; }
   @media (min-width: 1080px) {
     .timeline__list {
       width: 50%; } }
@@ -1149,20 +1205,19 @@ footer {
   margin: 0; }
 
 /* training */
-.program-details-training {
-  text-align: center; }
-  @media (min-width: 600px) {
-    .program-details-training .training-core-main {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); } }
-  .program-details-training .training-core {
-    margin: 20px 0; }
-    .program-details-training .training-core .core-img {
-      display: block;
-      margin: 2.5rem auto; }
-    .program-details-training .training-core .core-text {
-      margin: 0 auto;
-      text-align: left; }
+@media (min-width: 600px) {
+  .training-core-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); } }
+
+.training-core {
+  margin: 20px 0; }
+  .training-core .core-img {
+    display: block;
+    margin: 2.5rem auto; }
+  .training-core .core-text {
+    margin: 0 auto;
+    text-align: left; }
 
 /* enroll */
 /*--------------------------------------------------------------

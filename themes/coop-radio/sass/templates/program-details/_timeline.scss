@@ -8,6 +8,7 @@ $timeline__marker-width: $base__space-unit * 2;
   list-style: none;
   padding: 0;
   margin: 0 $base__space-unit/2 0 0;
+  text-align:left;
 
   @include desktop {
     width: 50%;

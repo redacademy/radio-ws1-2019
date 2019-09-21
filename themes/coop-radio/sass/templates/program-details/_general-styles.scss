@@ -1,20 +1,36 @@
 /* general styling */
 
 .program-details-page {
-    h2 {
-        font-size:38px;
+  h2 {
+    @include font_headline;
+    font-size: 38px;
+    font-weight: bold;
+
+    @include desktop {
+      font-size: 48px;
     }
-    h3 {
-        font-size:28px;
+  }
+  h3 {
+    @include font_headline;
+    font-weight: bold;
+
+    @include desktop {
+      font-size: 32px;
     }
-    .program-container {
-        @include tablet {
-            @include page-container 
-        }
+  }
+  .text-container {
+    text-align: left;
+    @include desktop {
+    text-align: center;
     }
-    .program-text-container {
-        @include tablet {
-            @include text-container
-        }
+  }
+
+  .program-container {
+    @include page-container;
+  }
+  .program-text-container {
+    @include tablet {
+      @include text-container
     }
+  }
 }

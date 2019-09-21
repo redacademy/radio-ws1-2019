@@ -18,14 +18,19 @@ if (isset($requirements) && sizeof($requirements) > 0) : ?>
       <p class="text-description"><?= CFS()->get('requirements_description'); ?></p>
     </div>
 
-    
-    <img class="requirement-img" src="<?= CFS()->get( 'requirements_img' ); ?>">
+    <article class="requirements-main">
+      <div class="requirement-img">
+        <img src="<?= CFS()->get('requirements_img'); ?>">
+      </div>
 
-    
-    <?php foreach ($requirements as $requirement) { ?>
-      <h3><?= $requirement['title']; ?></h3>
-      <p><?= $requirement['description']; ?></p>
-    <?php } ?>
-  </section>
+      <div class="requirement-list">
+        <?php foreach ($requirements as $requirement) { ?>
+          <h3><?= $requirement['title']; ?></h3>
+          <p><?= $requirement['description']; ?></p>
+        <?php } ?>
+      </div>
+
+    </article><!-- requirements-main -->
+  </section><!-- requirements -->
 
 <?php endif; ?>

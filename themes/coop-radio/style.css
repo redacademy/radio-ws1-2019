@@ -1192,6 +1192,13 @@ footer {
 
 /* video */
 /* requirements */
+@media (min-width: 1080px) {
+  .requirements-main .requirement-img {
+    margin: 4.5rem 0; } }
+
+.requirements-main .requirement-list {
+  text-align: left; }
+
 /* timeline */
 .timeline__list {
   border-right: 0.75rem solid #8b1f7e;

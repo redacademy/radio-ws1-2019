@@ -1,1 +1,10 @@
 /* requirements */
+
+.requirements-main {
+  .requirement-img {
+    @include full-width;
+  }
+  .requirement-list {
+    text-align: left;
+  }
+}

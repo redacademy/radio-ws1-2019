@@ -1,11 +1,9 @@
 /* overview */
 
 .overview-main {
-  margin: 3 * $base__space-unit 0;
   @include desktop {
     display: flex;
     justify-content: space-between;
-    margin: 3 * $base__space-unit 0;
   }
   .overview-item {
     width: 400px;

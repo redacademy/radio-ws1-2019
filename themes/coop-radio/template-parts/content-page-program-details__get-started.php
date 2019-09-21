@@ -28,7 +28,8 @@
 
 <?php endif; ?>
 
-<section>
+<section class="signup-descript">
   <h2><?= CFS()->get( 'sign_up_title' ); ?></h2>
+  <button id="enrollNow" class="btn-primary btn-large">Enroll Now</button>
 </section>
 

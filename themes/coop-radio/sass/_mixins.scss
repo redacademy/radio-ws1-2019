@@ -47,12 +47,18 @@
 @mixin page-container {
   margin:0 $base__space-unit;
   @include desktop {
-    margin:0 4*$base__space-unit;
+    margin:3*$base__space-unit 4*$base__space-unit;
   }
 }
 
 @mixin text-container {
   @include desktop {
-    margin: 0 13*$base__space-unit;
+    margin: 3*$base__space-unit 4*$base__space-unit;
+  }
+}
+
+@mixin full-width {
+  @include desktop {
+    margin:3*$base__space-unit 0;
   }
 }

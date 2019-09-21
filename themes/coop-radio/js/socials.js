@@ -17,3 +17,13 @@ for (i = 0; i < coll.length; i++) {
     content.style.display = 'none';
   });
 }
+
+document.getElementById("foto2").style.display = "none";
+
+document.getElementById("foto1").onclick = function() { 
+  
+  document.getElementById("foto1").style.display = "none", 
+
+}
+
+// document.getElementById("foto2").style.display = "show";

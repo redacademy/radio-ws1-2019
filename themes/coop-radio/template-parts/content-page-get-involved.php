@@ -23,30 +23,8 @@
     <p>
       <?php the_content(); ?>
     </p> 
-    <!-- <button class="collapsible">Socials</button>
-      <div class="content">  
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/coopradio/"><i class="fab fa-facebook"></i>
-              <span class="socials-icons">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/coopradio"><i class="fab fa-twitter-square"></i>
-              <span class="socials-icons">Twitter</span>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/coopradio/"><i class="fab fa-instagram"></i>
-              <span class="socials-icons">Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://vimeo.com/vancouvercoopradio"><i class="fab fa-vimeo"></i>
-              <span class="socials-icons">Vimeo</span>
-            </a>
-          </li>
-          </ul> 
-      </div> -->
+    <?php get_template_part( 'template-parts/content-socials-collapse' ); ?>
+    </div>
     </div>
   </header>
 

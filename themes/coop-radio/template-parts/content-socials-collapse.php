@@ -7,27 +7,36 @@
 
 ?>
 
-<button class="collapsible">Socials</button>
+
+<div class="socials">
+  <button class="collapsible">
+  <img id="foto1" src="<?php echo get_stylesheet_directory_uri().'/images/white_pullup_icon.svg'; ?>" >
+<img id="foto2" src="<?php echo get_stylesheet_directory_uri().'/images/white_close_icon.svg'; ?>" >
+
+  </button>
       <div class="content collapse-content">  
         <ul>
-          <li>
-            <a href="https://www.facebook.com/coopradio/"><i class="fab fa-facebook"></i>
-              <span class="socials-icons">Facebook</span>
+          <li class="lista">
+            <a href="https://www.facebook.com/coopradio/">
+              <span class="socials-icons">Facebook</span><i class="fab fa-facebook"></i>
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/coopradio"><i class="fab fa-twitter-square"></i>
-              <span class="socials-icons">Twitter</span>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/coopradio/"><i class="fab fa-instagram"></i>
-              <span class="socials-icons">Instagram</span>
+          <li class="lista">
+            <a href="https://twitter.com/coopradio">
+              <span class="socials-icons">Twitter</span><i class="fab fa-twitter-square"></i>
             </a>
           </li>
-          <li>
-            <a href="https://vimeo.com/vancouvercoopradio"><i class="fab fa-vimeo"></i>
-              <span class="socials-icons">Vimeo</span>
+          <li class="lista">
+            <a href="https://www.instagram.com/coopradio/">
+              <span class="socials-icons">Instagram</span><i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="lista">
+            <a href="https://vimeo.com/vancouvercoopradio">
+              <span class="socials-icons">Vimeo</span><i class="fab fa-vimeo"></i>
             </a>
           </li>
           </ul> 
       </div>
+</div>
+      

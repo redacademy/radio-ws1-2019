@@ -1142,6 +1142,9 @@ footer {
   @media (min-width: 1080px) {
     .program-details-page .text-container {
       text-align: center; } }
+  @media (min-width: 1080px) and (min-width: 1080px) {
+    .program-details-page .text-container {
+      margin: 4.5rem 6rem; } }
 
 .program-details-page .page-container {
   margin: 0 1.5rem; }
@@ -1149,13 +1152,12 @@ footer {
     .program-details-page .page-container {
       margin: 4.5rem 6rem; } }
 
-@media (min-width: 1080px) and (min-width: 1080px) {
-  .program-details-page .text-container {
-    margin: 4.5rem 6rem; } }
-
 @media (min-width: 1080px) {
   .program-details-page .full-width {
     margin: 4.5rem 0; } }
+
+.program-details-page .text-description {
+  text-align: left; }
 
 /* overview */
 @media (min-width: 1080px) {

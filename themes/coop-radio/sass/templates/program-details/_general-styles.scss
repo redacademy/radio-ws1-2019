@@ -18,22 +18,22 @@
       font-size: 32px;
     }
   }
+  
   .text-container {
     text-align: left;
     @include desktop {
     text-align: center;
+    @include text-container;
     }
   }
-
   .page-container {
     @include page-container;
   }
-  .text-container {
-    @include desktop {
-      @include text-container
-    }
-  }
   .full-width {
     @include full-width
+  }
+
+  .text-description {
+    text-align:left;
   }
 }

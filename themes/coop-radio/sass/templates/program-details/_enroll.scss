@@ -13,7 +13,7 @@
       }
       img {
         border-radius: 10px;
-        box-shadow: 0 0.5rem 0.5rem -0.25rem $color__text-main;
+        box-shadow: $img_box-shadow;
       }
     }
     .enroll-text {

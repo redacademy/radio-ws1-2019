@@ -6,13 +6,13 @@
   }
   .requirement-img {
     @include full-width;
+    img {
+      border-radius: 10px;
+      box-shadow: 0 0.5rem 0.5rem -0.25rem $color__text-main;
+    }
     @include desktop {
       width: 50%;
       margin: $base__space-unit;
-      img {
-        border-radius: 15px;
-        box-shadow: 0 0.5rem 0.5rem -0.25rem $color__text-main;
-      }
     }
   }
   .requirement-list {

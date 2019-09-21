@@ -1202,14 +1202,15 @@ footer {
   .requirements-main .requirement-img {
     margin: 4.5rem 0; } }
 
+.requirements-main .requirement-img img {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
+          box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
+
 @media (min-width: 1080px) {
   .requirements-main .requirement-img {
     width: 50%;
-    margin: 1.5rem; }
-    .requirements-main .requirement-img img {
-      border-radius: 15px;
-      -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
-              box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; } }
+    margin: 1.5rem; } }
 
 .requirements-main .requirement-list {
   text-align: left; }
@@ -1274,6 +1275,19 @@ footer {
     text-align: left; }
 
 /* enroll */
+.enroll {
+  margin: 3rem 0; }
+
+@media (min-width: 1080px) {
+  .enroll-img {
+    margin: 4.5rem 0; } }
+
+.enroll-img img {
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
+          box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
+
 /*--------------------------------------------------------------
 # Artist library
 --------------------------------------------------------------*/

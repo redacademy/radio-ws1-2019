@@ -1,1 +1,13 @@
 /* enroll */
+
+.enroll {
+  margin: 2 * $base__space-unit 0;
+}
+.enroll-img {
+  @include full-width;
+  img {
+    margin: $base__space-unit 0;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 0.5rem -0.25rem $color__text-main;
+  }
+}

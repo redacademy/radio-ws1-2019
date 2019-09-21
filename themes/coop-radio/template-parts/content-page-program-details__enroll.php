@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for program details page enroll section.
  *
@@ -7,8 +8,15 @@
 
 ?>
 
-<section>
-  <h2><?= CFS()->get( 'enroll_title' ); ?></h2>
-  <img><?= CFS()->get( 'enroll_img' ); ?>
-  <p><?= CFS()->get( 'enroll_description' ); ?></p>
+<section class="enroll">
+  <h2><?= CFS()->get('enroll_title'); ?></h2>
+
+  <div class="enroll-img">
+    <img src="<?= CFS()->get('enroll_img'); ?>">
+  </div>
+
+  <div class="enroll-text">
+    <p><?= CFS()->get('enroll_description'); ?></p>
+    <div class="enroll-input"><?php the_content() ?></div>
+  </div>
 </section>

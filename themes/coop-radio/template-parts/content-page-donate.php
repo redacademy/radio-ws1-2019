@@ -34,7 +34,7 @@
 
     <div class="donate-container2">
         <p><?= CFS()->get( 'actions_text' ); ?></p>
-      <div class="roxo">
+      <div class="wrap-photo">
         <img class="community-photo" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/the_community.jpg'; ?>" alt="">
           <div>
             <span class="ball-a"></span>
@@ -49,9 +49,8 @@
         </div>
       </div>
 
-
     <div class="donate-container">
-      <div class="roxo">
+      <div class="wrap-photo">
         <img class="community-photo" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/education_and_mentorship.jpg'; ?>" alt="">
           <div>
             <span class="ball-a1"></span>
@@ -67,9 +66,8 @@
       </div>
     </div>
 
-
     <div class="donate-container2">
-      <div class="roxo">
+      <div class="wrap-photo">
         <img class="community-photo" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/a_platform_for_voice.jpg'; ?>" alt="">
           <div>
             <span class="ball-a"></span>

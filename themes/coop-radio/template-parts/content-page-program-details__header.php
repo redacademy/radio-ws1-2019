@@ -19,7 +19,7 @@
 
   <h2>
     <?= CFS()->get( 'featured_content_title' ); ?>
-  <h2/>
+  </h2>
 
   <p>
     <?= CFS()->get( 'featured_content_subtitle' ); ?>

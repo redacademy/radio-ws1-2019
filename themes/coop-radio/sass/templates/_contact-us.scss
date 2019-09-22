@@ -2,27 +2,36 @@
 # Contact Page
 --------------------------------------------------------------*/
 
-.page-id-14 {
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    border-width: 0;
-    padding: 0;
+.container-contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include tablet {
+    flex-wrap: unset;
+  }
+  pre {
+    flex-basis: 100%;
+    height: 100vh;
 
-    @include desktop {
+    @include tablet {
+      flex-basis: 50%;
+    }
+    iframe {
       position: relative;
-      width: 700px;
-      height: 420px;
-      transform: translateY(13%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border-width: 0;
+      padding: 0;
+
+      @include tablet {
+        height: 500px;
+      }
     }
   }
   form {
-    position: relative;
-    top: 80vh;
     background-color: #fff;
     text-align: center;
 
@@ -30,15 +39,21 @@
       position: initial;
     }
   }
-
   textarea {
     width: 420px;
     height: 150px;
   }
 }
+.header-contact {
+  display: none;
+  @include tablet {
+    display: inline;
+  }
+}
+
 .container-contact {
   @include desktop {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 }

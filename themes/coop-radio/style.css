@@ -1160,25 +1160,52 @@ footer {
             justify-content: space-between; } }
 
 .overview-main .overview-item {
-  width: 400px;
+  max-width: 600px;
   margin: 0 auto; }
   @media (min-width: 1080px) {
     .overview-main .overview-item {
+      width: 400px;
       margin: 0 1.5rem; } }
   .overview-main .overview-item .overview-img {
     display: block;
     margin: 0 auto;
-    height: 200px; }
+    max-height: 200px; }
   .overview-main .overview-item .overview-text {
     text-align: left; }
+    @media (min-width: 1080px) {
+      .overview-main .overview-item .overview-text {
+        text-align: center; } }
 
 /* get started */
-.get-started .get-started-core {
-  width: 450px;
-  text-align: left;
-  margin: 0 auto; }
-  .get-started .get-started-core img {
-    height: 400px; }
+.get-started .get-started-item {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (min-width: 1080px) {
+    .get-started .get-started-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .get-started .get-started-item:nth-child(odd) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse; } }
+  .get-started .get-started-item .get-started-img img {
+    height: 300px; }
+    @media (min-width: 1080px) {
+      .get-started .get-started-item .get-started-img img {
+        height: 400px; } }
+  .get-started .get-started-item .get-started-text {
+    display: block;
+    max-width: 600px;
+    margin: 1.5rem auto 4.5rem;
+    text-align: left; }
+    @media (min-width: 1080px) {
+      .get-started .get-started-item .get-started-text {
+        margin: 7.5rem 0; } }
+  .get-started .get-started-item h3 {
+    margin: 0; }
 
 /* video */
 /* requirements */
@@ -1293,6 +1320,20 @@ footer {
   @media (min-width: 1080px) {
     .enroll .enroll-main .enroll-descript-mob {
       display: none; } }
+
+/* terms & conditions */
+.terms-conditions {
+  background-color: #bebebe;
+  padding: 1.5rem; }
+  @media (min-width: 1080px) {
+    .terms-conditions {
+      padding: 2.25rem; } }
+  .terms-conditions .terms-text-container {
+    text-align: left;
+    font-family: Arial, sans-serif; }
+    @media (min-width: 1080px) {
+      .terms-conditions .terms-text-container {
+        margin: 1.5rem 4.5rem; } }
 
 /*--------------------------------------------------------------
 # Artist library
@@ -1626,6 +1667,9 @@ footer {
 
 .donate-title {
   text-align: center; }
+
+.wrap-photo {
+  position: relative; }
 
 .wrap-photo {
   position: relative; }

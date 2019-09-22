@@ -4,14 +4,16 @@ $base__space-unit: 1.5rem;
 
 // Colors
 
-$color__brand-black:#171717;
+$color__brand-black: #171717;
 $color__brand-purple: #8b1f7e;
 $color__brand-gray: #bebebe;
-$color__brand-dark-gray:#8b8b8b;
+$color__brand-dark-gray: #8b8b8b;
+$color__brand-white: #fff;
 
 $color__background-body: #fff;
 $color__text-main: #2c2c2c;
-$color__headline:$color__brand-black;
+$color__headline: $color__brand-black;
+$color__headline-white: $color__brand-white;
 
 $color__background-screen: #f1f1f1;
 $color__text-screen: #2c2c2c;
@@ -25,7 +27,7 @@ $color__link-hover: #8b1f7e;
 $color__btn-default: $color__brand-purple;
 $color__btn-focus: #99488f;
 $color__btn-hover: #7e3575;
-$color__btn-disabled:$color__brand-dark-gray;
+$color__btn-disabled: $color__brand-dark-gray;
 $color__btn-primary-text: #fff;
 
 $color__input-background: rgba(190, 190, 190, 0.8);
@@ -45,4 +47,4 @@ $tablet-width: 600px;
 
 // Styling
 
-$img_box-shadow:0 0.5rem 0.5rem -0.25rem $color__background-dark;
+$img_box-shadow: 0 0.5rem 0.5rem -0.25rem $color__background-dark;

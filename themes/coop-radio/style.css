@@ -344,10 +344,13 @@ textarea {
   color: #2c2c2c;
   line-height: 1.5; }
 
-h1 {
+h1,
+.heading-1 {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
   color: #171717;
+  color: #fff;
+  font-size: 34px;
   font-size: 24px; }
 
 h2 {
@@ -1142,46 +1145,42 @@ footer {
         margin-left: 3rem; } }
 
 /* general styling */
-.program-details-page h2 {
+.program-details__subheading {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
   color: #171717;
-  font-size: 38px;
-  font-weight: bold; }
-  @media (min-width: 1080px) {
-    .program-details-page h2 {
-      font-size: 48px; } }
+  color: #fff;
+  font-size: 34px; }
 
-.program-details-page h3 {
+.program-details_paragraph {
+  font-weight: bold; }
+
+h3 {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
   color: #171717;
   font-weight: bold; }
   @media (min-width: 1080px) {
-    .program-details-page h3 {
+    h3 {
       font-size: 32px; } }
-
-.program-details-page .text-container {
-  text-align: left; }
-  @media (min-width: 1080px) {
-    .program-details-page .text-container {
-      text-align: center; } }
+  h3 .text-container {
+    text-align: left; }
+    @media (min-width: 1080px) {
+      h3 .text-container {
+        text-align: center; } }
   @media (min-width: 1080px) and (min-width: 1080px) {
-    .program-details-page .text-container {
+    h3 .text-container {
       margin: 4.5rem 6rem; } }
-
-.program-details-page .page-container {
-  margin: 0 1.5rem; }
+  h3 .page-container {
+    margin: 0 1.5rem; }
+    @media (min-width: 1080px) {
+      h3 .page-container {
+        margin: 4.5rem 6rem; } }
   @media (min-width: 1080px) {
-    .program-details-page .page-container {
-      margin: 4.5rem 6rem; } }
-
-@media (min-width: 1080px) {
-  .program-details-page .full-width {
-    margin: 4.5rem 0; } }
-
-.program-details-page .text-description {
-  text-align: left; }
+    h3 .full-width {
+      margin: 4.5rem 0; } }
+  h3 .text-description {
+    text-align: left; }
 
 /* overview */
 @media (min-width: 1080px) {

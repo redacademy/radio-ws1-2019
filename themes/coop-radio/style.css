@@ -1540,43 +1540,63 @@ footer {
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
-.page-id-14 iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border-width: 0;
-  padding: 0; }
-  @media (min-width: 1080px) {
-    .page-id-14 iframe {
+.container-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (min-width: 600px) {
+    .container-contact {
+      -ms-flex-wrap: unset;
+          flex-wrap: unset; } }
+  .container-contact pre {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 100vh; }
+    @media (min-width: 600px) {
+      .container-contact pre {
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%; } }
+    .container-contact pre iframe {
       position: relative;
-      width: 700px;
-      height: 420px;
-      -webkit-transform: translateY(13%);
-              transform: translateY(13%); } }
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border-width: 0;
+      padding: 0; }
+      @media (min-width: 600px) {
+        .container-contact pre iframe {
+          height: 500px; } }
+  .container-contact form {
+    background-color: #fff;
+    text-align: center; }
+    @media (min-width: 1080px) {
+      .container-contact form {
+        position: initial; } }
+  .container-contact textarea {
+    width: 420px;
+    height: 150px; }
 
-.page-id-14 form {
-  position: relative;
-  top: 80vh;
-  background-color: #fff;
-  text-align: center; }
-  @media (min-width: 1080px) {
-    .page-id-14 form {
-      position: initial; } }
-
-.page-id-14 textarea {
-  width: 420px;
-  height: 150px; }
+.header-contact {
+  display: none; }
+  @media (min-width: 600px) {
+    .header-contact {
+      display: inline; } }
 
 @media (min-width: 1080px) {
   .container-contact {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; } }
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly; } }
 
 @media (min-width: 1080px) {
   .page-id-55 .header-container {
@@ -1629,6 +1649,9 @@ footer {
   border-radius: 2px;
   border: 2px solid #8b1f7e;
   text-decoration: none; }
+
+.wrap-photo {
+  position: relative; }
 
 .community-photo {
   width: 200px;
@@ -1919,52 +1942,3 @@ ul {
         @media (min-width: 1080px) {
           .search-background .custom-search fieldset .custom-input {
             font-size: 1.5rem; } }
-
-.socials {
-  position: relative;
-  display: inline-block;
-  -webkit-transform: translateY(300%);
-          transform: translateY(300%); }
-
-/* Style the button that is used to open and close the collapsible content */
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.collapsible:hover {
-  background-color: #ccc; }
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  display: block;
-  position: absolute;
-  top: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  right: 0;
-  -webkit-box-shadow: 0 10px white;
-          box-shadow: 0 10px white;
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #fff;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 200px;
-  text-align: start; }
-  .content a {
-    color: #8b1f7e;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .content .lista {
-    margin: 10%; }
-
-.fab {
-  font-size: 48px; }

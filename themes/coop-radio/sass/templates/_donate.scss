@@ -21,6 +21,9 @@
   }
 }
 
+.wrap-photo {
+  position: relative;
+}
 .side-text {
   @include desktop {
     width: 500px;
@@ -35,16 +38,10 @@
     padding-top: 7rem;
   }
 }
-
-.btn {
-  height: 44px;
-  font-family: $font__heading;
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 2px;
-  border: 2px solid $color__btn-default;
-  text-decoration: none;
+.donate-title {
+  text-align: center;
 }
+
 .wrap-photo {
   position: relative;
 }
@@ -60,6 +57,7 @@
     width: 300px;
     height: 300px;
     transform: translateY(15%);
+    max-width: none;
   }
 }
 .ball-a {

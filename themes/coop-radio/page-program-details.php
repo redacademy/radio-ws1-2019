@@ -67,6 +67,11 @@ get_header(); ?>
           ); ?>
       </div>
 
+      <?php get_template_part(
+          'template-parts/content',
+          'page-program-details__terms-conditions'
+        ); ?>
+
     </article>
   <?php endwhile; ?>
 </main>

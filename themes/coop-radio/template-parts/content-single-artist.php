@@ -7,63 +7,48 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="artist-hero artist-img-container">
-    <header>
-      <?php if (has_post_thumbnail()) : ?>
-        <?php the_post_thumbnail('large'); ?>
-      <?php endif; ?>
-
-      <div class="text-container top-text-container">
-        <h2 class="artist-name">
-          <?= CFS()->get('artist_name'); ?>
-        </h2>
-
-        <div class="artist-description">
-          <?= CFS()->get('bio_text'); ?>
-        </div>
-
-      </div><!-- text-container top-text-container-->
-    </header>
-  </div><!-- artist-img-container -->
-
-  <section class="text-container my-journey-text">
-    <h3 class="intro-title">
-      <?= CFS()->get('intro_title'); ?>
-    </h3>
-
-    <?= CFS()->get('intro_text'); ?>
-  </section><!-- text container my-journey-text -->
-
-  <section class="featured-video">
-    <!-- music video -->
-    <?= CFS()->get('youtube_url'); ?>
-  </section><!-- featured-video -->
-
-  <article class="full-description-container">
-    <div class="description">
-      <section class="text-container">
-        <h3 class="full-name">
-          <?= CFS()->get('full_name'); ?>
-        </h3>
-
-        <?= CFS()->get('bio_text_secondary'); ?>
+    <header class="single-artist-header">
+    <section class="artist-hero" style="background-image: url(<?= CFS()->get('artist_hero'); ?>)">
       </section>
 
-      <section class="text-container">
-        <h3>
-          <?= CFS()->get('additional_info_title'); ?>
-        </h3>
+    <div class="page-container">
+        <h2 class="artist-name"><?= CFS()->get('artist_name'); ?></h2>
 
-        <?= CFS()->get('additional_info_text'); ?>
-      </section><!-- text-container -->
+        <p class="artist-description"><?= CFS()->get('bio_text'); ?></p>
+    </div><!-- page-container -->
+    </header>
 
-    </div><!-- description -->
+  <section class="page-container">
+    <div class="text-container">
+      <h3 class="intro-title"><?= CFS()->get('intro_title'); ?></h3>
+      <p><?= CFS()->get('intro_text'); ?></p>
+    </div>
+  </section><!-- page-container -->
 
-    <section class="additional-artist-img artist-img-container">
-      <!-- additional image? -->
-    </section>
+  <section class="page-container">
+    <iframe width="560" height="315" src="<?= CFS()->get('youtube_url'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section><!-- page-container -->
 
-    <section class="artist-tracks">
+  <section class="page-container">
+
+      <div class="bio">
+        <h3 class="full-name"><?= CFS()->get('full_name'); ?></h3>
+        <p><?= CFS()->get('bio_text_secondary'); ?></p>
+      </div>
+
+      <div class="bio">
+        <h3><?= CFS()->get('additional_info_title'); ?></h3>
+        <p><?= CFS()->get('additional_info_text'); ?></p>
+      </div>
+
+      <div class="artist-img">
+        <?php if (has_post_thumbnail()) : ?>
+        <?php the_post_thumbnail('large'); ?>
+        <?php endif; ?>
+      </div>
+  </section><!-- page-container -->
+
+  <section class="artist-tracks page-container">
       <h3>My Songs</h3>
       <?php
         $track_ids = CFS()->get_reverse_related( $post->ID, array(
@@ -97,12 +82,9 @@
         endif; endif; ?>
     </section>
 
-  </article><!-- full-description-container -->
-
   <footer>
     <div class="text-container">
       <p>follow me on</p>
-      <!-- social links -->
       <ul class="social-links">
         <li>
           <?= CFS()->get('facebook_url'); ?>

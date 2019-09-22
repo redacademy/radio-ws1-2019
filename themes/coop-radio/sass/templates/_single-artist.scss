@@ -3,38 +3,11 @@
 --------------------------------------------------------------*/
 
 .single-artist {
+  .page-container {
+    @include page-container;
+  }
   .text-container {
-    max-width: 430px;
-    margin: 3rem auto;
-    @include tablet {
-      max-width: auto;
-      p {
-        margin: 0 auto;
-        text-align: center;
-      }
-    }
-  }
-  .artist-img-container {
-    background-color: gray;
-    height: 600px;
-  }
-  .top-text-container {
-    position: absolute;
-    @include tablet {
-      margin-left: 800px;
-    }
-  }
-
-  .artist-hero {
-    position: relative;
-    .artist-name {
-      text-align: left;
-      bottom: 50%;
-    }
-    .artist-description {
-      max-width: 400px;
-      bottom: 1.5rem;
-    }
+    @include text-container;
   }
 
   .intro-title,
@@ -45,13 +18,8 @@
       text-decoration: underline;
     }
   }
-  .my-journey-text {
-    @include tablet {
-      max-width: 900px;
-    }
-  }
-  .featured-video {
-    background-color: gray;
+ 
+  iframe {
     height: 450px;
     margin: 0 auto;
     @include tablet {
@@ -60,30 +28,11 @@
       overflow: hidden;
     }
   }
-  .full-description-container {
-    @include tablet {
-      position: relative;
-    }
-    .description {
-      @include tablet {
-        display: inline-block;
-        align-items: left;
-        position: absolute;
-        left: 15%;
-        top: 10%;
-        max-width: 500px;
-      }
-      .full-name {
-        @include tablet {
-          font-size: 48px;
-          text-transform: uppercase;
-        }
-      }
-    }
-  }
 
-  .additional-artist-img {
-    margin: 4.5rem auto;
+  .artist-hero {
+    height: 100vh;
+  background-size: cover;
+  background-position: top center;
   }
 
   footer {

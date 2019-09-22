@@ -89,16 +89,18 @@
           </div>
         </div>
 
-        <button
+        <a
           id="audio-player__action--share"
           class="audio-player__action audio-player__action--share"
-          type="button"
+          href=""
+          target="_blank"
+          disabled
         >
           <img
             src="<?= get_template_directory_uri().'/images/share-icon.svg'; ?>"
             alt="Share track"
           />
-        </button>
+        </a>
 
         <audio id="audio-player">
           <a href="">Download track</a>

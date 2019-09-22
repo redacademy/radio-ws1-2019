@@ -45,7 +45,7 @@
         <div class="banner__container">
           <div class="banner__logo-container">
             <a class="banner__logo-link" href="<?php echo esc_url(home_url('/')); ?>">
-              <img src="<?php echo get_stylesheet_directory_uri().'/images/logo-dark.png'; ?>" alt="co-op radio logo">
+              <div class='logo-image'>image</div>
             </a>
           </div>
           <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -57,11 +57,6 @@
           </nav>
           <div class="header-search">
             <?php get_search_form(); ?>
-          </div>
-          <div class="search-icon">
-            <a href="">
-              <img src="<?php echo get_stylesheet_directory_uri().'/images/search-icon-white.svg'; ?>" alt="search icon">
-            </a>
           </div>
         </div>
         

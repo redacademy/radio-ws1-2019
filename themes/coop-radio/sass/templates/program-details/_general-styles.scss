@@ -1,39 +1,46 @@
 /* general styling */
 
-.program-details-page {
-  h2 {
-    @include font_headline;
-    font-size: 38px;
-    font-weight: bold;
+// .program-details-page {
+//   h2 {
+//     @include font_headline;
+//     font-size: 38px;
+//     font-weight: bold;
 
-    @include desktop {
-      font-size: 48px;
-    }
-  }
-  h3 {
-    @include font_headline;
-    font-weight: bold;
+//     @include desktop {
+//       font-size: 48px;
+//     }
+//   }
+// }
+.program-details__subheading {
+  @include font-headline-white;
+}
+.program-details_paragraph {
+  font-weight: bold;
+}
 
-    @include desktop {
-      font-size: 32px;
-    }
+h3 {
+  @include font_headline;
+  font-weight: bold;
+
+  @include desktop {
+    font-size: 32px;
   }
-  
+
   .text-container {
     text-align: left;
     @include desktop {
-    text-align: center;
-    @include text-container;
+      text-align: center;
+      @include text-container;
     }
   }
   .page-container {
     @include page-container;
   }
   .full-width {
-    @include full-width
+    @include full-width;
   }
 
   .text-description {
-    text-align:left;
+    text-align: left;
   }
 }

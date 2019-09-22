@@ -13,15 +13,15 @@
     <?= wp_get_attachment_url( get_post_thumbnail_id( $post->ID )); ?>
   );"
 >
-  <h1>
+  <h1 class="heading-1">
     <?= CFS()->get( 'program_title' ); ?>
   </h1>
 
-  <h2>
+  <h2 class="program-details__subheading">
     <?= CFS()->get( 'featured_content_title' ); ?>
   </h2>
 
-  <p>
+  <p class="program-details_paragraph">
     <?= CFS()->get( 'featured_content_subtitle' ); ?>
   </p>
 

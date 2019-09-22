@@ -1399,8 +1399,10 @@ h3 {
 
 .artist-library__scroll-container {
   position: relative;
-  padding: 0 6rem;
   min-height: 440px; }
+  @media (min-width: 600px) {
+    .artist-library__scroll-container {
+      padding: 0 6rem; } }
   .artist-library__scroll-container .slick-slide img {
     width: 100%;
     height: 100%;
@@ -1409,7 +1411,21 @@ h3 {
     border: none;
     border-radius: 10px;
     -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
-            box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
+            box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+    margin: 4.5rem 0; }
+  .artist-library__scroll-container .slick-slide:focus img {
+    opacity: 0.8; }
+  .artist-library__scroll-container .slick-active img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  .artist-library__scroll-container .slick-center img {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    z-index: 1; }
 
 .artist-libary {
   width: 80%;
@@ -1446,7 +1462,8 @@ h3 {
   position: absolute;
   top: 50%;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  z-index: 2; }
 
 .artist-library__action--prev {
   left: 0; }
@@ -1473,16 +1490,26 @@ h3 {
   margin: 0 auto; }
 
 .artist-card__img-container {
-  height: 300px;
-  width: 200px; }
-
-.artist-card__title {
-  text-transform: uppercase; }
+  height: 210px;
+  width: 140px;
+  margin-bottom: 100px; }
+  @media (min-width: 600px) {
+    .artist-card__img-container {
+      height: 300px;
+      width: 200px; } }
 
 .artist-card__title,
 .artist-card__genre {
   text-align: center;
   white-space: nowrap; }
+
+.artist-card__title {
+  margin: 0;
+  text-transform: uppercase; }
+
+.artist-card__genre {
+  margin: 0 0 1.5rem 0;
+  padding: 0; }
 
 /*--------------------------------------------------------------
 # Single artist

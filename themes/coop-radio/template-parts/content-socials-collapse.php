@@ -10,12 +10,14 @@
 
 <div class="socials">
   <button class="collapsible">
-    <div class="div">
-  <img id="foto1" src="<?php echo get_stylesheet_directory_uri().'/images/white_pullup_icon.svg'; ?>" >
-<img id="foto2" src="<?php echo get_stylesheet_directory_uri().'/images/white_close_icon.svg'; ?>" >
-</div>
-
+    <div id="foto1">
+      <img class="foto1" src="<?php echo get_stylesheet_directory_uri().'/images/white_pullup_icon.svg'; ?>" >
+    </div>
+    <div id="foto2">
+      <img class="foto2" src="<?php echo get_stylesheet_directory_uri().'/images/white_close_icon.svg'; ?>" >
+    </div>
   </button>
+  
       <div class="content collapse-content">  
         <ul>
           <li class="lista">

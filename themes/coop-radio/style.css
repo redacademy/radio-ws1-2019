@@ -605,28 +605,23 @@ a {
 
 .main-navigation.toggled ul {
   position: absolute;
-  top: 0;
+  top: 5rem;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100vh;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
   background-color: #fff; }
-  .main-navigation.toggled ul .menu-item a {
-    color: #2c2c2c; }
 
 @media (min-width: 1080px) {
   .main-navigation .menu-toggle,
@@ -718,13 +713,36 @@ a {
 
 .banner--light {
   background-color: #fff; }
+  .banner--light .banner__container .banner__logo-link .logo-image {
+    background: url(../../images/logo-light.png) no-repeat;
+    background-size: 4rem 4rem;
+    width: 4rem;
+    height: 4rem;
+    color: transparent; }
+  .banner--light .banner__container .header-search input {
+    color: #2c2c2c; }
   .banner--light .menu-item a {
     color: #2c2c2c; }
 
 .banner--transparent {
   background-color: transparent; }
+  .banner--transparent .banner__container .banner__logo-link .logo-image {
+    background: url(../../images/logo-light.png) no-repeat;
+    background-size: 4rem 4rem;
+    width: 4rem;
+    height: 4rem;
+    color: transparent; }
+  .banner--transparent .banner__container .header-search input {
+    color: #2c2c2c; }
   .banner--transparent .menu-item a {
-    color: #fff; }
+    color: #2c2c2c; }
+
+.banner--dark .banner__container .banner__logo-link .logo-image {
+  background: url(../../images/logo-dark.png) no-repeat;
+  background-size: 4rem 4rem;
+  width: 4rem;
+  height: 4rem;
+  color: transparent; }
 
 @media (min-width: 600px) {
   .banner--dark {
@@ -742,7 +760,12 @@ a {
   width: 90%;
   margin: 0 auto; }
   .banner__container .main-navigation.toggled ul a {
-    color: #2c2c2c; }
+    color: #2c2c2c;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600; }
+    .banner__container .main-navigation.toggled ul a:hover {
+      text-decoration: underline;
+      cursor: pointer; }
 
 .menu-toggle {
   background-image: url("../../images/menu-bar.png");
@@ -760,10 +783,7 @@ a {
   display: none; }
   @media (min-width: 1080px) {
     .banner__logo-container {
-      display: block; }
-      .banner__logo-container .banner__logo-link img {
-        height: 4rem;
-        width: auto; } }
+      display: block; } }
 
 @media (min-width: 1080px) {
   .main-navigation {
@@ -786,7 +806,8 @@ a {
           float: left;
           padding-right: 1.5rem; }
           .main-navigation .menu-header-navigation-container ul li a {
-            white-space: nowrap; }
+            white-space: nowrap;
+            font-family: "Oswald", sans-serif; }
         .main-navigation .menu-header-navigation-container ul li:last-child {
           display: none; } }
 
@@ -801,9 +822,18 @@ a {
         background-color: transparent;
         border: none;
         float: left; }
-        .header-search .search-toggle img {
-          height: 1.25rem;
-          width: auto; }
+        .header-search .search-toggle .search-icon-black {
+          background: url(../../images/search-icon-white.svg) no-repeat;
+          background-size: 1.5rem 3.5rem;
+          width: 2rem;
+          height: 3rem;
+          color: transparent; }
+        .header-search .search-toggle .search-icon-white {
+          background: url(../../images/search-icon-black.png) no-repeat;
+          background-size: 2rem 2rem;
+          width: 2rem;
+          height: 2rem;
+          color: transparent; }
       .header-search label {
         width: 0;
         margin: 0;
@@ -993,16 +1023,18 @@ footer {
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
-.home {
+.home-main {
   height: 100vh;
-  background-image: url("../../images/front-page-background.jpeg");
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: top; }
-  .home main {
-    position: absolute;
-    top: 4.5rem;
-    width: 100vw; }
+
+.home-container {
+  width: 100vw; }
+  @media (min-width: 1080px) {
+    .home-container {
+      position: absolute;
+      top: 4.5rem; } }
 
 .content-front-page {
   position: absolute;
@@ -1023,7 +1055,9 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .content-front-page .content-container h1, .content-front-page .content-container p, .content-front-page .content-container a {
+    .content-front-page .content-container h1,
+    .content-front-page .content-container p,
+    .content-front-page .content-container a {
       color: #000000; }
     .content-front-page .content-container p {
       max-width: 60%;
@@ -1160,25 +1194,52 @@ footer {
             justify-content: space-between; } }
 
 .overview-main .overview-item {
-  width: 400px;
+  max-width: 600px;
   margin: 0 auto; }
   @media (min-width: 1080px) {
     .overview-main .overview-item {
+      width: 400px;
       margin: 0 1.5rem; } }
   .overview-main .overview-item .overview-img {
     display: block;
     margin: 0 auto;
-    height: 200px; }
+    max-height: 200px; }
   .overview-main .overview-item .overview-text {
     text-align: left; }
+    @media (min-width: 1080px) {
+      .overview-main .overview-item .overview-text {
+        text-align: center; } }
 
 /* get started */
-.get-started .get-started-core {
-  width: 450px;
-  text-align: left;
-  margin: 0 auto; }
-  .get-started .get-started-core img {
-    height: 400px; }
+.get-started .get-started-item {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (min-width: 1080px) {
+    .get-started .get-started-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .get-started .get-started-item:nth-child(odd) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse; } }
+  .get-started .get-started-item .get-started-img img {
+    height: 300px; }
+    @media (min-width: 1080px) {
+      .get-started .get-started-item .get-started-img img {
+        height: 400px; } }
+  .get-started .get-started-item .get-started-text {
+    display: block;
+    max-width: 600px;
+    margin: 1.5rem auto 4.5rem;
+    text-align: left; }
+    @media (min-width: 1080px) {
+      .get-started .get-started-item .get-started-text {
+        margin: 7.5rem 0; } }
+  .get-started .get-started-item h3 {
+    margin: 0; }
 
 /* video */
 /* requirements */
@@ -1264,7 +1325,9 @@ footer {
     margin: 0 auto;
     text-align: left; }
 
-/* enroll */
+/*--------------------------------------------------------------
+# Enroll
+--------------------------------------------------------------*/
 .enroll {
   margin: 3rem 0; }
   @media (min-width: 1080px) {
@@ -1285,14 +1348,20 @@ footer {
     .enroll .enroll-main .enroll-text {
       width: 50%;
       margin: 1.5rem; } }
-  .enroll .enroll-main .enroll-descript-desk {
-    display: none; }
-    @media (min-width: 1080px) {
-      .enroll .enroll-main .enroll-descript-desk {
-        display: block; } }
+
+/* terms & conditions */
+.terms-conditions {
+  background-color: #bebebe;
+  padding: 1.5rem; }
   @media (min-width: 1080px) {
-    .enroll .enroll-main .enroll-descript-mob {
-      display: none; } }
+    .terms-conditions {
+      padding: 2.25rem; } }
+  .terms-conditions .terms-text-container {
+    text-align: left;
+    font-family: Arial, sans-serif; }
+    @media (min-width: 1080px) {
+      .terms-conditions .terms-text-container {
+        margin: 1.5rem 4.5rem; } }
 
 /*--------------------------------------------------------------
 # Artist library
@@ -1627,6 +1696,9 @@ footer {
             flex-direction: row-reverse;
     width: 80%; } }
 
+.wrap-photo {
+  position: relative; }
+
 @media (min-width: 1080px) {
   .side-text {
     width: 500px;
@@ -1641,19 +1713,19 @@ footer {
             transform: translateX(-20%);
     padding-top: 7rem; } }
 
-.btn {
-  height: 44px;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 2px;
-  border: 2px solid #8b1f7e;
-  text-decoration: none; }
+.donate-title {
+  text-align: center; }
 
 .wrap-photo {
   position: relative; }
 
-.community-photo {
+.wrap-photo {
+  position: relative; }
+
+.wrap-photo {
+  position: relative; }
+
+.donate-photo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -1661,11 +1733,12 @@ footer {
   margin-left: 10px;
   margin-top: 10px; }
   @media (min-width: 1080px) {
-    .community-photo {
+    .donate-photo {
       width: 300px;
       height: 300px;
       -webkit-transform: translateY(15%);
-              transform: translateY(15%); } }
+              transform: translateY(15%);
+      max-width: none; } }
 
 .ball-a {
   height: 90px;
@@ -1744,43 +1817,23 @@ footer {
 article {
   text-align: center; }
 
-.header-container {
-  /* Style the button that is used to open and close the collapsible content */
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  /* Style the collapsible content. Note: hidden by default */ }
-  @media (min-width: 1080px) {
-    .header-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      width: 100%; }
-      .header-container .container2 {
-        width: 50%;
-        height: 50%; }
-      .header-container .container-1 {
-        width: 50%; } }
-  .header-container .collapsible {
-    background-color: #fff;
-    color: #8b1f7e;
-    cursor: pointer;
-    padding: 18px;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px; }
-  .header-container .active,
-  .header-container .collapsible:hover {
-    background-color: #ccc; }
-  .header-container .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #b079aa;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 200px; }
+@media (min-width: 1080px) {
+  .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 600px; }
+    .header-container .container2 {
+      width: 50%;
+      position: relative; }
+    .header-container .container-1 {
+      width: 50%;
+      background-color: black;
+      position: relative; }
+    .header-container .wp-post-image {
+      height: -webkit-fill-available;
+      width: -webkit-fill-available; } }
 
 @media (min-width: 1080px) {
   .participate {
@@ -1793,9 +1846,8 @@ article {
 .logo-link-involved {
   border: none;
   border-radius: 50%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 170px;
+  height: 170px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
   .logo-link-involved:hover {
@@ -1803,10 +1855,10 @@ article {
     background-image: linear-gradient(#b079aa, #d8d8d8); }
 
 .logo-link-involved3 {
-  width: 145px;
+  width: 170px;
+  height: 170px;
   border: none;
   border-radius: 50%;
-  height: 145px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
   .logo-link-involved3:hover {
@@ -1896,8 +1948,7 @@ ul {
 /*--------------------------------------------------------------
 # Search Page
 --------------------------------------------------------------*/
-.search-background {
-  background-image: url("../../images/search-background.jpg");
+.search-container {
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -1909,7 +1960,7 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative; }
-  .search-background .search-intro {
+  .search-container .search-intro {
     color: white;
     text-transform: uppercase;
     font-size: 1.25rem;
@@ -1917,28 +1968,82 @@ ul {
     position: absolute;
     top: 6.5rem; }
     @media (min-width: 600px) {
-      .search-background .search-intro {
+      .search-container .search-intro {
         font-size: 1.5rem;
         font-weight: 400;
         top: 5.5rem; } }
     @media (min-width: 1080px) {
-      .search-background .search-intro {
+      .search-container .search-intro {
         font-size: 1.75rem;
         top: 4.5rem; } }
-    .search-background .search-intro p {
+    .search-container .search-intro p {
       text-align: center; }
-  .search-background .custom-search {
+  .search-container .custom-search {
     position: absolute;
     top: 10rem; }
-    .search-background .custom-search fieldset {
+    .search-container .custom-search fieldset {
       border: none; }
-      .search-background .custom-search fieldset .custom-input {
+      .search-container .custom-search fieldset .custom-input {
         width: 60vw;
         background-color: #dddddd;
         font-size: 1rem; }
         @media (min-width: 600px) {
-          .search-background .custom-search fieldset .custom-input {
+          .search-container .custom-search fieldset .custom-input {
             font-size: 1.25rem; } }
         @media (min-width: 1080px) {
-          .search-background .custom-search fieldset .custom-input {
+          .search-container .custom-search fieldset .custom-input {
             font-size: 1.5rem; } }
+
+.socials {
+  position: absolute;
+  display: inline-block;
+  bottom: 10%;
+  left: 80%; }
+
+.collapsible {
+  display: contents; }
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: #ccc; }
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  display: block;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  right: 0;
+  -webkit-box-shadow: 0 10px white;
+          box-shadow: 0 10px white;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  text-align: start;
+  border-radius: 5%;
+  -webkit-box-shadow: 0px 0px 10px 3px #fff;
+          box-shadow: 0px 0px 10px 3px #fff; }
+  .content a {
+    color: #8b1f7e;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .content .lista {
+    margin: 10%; }
+
+.fab {
+  font-size: 48px; }

@@ -32,7 +32,7 @@
       const track = data[0]
       audioPlayer.src = track.source_url
       prograssBarContainer.style.cursor = 'pointer'
-      
+
       // get audio file's id3 tags
       new jsmediatags.Reader(track.source_url)
         .setTagsToRead(['title', 'artist', 'picture'])
@@ -46,10 +46,16 @@
             coverImg.src = coverURL
             trackTitle.innerText = tags.title
             trackArtist.innerText = tags.artist
-            audioPlayer.setAttribute('autoplay', true)
+
+            audioPlayer.pause()
+            togglePlayButtonIcon('PLAY')
+            window.localStorage.setItem('audio-player-playing', false)
           },
-          // eslint-disable-next-line
-          onError: e => console.error(e.type, e.info)
+          onError: e => {
+            // eslint-disable-next-line
+            console.error(e.type, e.info)
+            audioPlayer.style.display = 'none'
+          }
         })
     })
 
@@ -93,14 +99,15 @@
     if (audioPlayer.paused) {
       audioPlayer.play()
       togglePlayButtonIcon('PAUSE')
+      window.localStorage.setItem('audio-player-playing', true)
     } else {
       audioPlayer.pause()
       togglePlayButtonIcon('PLAY')
+      window.localStorage.setItem('audio-player-playing', false)
     }
   })
 
   prevButton.addEventListener('click', () => {
-    togglePlayButtonIcon('PAUSE')
     if (lastPlayedIndex > 0) {
       loadTrack(tracks, --lastPlayedIndex)
     } else {
@@ -111,7 +118,6 @@
   })
 
   nextButton.addEventListener('click', () => {
-    togglePlayButtonIcon('PAUSE')
     if (lastPlayedIndex < tracks.length - 1) {
       loadTrack(tracks, ++lastPlayedIndex)
     } else {
@@ -120,7 +126,7 @@
     } 
     localStorage.setItem('audio-player-index', lastPlayedIndex)
   })
-  
+
   // current time
   const updateTime = () => {
     const padNum = num => num
@@ -128,7 +134,7 @@
         ? `0${num}`
         : num
       : '00'
-    
+
     const timeTotalSeconds = audioPlayer.currentTime || lastPlayedTime
     const timeMinutes = Math.floor(timeTotalSeconds / 60)
     const timeSeconds = Math.floor(timeTotalSeconds - (timeMinutes * 60)) 
@@ -153,6 +159,7 @@
 
     if (progressPercent === 100) {
       togglePlayButtonIcon('PLAY')
+      window.localStorage.removeItem('audio-player-playing')
       window.localStorage.removeItem('audio-player-progress')
       window.localStorage.removeItem('audio-player-time')
     }

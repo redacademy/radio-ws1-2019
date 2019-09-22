@@ -8,28 +8,30 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <header class="header-container">
-    <div class="container2">
-      <?php if ( has_post_thumbnail() ) : ?>
-        <?php the_post_thumbnail( 'large' ); ?>
-      <?php endif; ?>
-    </div>
+  <header>
+    <div class="header-container">
+      <div class="container2">
+        <?php if ( has_post_thumbnail() ) : ?>
+          <?php the_post_thumbnail( 'large' ); ?>
+          <?php get_template_part( 'template-parts/content-socials-collapse' ); ?>
+          <?php endif; ?>
+        </div>
 
-    <div class="container-1">
-      <h1>
-        <?= the_title(); ?>
-      </h1>
-
-      <p>
-        <?php the_content(); ?>
-      </p> 
-      <a href="#" class="btn">Donate Now</a>
+      <div class="container-1">
+        <h1>
+          <?= the_title(); ?>
+        </h1>
+        <p>
+          <?php the_content(); ?>
+        </p> 
+        <a href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E920158QE&id=3" class="btn-medium btn-primary">Donate Now</a> 
+      </div>
     </div>
   </header>
 </article>
 
 <section>
-  <h2><?= CFS()->get( 'actions_title' ); ?></h2>
+    <h2 class="donate-title"><?= CFS()->get( 'actions_title' ); ?></h2>
 
   <div class="donate-container2">
     <p><?= CFS()->get( 'actions_text' ); ?></p>
@@ -80,5 +82,6 @@
       <p><?= CFS()->get( 'platform_text' ); ?></p>
     </div>
   </div>
-  <a href="#" class="btn">Donate Now</a>
+    <a href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E920158QE&id=3" class="btn-medium btn-primary">Donate Now</a> 
+
 </section>

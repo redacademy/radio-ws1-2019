@@ -1164,25 +1164,52 @@ footer {
             justify-content: space-between; } }
 
 .overview-main .overview-item {
-  width: 400px;
+  max-width: 600px;
   margin: 0 auto; }
   @media (min-width: 1080px) {
     .overview-main .overview-item {
+      width: 400px;
       margin: 0 1.5rem; } }
   .overview-main .overview-item .overview-img {
     display: block;
     margin: 0 auto;
-    height: 200px; }
+    max-height: 200px; }
   .overview-main .overview-item .overview-text {
     text-align: left; }
+    @media (min-width: 1080px) {
+      .overview-main .overview-item .overview-text {
+        text-align: center; } }
 
 /* get started */
-.get-started .get-started-core {
-  width: 450px;
-  text-align: left;
-  margin: 0 auto; }
-  .get-started .get-started-core img {
-    height: 400px; }
+.get-started .get-started-item {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (min-width: 1080px) {
+    .get-started .get-started-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .get-started .get-started-item:nth-child(odd) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse; } }
+  .get-started .get-started-item .get-started-img img {
+    height: 300px; }
+    @media (min-width: 1080px) {
+      .get-started .get-started-item .get-started-img img {
+        height: 400px; } }
+  .get-started .get-started-item .get-started-text {
+    display: block;
+    max-width: 600px;
+    margin: 1.5rem auto 4.5rem;
+    text-align: left; }
+    @media (min-width: 1080px) {
+      .get-started .get-started-item .get-started-text {
+        margin: 7.5rem 0; } }
+  .get-started .get-started-item h3 {
+    margin: 0; }
 
 /* video */
 /* requirements */
@@ -1291,6 +1318,20 @@ footer {
     .enroll .enroll-main .enroll-text {
       width: 50%;
       margin: 1.5rem; } }
+
+/* terms & conditions */
+.terms-conditions {
+  background-color: #bebebe;
+  padding: 1.5rem; }
+  @media (min-width: 1080px) {
+    .terms-conditions {
+      padding: 2.25rem; } }
+  .terms-conditions .terms-text-container {
+    text-align: left;
+    font-family: Arial, sans-serif; }
+    @media (min-width: 1080px) {
+      .terms-conditions .terms-text-container {
+        margin: 1.5rem 4.5rem; } }
 
 /*--------------------------------------------------------------
 # Artist library
@@ -1605,6 +1646,9 @@ footer {
             flex-direction: row-reverse;
     width: 80%; } }
 
+.wrap-photo {
+  position: relative; }
+
 @media (min-width: 1080px) {
   .side-text {
     width: 500px;
@@ -1619,14 +1663,14 @@ footer {
             transform: translateX(-20%);
     padding-top: 7rem; } }
 
-.btn {
-  height: 44px;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 2px;
-  border: 2px solid #8b1f7e;
-  text-decoration: none; }
+.donate-title {
+  text-align: center; }
+
+.wrap-photo {
+  position: relative; }
+
+.wrap-photo {
+  position: relative; }
 
 .wrap-photo {
   position: relative; }
@@ -1643,7 +1687,8 @@ footer {
       width: 300px;
       height: 300px;
       -webkit-transform: translateY(15%);
-              transform: translateY(15%); } }
+              transform: translateY(15%);
+      max-width: none; } }
 
 .ball-a {
   height: 90px;
@@ -1722,43 +1767,23 @@ footer {
 article {
   text-align: center; }
 
-.header-container {
-  /* Style the button that is used to open and close the collapsible content */
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  /* Style the collapsible content. Note: hidden by default */ }
-  @media (min-width: 1080px) {
-    .header-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      width: 100%; }
-      .header-container .container2 {
-        width: 50%;
-        height: 50%; }
-      .header-container .container-1 {
-        width: 50%; } }
-  .header-container .collapsible {
-    background-color: #fff;
-    color: #8b1f7e;
-    cursor: pointer;
-    padding: 18px;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px; }
-  .header-container .active,
-  .header-container .collapsible:hover {
-    background-color: #ccc; }
-  .header-container .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #b079aa;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 200px; }
+@media (min-width: 1080px) {
+  .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 600px; }
+    .header-container .container2 {
+      width: 50%;
+      position: relative; }
+    .header-container .container-1 {
+      width: 50%;
+      background-color: black;
+      position: relative; }
+    .header-container .wp-post-image {
+      height: -webkit-fill-available;
+      width: -webkit-fill-available; } }
 
 @media (min-width: 1080px) {
   .participate {
@@ -1771,9 +1796,8 @@ article {
 .logo-link-involved {
   border: none;
   border-radius: 50%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 170px;
+  height: 170px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
   .logo-link-involved:hover {
@@ -1781,10 +1805,10 @@ article {
     background-image: linear-gradient(#b079aa, #d8d8d8); }
 
 .logo-link-involved3 {
-  width: 145px;
+  width: 170px;
+  height: 170px;
   border: none;
   border-radius: 50%;
-  height: 145px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
   .logo-link-involved3:hover {
@@ -1919,3 +1943,57 @@ ul {
         @media (min-width: 1080px) {
           .search-container .custom-search fieldset .custom-input {
             font-size: 1.5rem; } }
+
+.socials {
+  position: absolute;
+  display: inline-block;
+  bottom: 10%;
+  left: 80%; }
+
+.collapsible {
+  display: contents; }
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: #ccc; }
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  display: block;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  right: 0;
+  -webkit-box-shadow: 0 10px white;
+          box-shadow: 0 10px white;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  text-align: start;
+  border-radius: 5%;
+  -webkit-box-shadow: 0px 0px 10px 3px #fff;
+          box-shadow: 0px 0px 10px 3px #fff; }
+  .content a {
+    color: #8b1f7e;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .content .lista {
+    margin: 10%; }
+
+.fab {
+  font-size: 48px; }

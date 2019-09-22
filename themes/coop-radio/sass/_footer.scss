@@ -4,11 +4,6 @@
 
 $footer_height: $base__space-unit * 3;
 
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
 .audio-player {
   position: fixed;
   bottom: 0;
@@ -31,6 +26,9 @@ footer {
   display: flex;
   margin-right: $base__space-unit;
   align-items: center;
+  @include tablet {
+    margin-left: $base__space-unit;
+  }
 }
 
 .audio-player__info-artist-img {
@@ -44,6 +42,13 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include tablet {
+    width: 6 * $base__space-unit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .audio-player__info--title {
@@ -56,12 +61,25 @@ footer {
   white-space: nowrap;
 }
 
-.audio-player__actions {
+.audio-player__controls--container {
+  display: flex;
   flex-grow: 1;
   flex-shrink: 0;
+
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
+
+.audio-player__actions {
   display: flex;
   margin-right: $base__space-unit;
   justify-content: flex-end;
+  margin-top: 9px;
+
+  @include tablet {
+    align-items: bottom;
+  }
 }
 
 .audio-player__action {
@@ -87,10 +105,15 @@ footer {
   @include tablet {
     display: initial;
     position: relative;
+    top: -2px;
     width: 100%;
     height: 100%;
     padding: 1rem 0;
     margin: 0 1rem;
+  }
+
+  @include desktop {
+    top: 4px;
   }
 }
 
@@ -134,15 +157,17 @@ footer {
 }
 
 .audio-player__time {
-  display: none;
+  flex-shrink: 0;
+  flex-grow: 1;
+  top: 0.16rem;
+  color: $color__brand-gray;
+  font-weight: bold;
+  text-align: right;
+  padding: 0 $base__space-unit/2;
 
-  @include tablet {
-    display: initial;
-    flex-shrink: 0;
+  @include desktop {
     position: relative;
-    top: 0.16rem;
-    color: $color__brand-gray;
-    font-weight: bold;
+    top: 6px;
   }
 }
 

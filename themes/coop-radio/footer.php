@@ -34,50 +34,54 @@
           </div>
         </div>
 
-        <div class="audio-player__actions">
-          <button
-            id="audio-player__action--prev"
-            class="audio-player__action audio-player__action--prev"
-            type="button"
-          >
-            <img
-              src="<?= get_template_directory_uri().'/images/button-prev.svg'; ?>"
-              alt="Previous track"
-            />
-          </button>
+        <div class="audio-player__controls--container">
 
-          <button
-            id="audio-player__action--play"
-            class="audio-player__action audio-player__action--play"
-            type="button"
+          <p
+            id="audio-player__time"
+            class="audio-player__time"
           >
-            <img
-              id="audio-player__action-icon--play"
-              src="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
-              data-pause-icon="<?= get_template_directory_uri().'/images/button-pause.svg'; ?>"
-              data-play-icon="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
-              alt="Play track"
-            />
-          </button>
+            00:00
+          </p>
 
-          <button
-            id="audio-player__action--next"
-            class="audio-player__action audio-player__action--next"
-            type="button"
-          >
-            <img
-              src="<?= get_template_directory_uri().'/images/button-next.svg'; ?>"
-              alt="Next track"
-            />
-          </button>
+          <div class="audio-player__actions">
+            <button
+              id="audio-player__action--prev"
+              class="audio-player__action audio-player__action--prev"
+              type="button"
+            >
+              <img
+                src="<?= get_template_directory_uri().'/images/button-prev.svg'; ?>"
+                alt="Previous track"
+              />
+            </button>
+
+            <button
+              id="audio-player__action--play"
+              class="audio-player__action audio-player__action--play"
+              type="button"
+            >
+              <img
+                id="audio-player__action-icon--play"
+                src="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
+                data-pause-icon="<?= get_template_directory_uri().'/images/button-pause.svg'; ?>"
+                data-play-icon="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
+                alt="Play track"
+              />
+            </button>
+
+            <button
+              id="audio-player__action--next"
+              class="audio-player__action audio-player__action--next"
+              type="button"
+            >
+              <img
+                src="<?= get_template_directory_uri().'/images/button-next.svg'; ?>"
+                alt="Next track"
+              />
+            </button>
+          </div>
+
         </div>
-
-        <p
-          id="audio-player__time"
-          class="audio-player__time"
-        >
-          00:00
-        </p>
 
         <div
           id="audio-player__progress-container"

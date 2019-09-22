@@ -9,12 +9,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <header class="header-container">
+  <header>
+    <div class="header-container">
     <div class="container2">
   <?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
     <?php endif; ?>
-</div>
+    </div>
     <div class="container-1">
     <h1>
       <?= the_title(); ?>
@@ -35,7 +36,7 @@
     <a href="<?php echo esc_url(home_url('/donate')); ?>">
       <img class="logo-link-involved" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-06.svg'; ?>" alt="">
       <p>Donations</p></a>      
-    <a href="<?php echo esc_url(home_url('/')); ?>">
+    <a href="http://www.coopradio.org/member">
       <img class="logo-link-involved" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-07.svg'; ?>" alt="">
     <p>Become a Volunteer Programmer</p></a>
     <a href="<?php echo esc_url(home_url('/')); ?>">

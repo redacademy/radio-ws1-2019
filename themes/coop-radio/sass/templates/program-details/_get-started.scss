@@ -1,12 +1,33 @@
 /* get started */
 
-.get-started {  
-  .get-started-core {
-      width:450px;
-      text-align:left;
-      margin:0 auto;
-    img {
-      height: 400px;
+.get-started {
+  .get-started-item {
+    justify-content:space-between;
+    @include desktop {
+      display:flex;
+      &:nth-child(odd){
+        flex-direction:row-reverse;
+      }
+    }
+    .get-started-img {
+      img {
+        height: 300px;
+        @include desktop {
+          height:400px;
+        }
+      }
+    }
+    .get-started-text {
+      display:block;
+      max-width:600px;
+      margin:$base__space-unit auto 3*$base__space-unit;
+      text-align: left;
+      @include desktop {
+        margin:5*$base__space-unit 0;
+      }
+    }
+    h3 {
+      margin:0;
     }
   }
 }

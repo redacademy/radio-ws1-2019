@@ -32,9 +32,9 @@
 
 <section>
     <h2 class="donate-title"><?= CFS()->get( 'actions_title' ); ?></h2>
+    <p><?= CFS()->get( 'actions_text' ); ?></p>
 
   <div class="donate-container2">
-    <p><?= CFS()->get( 'actions_text' ); ?></p>
     <div class="wrap-photo">
       <img class="donate-photo" src="<?= CFS()->get( 'community_img' ); ?>" alt="">
       <div>

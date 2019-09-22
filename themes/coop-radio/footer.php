@@ -100,10 +100,7 @@
           />
         </button>
 
-        <audio
-          id="audio-player"
-          src="<?= get_stylesheet_directory_uri() . '/'; ?>"
-        >
+        <audio id="audio-player">
           <a href="">Download track</a>
         </audio>
       </footer>

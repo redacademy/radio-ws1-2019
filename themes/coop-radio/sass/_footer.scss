@@ -9,8 +9,6 @@ footer {
   bottom: 0;
 }
 
-// FIXME: mobile styles
-
 .audio-player {
   position: fixed;
   bottom: 0;
@@ -59,9 +57,11 @@ footer {
 }
 
 .audio-player__actions {
+  flex-grow: 1;
   flex-shrink: 0;
   display: flex;
   margin-right: $base__space-unit;
+  justify-content: flex-end;
 }
 
 .audio-player__action {
@@ -72,12 +72,26 @@ footer {
   padding-left: $base__space-unit / 4;
 }
 
+.audio-player__action--prev,
+.audio-player__action--next {
+  display: none;
+
+  @include tablet {
+    display: initial;
+  }
+}
+
 .audio-player__progress-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 1rem 0;
-  margin: 0 1rem;
+  display: none;
+
+  @include tablet {
+    display: initial;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    margin: 0 1rem;
+  }
 }
 
 .audio-player__progress-fill {
@@ -120,18 +134,29 @@ footer {
 }
 
 .audio-player__time {
-  flex-shrink: 0;
-  position: relative;
-  top: 0.16rem;
-  color: $color__brand-gray;
-  font-weight: bold;
+  display: none;
+
+  @include tablet {
+    display: initial;
+    flex-shrink: 0;
+    position: relative;
+    top: 0.16rem;
+    color: $color__brand-gray;
+    font-weight: bold;
+  }
 }
 
 .audio-player__action--share {
-  &, &:visited {
-    flex-shrink: 0;
-    border: none;
-    transform: scale(0.8) translateY(2.3px);
+  &,
+  &:visited {
+    display: none;
+
+    @include tablet {
+      display: initial;
+      flex-shrink: 0;
+      border: none;
+      transform: scale(0.8) translateY(2.3px);
+    }
 
     @include desktop {
       transform: scale(1) translateY(3px);

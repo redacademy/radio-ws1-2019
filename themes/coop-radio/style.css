@@ -944,12 +944,18 @@ footer {
   white-space: nowrap; }
 
 .audio-player__actions {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 1.5rem; }
+  margin-right: 1.5rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .audio-player__action {
   -ms-flex-negative: 0;
@@ -959,12 +965,24 @@ footer {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
+.audio-player__action--prev,
+.audio-player__action--next {
+  display: none; }
+  @media (min-width: 600px) {
+    .audio-player__action--prev,
+    .audio-player__action--next {
+      display: initial; } }
+
 .audio-player__progress-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 1rem 0;
-  margin: 0 1rem; }
+  display: none; }
+  @media (min-width: 600px) {
+    .audio-player__progress-container {
+      display: initial;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 1rem 0;
+      margin: 0 1rem; } }
 
 .audio-player__progress-fill {
   position: absolute;
@@ -1004,19 +1022,27 @@ footer {
               transform: scale(1) translateY(-5px); } }
 
 .audio-player__time {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  position: relative;
-  top: 0.16rem;
-  color: #bebebe;
-  font-weight: bold; }
+  display: none; }
+  @media (min-width: 600px) {
+    .audio-player__time {
+      display: initial;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      position: relative;
+      top: 0.16rem;
+      color: #bebebe;
+      font-weight: bold; } }
 
 .audio-player__action--share, .audio-player__action--share:visited {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  border: none;
-  -webkit-transform: scale(0.8) translateY(2.3px);
-          transform: scale(0.8) translateY(2.3px); }
+  display: none; }
+  @media (min-width: 600px) {
+    .audio-player__action--share, .audio-player__action--share:visited {
+      display: initial;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      border: none;
+      -webkit-transform: scale(0.8) translateY(2.3px);
+              transform: scale(0.8) translateY(2.3px); } }
   @media (min-width: 1080px) {
     .audio-player__action--share, .audio-player__action--share:visited {
       -webkit-transform: scale(1) translateY(3px);

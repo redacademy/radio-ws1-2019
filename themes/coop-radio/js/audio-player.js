@@ -32,6 +32,7 @@
       const track = data[0]
       audioPlayer.src = track.source_url
       prograssBarContainer.style.cursor = 'pointer'
+      shareButton.href = `https://www.facebook.com/sharer/sharer.php?u=${track.source_url}`
 
       // get audio file's id3 tags
       new jsmediatags.Reader(track.source_url)
@@ -177,10 +178,5 @@
     // force play due to autoplay inconsistencies
     audioPlayer.play()
     togglePlayButtonIcon('PAUSE')
-  })
-
-  shareButton.addEventListener('click', () => {
-    // TODO: handle share
-    alert('hello')
   })
 })(WP_GLOBALS)

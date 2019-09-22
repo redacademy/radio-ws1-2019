@@ -394,19 +394,20 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  overflow: hidden; }
 
 main {
   overflow: auto; }
   @media (min-height: 650px) {
     main {
-      max-height: 79vh; } }
+      max-height: 89vh; } }
   @media (min-height: 750px) {
     main {
-      max-height: 82vh; } }
+      max-height: 91vh; } }
   @media (min-height: 1000px) {
     main {
-      max-height: 86vh; } }
+      max-height: 93vh; } }
 
 blockquote,
 q {

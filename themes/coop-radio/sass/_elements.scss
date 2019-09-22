@@ -15,18 +15,19 @@ html {
 
 body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  overflow: hidden;
 }
 
 main {
   overflow: auto;
   @include short {
-    max-height: 79vh;
+    max-height: 89vh;
   }
   @include medium {
-      max-height: 82vh;
+      max-height: 91vh;
   }
   @include tall {
-      max-height: 86vh;
+      max-height: 93vh;
   }
 }
 

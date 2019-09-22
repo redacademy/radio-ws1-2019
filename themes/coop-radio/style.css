@@ -1241,6 +1241,20 @@ h3 {
     margin: 0; }
 
 /* video */
+.program-details__video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+
+.program-details__video-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /* requirements */
 @media (min-width: 1080px) {
   .requirements-main {
@@ -1714,12 +1728,6 @@ h3 {
 
 .donate-title {
   text-align: center; }
-
-.wrap-photo {
-  position: relative; }
-
-.wrap-photo {
-  position: relative; }
 
 .wrap-photo {
   position: relative; }

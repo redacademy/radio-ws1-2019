@@ -1,1 +1,9 @@
 /* video */
+
+.program-details__video-container {
+  @include iframe-container;
+}
+
+.program-details__video-embed {
+  @include iframe;
+}

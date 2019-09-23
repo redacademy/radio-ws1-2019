@@ -8,10 +8,13 @@
     @include desktop {
       display: flex;
     }
+    @include wide-screen {
+      margin: 0 2*$base__space-unit;
+    }
     .enroll-img {
       margin: $base__space-unit 0;
       @include desktop {
-        width: 50%;
+        width: 60%;
       }
       img {
         border-radius: 10px;
@@ -20,8 +23,10 @@
     }
     .enroll-text {
       @include desktop {
-        width: 50%;
-        margin: $base__space-unit;
+        display:flex;
+        justify-content:center;
+        width: 40%;
+        margin: 2*$base__space-unit 4*$base__space-unit;
       }
     }
   }

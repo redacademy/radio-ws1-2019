@@ -1457,19 +1457,28 @@ a {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; } }
+  @media (min-width: 1500px) {
+    .enroll .enroll-main {
+      margin: 0 3rem; } }
   .enroll .enroll-main .enroll-img {
     margin: 1.5rem 0; }
     @media (min-width: 1080px) {
       .enroll .enroll-main .enroll-img {
-        width: 50%; } }
+        width: 60%; } }
     .enroll .enroll-main .enroll-img img {
       border-radius: 10px;
       -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
               box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
   @media (min-width: 1080px) {
     .enroll .enroll-main .enroll-text {
-      width: 50%;
-      margin: 1.5rem; } }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 40%;
+      margin: 3rem 6rem; } }
 
 /* terms & conditions */
 .terms-conditions {

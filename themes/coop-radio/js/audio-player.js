@@ -82,7 +82,6 @@
     window.localStorage.getItem('audio-player-progress') || 0;
   let lastPlayedIndex = localStorage.getItem('audio-player-index') || 0;
 
-  // TODO: check if track is same
   progressBar.style.width = `${lastPlayedPercent}%`;
 
   const togglePlayButtonIcon = action => {

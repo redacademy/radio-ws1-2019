@@ -84,6 +84,9 @@ function coop_radio_scripts() {
   );
   wp_enqueue_script('coop-radio-audio-player');
 
+  // artist single audio players
+  wp_enqueue_script( 'coop-radio-artist-single-audio-players', get_template_directory_uri() . '/build/js/artist-single-tracks.min.js', array(), '20151215', true );
+
   wp_enqueue_script( 'coop-radio-search-form', get_template_directory_uri() . '/build/js/search-form.min.js', array('jquery'), '20151215', true );
   wp_register_script( 'coop-radio-headerScroll', get_template_directory_uri() . '/build/js/headerScroll.min.js', array('jquery'), '20151215', true );
   wp_localize_script(

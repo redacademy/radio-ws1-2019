@@ -63,39 +63,109 @@
       <!-- additional image? -->
     </section>
 
-    <section class="artist-tracks">
-      <h3>My Songs</h3>
-      <?php
-        $track_ids = CFS()->get_reverse_related( $post->ID, array(
-          'field_name' => 'artist',
-          'post_type' => 'track'
+    <?php
+      $track_ids = CFS()->get_reverse_related( $post->ID, array(
+        'field_name' => 'artist',
+        'post_type' => 'track'
+      ) );
+
+      if ( sizeof( $track_ids ) ) :
+
+        $track_artist = CFS()->get('artist_name');
+        $tracks = new WP_Query( array(
+          'post__in' => $track_ids,
+          'post_type' => 'track',
         ) );
 
-        if ( sizeof( $track_ids ) ) :
+        if ( $tracks->have_posts() ) : ?>
+          <section class="artist-tracks__container">
+            <h3 class="artist-tracks__title">My Songs</h3>
+            <div class="artist-tracks">
+              <?php while ( $tracks->have_posts() ) : $tracks->the_post();
+                $track_file = CFS()->get('file'); ?>
 
-          $track_artist = CFS()->get('artist_name');
-          $tracks = new WP_Query( array(
-            'post__in' => $track_ids,
-            'post_type' => 'track',
-          ) );
+                <!-- Player styling depends on class-names (in `artist-single-tracks.js`) -->
+                <div class="artist-track__container">
+                  <div class="artist-track__info-container">
+                    <div class="artist-track__info-artist-img-container">
+                      <img
+                        class="artist-track__info-artist-img"
+                        src=""
+                        alt=""
+                      />
+                    </div>
+                    <div class="artist-track__info">
+                      <p
+                        class="artist-track__info--title"
+                      >
+                        <?php the_title(); ?>
+                      </p>
+                      <p
+                        class="artist-track__info--artist"
+                      >
+                        <?= $track_artist; ?>
+                      </p>
+                    </div>
+                  </div>
 
-          if ( $tracks->have_posts() ) :
-            while ( $tracks->have_posts() ) : $tracks->the_post();
-              $track_file = CFS()->get('file'); ?>
+                  <div class="artist-track__controls--container">
 
-              <h4><?php the_title(); ?></h4> 
-              <p><?= $track_artist; ?></p>
+                    <div class="artist-track__actions">
 
-              <audio
-                class="artist-track"
-                src="<?= $track_file; ?>"
-              >
-                <a href="<?= $track_file; ?>">Download track</a>
-              </audio>
+                      <button
+                        class="artist-track__action artist-track__action--play"
+                        type="button"
+                      >
+                        <img
+                          class="artist-track__action-icon--play"
+                          src="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
+                          data-pause-icon="<?= get_template_directory_uri().'/images/button-pause.svg'; ?>"
+                          data-play-icon="<?= get_template_directory_uri().'/images/button-play.svg'; ?>"
+                          alt="Play track"
+                        />
+                      </button>
 
-            <?php endwhile; wp_reset_postdata();
-        endif; endif; ?>
-    </section>
+                    </div>
+
+                  </div>
+
+
+                  <p
+                    class="artist-track__time"
+                  >
+                    00:00
+                  </p>
+
+                  <div
+                    class="artist-track__progress-container"
+                  >
+                    <div class="artist-track__progress-fill"></div>
+                    <div class="artist-track__progress">
+                      <div class="artist-track__progress-marker"></div>
+                    </div>
+                  </div>
+
+                  <a
+                    class="artist-track__action artist-track__action--share"
+                    href=""
+                    target="_blank"
+                  >
+                    <img
+                      src="<?= get_template_directory_uri().'/images/share-icon.svg'; ?>"
+                      alt="Share track"
+                    />
+                  </a>
+                  <audio
+                    class="artist-track"
+                    src="<?= $track_file; ?>"
+                  >
+                    <a href="<?= $track_file; ?>">Download track</a>
+                  </audio>
+                </div>
+              <?php endwhile; wp_reset_postdata(); ?>
+            </div>
+          </section>
+      <?php endif; endif; ?>
 
   </article><!-- full-description-container -->
 

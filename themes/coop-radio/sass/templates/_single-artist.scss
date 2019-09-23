@@ -24,6 +24,11 @@
       margin-left: 800px;
     }
   }
+  
+  .audio-container {
+    max-width: 100vw;
+    overflow: hidden;
+  }
 
   .artist-hero {
     position: relative;

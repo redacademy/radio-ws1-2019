@@ -1237,32 +1237,46 @@ a {
 .program-details_paragraph {
   font-weight: bold; }
 
-h3 {
+.program-details-page h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  color: #171717;
+  font-size: 38px;
+  font-weight: bold; }
+  @media (min-width: 1080px) {
+    .program-details-page h2 {
+      font-size: 48px; } }
+
+.program-details-page h3 {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
   color: #171717;
   font-weight: bold; }
   @media (min-width: 1080px) {
-    h3 {
+    .program-details-page h3 {
       font-size: 32px; } }
-  h3 .text-container {
-    text-align: left; }
-    @media (min-width: 1080px) {
-      h3 .text-container {
-        text-align: center; } }
-  @media (min-width: 1080px) and (min-width: 1080px) {
-    h3 .text-container {
-      margin: 4.5rem 6rem; } }
-  h3 .page-container {
-    margin: 0 1.5rem; }
-    @media (min-width: 1080px) {
-      h3 .page-container {
-        margin: 4.5rem 6rem; } }
+
+.program-details-page .text-container {
+  text-align: left; }
   @media (min-width: 1080px) {
-    h3 .full-width {
-      margin: 4.5rem 0; } }
-  h3 .text-description {
-    text-align: left; }
+    .program-details-page .text-container {
+      text-align: center; } }
+  @media (min-width: 1080px) and (min-width: 1080px) {
+    .program-details-page .text-container {
+      margin: 4.5rem 6rem; } }
+
+.program-details-page .page-container {
+  margin: 0 1.5rem; }
+  @media (min-width: 1080px) {
+    .program-details-page .page-container {
+      margin: 4.5rem 6rem; } }
+
+@media (min-width: 1080px) {
+  .program-details-page .full-width {
+    margin: 4.5rem 0; } }
+
+.program-details-page .text-description {
+  text-align: left; }
 
 /* overview */
 @media (min-width: 1080px) {

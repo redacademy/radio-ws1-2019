@@ -14,7 +14,7 @@
         <fieldset>
           <span class="screen-reader-text"><?php echo esc_html( 'Search' ); ?></span>
           <label class="custom-search-label">
-            <input type="search" class="custom-input" placeholder="Type and hit enter..." name="s" title="Search for:" />
+            <input type="search" class="custom-input" placeholder="Try something else..." name="s" title="Search for:" />
           </label>
         </fieldset>
       </form>

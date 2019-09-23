@@ -163,10 +163,6 @@
           </section>
       <?php endif; endif; ?>
 
-    <?php endwhile;
-        wp_reset_postdata();
-      endif;
-    endif; ?>
   </section>
 </section>
 

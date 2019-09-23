@@ -1,0 +1,240 @@
+/*--------------------------------------------------------------
+# Audio players
+--------------------------------------------------------------*/
+
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: $color__background-body;
+  padding: 0 1rem;
+}
+
+.artist-tracks__container {
+  text-align: left;
+  position: relative;
+  width: 100vw;
+  left: 20vw;
+  margin: 0 auto;
+  display: none;
+
+  @include desktop {
+    display: initial;
+  }
+}
+
+.artist-tracks {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 25px;
+  padding-left: 2 * $base__space-unit;
+  padding-right: 40vw;
+}
+
+.artist-tracks__title {
+  margin-left: 2 * $base__space-unit;
+}
+
+.artist-track__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: $base__space-unit/2 0;
+}
+
+.audio-player__info-container,
+.artist-track__info-container {
+  display: flex;
+  height: $footer_height;
+  justify-content: space-between;
+}
+
+.audio-player__info-artist-img-container,
+.artist-track__info-artist-img-container {
+  width: $footer_height / 1.75;
+  display: flex;
+  align-items: center;
+  margin-right: $base__space-unit;
+}
+
+.audio-player__info-artist-img-container {
+  @include tablet {
+    margin-left: $base__space-unit;
+  }
+}
+
+.audio-player__info-artist-img,
+.artist-track__info-artist-img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.audio-player__info,
+.artist-track__info {
+  margin-right: $base__space-unit;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablet {
+    width: 6 * $base__space-unit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.audio-player__info--title,
+.artist-track__info--title {
+  font-weight: bold;
+}
+
+.audio-player__info--title,
+.artist-track__info--title,
+.audio-player__info--artist,
+.artist-track__info--artist {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.audio-player__controls--container,
+.artist-track__controls--container {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
+
+.audio-player__actions,
+.artist-track__actions {
+  display: flex;
+  margin-right: $base__space-unit;
+  justify-content: flex-end;
+  margin-top: 9px;
+
+  @include tablet {
+    align-items: bottom;
+  }
+}
+
+.audio-player__action,
+.artist-track__action {
+  flex-shrink: 0;
+  border: none;
+  background-color: transparent;
+  padding-right: $base__space-unit / 4;
+  padding-left: $base__space-unit / 4;
+}
+
+.audio-player__action--prev,
+.audio-player__action--next {
+  display: none;
+
+  @include tablet {
+    display: initial;
+  }
+}
+
+.audio-player__progress-container,
+.artist-track__progress-container {
+  display: none;
+
+  @include tablet {
+    display: initial;
+    position: relative;
+    top: -2px;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    margin: 0 1rem;
+  }
+
+  @include desktop {
+    top: 4px;
+  }
+}
+
+.audio-player__progress-fill,
+.artist-track__progress-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  border-radius: 5px;
+  background-color: $color__brand-gray;
+  z-index: -1;
+}
+
+.audio-player__progress,
+.artist-track__progress {
+  position: relative;
+  width: 0%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: $color__brand-purple;
+}
+
+.audio-player__progress-marker,
+.artist-track__progress-marker {
+  position: absolute;
+  right: -5px;
+  top: -50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color__brand-purple;
+}
+
+.audio-player__action--play,
+.artist-track__action--play {
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  transform: scale(0.8) translateY(-10px);
+
+  @include desktop {
+    transform: scale(1) translateY(-5px);
+  }
+}
+
+.audio-player__time,
+.artist-track__time {
+  flex-shrink: 0;
+  flex-grow: 1;
+  top: 0.16rem;
+  color: $color__brand-gray;
+  font-weight: bold;
+  text-align: right;
+  padding: 0 $base__space-unit/2;
+
+  @include desktop {
+    position: relative;
+    top: 6px;
+  }
+}
+
+.audio-player__action--share,
+.artist-track__action--share {
+  &,
+  &:visited {
+    display: none;
+
+    @include tablet {
+      display: initial;
+      flex-shrink: 0;
+      border: none;
+      transform: scale(0.8) translateY(2.3px);
+    }
+
+    @include desktop {
+      transform: scale(1) translateY(3px);
+    }
+  }
+}

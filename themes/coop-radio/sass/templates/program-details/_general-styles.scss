@@ -44,3 +44,10 @@
     text-align: left;
   }
 }
+
+.program-details__internal-link {
+  display: block;
+  position: relative;
+  top: -$header_height;
+  visibility: hidden;
+}

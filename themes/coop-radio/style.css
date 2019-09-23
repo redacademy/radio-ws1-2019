@@ -1415,12 +1415,24 @@ footer {
   .single-artist .text-container {
     margin: 4.5rem 6rem; } }
 
-@media (min-width: 600px) {
-  .single-artist .intro-title,
-  .single-artist .artist-name {
-    font-size: 40px;
-    text-align: center;
-    text-decoration: underline; } }
+.single-artist .bio h2, .single-artist .bio p {
+  text-align: left; }
+
+.single-artist .artist-hero {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: top center; }
+  .single-artist .artist-hero .artist-header-bio {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    z-index: 5;
+    bottom: 0; }
+    .single-artist .artist-hero .artist-header-bio h2 {
+      font-size: 36px; }
+
+.single-artist .artist-intro p {
+  text-align: left; }
 
 .single-artist iframe {
   height: 450px;
@@ -1428,20 +1440,23 @@ footer {
   @media (min-width: 600px) {
     .single-artist iframe {
       width: 800px;
-      border-radius: 15px;
+      border-radius: 10px;
       overflow: hidden; } }
 
-.single-artist .artist-hero {
-  height: 100vh;
-  background-size: cover;
-  background-position: top center; }
+.single-artist .full-name {
+  text-transform: uppercase; }
 
-.single-artist footer p {
+.single-artist .artist-img img {
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
+          box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
+
+.single-artist .artist-socials p {
   text-transform: capitalize;
   text-align: center;
   margin-top: 3rem; }
 
-.single-artist footer .social-links {
+.single-artist .artist-socials .social-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

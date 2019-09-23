@@ -49,8 +49,10 @@
   .program-header-text {
     max-width: 300px;
     margin-bottom: $base__space-unit;
-    @include desktop {
+    @include tablet {
       max-width:100%;
+    }
+    @include desktop {
       text-align:left;
     }
 

@@ -1122,9 +1122,11 @@ footer {
   .program-header-info .program-header-text {
     max-width: 300px;
     margin-bottom: 1.5rem; }
+    @media (min-width: 600px) {
+      .program-header-info .program-header-text {
+        max-width: 100%; } }
     @media (min-width: 1080px) {
       .program-header-info .program-header-text {
-        max-width: 100%;
         text-align: left; } }
     .program-header-info .program-header-text h3.program-title {
       color: #fff;

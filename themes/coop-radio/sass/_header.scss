@@ -5,7 +5,7 @@
 .banner {
   background-color: transparent;
   position: absolute;
-  height: 3 * $base__space-unit;
+  height: 11/3 * $base__space-unit;
   top: 0;
   right: 0;
   left: 0;
@@ -90,6 +90,7 @@
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  padding-top: 0.75rem;
   .main-navigation.toggled ul {
     a {
       color: $color__text-screen;

@@ -719,7 +719,7 @@ a {
 .banner {
   background-color: transparent;
   position: absolute;
-  height: 4.5rem;
+  height: 5.5rem;
   top: 0;
   right: 0;
   left: 0;
@@ -773,7 +773,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 0.75rem; }
   .banner__container .main-navigation.toggled ul a {
     color: #2c2c2c;
     font-family: "Oswald", sans-serif;

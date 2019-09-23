@@ -12,7 +12,8 @@
 $requirements = CFS()->get('requirements');
 if (isset($requirements) && sizeof($requirements) > 0) : ?>
 
-  <section id="section--requirements" class="requirements">
+  <section class="requirements">
+    <a id="section--requirements" class="program-details__internal-link"></a>
     <div class="text-container">
       <h2><?= CFS()->get('requirements_title'); ?></h2>
       <p class="text-description"><?= CFS()->get('requirements_description'); ?></p>

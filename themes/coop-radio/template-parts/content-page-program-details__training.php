@@ -12,7 +12,8 @@
 $sections = CFS()->get('training_cores');
 if (isset($sections) && sizeof($sections) > 0) : ?>
 
-  <section id="section--training" class="program-details-training">
+  <section class="program-details-training">
+    <a id="section--training" class="program-details__internal-link"></a>
     <h2><?= CFS()->get('training_title'); ?></h2>
     <p class="text-description text-container"><?= CFS()->get('training_description'); ?></p>
 

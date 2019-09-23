@@ -11,7 +11,8 @@
   $events = CFS()->get( 'timeline_events' );
   if ( isset( $events ) && sizeof( $events ) > 0 ) : ?>
 
-    <section id="section--timeline" class="timeline">
+    <section class="timeline">
+      <a id="section--timeline" class="program-details__internal-link"></a>
       <h2><?= CFS()->get( 'timeline_title' ); ?></h2>
       <p class="text-description text-container"><?= CFS()->get( 'timeline_description' ); ?></p>
       <a href="/">Learn more</a>

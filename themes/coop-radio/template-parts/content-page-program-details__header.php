@@ -8,9 +8,10 @@
 
 ?>
 
-<header id="section--header" class="program-details__header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(
+<header class="program-details__header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(
     <?= wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
   );">
+  <a id="section--header" class="program-details__internal-link"></a>
   <div class="program-details__header-container">
     <div class="program-header-info">
       <div class="program-header-text">

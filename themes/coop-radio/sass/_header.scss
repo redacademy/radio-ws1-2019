@@ -18,6 +18,23 @@
 
 .banner--light {
   background-color: $color__background-body;
+  .banner__container {
+    .banner__logo-link {
+      .logo-image{
+        background: url(../../images/logo-light.png) no-repeat;
+        background-size: 4rem 4rem;
+        width: 4rem;
+        height: 4rem;
+        color: transparent;
+      }
+    }
+
+    .header-search {
+      input {
+        color: $color__text-screen;
+      }
+    }
+  }
 
   .menu-item a {
     color: $color__text-screen;
@@ -26,14 +43,44 @@
 
 .banner--transparent {
   background-color: transparent;
+  .banner__container {
+    .banner__logo-link {
+      .logo-image{
+        background: url(../../images/logo-light.png) no-repeat;
+        background-size: 4rem 4rem;
+        width: 4rem;
+        height: 4rem;
+        color: transparent;
+      }
+    }
+
+    .header-search {
+      input {
+        color: $color__text-screen;
+      }
+    }
+  }
  
   .menu-item a {
-    color: $color__background-body;
+    color: $color__text-screen;
   }
 }
 .banner--dark {
+
+  .banner__container {
+    .banner__logo-link {
+      .logo-image{
+        background: url(../../images/logo-dark.png) no-repeat;
+        background-size: 4rem 4rem;
+        width: 4rem;
+        height: 4rem;
+        color: transparent;
+      }
+    }
+  }
   @include tablet {
     background-color: $color__text-screen;
+    
   
     .menu-item a {
       color: $color__background-body;
@@ -49,8 +96,15 @@
   .main-navigation.toggled ul {
     a {
       color: $color__text-screen;
+      font-family: $font__heading;
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
   }
+  
 }
 
 // 🍔
@@ -71,19 +125,20 @@
 .banner__logo-container {
   display: none;
 
-  @include desktop {
+  @include tablet {
     display: block;
-
-    .banner__logo-link {
-      img{
-        height: 4rem;
-        width: auto;
-      }
-    }
   }
 }
 
 .main-navigation {
+  a {
+    font-family: $font__heading;
+  }
+  @include tablet {
+      width: 85%;
+      margin-left: 1rem;
+  }
+
   @include desktop {
     display: flex;
     margin: 0 auto;
@@ -114,6 +169,7 @@
 }
 
 
+
 .header-search {
   display: none;
 
@@ -123,9 +179,19 @@
     margin: 0 auto;
 
     .search-toggle {
-      img {
-        height: 1.25rem;
-        width: auto;
+      .search-icon-black {
+        background: url(../../images/search-icon-white.svg) no-repeat;
+        background-size: 1.5rem 3.5rem;
+        width: 2rem;
+        height: 3rem;
+        color: transparent;
+      }
+      .search-icon-white {
+        background: url(../../images/search-icon-black.png) no-repeat;
+        background-size: 2rem 2rem;
+        width: 2rem;
+        height: 2rem;
+        color: transparent;
       }
       background-color: transparent;
       border: none;

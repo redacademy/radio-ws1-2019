@@ -1,4 +1,6 @@
-/* enroll */
+/*--------------------------------------------------------------
+# Enroll
+--------------------------------------------------------------*/
 
 .enroll {
   margin: 2 * $base__space-unit 0;
@@ -19,19 +21,8 @@
     .enroll-text {
       @include desktop {
         width: 50%;
-        margin:$base__space-unit;
+        margin: $base__space-unit;
       }
-    }
-    .enroll-descript-desk {
-        display:none;
-        @include desktop {
-            display:block;
-        }
-    }
-    .enroll-descript-mob {
-        @include desktop {
-            display:none;
-        }
     }
   }
 }

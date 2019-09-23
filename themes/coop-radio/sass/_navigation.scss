@@ -34,6 +34,8 @@ a {
     margin: 0;
     padding-left: 0;
 
+    
+
     ul {
       position: absolute;
       top: $base__space-unit;
@@ -95,20 +97,29 @@ a {
   }
   & ul {
     position: absolute;
-    top: 0;
+    top: 5rem;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 100vh;
+    height: 60vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     text-align: center;
     background-color: #fff;
 
-    .menu-item a {
-      color: $color__text-screen;
+  }
+}
+
+@include tablet {
+  .main-navigation {
+    & .menu-toggle,
+    & .toggled .menu-toggle {
+      display: none;
+    }
+    ul {
+      display: flex;
+      justify-content: space-evenly;
     }
   }
 }
@@ -117,7 +128,6 @@ a {
   .main-navigation {
     & .menu-toggle,
     &.toggled .menu-toggle {
-      display: none;
       position: relative;
     }
     &.toggled ul {

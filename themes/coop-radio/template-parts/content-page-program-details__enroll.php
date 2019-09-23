@@ -6,7 +6,7 @@
  */
 ?>
 
-<section class="enroll">
+<section id="section--enroll" class="enroll">
   <h2><?= CFS()->get('enroll_title'); ?></h2>
   <p><?= CFS()->get('enroll_description'); ?></p>
 

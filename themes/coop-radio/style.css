@@ -1214,17 +1214,58 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .program-details__actions a {
-    color: #fff; }
   @media (min-width: 1080px) {
     .program-details__actions {
-      display: inline-block;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row; }
       .program-details__actions * + * {
         margin-left: 3rem; } }
+  .program-details__actions a {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    color: #fff;
+    margin: 1.5rem; }
+    .program-details__actions a:hover {
+      text-decoration: underline; }
+
+.program-header-info {
+  margin: 3.75rem 0; }
+  @media (min-width: 1080px) {
+    .program-header-info {
+      margin: 0 1.5rem; } }
+  @media (min-width: 1080px) and (min-width: 1080px) {
+    .program-header-info {
+      margin: 4.5rem 6rem; } }
+  .program-header-info .program-header-text {
+    max-width: 300px;
+    margin-bottom: 1.5rem; }
+    @media (min-width: 600px) {
+      .program-header-info .program-header-text {
+        max-width: 100%; } }
+    @media (min-width: 1080px) {
+      .program-header-info .program-header-text {
+        text-align: left; } }
+    .program-header-info .program-header-text h3.program-title {
+      color: #fff;
+      margin: 0;
+      line-height: 40px; }
+      @media (min-width: 1080px) {
+        .program-header-info .program-header-text h3.program-title {
+          line-height: 60px; } }
+    .program-header-info .program-header-text h2.featured-title {
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 40px; }
+      @media (min-width: 1080px) {
+        .program-header-info .program-header-text h2.featured-title {
+          font-size: 56px;
+          margin: 1.5rem 0; } }
+    .program-header-info .program-header-text h1.featured-subtitle {
+      color: #fff;
+      margin: 0; }
 
 /* general styling */
 .program-details__subheading {

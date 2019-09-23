@@ -9,6 +9,11 @@
   .text-container {
     @include text-container;
   }
+  .audio-container {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
   .bio {
     @include desktop {
       max-width: 600px;

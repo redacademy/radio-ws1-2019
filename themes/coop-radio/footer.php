@@ -98,7 +98,6 @@
           class="audio-player__action audio-player__action--share"
           href=""
           target="_blank"
-          disabled
         >
           <img
             src="<?= get_template_directory_uri().'/images/share-icon.svg'; ?>"

@@ -29,6 +29,42 @@
   );
   const nextButton = document.getElementById('audio-player__action--next');
   const prevButton = document.getElementById('audio-player__action--prev');
+  const allAudioPlayers = document.querySelectorAll('audio');
+  const allArtistAudioPlayerIcons = document.querySelectorAll(
+    '.artist-track__action-icon--play'
+  );
+
+  const togglePlayButtonIcon = (action, el) => {
+    switch (action) {
+      case 'PLAY':
+        if (el) {
+          el.src = playButtonIcon.dataset.playIcon;
+          el.alt = 'Play track';
+        } else {
+          playButtonIcon.src = playButtonIcon.dataset.playIcon;
+          playButtonIcon.alt = 'Play track';
+        }
+        break;
+      case 'PAUSE':
+        if (el) {
+          el.src = playButtonIcon.dataset.pauseIcon;
+          el.alt = 'Pause track';
+        } else {
+          playButtonIcon.src = playButtonIcon.dataset.pauseIcon;
+          playButtonIcon.alt = 'Pause track';
+        }
+        break;
+      default:
+        break;
+    }
+  };
+
+  const toggleAllIcons = action =>
+    [...allArtistAudioPlayerIcons].forEach(el =>
+      togglePlayButtonIcon(action, el)
+    );
+
+  const pauseAll = () => [...allAudioPlayers].forEach(el => el.pause());
 
   // load tracks
   let tracks = [];
@@ -82,29 +118,15 @@
     window.localStorage.getItem('audio-player-progress') || 0;
   let lastPlayedIndex = localStorage.getItem('audio-player-index') || 0;
 
-  // TODO: check if track is same
   progressBar.style.width = `${lastPlayedPercent}%`;
-
-  const togglePlayButtonIcon = action => {
-    switch (action) {
-      case 'PLAY':
-        playButtonIcon.src = playButtonIcon.dataset.playIcon;
-        playButtonIcon.alt = 'Play track';
-        break;
-      case 'PAUSE':
-        playButtonIcon.src = playButtonIcon.dataset.pauseIcon;
-        playButtonIcon.alt = 'Pause track';
-        break;
-      default:
-        break;
-    }
-  };
 
   playButton.addEventListener('click', () => {
     audioPlayer.currentTime = lastPlayedTime;
 
     if (audioPlayer.paused) {
+      pauseAll();
       audioPlayer.play();
+      toggleAllIcons('PLAY');
       togglePlayButtonIcon('PAUSE');
       window.localStorage.setItem('audio-player-playing', true);
     } else {
@@ -178,7 +200,8 @@
     audioPlayer.currentTime = progressPercent * audioPlayer.duration;
     progressBar.style.width = `${progressPercent}%`;
 
-    // force play due to autoplay inconsistencies
+    pauseAll();
+    toggleAllIcons('PLAY');
     audioPlayer.play();
     togglePlayButtonIcon('PAUSE');
   });

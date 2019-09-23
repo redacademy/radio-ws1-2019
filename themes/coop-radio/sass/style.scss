@@ -35,6 +35,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     ## Single artist
     ## 404 page
     ## Contact us
+
+# Components
+    ## Audio Players
 --------------------------------------------------------------*/
 
 // Imported but not included in the stylesheet.
@@ -66,3 +69,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'templates/search-result';
 @import 'templates/search';
 @import 'templates/socials';
+
+@import 'templates/audio-players';

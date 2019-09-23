@@ -627,10 +627,21 @@ a {
   text-align: center;
   background-color: #fff; }
 
+@media (min-width: 600px) {
+  .main-navigation .menu-toggle,
+  .main-navigation .toggled .menu-toggle {
+    display: none; }
+  .main-navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly; } }
+
 @media (min-width: 1080px) {
   .main-navigation .menu-toggle,
   .main-navigation.toggled .menu-toggle {
-    display: none;
     position: relative; }
   .main-navigation.toggled ul {
     width: 80%;
@@ -785,9 +796,17 @@ a {
 
 .banner__logo-container {
   display: none; }
-  @media (min-width: 1080px) {
+  @media (min-width: 600px) {
     .banner__logo-container {
       display: block; } }
+
+.main-navigation a {
+  font-family: "Oswald", sans-serif; }
+
+@media (min-width: 600px) {
+  .main-navigation {
+    width: 85%;
+    margin-left: 1rem; } }
 
 @media (min-width: 1080px) {
   .main-navigation {
@@ -810,8 +829,7 @@ a {
           float: left;
           padding-right: 1.5rem; }
           .main-navigation .menu-header-navigation-container ul li a {
-            white-space: nowrap;
-            font-family: "Oswald", sans-serif; }
+            white-space: nowrap; }
         .main-navigation .menu-header-navigation-container ul li:last-child {
           display: none; } }
 
@@ -2008,21 +2026,21 @@ ul {
     font-size: 1.25rem;
     font-weight: 300;
     position: absolute;
-    top: 6.5rem; }
+    top: 9.5rem; }
     @media (min-width: 600px) {
       .search-container .search-intro {
         font-size: 1.5rem;
         font-weight: 400;
-        top: 5.5rem; } }
+        top: 8.5rem; } }
     @media (min-width: 1080px) {
       .search-container .search-intro {
         font-size: 1.75rem;
-        top: 4.5rem; } }
+        top: 7.5rem; } }
     .search-container .search-intro p {
       text-align: center; }
   .search-container .custom-search {
     position: absolute;
-    top: 10rem; }
+    top: 14rem; }
     .search-container .custom-search fieldset {
       border: none; }
       .search-container .custom-search fieldset .custom-input {

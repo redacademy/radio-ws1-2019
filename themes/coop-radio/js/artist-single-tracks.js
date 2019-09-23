@@ -7,7 +7,9 @@
 /* global jsmediatags */
 
 (function() {
-  const audioPlayerContainers = document.getElementsByClassName('artist-track__container')
+  const audioPlayerContainers = document.getElementsByClassName(
+    'artist-track__container'
+  );
 
   if (!audioPlayerContainers) {
     return;
@@ -15,15 +17,66 @@
 
   [...audioPlayerContainers].forEach(audioPlayerContainer => {
     const audioPlayer = audioPlayerContainer.querySelector('.artist-track');
-    const audioSrc = audioPlayer.src
-    const coverImg = audioPlayerContainer.querySelector('.artist-track__info-artist-img');
-    const progressBar = audioPlayerContainer.querySelector('.artist-track__progress');
-    const shareButton = audioPlayerContainer.querySelector('.artist-track__action--share');
-    const currentTime = audioPlayerContainer.querySelector('.artist-track__time');
-    const playButton = audioPlayerContainer.querySelector('.artist-track__action--play');
+    const audioSrc = audioPlayer.src;
+    const coverImg = audioPlayerContainer.querySelector(
+      '.artist-track__info-artist-img'
+    );
+    const progressBar = audioPlayerContainer.querySelector(
+      '.artist-track__progress'
+    );
+    const shareButton = audioPlayerContainer.querySelector(
+      '.artist-track__action--share'
+    );
+    const currentTime = audioPlayerContainer.querySelector(
+      '.artist-track__time'
+    );
+    const playButton = audioPlayerContainer.querySelector(
+      '.artist-track__action--play'
+    );
     const playButtonIcon = audioPlayerContainer.querySelector(
       '.artist-track__action-icon--play'
     );
+    const allAudioPlayers = document.querySelectorAll('audio');
+    const allArtistAudioPlayerIcons = document.querySelectorAll(
+      '.artist-track__action-icon--play'
+    );
+    const siteWidePlayerIcon = document.getElementById(
+      'audio-player__action-icon--play'
+    );
+    const allAudioPlayerIcons = [
+      siteWidePlayerIcon,
+      ...allArtistAudioPlayerIcons
+    ];
+
+    const togglePlayButtonIcon = (action, el) => {
+      switch (action) {
+        case 'PLAY':
+          if (el) {
+            el.src = playButtonIcon.dataset.playIcon;
+            el.alt = 'Play track';
+          } else {
+            playButtonIcon.src = playButtonIcon.dataset.playIcon;
+            playButtonIcon.alt = 'Play track';
+          }
+          break;
+        case 'PAUSE':
+          if (el) {
+            el.src = playButtonIcon.dataset.pauseIcon;
+            el.alt = 'Pause track';
+          } else {
+            playButtonIcon.src = playButtonIcon.dataset.pauseIcon;
+            playButtonIcon.alt = 'Pause track';
+          }
+          break;
+        default:
+          break;
+      }
+    };
+
+    const toggleAllIcons = action =>
+      allAudioPlayerIcons.forEach(el => togglePlayButtonIcon(action, el));
+
+    const pauseAll = () => [...allAudioPlayers].forEach(el => el.pause());
 
     shareButton.href = `https://www.facebook.com/sharer/sharer.php?u=${audioSrc}`;
 
@@ -49,25 +102,11 @@
         }
       });
 
-    // progress bar
-    const togglePlayButtonIcon = action => {
-      switch (action) {
-        case 'PLAY':
-          playButtonIcon.src = playButtonIcon.dataset.playIcon;
-          playButtonIcon.alt = 'Play track';
-          break;
-        case 'PAUSE':
-          playButtonIcon.src = playButtonIcon.dataset.pauseIcon;
-          playButtonIcon.alt = 'Pause track';
-          break;
-        default:
-          break;
-      }
-    };
-
     playButton.addEventListener('click', () => {
       if (audioPlayer.paused) {
+        pauseAll();
         audioPlayer.play();
+        toggleAllIcons('PLAY');
         togglePlayButtonIcon('PAUSE');
       } else {
         audioPlayer.pause();
@@ -100,5 +139,5 @@
         togglePlayButtonIcon('PLAY');
       }
     });
-  })
+  });
 })();

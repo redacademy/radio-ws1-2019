@@ -1426,16 +1426,21 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0 100px; } }
 
-.training-core {
+@media (min-width: 1400px) {
+  .training-core-main {
+    margin: 0 7.5rem;
+    grid-gap: 0 200px; } }
+
+.training-core-main .training-core {
   margin: 20px 0;
   max-width: 100%; }
-  .training-core .core-img {
+  .training-core-main .training-core .core-img {
     display: block;
     margin: 2.5rem auto; }
-  .training-core .core-text {
+  .training-core-main .training-core .core-text {
     margin: 0 auto;
     text-align: left; }
-    .training-core .core-text h3 {
+    .training-core-main .training-core .core-text h3 {
       margin: 0; }
 
 /*--------------------------------------------------------------

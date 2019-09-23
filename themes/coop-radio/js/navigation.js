@@ -123,7 +123,7 @@
   })
 
   function handleResizeNav() {
-    if (this.innerWidth >= 1080) {
+    if (this.innerWidth >= 600) {
       $content.css('display', 'block');
       container.className = container.className.replace(' toggled', '');
       button.setAttribute('aria-expanded', 'false');

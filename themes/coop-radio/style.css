@@ -1179,6 +1179,12 @@ a {
 .program-details-page .text-description {
   text-align: left; }
 
+.program-details__internal-link {
+  display: block;
+  position: relative;
+  top: -5.5rem;
+  visibility: hidden; }
+
 /* overview */
 @media (min-width: 1080px) {
   .overview-main {

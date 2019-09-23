@@ -1,6 +1,7 @@
 // Structure
 
 $base__space-unit: 1.5rem;
+$header_height: 11/3 * $base__space-unit;
 $footer_height: $base__space-unit * 3;
 
 // Colors
@@ -47,7 +48,7 @@ $font__line-height-body: 1.5;
 
 $tablet-width: 600px;
 $desktop-width: 1080px;
-$wide_screen-width:1500px;
+$wide_screen-width: 1500px;
 
 // Styling
 

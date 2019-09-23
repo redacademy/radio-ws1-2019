@@ -6,7 +6,8 @@
  */
 ?>
 
-<section id="section--enroll" class="enroll">
+<section class="enroll">
+  <a id="section--enroll" class="program-details__internal-link"></a>
   <h2><?= CFS()->get('enroll_title'); ?></h2>
   <p><?= CFS()->get('enroll_description'); ?></p>
 

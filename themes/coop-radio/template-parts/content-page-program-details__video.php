@@ -7,7 +7,8 @@
 
 ?>
 
-<section id="section--video">
+<section>
+  <a id="section--video" class="program-details__internal-link"></a>
   <div class="text-container program-details__video-container">
     <iframe
       class="program-details__video-embed"

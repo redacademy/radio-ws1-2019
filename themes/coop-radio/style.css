@@ -1446,6 +1446,10 @@ footer {
 .single-artist .full-name {
   text-transform: uppercase; }
 
+.single-artist .underline {
+  display: block;
+  margin: 0 auto; }
+
 .single-artist .artist-img img {
   border-radius: 15px;
   -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;

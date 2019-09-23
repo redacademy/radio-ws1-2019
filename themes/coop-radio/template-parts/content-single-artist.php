@@ -36,6 +36,11 @@
     <div class="text-container">
       <div class="bio">
         <h3 class="full-name"><?= CFS()->get('full_name'); ?></h3>
+        <div class="underline">
+          <svg height="20" width="500">
+            <line x1="0" y1="0" x2="200" y2="0" style="stroke:rgb(0,0,0);stroke-width:10" />
+          </svg>
+        </div>
         <p><?= CFS()->get('bio_text_secondary'); ?></p>
       </div>
 

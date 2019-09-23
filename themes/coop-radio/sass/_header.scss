@@ -46,7 +46,7 @@
   .banner__container {
     .banner__logo-link {
       .logo-image{
-        background: url(../../images/logo-light.png) no-repeat;
+        background: url(../../images/logo-dark.png) no-repeat;
         background-size: 4rem 4rem;
         width: 4rem;
         height: 4rem;
@@ -56,13 +56,13 @@
 
     .header-search {
       input {
-        color: $color__text-screen;
+        color: $color__brand-white;
       }
     }
   }
  
   .menu-item a {
-    color: $color__text-screen;
+    color: $color__brand-white;
   }
 }
 .banner--dark {

@@ -97,7 +97,6 @@
       font-family: $font__heading;
       font-weight: 600;
       &:hover {
-        text-decoration: underline;
         cursor: pointer;
       }
     }
@@ -131,6 +130,12 @@
 .main-navigation {
   a {
     font-family: $font__heading;
+    &:active,
+    &:hover,
+    &:focus {
+      color: $color__brand-purple;
+      border-bottom: 2px solid $color__brand-purple;
+    }
   }
   @include tablet {
       width: 85%;

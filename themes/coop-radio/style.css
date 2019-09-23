@@ -805,7 +805,6 @@ a {
     font-family: "Oswald", sans-serif;
     font-weight: 600; }
     .banner__container .main-navigation.toggled ul a:hover {
-      text-decoration: underline;
       cursor: pointer; }
 
 .menu-toggle {
@@ -828,6 +827,9 @@ a {
 
 .main-navigation a {
   font-family: "Oswald", sans-serif; }
+  .main-navigation a:active, .main-navigation a:hover, .main-navigation a:focus {
+    color: #8b1f7e;
+    border-bottom: 2px solid #8b1f7e; }
 
 @media (min-width: 600px) {
   .main-navigation {

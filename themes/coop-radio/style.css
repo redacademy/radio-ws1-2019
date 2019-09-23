@@ -1306,7 +1306,7 @@ a {
         text-align: center; } }
 
 /* get started */
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   .get-started-main {
     margin: 0 15rem; } }
 
@@ -1430,7 +1430,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0 100px; } }
 
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   .training-core-main {
     margin: 0 7.5rem;
     grid-gap: 0 200px; } }

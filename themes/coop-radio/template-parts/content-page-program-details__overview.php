@@ -11,7 +11,7 @@
   $sections = CFS()->get( 'info_sections' );
   if ( isset( $sections ) && sizeof( $sections ) > 0 ) : ?>
 
-    <section class="overview">
+    <section id="section--overview" class="overview">
       <h2 class="text-container"><?= CFS()->get( 'info_title' ); ?></h2>
 
     <section class="overview-main">

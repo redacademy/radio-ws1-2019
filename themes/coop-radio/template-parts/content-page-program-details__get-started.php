@@ -12,7 +12,7 @@
 $sections = CFS()->get('how_to_sections');
 if (isset($sections) && sizeof($sections) > 0) : ?>
 
-  <section class="get-started">
+  <section id="section--get-started" class="get-started">
     <h2><?= CFS()->get('how_to_title'); ?></h2>
 
     <div class="get-started-main">

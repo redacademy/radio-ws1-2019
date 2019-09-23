@@ -17,9 +17,6 @@
     const audioPlayer = audioPlayerContainer.querySelector('.artist-track');
     const audioSrc = audioPlayer.src
     const coverImg = audioPlayerContainer.querySelector('.artist-track__info-artist-img');
-    const prograssBarContainer = audioPlayerContainer.querySelector(
-      '.artist-track__progress-container'
-    );
     const progressBar = audioPlayerContainer.querySelector('.artist-track__progress');
     const shareButton = audioPlayerContainer.querySelector('.artist-track__action--share');
     const currentTime = audioPlayerContainer.querySelector('.artist-track__time');
@@ -102,17 +99,6 @@
       if (progressPercent === 100) {
         togglePlayButtonIcon('PLAY');
       }
-    });
-
-    // click to timestamp
-    prograssBarContainer.addEventListener('click', function(e) {
-      if (!audioPlayer.duration) {
-        return;
-      }
-      const progressPercent = (e.clientX - this.offsetLeft) / this.clientWidth;
-
-      audioPlayer.currentTime = progressPercent * audioPlayer.duration;
-      progressBar.style.width = `${progressPercent}%`;
     });
   })
 })();

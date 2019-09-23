@@ -24,6 +24,12 @@
   }
 }
 
+@mixin wide-screen {
+  @media (min-width: $wide_screen-width) {
+    @content;
+  }
+}
+
 // Heights for Main Content
 @mixin short {
   @media (min-height: 650px) {

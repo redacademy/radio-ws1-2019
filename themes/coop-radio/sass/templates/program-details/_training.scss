@@ -4,17 +4,27 @@
   @include tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 100px;
   }
-}
+  @include wide-screen {
+    margin: 0 5*$base__space-unit;
+    grid-gap: 0 200px;
+  }
 
-.training-core {
-  margin: 20px 0;
-  .core-img {
-    display: block;
-    margin: 2.5rem auto;
-  }
-  .core-text {
-    margin: 0 auto;
-    text-align: left;
+  .training-core {
+    margin: 20px 0;
+    max-width: 100%;
+
+    .core-img {
+      display: block;
+      margin: 2.5rem auto;
+    }
+    .core-text {
+      margin: 0 auto;
+      text-align: left;
+      h3 {
+        margin: 0;
+      }
+    }
   }
 }

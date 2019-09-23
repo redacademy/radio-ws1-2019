@@ -1,16 +1,5 @@
 /* general styling */
 
-// .program-details-page {
-//   h2 {
-//     @include font_headline;
-//     font-size: 38px;
-//     font-weight: bold;
-
-//     @include desktop {
-//       font-size: 48px;
-//     }
-//   }
-// }
 .program-details__subheading {
   @include font-headline-white;
 }
@@ -18,12 +7,23 @@
   font-weight: bold;
 }
 
-h3 {
-  @include font_headline;
-  font-weight: bold;
+.program-details-page {
+  h2 {
+    @include font_headline;
+    font-size: 38px;
+    font-weight: bold;
 
-  @include desktop {
-    font-size: 32px;
+    @include desktop {
+      font-size: 48px;
+    }
+  }
+  h3 {
+    @include font_headline;
+    font-weight: bold;
+
+    @include desktop {
+      font-size: 32px;
+    }
   }
 
   .text-container {

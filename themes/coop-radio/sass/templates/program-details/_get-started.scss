@@ -1,6 +1,9 @@
 /* get started */
 
-.get-started {
+.get-started-main {
+  @include wide-screen {
+    margin: 0 10*$base__space-unit;
+  }
   .get-started-item {
     justify-content:space-between;
     @include desktop {

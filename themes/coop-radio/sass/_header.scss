@@ -21,7 +21,7 @@
     background-color: $color__background-body;
     .banner__container {
       .banner__logo-link {
-        .logo-image{
+        .logo-image {
           background: url(../../images/logo-light.png) no-repeat;
           background-size: 4rem 4rem;
           width: 4rem;
@@ -29,14 +29,14 @@
           color: transparent;
         }
       }
-  
+
       .header-search {
         input {
           color: $color__text-screen;
         }
       }
     }
-  
+
     .menu-item a {
       color: $color__text-screen;
     }
@@ -47,7 +47,7 @@
   background-color: transparent;
   .banner__container {
     .banner__logo-link {
-      .logo-image{
+      .logo-image {
         background: url(../../images/logo-dark.png) no-repeat;
         background-size: 4rem 4rem;
         width: 4rem;
@@ -62,7 +62,7 @@
       }
     }
   }
- 
+
   .menu-item a {
     color: $color__brand-white;
   }
@@ -72,7 +72,7 @@
     background-color: $color__text-screen;
     .banner__container {
       .banner__logo-link {
-        .logo-image{
+        .logo-image {
           background: url(../../images/logo-dark.png) no-repeat;
           background-size: 4rem 4rem;
           width: 4rem;
@@ -81,7 +81,7 @@
         }
       }
     }
-    
+
     .menu-item a {
       color: $color__background-body;
     }
@@ -104,7 +104,6 @@
       }
     }
   }
-  
 }
 
 // 🍔
@@ -135,14 +134,15 @@
     font-family: $font__heading;
     &:active,
     &:hover,
-    &:focus {
+    &:focus,
+    &[aria-current='page'] {
       color: $color__brand-purple;
       border-bottom: 2px solid $color__brand-purple;
     }
   }
   @include tablet {
-      width: 85%;
-      margin-left: 1rem;
+    width: 85%;
+    margin-left: 1rem;
   }
 
   @include desktop {
@@ -173,8 +173,6 @@
     }
   }
 }
-
-
 
 .header-search {
   display: none;

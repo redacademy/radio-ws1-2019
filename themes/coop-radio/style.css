@@ -831,7 +831,7 @@ a {
 
 .main-navigation a {
   font-family: "Oswald", sans-serif; }
-  .main-navigation a:active, .main-navigation a:hover, .main-navigation a:focus {
+  .main-navigation a:active, .main-navigation a:hover, .main-navigation a:focus, .main-navigation a[aria-current='page'] {
     color: #8b1f7e;
     border-bottom: 2px solid #8b1f7e; }
 

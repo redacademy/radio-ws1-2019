@@ -87,19 +87,29 @@
       <p>follow me on</p>
       <ul class="social-links">
         <li>
-          <a href="<?= CFS()->get('facebook_url'); ?>"></a>
+          <a href="<?= CFS()->get('facebook_url'); ?>">
+            <i class="fab fa-facebook"></i>
+          </a>
         </li>
         <li>
-          <a href="<?= CFS()->get('twitter_url'); ?>"></a>
+          <a href="<?= CFS()->get('twitter_url'); ?>">
+            <i class="fab fa-twitter-square"></i>
+          </a>
         </li>
         <li>
-          <a href="<?= CFS()->get('instagram_url'); ?>"></a>
+          <a href="<?= CFS()->get('instagram_url'); ?>">
+            <i class="fab fa-instagram"></i>
+          </a>
         </li>
         <li>
-          <a href="<?= CFS()->get('soundcloud_url'); ?>"></a>
+          <a href="<?= CFS()->get('soundcloud_url'); ?>">
+            <i class="fab fa-soundcloud"></i>
+          </a>
         </li>
         <li>
-          <a href="<?= CFS()->get('apple_music_url'); ?>"></a>
+          <a href="<?= CFS()->get('apple_music_url'); ?>">
+            <i class="fas fa-music"></i>
+          </a>
         </li>
       </ul>
     </div>

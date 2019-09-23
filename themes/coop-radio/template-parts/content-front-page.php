@@ -16,8 +16,8 @@
 
     <?= the_content(); ?>
   
-    <div>
-      <a href='<?php echo esc_url( home_url('/program-details')); ?>'>View</a>
+    <div class='link-btn-wrapper'>
+      <a href='<?php echo esc_url( home_url('/program-details')); ?>' class='btn-primary'>View</a>
     </div>
   </div>
 

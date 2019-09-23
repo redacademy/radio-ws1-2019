@@ -3,95 +3,105 @@
 --------------------------------------------------------------*/
 
 .single-artist {
+  .page-container {
+    @include page-container;
+  }
   .text-container {
-    max-width: 430px;
-    margin: 3rem auto;
-    @include tablet {
-      max-width: auto;
-      p {
-        margin: 0 auto;
-        text-align: center;
-      }
-    }
+    @include text-container;
   }
-  .artist-img-container {
-    background-color: gray;
-    height: 600px;
-  }
-  .top-text-container {
-    position: absolute;
-    @include tablet {
-      margin-left: 800px;
-    }
-  }
-  
   .audio-container {
     max-width: 100vw;
     overflow: hidden;
   }
 
+  .bio {
+    @include desktop {
+      max-width: 600px;
+    }
+    h2,
+    p {
+      text-align: left;
+    }
+    h3 {
+      @include desktop {
+        text-align: left;
+      }
+    }
+  }
   .artist-hero {
     position: relative;
-    .artist-name {
-      text-align: left;
-      bottom: 50%;
-    }
-    .artist-description {
-      max-width: 400px;
-      bottom: 1.5rem;
-    }
-  }
-
-  .intro-title,
-  .artist-name {
-    @include tablet {
-      font-size: 40px;
-      text-align: center;
-      text-decoration: underline;
-    }
-  }
-  .my-journey-text {
-    @include tablet {
-      max-width: 900px;
-    }
-  }
-  .featured-video {
-    background-color: gray;
-    height: 450px;
-    margin: 0 auto;
-    @include tablet {
-      width: 800px;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-  }
-  .full-description-container {
-    @include tablet {
-      position: relative;
-    }
-    .description {
-      @include tablet {
-        display: inline-block;
-        align-items: left;
-        position: absolute;
-        left: 15%;
-        top: 10%;
-        max-width: 500px;
+    height: 100vh;
+    background-size: cover;
+    background-position: top center;
+    .artist-header-bio {
+      background-color: $color__text-background;
+      position: absolute;
+      z-index: 5;
+      bottom: 0;
+      @include desktop {
+        background-color: transparent;
+        color: $color__background-body;
+        right: 10px;
+        bottom: 50px;
       }
-      .full-name {
-        @include tablet {
-          font-size: 48px;
-          text-transform: uppercase;
+      h2 {
+        font-size: 36px;
+        @include desktop {
+          font-size:46px;
         }
       }
     }
   }
-
-  .additional-artist-img {
-    margin: 4.5rem auto;
+  .artist-intro {
+    p {
+      text-align: left;
+      @include desktop {
+        text-align: center;
+      }
+    }
+  }
+  iframe {
+    height: 450px;
+    margin: 0 auto;
+    @include tablet {
+      width: 800px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
   }
 
-  footer {
+  .artist-text-main {
+    @include desktop {
+      display: flex;
+    }
+    .artist-text-item {
+      @include desktop {
+        width: 50%;
+      }
+    }
+
+    .full-name {
+      text-transform: uppercase;
+      @include desktop {
+        font-size:36px;
+      }
+    }
+    .underline {
+      display: block;
+      margin: 0 auto;
+    }
+    .artist-img {
+      @include desktop {
+        width: 50%;
+      }
+      img {
+        border-radius: 15px;
+        box-shadow: $img_box-shadow;
+      }
+    }
+  }
+
+  .artist-socials {
     p {
       text-transform: capitalize;
       text-align: center;

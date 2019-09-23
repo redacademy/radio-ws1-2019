@@ -22,6 +22,46 @@ input[type='submit'] {
   }
 }
 
+/* Link Buttons */
+
+.link-btn-wrapper {
+  .btn-primary {
+    color: $color__btn-primary-text;
+
+    &:focus {
+      border-color: $color__btn-focus;
+      background-color: $color__btn-focus;
+    }
+    &:hover {
+      border-color: $color__btn-hover;
+      background-color: $color__btn-hover;
+    }
+    &:disabled {
+      border-color: $color__btn-disabled;
+      background-color: $color__btn-disabled;
+    }
+  }
+}
+
+.link-btn-wrapper {
+  .btn-secondary {
+    color: $color__btn-default;
+  
+    &:focus {
+      border-color: $color__btn-focus;
+      color: $color__btn-focus;
+    }
+    &:hover {
+      border-color: $color__btn-hover;
+      color: $color__btn-hover;
+    }
+    &:disabled {
+      border-color: $color__btn-disabled;
+      color: $color__btn-disabled;
+    }
+  }
+}
+
 /* Button Sizes */
 
 .btn-small {

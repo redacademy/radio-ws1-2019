@@ -20,6 +20,7 @@ body {
 
 main {
   overflow: auto;
+  max-height: 87vh;
   @include short {
     max-height: 89vh;
   }

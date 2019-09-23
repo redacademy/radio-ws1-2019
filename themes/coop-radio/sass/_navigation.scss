@@ -34,6 +34,8 @@ a {
     margin: 0;
     padding-left: 0;
 
+    
+
     ul {
       position: absolute;
       top: $base__space-unit;
@@ -109,11 +111,23 @@ a {
   }
 }
 
+@include tablet {
+  .main-navigation {
+    & .menu-toggle,
+    & .toggled .menu-toggle {
+      display: none;
+    }
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
+
 @include desktop {
   .main-navigation {
     & .menu-toggle,
     &.toggled .menu-toggle {
-      display: none;
       position: relative;
     }
     &.toggled ul {

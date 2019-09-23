@@ -5,7 +5,7 @@
 .banner {
   background-color: transparent;
   position: absolute;
-  height: 3 * $base__space-unit;
+  height: 11/3 * $base__space-unit;
   top: 0;
   right: 0;
   left: 0;
@@ -17,56 +17,34 @@
 }
 
 .banner--light {
-  background-color: $color__background-body;
-  .banner__container {
-    .banner__logo-link {
-      .logo-image{
-        background: url(../../images/logo-light.png) no-repeat;
-        background-size: 4rem 4rem;
-        width: 4rem;
-        height: 4rem;
-        color: transparent;
+  @include tablet {
+    background-color: $color__background-body;
+    .banner__container {
+      .banner__logo-link {
+        .logo-image{
+          background: url(../../images/logo-light.png) no-repeat;
+          background-size: 4rem 4rem;
+          width: 4rem;
+          height: 4rem;
+          color: transparent;
+        }
+      }
+  
+      .header-search {
+        input {
+          color: $color__text-screen;
+        }
       }
     }
-
-    .header-search {
-      input {
-        color: $color__text-screen;
-      }
+  
+    .menu-item a {
+      color: $color__text-screen;
     }
-  }
-
-  .menu-item a {
-    color: $color__text-screen;
   }
 }
 
 .banner--transparent {
   background-color: transparent;
-  .banner__container {
-    .banner__logo-link {
-      .logo-image{
-        background: url(../../images/logo-light.png) no-repeat;
-        background-size: 4rem 4rem;
-        width: 4rem;
-        height: 4rem;
-        color: transparent;
-      }
-    }
-
-    .header-search {
-      input {
-        color: $color__text-screen;
-      }
-    }
-  }
- 
-  .menu-item a {
-    color: $color__text-screen;
-  }
-}
-.banner--dark {
-
   .banner__container {
     .banner__logo-link {
       .logo-image{
@@ -77,10 +55,33 @@
         color: transparent;
       }
     }
+
+    .header-search {
+      input {
+        color: $color__brand-white;
+      }
+    }
   }
+ 
+  .menu-item a {
+    color: $color__brand-white;
+  }
+}
+.banner--dark {
   @include tablet {
     background-color: $color__text-screen;
-  
+    .banner__container {
+      .banner__logo-link {
+        .logo-image{
+          background: url(../../images/logo-dark.png) no-repeat;
+          background-size: 4rem 4rem;
+          width: 4rem;
+          height: 4rem;
+          color: transparent;
+        }
+      }
+    }
+    
     .menu-item a {
       color: $color__background-body;
     }
@@ -92,17 +93,18 @@
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  padding-top: 0.75rem;
   .main-navigation.toggled ul {
     a {
       color: $color__text-screen;
       font-family: $font__heading;
       font-weight: 600;
       &:hover {
-        text-decoration: underline;
         cursor: pointer;
       }
     }
   }
+  
 }
 
 // 🍔
@@ -123,14 +125,26 @@
 .banner__logo-container {
   display: none;
 
-  @include desktop {
+  @include tablet {
     display: block;
-
-    
   }
 }
 
 .main-navigation {
+  a {
+    font-family: $font__heading;
+    &:active,
+    &:hover,
+    &:focus {
+      color: $color__brand-purple;
+      border-bottom: 2px solid $color__brand-purple;
+    }
+  }
+  @include tablet {
+      width: 85%;
+      margin-left: 1rem;
+  }
+
   @include desktop {
     display: flex;
     margin: 0 auto;
@@ -150,7 +164,6 @@
 
           a {
             white-space: nowrap;
-            font-family: $font__heading;
           }
         }
         li:last-child {

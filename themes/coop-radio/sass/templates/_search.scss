@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  background-color: $color__background-dark;
 
   .search-intro {
     color: white;
@@ -17,15 +18,15 @@
     font-size: 1.25rem;
     font-weight: 300;
     position: absolute;
-    top: 6.5rem;
+    top: 9.5rem;
     @include tablet {
       font-size: 1.5rem;
       font-weight: 400;
-      top: 5.5rem;
+      top: 8.5rem;
     }
     @include desktop {
       font-size: 1.75rem;
-      top: 4.5rem;
+      top: 7.5rem;
     }
     p {
       text-align: center;
@@ -34,7 +35,7 @@
 
   .custom-search {
     position: absolute;
-    top: 10rem;
+    top: 14rem;
 
     fieldset {
       border: none;

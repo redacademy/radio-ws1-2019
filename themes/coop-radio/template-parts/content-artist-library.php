@@ -21,20 +21,20 @@
     </div>
 
     <h2 class="artist-card__title"><?= the_title(); ?></h2>
-  
+
+    <?php $terms = get_the_terms( get_the_ID(), 'genre'  );
+
+    if ( gettype( $terms ) == 'array' ) : 
+      foreach ( $terms as $term  ) : ?>
+
+        <p class="artist-card__genre"><?= $term->name; ?></p>
+
+      <?php endforeach; else : ?>
+
+        <p class="artist-card__genre">Misc</p>
+
+    <?php endif; ?>
+
   </a>
-
-  <?php $terms = get_the_terms( get_the_ID(), 'genre'  );
-
-      if ( gettype( $terms ) == 'array' ) : 
-        foreach ( $terms as $term  ) : ?>
-
-          <p class="artist-card__genre"><?= $term->name; ?></p>
-
-        <?php endforeach; else : ?>
-
-          <p class="artist-card__genre">Misc</p>
-
-      <?php endif; ?>
 
 </article>

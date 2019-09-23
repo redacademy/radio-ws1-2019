@@ -8,7 +8,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header>
+  <header class="header-contact">
     <?php if ( has_post_thumbnail() ) : ?>
       <?php the_post_thumbnail( 'large' ); ?>
     <?php endif; ?>

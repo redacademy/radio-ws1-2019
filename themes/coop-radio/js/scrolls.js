@@ -1,17 +1,16 @@
 jQuery(document).ready(function ($) {
   $('.artist-library').slick({
     centerMode: true,
-    centerPadding: '100px',
     slidesToShow: 3,
     infinite: true,
-    arrows: true,
+    arrows: false,
+    centerPadding: '0',
     responsive: [
       {
         breakpoint: 900,
         settings: {
           slidesToShow: 1,
           dots: true,
-          centerPadding: '40px',
         }
       }
     ]

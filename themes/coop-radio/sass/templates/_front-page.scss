@@ -2,17 +2,18 @@
 # Front Page
 --------------------------------------------------------------*/
 
-.home {
+.home-main {
   height: 100vh;
-  background-image: url('../../images/front-page-background.jpeg');
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: top;
+}
 
-  main {
+.home-container {
+  width: 100vw;
+  @include desktop {
     position: absolute;
     top: 4.5rem;
-    width: 100vw;
   }
 }
 
@@ -24,23 +25,34 @@
   @include desktop {
     width: unset;
   }
-  
+
   .content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1, p, a {
+    font-family: $font__heading;
+    h1,
+    p{
       color: #000000;
+    }
+    h1 {
+      font-weight: 900;
     }
     p {
       max-width: 60%;
       text-align: center;
     }
+    div {
+      margin-bottom: 1.5rem;
+      a {
+        padding: 0.5rem 1rem;
+      }
+    }
   }
-  
+
   @include desktop {
     position: relative;
-    
+
     .content-container {
       display: flex;
       flex-direction: column;
@@ -50,6 +62,9 @@
 
       header {
         margin-top: 1.5rem;
+      }
+      h1 {
+        text-transform: uppercase;
       }
       p {
         max-width: 100%;

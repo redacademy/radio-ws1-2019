@@ -2,55 +2,54 @@
 # Search Page
 --------------------------------------------------------------*/
 
-.search-background {
-    background-image: url('../../images/search-background.jpg');
-    background-size: cover, cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    position: relative;
+.search-container {
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
 
-    .search-intro {
-        color: white;
-        text-transform: uppercase;
-        font-size: 1.25rem;
-        font-weight: 300;
-        position: absolute;
-        top: 6.5rem;
+  .search-intro {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 300;
+    position: absolute;
+    top: 9.5rem;
+    @include tablet {
+      font-size: 1.5rem;
+      font-weight: 400;
+      top: 8.5rem;
+    }
+    @include desktop {
+      font-size: 1.75rem;
+      top: 7.5rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  .custom-search {
+    position: absolute;
+    top: 14rem;
+
+    fieldset {
+      border: none;
+
+      .custom-input {
+        width: 60vw;
+        background-color: #dddddd;
+        font-size: 1rem;
         @include tablet {
-            font-size: 1.5rem;
-            font-weight: 400;
-            top: 5.5rem;
+          font-size: 1.25rem;
         }
         @include desktop {
-            font-size: 1.75rem;
-            top: 4.5rem;
+          font-size: 1.5rem;
         }
-        p {
-            text-align: center;
-        }
+      }
     }
-
-    .custom-search {
-        position: absolute;
-        top: 10rem;
-
-        fieldset {
-            border: none;
-
-            .custom-input {
-                width: 60vw;
-                background-color: #dddddd;
-                font-size: 1rem;
-                @include tablet {
-                    font-size: 1.25rem;
-                }
-                @include desktop {
-                    font-size: 1.5rem;
-                }
-            }
-        }
-    }
+  }
 }

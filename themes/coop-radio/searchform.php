@@ -3,10 +3,10 @@
 		<button type='button' class="search-toggle" aria-hidden="true">
 			<div class='
 				<?php global $template;
-					if ( basename( $template ) === 'page-search.php' || is_search() || basename($template) === 'page-donate.php' || is_front_page()) {
-						echo 'search-icon-black';
-					} else {
+					if ( basename( $template ) === 'page-artist-library.php' || basename($template) === 'page-contact-us.php') {
 						echo 'search-icon-white';
+					} else {
+						echo 'search-icon-black';
 					}
 				?>
 				'>search</div>

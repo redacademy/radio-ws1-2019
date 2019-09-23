@@ -1,21 +1,46 @@
 /* header */
 
-.program-details__header {
+.program-details__header-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  height: 100vh;
   align-items: center;
   text-align: center;
-  color: $color__background-body;
-  height: 100vh;
-  background-size: cover;
-  background-position: top center;
 
   @include desktop {
     text-align: unset;
     align-items: flex-start;
     padding-right: 20%;
   }
+}
+
+.program-details__header {
+  position: relative;
+  color: $color__background-body;
+  background-size: cover;
+  background-position: top center;
+}
+
+.program-details__nav-link-list {
+  position: absolute;
+  display: inline-block;
+  right: $base__space-unit;
+  top: 33vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.program-details__nav-link {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid $color__brand-white;
+}
+
+.program-details__nav-link--fill {
+  background-color: $color__brand-white;
 }
 
 .program-details__actions {

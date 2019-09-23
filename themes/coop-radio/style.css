@@ -1010,7 +1010,7 @@ a {
 # Program details 
 --------------------------------------------------------------*/
 /* header */
-.program-details__header {
+.program-details__header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1021,21 +1021,47 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  color: #fff;
-  height: 100vh;
-  background-size: cover;
-  background-position: top center; }
+  text-align: center; }
   @media (min-width: 1080px) {
-    .program-details__header {
+    .program-details__header-container {
       text-align: unset;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start;
       padding-right: 20%; } }
+
+.program-details__header {
+  position: relative;
+  color: #fff;
+  background-size: cover;
+  background-position: top center; }
+
+.program-details__nav-link-list {
+  position: absolute;
+  display: inline-block;
+  right: 1.5rem;
+  top: 33vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.program-details__nav-link {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff; }
+
+.program-details__nav-link--fill {
+  background-color: #fff; }
 
 .program-details__actions {
   display: -webkit-box;
@@ -1517,13 +1543,13 @@ a {
   .single-artist .text-container {
     margin: 4.5rem 6rem; } }
 
-@media (min-width: 1080px) {
-  .single-artist .bio {
-    max-width: 600px; } }
-
 .single-artist .audio-container {
   max-width: 100vw;
   overflow: hidden; }
+
+@media (min-width: 1080px) {
+  .single-artist .bio {
+    max-width: 600px; } }
 
 .single-artist .bio h2,
 .single-artist .bio p {

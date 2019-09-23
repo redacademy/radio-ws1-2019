@@ -2,10 +2,21 @@
 # Search-result Page
 --------------------------------------------------------------*/
 .search-results {
+    .banner {
+        position: initial;
+    }
     main {
-        
         background-color: #2c2c2c;
-
+        max-height: 75vh;
+        @include short {
+            max-height: 78vh;
+        }
+        @include medium {
+            max-height: 81vh;
+        }
+        @include tall {
+            max-height: 86vh;
+        }
 
         .search-container {
             display: flex;
@@ -14,6 +25,7 @@
             margin: 0 auto;
             width: 80%;
             color: white;
+            height: initial;
             a {
                 color: inherit;
             }

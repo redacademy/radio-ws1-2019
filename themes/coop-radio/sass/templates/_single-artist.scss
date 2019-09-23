@@ -42,7 +42,7 @@
       h2 {
         font-size: 36px;
         @include desktop {
-          text-decoration: underline;
+          font-size:46px;
         }
       }
     }
@@ -77,6 +77,9 @@
 
     .full-name {
       text-transform: uppercase;
+      @include desktop {
+        font-size:36px;
+      }
     }
     .underline {
       display: block;

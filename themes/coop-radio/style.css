@@ -1447,7 +1447,7 @@ footer {
       font-size: 36px; }
       @media (min-width: 1080px) {
         .single-artist .artist-hero .artist-header-bio h2 {
-          text-decoration: underline; } }
+          font-size: 46px; } }
 
 .single-artist .artist-intro p {
   text-align: left; }
@@ -1476,6 +1476,9 @@ footer {
 
 .single-artist .artist-text-main .full-name {
   text-transform: uppercase; }
+  @media (min-width: 1080px) {
+    .single-artist .artist-text-main .full-name {
+      font-size: 36px; } }
 
 .single-artist .artist-text-main .underline {
   display: block;

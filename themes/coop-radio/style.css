@@ -752,18 +752,19 @@ a {
   .banner .menu-item a {
     color: #fff; }
 
-.banner--light {
-  background-color: #fff; }
-  .banner--light .banner__container .banner__logo-link .logo-image {
-    background: url(../../images/logo-light.png) no-repeat;
-    background-size: 4rem 4rem;
-    width: 4rem;
-    height: 4rem;
-    color: transparent; }
-  .banner--light .banner__container .header-search input {
-    color: #2c2c2c; }
-  .banner--light .menu-item a {
-    color: #2c2c2c; }
+@media (min-width: 600px) {
+  .banner--light {
+    background-color: #fff; }
+    .banner--light .banner__container .banner__logo-link .logo-image {
+      background: url(../../images/logo-light.png) no-repeat;
+      background-size: 4rem 4rem;
+      width: 4rem;
+      height: 4rem;
+      color: transparent; }
+    .banner--light .banner__container .header-search input {
+      color: #2c2c2c; }
+    .banner--light .menu-item a {
+      color: #2c2c2c; } }
 
 .banner--transparent {
   background-color: transparent; }
@@ -778,15 +779,15 @@ a {
   .banner--transparent .menu-item a {
     color: #fff; }
 
-.banner--dark {
-  background-color: #2c2c2c; }
-  .banner--dark .banner__container .banner__logo-link .logo-image {
-    background: url(../../images/logo-dark.png) no-repeat;
-    background-size: 4rem 4rem;
-    width: 4rem;
-    height: 4rem;
-    color: transparent; }
-  @media (min-width: 600px) {
+@media (min-width: 600px) {
+  .banner--dark {
+    background-color: #2c2c2c; }
+    .banner--dark .banner__container .banner__logo-link .logo-image {
+      background: url(../../images/logo-dark.png) no-repeat;
+      background-size: 4rem 4rem;
+      width: 4rem;
+      height: 4rem;
+      color: transparent; }
     .banner--dark .menu-item a {
       color: #fff; } }
 

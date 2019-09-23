@@ -17,27 +17,29 @@
 }
 
 .banner--light {
-  background-color: $color__background-body;
-  .banner__container {
-    .banner__logo-link {
-      .logo-image{
-        background: url(../../images/logo-light.png) no-repeat;
-        background-size: 4rem 4rem;
-        width: 4rem;
-        height: 4rem;
-        color: transparent;
+  @include tablet {
+    background-color: $color__background-body;
+    .banner__container {
+      .banner__logo-link {
+        .logo-image{
+          background: url(../../images/logo-light.png) no-repeat;
+          background-size: 4rem 4rem;
+          width: 4rem;
+          height: 4rem;
+          color: transparent;
+        }
+      }
+  
+      .header-search {
+        input {
+          color: $color__text-screen;
+        }
       }
     }
-
-    .header-search {
-      input {
-        color: $color__text-screen;
-      }
+  
+    .menu-item a {
+      color: $color__text-screen;
     }
-  }
-
-  .menu-item a {
-    color: $color__text-screen;
   }
 }
 
@@ -66,19 +68,20 @@
   }
 }
 .banner--dark {
-  background-color: $color__text-screen;
-  .banner__container {
-    .banner__logo-link {
-      .logo-image{
-        background: url(../../images/logo-dark.png) no-repeat;
-        background-size: 4rem 4rem;
-        width: 4rem;
-        height: 4rem;
-        color: transparent;
+  @include tablet {
+    background-color: $color__text-screen;
+    .banner__container {
+      .banner__logo-link {
+        .logo-image{
+          background: url(../../images/logo-dark.png) no-repeat;
+          background-size: 4rem 4rem;
+          width: 4rem;
+          height: 4rem;
+          color: transparent;
+        }
       }
     }
-  }
-  @include tablet {
+    
     .menu-item a {
       color: $color__background-body;
     }

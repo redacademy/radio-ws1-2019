@@ -398,7 +398,8 @@ body {
   overflow: hidden; }
 
 main {
-  overflow: auto; }
+  overflow: auto;
+  max-height: 87vh; }
   @media (min-height: 650px) {
     main {
       max-height: 89vh; } }
@@ -752,16 +753,15 @@ a {
   .banner--transparent .menu-item a {
     color: #2c2c2c; }
 
-.banner--dark .banner__container .banner__logo-link .logo-image {
-  background: url(../../images/logo-dark.png) no-repeat;
-  background-size: 4rem 4rem;
-  width: 4rem;
-  height: 4rem;
-  color: transparent; }
-
-@media (min-width: 600px) {
-  .banner--dark {
-    background-color: #2c2c2c; }
+.banner--dark {
+  background-color: #2c2c2c; }
+  .banner--dark .banner__container .banner__logo-link .logo-image {
+    background: url(../../images/logo-dark.png) no-repeat;
+    background-size: 4rem 4rem;
+    width: 4rem;
+    height: 4rem;
+    color: transparent; }
+  @media (min-width: 600px) {
     .banner--dark .menu-item a {
       color: #fff; } }
 
@@ -1970,8 +1970,24 @@ ul {
 /*--------------------------------------------------------------
 # Search-result Page
 --------------------------------------------------------------*/
+.search-results .banner {
+  position: initial; }
+
 .search-results main {
-  background-color: #2c2c2c; }
+  background-color: #2c2c2c;
+  max-height: 75vh; }
+  @media (min-height: 650px) {
+    .search-results main {
+      max-height: 78vh;
+      min-height: 78vh; } }
+  @media (min-height: 750px) {
+    .search-results main {
+      max-height: 81vh;
+      min-height: 81vh; } }
+  @media (min-height: 1000px) {
+    .search-results main {
+      max-height: 86vh;
+      min-height: 86vh; } }
   .search-results main .search-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1985,7 +2001,8 @@ ul {
             align-items: center;
     margin: 0 auto;
     width: 80%;
-    color: white; }
+    color: white;
+    height: initial; }
     .search-results main .search-container a {
       color: inherit; }
     .search-results main .search-container article {
@@ -2004,6 +2021,12 @@ ul {
       border: 1px solid #ffffff; }
       .search-results main .search-container article p {
         text-align: center; }
+        .search-results main .search-container article p .read-more {
+          border: 1px solid #fff;
+          padding: 0.5rem;
+          font-size: 0.8rem; }
+  .search-results main .search-pagination a {
+    margin: 1rem; }
 
 /*--------------------------------------------------------------
 # Search Page
@@ -2019,7 +2042,8 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative; }
+  position: relative;
+  background-color: #2c2c2c; }
   .search-container .search-intro {
     color: white;
     text-transform: uppercase;

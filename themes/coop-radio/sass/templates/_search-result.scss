@@ -10,12 +10,15 @@
         max-height: 75vh;
         @include short {
             max-height: 78vh;
+            min-height: 78vh;
         }
         @include medium {
             max-height: 81vh;
+            min-height: 81vh;
         }
         @include tall {
             max-height: 86vh;
+            min-height: 86vh;
         }
 
         .search-container {
@@ -39,7 +42,17 @@
                 border: 1px solid #ffffff;
                 p {
                     text-align: center;
+                    .read-more{
+                        border: 1px solid $color__brand-white;
+                        padding: 0.5rem;
+                        font-size: 0.8rem;
+                    }
                 }
+            }
+        }
+        .search-pagination {
+            a {
+                margin: 1rem;
             }
         }
     }

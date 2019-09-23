@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying single artist.
  *
@@ -7,119 +8,122 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="artist-hero artist-img-container">
-    <header>
+  <header>
+    <div class="artist-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<?= CFS()->get('artist_hero'); ?>)">
+
+      <div class="artist-header-bio bio">
+        <div class="page-container">
+          <h2><?= CFS()->get('artist_name'); ?></h2>
+          <p><?= CFS()->get('bio_text'); ?></p>
+        </div><!-- page-container -->
+      </div>
+    </div><!-- artist-hero -->
+  </header>
+
+  <section class="page-container">
+    <div class="artist-intro text-container">
+      <h3 class="intro-title"><?= CFS()->get('intro_title'); ?></h3>
+      <p><?= CFS()->get('intro_text'); ?></p>
+    </div>
+  </section><!-- page-container -->
+
+  <section class="page-container">
+    <iframe width="560" height="315" src="<?= CFS()->get('youtube_url'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section><!-- page-container -->
+
+  <section class="page-container artist-text-main">
+
+    <article class="artist-text-item">
+      <div class="bio">
+        <h3 class="full-name"><?= CFS()->get('full_name'); ?></h3>
+        <div class="underline">
+          <svg height="20" width="500">
+            <line x1="0" y1="0" x2="200" y2="0" style="stroke:rgb(0,0,0);stroke-width:10" />
+          </svg>
+        </div>
+        <p><?= CFS()->get('bio_text_secondary'); ?></p>
+      </div><!-- bio -->
+
+      <div class="bio">
+        <h3><?= CFS()->get('additional_info_title'); ?></h3>
+        <p><?= CFS()->get('additional_info_text'); ?></p>
+      </div><!-- bio -->
+    </article><!-- text-container artist-text-item -->
+
+
+    <article class="artist-img">
       <?php if (has_post_thumbnail()) : ?>
         <?php the_post_thumbnail('large'); ?>
       <?php endif; ?>
+    </article>
 
-      <div class="text-container top-text-container">
-        <h2 class="artist-name">
-          <?= CFS()->get('artist_name'); ?>
-        </h2>
+  </section><!-- page-container -->
 
-        <div class="artist-description">
-          <?= CFS()->get('bio_text'); ?>
-        </div>
+  <section class="artist-tracks page-container">
+    <h3>My Songs</h3>
+    <?php
+    $track_ids = CFS()->get_reverse_related($post->ID, array(
+      'field_name' => 'artist',
+      'post_type' => 'track'
+    ));
 
-      </div><!-- text-container top-text-container-->
-    </header>
-  </div><!-- artist-img-container -->
+    if (sizeof($track_ids)) :
 
-  <section class="text-container my-journey-text">
-    <h3 class="intro-title">
-      <?= CFS()->get('intro_title'); ?>
-    </h3>
+      $track_artist = CFS()->get('artist_name');
+      $tracks = new WP_Query(array(
+        'post__in' => $track_ids,
+        'post_type' => 'track',
+      ));
 
-    <?= CFS()->get('intro_text'); ?>
-  </section><!-- text container my-journey-text -->
+      if ($tracks->have_posts()) :
+        while ($tracks->have_posts()) : $tracks->the_post();
+          $track_file = CFS()->get('file'); ?>
 
-  <section class="featured-video">
-    <!-- music video -->
-    <?= CFS()->get('youtube_url'); ?>
-  </section><!-- featured-video -->
+          <h4><?php the_title(); ?></h4>
+          <p><?= $track_artist; ?></p>
 
-  <article class="full-description-container">
-    <div class="description">
-      <section class="text-container">
-        <h3 class="full-name">
-          <?= CFS()->get('full_name'); ?>
-        </h3>
+          <audio class="artist-track" src="<?= $track_file; ?>">
+            <a href="<?= $track_file; ?>">Download track</a>
+          </audio>
 
-        <?= CFS()->get('bio_text_secondary'); ?>
-      </section>
+    <?php endwhile;
+        wp_reset_postdata();
+      endif;
+    endif; ?>
+  </section>
 
-      <section class="text-container">
-        <h3>
-          <?= CFS()->get('additional_info_title'); ?>
-        </h3>
-
-        <?= CFS()->get('additional_info_text'); ?>
-      </section><!-- text-container -->
-
-    </div><!-- description -->
-
-    <section class="additional-artist-img artist-img-container">
-      <!-- additional image? -->
-    </section>
-
-    <section class="artist-tracks">
-      <h3>My Songs</h3>
-      <?php
-        $track_ids = CFS()->get_reverse_related( $post->ID, array(
-          'field_name' => 'artist',
-          'post_type' => 'track'
-        ) );
-
-        if ( sizeof( $track_ids ) ) :
-
-          $track_artist = CFS()->get('artist_name');
-          $tracks = new WP_Query( array(
-            'post__in' => $track_ids,
-            'post_type' => 'track',
-          ) );
-
-          if ( $tracks->have_posts() ) :
-            while ( $tracks->have_posts() ) : $tracks->the_post();
-              $track_file = CFS()->get('file'); ?>
-
-              <h4><?php the_title(); ?></h4> 
-              <p><?= $track_artist; ?></p>
-
-              <audio
-                class="artist-track"
-                src="<?= $track_file; ?>"
-              >
-                <a href="<?= $track_file; ?>">Download track</a>
-              </audio>
-
-            <?php endwhile; wp_reset_postdata();
-        endif; endif; ?>
-    </section>
-
-  </article><!-- full-description-container -->
-
-  <footer>
+  <section class="artist-socials">
     <div class="text-container">
       <p>follow me on</p>
-      <!-- social links -->
       <ul class="social-links">
         <li>
-          <?= CFS()->get('facebook_url'); ?>
+          <a href="<?= CFS()->get('facebook_url'); ?>">
+            <i class="fab fa-facebook"></i>
+          </a>
         </li>
         <li>
-          <?= CFS()->get('twitter_url'); ?>
+          <a href="<?= CFS()->get('twitter_url'); ?>">
+            <i class="fab fa-twitter-square"></i>
+          </a>
         </li>
         <li>
-          <?= CFS()->get('instagram_url'); ?>
+          <a href="<?= CFS()->get('instagram_url'); ?>">
+            <i class="fab fa-instagram"></i>
+          </a>
         </li>
         <li>
-          <?= CFS()->get('soundcloud_url'); ?>
+          <a href="<?= CFS()->get('soundcloud_url'); ?>">
+            <i class="fab fa-soundcloud"></i>
+          </a>
         </li>
         <li>
-          <?= CFS()->get('apple_music_url'); ?>
+          <a href="<?= CFS()->get('apple_music_url'); ?>">
+            <i class="fas fa-music"></i>
+          </a>
         </li>
       </ul>
     </div>
+  </section>
+  <footer>
   </footer>
 </article>

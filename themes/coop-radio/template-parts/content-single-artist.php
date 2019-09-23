@@ -31,9 +31,9 @@
     <iframe width="560" height="315" src="<?= CFS()->get('youtube_url'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </section><!-- page-container -->
 
-  <section class="page-container">
+  <section class="page-container artist-text-main">
 
-    <div class="text-container">
+    <article class="artist-text-item">
       <div class="bio">
         <h3 class="full-name"><?= CFS()->get('full_name'); ?></h3>
         <div class="underline">
@@ -42,19 +42,20 @@
           </svg>
         </div>
         <p><?= CFS()->get('bio_text_secondary'); ?></p>
-      </div>
+      </div><!-- bio -->
 
       <div class="bio">
         <h3><?= CFS()->get('additional_info_title'); ?></h3>
         <p><?= CFS()->get('additional_info_text'); ?></p>
-      </div>
-    </div>
+      </div><!-- bio -->
+    </article><!-- text-container artist-text-item -->
 
-    <div class="artist-img">
+
+    <article class="artist-img">
       <?php if (has_post_thumbnail()) : ?>
         <?php the_post_thumbnail('large'); ?>
       <?php endif; ?>
-    </div>
+    </article>
 
   </section><!-- page-container -->
 

@@ -10,11 +10,19 @@
     @include text-container;
   }
   .bio {
-    h2, p {
+    @include desktop {
+      max-width: 600px;
+    }
+    h2,
+    p {
       text-align: left;
     }
+    h3 {
+      @include desktop {
+        text-align: left;
+      }
+    }
   }
-
   .artist-hero {
     position: relative;
     height: 100vh;
@@ -25,18 +33,28 @@
       position: absolute;
       z-index: 5;
       bottom: 0;
+      @include desktop {
+        background-color: transparent;
+        color: $color__background-body;
+        right: 10px;
+        bottom: 50px;
+      }
       h2 {
         font-size: 36px;
+        @include desktop {
+          text-decoration: underline;
+        }
       }
     }
   }
-
   .artist-intro {
     p {
       text-align: left;
+      @include desktop {
+        text-align: center;
+      }
     }
   }
-
   iframe {
     height: 450px;
     margin: 0 auto;
@@ -47,17 +65,31 @@
     }
   }
 
-  .full-name {
-    text-transform: uppercase;
-  }
-  .underline {
-    display:block;
-    margin:0 auto;
-  }
-  .artist-img {
-    img {
-      border-radius:15px;
-      box-shadow:$img_box-shadow;
+  .artist-text-main {
+    @include desktop {
+      display: flex;
+    }
+    .artist-text-item {
+      @include desktop {
+        width: 50%;
+      }
+    }
+
+    .full-name {
+      text-transform: uppercase;
+    }
+    .underline {
+      display: block;
+      margin: 0 auto;
+    }
+    .artist-img {
+      @include desktop {
+        width: 50%;
+      }
+      img {
+        border-radius: 15px;
+        box-shadow: $img_box-shadow;
+      }
     }
   }
 

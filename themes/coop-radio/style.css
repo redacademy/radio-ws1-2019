@@ -1415,8 +1415,17 @@ footer {
   .single-artist .text-container {
     margin: 4.5rem 6rem; } }
 
-.single-artist .bio h2, .single-artist .bio p {
+@media (min-width: 1080px) {
+  .single-artist .bio {
+    max-width: 600px; } }
+
+.single-artist .bio h2,
+.single-artist .bio p {
   text-align: left; }
+
+@media (min-width: 1080px) {
+  .single-artist .bio h3 {
+    text-align: left; } }
 
 .single-artist .artist-hero {
   position: relative;
@@ -1428,11 +1437,23 @@ footer {
     position: absolute;
     z-index: 5;
     bottom: 0; }
+    @media (min-width: 1080px) {
+      .single-artist .artist-hero .artist-header-bio {
+        background-color: transparent;
+        color: #fff;
+        right: 10px;
+        bottom: 50px; } }
     .single-artist .artist-hero .artist-header-bio h2 {
       font-size: 36px; }
+      @media (min-width: 1080px) {
+        .single-artist .artist-hero .artist-header-bio h2 {
+          text-decoration: underline; } }
 
 .single-artist .artist-intro p {
   text-align: left; }
+  @media (min-width: 1080px) {
+    .single-artist .artist-intro p {
+      text-align: center; } }
 
 .single-artist iframe {
   height: 450px;
@@ -1443,14 +1464,28 @@ footer {
       border-radius: 10px;
       overflow: hidden; } }
 
-.single-artist .full-name {
+@media (min-width: 1080px) {
+  .single-artist .artist-text-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media (min-width: 1080px) {
+  .single-artist .artist-text-main .artist-text-item {
+    width: 50%; } }
+
+.single-artist .artist-text-main .full-name {
   text-transform: uppercase; }
 
-.single-artist .underline {
+.single-artist .artist-text-main .underline {
   display: block;
   margin: 0 auto; }
 
-.single-artist .artist-img img {
+@media (min-width: 1080px) {
+  .single-artist .artist-text-main .artist-img {
+    width: 50%; } }
+
+.single-artist .artist-text-main .artist-img img {
   border-radius: 15px;
   -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
           box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }

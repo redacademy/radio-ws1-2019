@@ -73,6 +73,7 @@
   .artist-text-main {
     @include desktop {
       display: flex;
+      flex-wrap:wrap;
     }
     .artist-text-item {
       @include desktop {

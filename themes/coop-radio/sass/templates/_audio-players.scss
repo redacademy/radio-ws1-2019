@@ -25,6 +25,11 @@
     display: initial;
   }
 }
+.artist-track-main .audio-container {
+  .artist-tracks__container{
+    left: unset;
+  }
+}
 
 .artist-tracks {
   width: 100vw;

@@ -1609,7 +1609,9 @@ a {
   .single-artist .artist-text-main {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
 
 @media (min-width: 1080px) {
   .single-artist .artist-text-main .artist-text-item {
@@ -2180,6 +2182,9 @@ ul {
   @media (min-width: 1080px) {
     .artist-tracks__container {
       display: initial; } }
+
+.artist-track-main .audio-container .artist-tracks__container {
+  left: unset; }
 
 .artist-tracks {
   width: 100vw;

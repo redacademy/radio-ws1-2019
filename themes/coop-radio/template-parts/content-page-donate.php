@@ -24,16 +24,19 @@
         <p>
           <?php the_content(); ?>
         </p> 
+        <div class="link-btn-wrapper btn-medium">
         <a href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E920158QE&id=3" class="btn-medium btn-primary">Donate Now</a> 
+</div>
       </div>
     </div>
   </header>
 </article>
 
-<section>
+<section> 
+  <div class="text-container">
     <h2 class="donate-title"><?= CFS()->get( 'actions_title' ); ?></h2>
     <p><?= CFS()->get( 'actions_text' ); ?></p>
-
+</div>
   <div class="donate-container2">
     <div class="wrap-photo">
       <img class="donate-photo" src="<?= CFS()->get( 'community_img' ); ?>" alt="">
@@ -82,6 +85,7 @@
       <p><?= CFS()->get( 'platform_text' ); ?></p>
     </div>
   </div>
+    <div class="link-btn-wrapper btn-medium">
     <a href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E920158QE&id=3" class="btn-medium btn-primary">Donate Now</a> 
-
+</div>
 </section>

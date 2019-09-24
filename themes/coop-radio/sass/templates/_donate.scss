@@ -4,34 +4,50 @@
       flex-direction: row-reverse;
     }
   }
+  .container-1 {
+    margin: 5%;
+    @include desktop {
+      margin: 0;
+    }
+    h1 {
+      color: black;
+      @include desktop {
+        color: white;
+      }
+    }
+  }
+  section {
+    margin: 5%;
+  }
 }
 
 .donate-container {
   @include desktop {
     display: flex;
     flex-direction: row;
-    width: 80%;
   }
 }
 .donate-container2 {
   @include desktop {
     display: flex;
     flex-direction: row-reverse;
-    width: 80%;
   }
 }
 
-.wrap-photo {
-  position: relative;
-}
 .side-text {
+  text-align: center;
+  margin: 5%;
+
   @include desktop {
     width: 500px;
-    transform: translateX(50%);
+    transform: translateX(30%);
     padding-top: 7rem;
   }
 }
 .side-text2 {
+  text-align: center;
+  margin: 5%;
+
   @include desktop {
     width: 500px;
     transform: translateX(-20%);
@@ -41,17 +57,18 @@
 .donate-title {
   text-align: center;
 }
-
 .wrap-photo {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
 }
 .donate-photo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   position: absolute;
-  margin-left: 10px;
-  margin-top: 10px;
 
   @include desktop {
     width: 300px;
@@ -68,10 +85,12 @@
   display: flex;
   position: relative;
   z-index: -1;
+  transform: translateX(8%) translateY(-70%);
 
   @include desktop {
     height: 190px;
     width: 190px;
+    transform: translateX(13%) translateY(-29%);
   }
 }
 .ball-b {
@@ -82,12 +101,12 @@
   display: flex;
   position: relative;
   z-index: -1;
-  transform: translateX(60%);
+  transform: translateX(15%) translateY(37%);
 
   @include desktop {
     height: 250px;
     width: 250px;
-    transform: translateX(50%);
+    transform: translateX(3%) translateY(59%);
   }
 }
 .ball-a1 {
@@ -97,12 +116,12 @@
   border-radius: 50%;
   display: flex;
   position: relative;
-  transform: translateX(60%);
+  transform: translateX(10%) translateY(39%);
   z-index: -1;
   @include desktop {
     height: 250px;
     width: 250px;
-    transform: translateX(50%);
+    transform: translateX(4%) translateY(53%);
   }
 }
 .ball-b1 {
@@ -111,11 +130,18 @@
   background-image: linear-gradient(#baa2b7, #d8d8d8);
   border-radius: 50%;
   display: flex;
-  transform: translateY(-20%);
+  transform: translateY(-52%);
   position: relative;
   z-index: -1;
   @include desktop {
     height: 200px;
     width: 200px;
+    transform: translateX(-12%) translateY(-29%);
   }
+}
+.link-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
 }

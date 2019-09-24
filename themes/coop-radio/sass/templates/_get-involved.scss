@@ -1,117 +1,113 @@
-.page-template-page-get-involved {
-  article {
-    text-align: center;
-  }
-  .header-container {
-    @include desktop {
-      display: flex;
-      width: 100%;
-      height: 600px;
+// .page-template-page-get-involved {
+article {
+  text-align: center;
+}
+.header-container {
+  @include desktop {
+    display: flex;
+    width: 100%;
+    height: 600px;
 
-      .container2 {
-        width: 50%;
-        position: relative;
-      }
-      .container-1 {
-        width: 50%;
-        background-color: black;
-        position: relative;
-        @include desktop {
-          padding: 5%;
-          color: #fff;
-          text-align: start;
-        }
-      }
-      .wp-post-image {
-        height: 100%;
-        width: 100%;
+    .container2 {
+      width: 50%;
+      position: relative;
+    }
+    .container-1 {
+      width: 50%;
+      background-color: black;
+      position: relative;
+      @include desktop {
+        padding: 7%;
+        color: #fff;
+        text-align: start;
       }
     }
-  }
-  .socials {
-    display: none;
-    @include desktop {
-      display: block;
+    .wp-post-image {
+      height: 100%;
+      width: 100%;
     }
   }
+}
+
+.page-template-page-get-involved {
   h1 {
     color: black;
     @include desktop {
       color: white;
     }
   }
-  .text-container {
-    margin: 3%;
-    @include desktop {
-      margin-right: 15%;
-      margin-left: 15%;
-    }
+}
+.text-container {
+  margin: 3%;
+  @include desktop {
+    margin-right: 15%;
+    margin-left: 15%;
   }
+}
 
-  .participate {
-    @include desktop {
-      display: flex;
-      justify-content: space-around;
-    }
+.participate {
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
   }
-  .logo-link-involved {
-    border: none;
-    border-radius: 50%;
-    width: 170px;
-    height: 170px;
-    background-image: linear-gradient(#b4b4b4, #fff);
-    &:hover {
-      background-image: linear-gradient(#b079aa, #d8d8d8);
-    }
+}
+.logo-link-involved {
+  border: none;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  background-image: linear-gradient(#b4b4b4, #fff);
+  &:hover {
+    background-image: linear-gradient(#b079aa, #d8d8d8);
   }
-  .logo-link-involved3 {
-    width: 170px;
-    height: 170px;
-    border: none;
-    border-radius: 50%;
-    background-image: linear-gradient(#b4b4b4, #fff);
-    &:hover {
-      background-image: linear-gradient(#b079aa, #d8d8d8);
-    }
+}
+.logo-link-involved3 {
+  width: 170px;
+  height: 170px;
+  border: none;
+  border-radius: 50%;
+  background-image: linear-gradient(#b4b4b4, #fff);
+  &:hover {
+    background-image: linear-gradient(#b079aa, #d8d8d8);
   }
-  .faq-container {
-    @include desktop {
-      text-align: start;
-      padding: 5%;
-    }
+}
+.faq-container {
+  @include desktop {
+    text-align: start;
+    padding: 5%;
   }
-  .btnfaq {
-    width: 300px;
-    margin-bottom: 0.5rem;
-    background-color: #fff;
-    border: none;
-    border-bottom: solid, 4px, #e9d4e6;
+}
+.btnfaq {
+  width: 300px;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  border: none;
+  border-bottom: solid, 4px, #e9d4e6;
 
-    @include desktop {
-      width: 90%;
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
-    }
+  @include desktop {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
   }
-  .arrow {
-    display: none;
+}
+.arrow {
+  display: none;
 
-    @include desktop {
-      display: flex;
-      width: 90px;
-    }
+  @include desktop {
+    display: flex;
+    width: 90px;
   }
-  .tooltip {
-    @include desktop {
-      text-align: flex-end;
-    }
+}
+.tooltip {
+  @include desktop {
+    text-align: flex-end;
   }
-  li {
-    list-style-type: none;
-  }
-  ul {
-    margin: 0 auto;
-    padding-inline-start: 0;
-  }
+}
+li {
+  list-style-type: none;
+}
+ul {
+  margin: 0 auto;
+  padding-inline-start: 0;
 }

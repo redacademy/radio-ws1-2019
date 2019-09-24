@@ -1770,6 +1770,20 @@ a {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse; } }
 
+.page-id-55 .container-1 {
+  margin: 5%; }
+  @media (min-width: 1080px) {
+    .page-id-55 .container-1 {
+      margin: 0; } }
+  .page-id-55 .container-1 h1 {
+    color: black; }
+    @media (min-width: 1080px) {
+      .page-id-55 .container-1 h1 {
+        color: white; } }
+
+.page-id-55 section {
+  margin: 5%; }
+
 @media (min-width: 1080px) {
   .donate-container {
     display: -webkit-box;
@@ -1778,8 +1792,7 @@ a {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row;
-    width: 80%; } }
+            flex-direction: row; } }
 
 @media (min-width: 1080px) {
   .donate-container2 {
@@ -1789,39 +1802,49 @@ a {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    width: 80%; } }
+            flex-direction: row-reverse; } }
 
-.wrap-photo {
-  position: relative; }
+.side-text {
+  text-align: center;
+  margin: 5%; }
+  @media (min-width: 1080px) {
+    .side-text {
+      width: 500px;
+      -webkit-transform: translateX(30%);
+              transform: translateX(30%);
+      padding-top: 7rem; } }
 
-@media (min-width: 1080px) {
-  .side-text {
-    width: 500px;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
-    padding-top: 7rem; } }
-
-@media (min-width: 1080px) {
-  .side-text2 {
-    width: 500px;
-    -webkit-transform: translateX(-20%);
-            transform: translateX(-20%);
-    padding-top: 7rem; } }
+.side-text2 {
+  text-align: center;
+  margin: 5%; }
+  @media (min-width: 1080px) {
+    .side-text2 {
+      width: 500px;
+      -webkit-transform: translateX(-20%);
+              transform: translateX(-20%);
+      padding-top: 7rem; } }
 
 .donate-title {
   text-align: center; }
 
 .wrap-photo {
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5%; }
 
 .donate-photo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  position: absolute;
-  margin-left: 10px;
-  margin-top: 10px; }
+  position: absolute; }
   @media (min-width: 1080px) {
     .donate-photo {
       width: 300px;
@@ -1840,11 +1863,15 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  z-index: -1; }
+  z-index: -1;
+  -webkit-transform: translateX(8%) translateY(-70%);
+          transform: translateX(8%) translateY(-70%); }
   @media (min-width: 1080px) {
     .ball-a {
       height: 190px;
-      width: 190px; } }
+      width: 190px;
+      -webkit-transform: translateX(13%) translateY(-29%);
+              transform: translateX(13%) translateY(-29%); } }
 
 .ball-b {
   height: 150px;
@@ -1857,14 +1884,14 @@ a {
   display: flex;
   position: relative;
   z-index: -1;
-  -webkit-transform: translateX(60%);
-          transform: translateX(60%); }
+  -webkit-transform: translateX(15%) translateY(37%);
+          transform: translateX(15%) translateY(37%); }
   @media (min-width: 1080px) {
     .ball-b {
       height: 250px;
       width: 250px;
-      -webkit-transform: translateX(50%);
-              transform: translateX(50%); } }
+      -webkit-transform: translateX(3%) translateY(59%);
+              transform: translateX(3%) translateY(59%); } }
 
 .ball-a1 {
   height: 150px;
@@ -1876,15 +1903,15 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-transform: translateX(60%);
-          transform: translateX(60%);
+  -webkit-transform: translateX(10%) translateY(39%);
+          transform: translateX(10%) translateY(39%);
   z-index: -1; }
   @media (min-width: 1080px) {
     .ball-a1 {
       height: 250px;
       width: 250px;
-      -webkit-transform: translateX(50%);
-              transform: translateX(50%); } }
+      -webkit-transform: translateX(4%) translateY(53%);
+              transform: translateX(4%) translateY(53%); } }
 
 .ball-b1 {
   height: 100px;
@@ -1895,48 +1922,54 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translateY(-20%);
-          transform: translateY(-20%);
+  -webkit-transform: translateY(-52%);
+          transform: translateY(-52%);
   position: relative;
   z-index: -1; }
   @media (min-width: 1080px) {
     .ball-b1 {
       height: 200px;
-      width: 200px; } }
+      width: 200px;
+      -webkit-transform: translateX(-12%) translateY(-29%);
+              transform: translateX(-12%) translateY(-29%); } }
 
-.page-template-page-get-involved article {
+.link-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 0 auto; }
+
+article {
   text-align: center; }
 
 @media (min-width: 1080px) {
-  .page-template-page-get-involved .header-container {
+  .header-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 600px; }
-    .page-template-page-get-involved .header-container .container2 {
+    .header-container .container2 {
       width: 50%;
       position: relative; }
-    .page-template-page-get-involved .header-container .container-1 {
+    .header-container .container-1 {
       width: 50%;
       background-color: black;
       position: relative; } }
     @media (min-width: 1080px) and (min-width: 1080px) {
-      .page-template-page-get-involved .header-container .container-1 {
-        padding: 5%;
+      .header-container .container-1 {
+        padding: 7%;
         color: #fff;
         text-align: start; } }
 
 @media (min-width: 1080px) {
-    .page-template-page-get-involved .header-container .wp-post-image {
+    .header-container .wp-post-image {
       height: 100%;
       width: 100%; } }
-
-.page-template-page-get-involved .socials {
-  display: none; }
-  @media (min-width: 1080px) {
-    .page-template-page-get-involved .socials {
-      display: block; } }
 
 .page-template-page-get-involved h1 {
   color: black; }
@@ -1944,56 +1977,56 @@ a {
     .page-template-page-get-involved h1 {
       color: white; } }
 
-.page-template-page-get-involved .text-container {
+.text-container {
   margin: 3%; }
   @media (min-width: 1080px) {
-    .page-template-page-get-involved .text-container {
+    .text-container {
       margin-right: 15%;
       margin-left: 15%; } }
 
 @media (min-width: 1080px) {
-  .page-template-page-get-involved .participate {
+  .participate {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around; } }
 
-.page-template-page-get-involved .logo-link-involved {
+.logo-link-involved {
   border: none;
   border-radius: 50%;
   width: 170px;
   height: 170px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
-  .page-template-page-get-involved .logo-link-involved:hover {
+  .logo-link-involved:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#b079aa), to(#d8d8d8));
     background-image: linear-gradient(#b079aa, #d8d8d8); }
 
-.page-template-page-get-involved .logo-link-involved3 {
+.logo-link-involved3 {
   width: 170px;
   height: 170px;
   border: none;
   border-radius: 50%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
-  .page-template-page-get-involved .logo-link-involved3:hover {
+  .logo-link-involved3:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#b079aa), to(#d8d8d8));
     background-image: linear-gradient(#b079aa, #d8d8d8); }
 
 @media (min-width: 1080px) {
-  .page-template-page-get-involved .faq-container {
+  .faq-container {
     text-align: start;
     padding: 5%; } }
 
-.page-template-page-get-involved .btnfaq {
+.btnfaq {
   width: 300px;
   margin-bottom: 0.5rem;
   background-color: #fff;
   border: none;
   border-bottom: solid, 4px, #e9d4e6; }
   @media (min-width: 1080px) {
-    .page-template-page-get-involved .btnfaq {
+    .btnfaq {
       width: 90%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2003,23 +2036,23 @@ a {
               justify-content: space-between;
       text-align: center; } }
 
-.page-template-page-get-involved .arrow {
+.arrow {
   display: none; }
   @media (min-width: 1080px) {
-    .page-template-page-get-involved .arrow {
+    .arrow {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       width: 90px; } }
 
 @media (min-width: 1080px) {
-  .page-template-page-get-involved .tooltip {
+  .tooltip {
     text-align: flex-end; } }
 
-.page-template-page-get-involved li {
+li {
   list-style-type: none; }
 
-.page-template-page-get-involved ul {
+ul {
   margin: 0 auto;
   -webkit-padding-start: 0;
           padding-inline-start: 0; }
@@ -2136,58 +2169,57 @@ a {
             font-size: 1.5rem; } }
 
 .socials {
-  position: absolute;
-  display: inline-block;
-  bottom: 10%;
-  left: 80%; }
-
-.collapsible {
-  display: contents; }
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.collapsible:hover {
-  background-color: #ccc; }
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  display: block;
-  position: absolute;
-  top: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  right: 0;
-  -webkit-box-shadow: 0 10px white;
-          box-shadow: 0 10px white;
-  padding: 0 18px;
   display: none;
-  overflow: hidden;
-  background-color: #fff;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 200px;
-  text-align: start;
-  border-radius: 5%;
-  -webkit-box-shadow: 0px 0px 10px 3px #fff;
-          box-shadow: 0px 0px 10px 3px #fff; }
-  .content a {
-    color: #8b1f7e;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .content .lista {
-    margin: 10%; }
-
-.fab {
-  font-size: 48px; }
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  /* Style the collapsible content. Note: hidden by default */ }
+  @media (min-width: 1080px) {
+    .socials {
+      position: absolute;
+      display: inline-block;
+      bottom: 10%;
+      left: 80%; } }
+  .socials .collapsible {
+    display: contents; }
+  .socials .active,
+  .socials .collapsible:hover {
+    background-color: #ccc; }
+  .socials .content {
+    display: block;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    right: 0;
+    -webkit-box-shadow: 0 10px white;
+            box-shadow: 0 10px white;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #fff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 200px;
+    text-align: start;
+    border-radius: 5%;
+    -webkit-box-shadow: 0px 0px 10px 3px #fff;
+            box-shadow: 0px 0px 10px 3px #fff; }
+    .socials .content a {
+      color: #8b1f7e;
+      cursor: pointer;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .socials .content .lista {
+      margin: 10%; }
+  .socials .fab {
+    font-size: 48px; }
 
 /*--------------------------------------------------------------
 # Audio players

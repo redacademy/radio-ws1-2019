@@ -2386,6 +2386,9 @@ ul {
   width: 100%;
   border-radius: 50%; }
 
+.audio-player__info-artist-img {
+  width: 0; }
+
 .audio-player__info,
 .artist-track__info {
   margin-right: 1.5rem;

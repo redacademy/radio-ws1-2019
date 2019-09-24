@@ -90,6 +90,7 @@
               const coverURL = URL.createObjectURL(blob);
 
               coverImg.src = coverURL;
+              coverImg.style.width = '100%';
               trackTitle.innerText = tags.title;
               trackArtist.innerText = tags.artist;
 

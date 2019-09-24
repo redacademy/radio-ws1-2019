@@ -147,6 +147,10 @@
       loadTrack(tracks, lastPlayedIndex);
     }
     localStorage.setItem('audio-player-index', lastPlayedIndex);
+
+    // HACK: force time reset on prev
+    audioPlayer.currentTime = 0;
+    audioPlayer.pause();
   });
 
   nextButton.addEventListener('click', () => {
@@ -157,6 +161,10 @@
       loadTrack(tracks, lastPlayedIndex);
     }
     localStorage.setItem('audio-player-index', lastPlayedIndex);
+
+    // HACK: force time reset on next
+    audioPlayer.currentTime = 0;
+    audioPlayer.pause();
   });
 
   // current time

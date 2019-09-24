@@ -50,6 +50,16 @@
 }
 
 // General Containers
+@mixin pad--h {
+  padding-left: $base__space-unit;
+  padding-right: $base__space-unit;
+}
+
+@mixin pad--v {
+  padding-top: $base__space-unit;
+  padding-bottom: $base__space-unit;
+}
+
 @mixin page-container {
   margin:0 $base__space-unit;
   @include desktop {

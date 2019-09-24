@@ -34,3 +34,8 @@
     }
   }
 }
+
+.signup-note {
+  @include pad--h;
+  margin-bottom: 3 * $base__space-unit;
+}

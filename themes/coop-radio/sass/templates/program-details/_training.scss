@@ -1,6 +1,7 @@
 /* training */
 
 .training-core-main {
+  @include pad--h;
   @include tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -94,12 +94,10 @@
       }
     }
     h2.featured-title {
+      @include font-headline--xl;
       color: $color__background-body;
-      text-transform: uppercase;
       margin: 0;
-      line-height: 40px;
       @include desktop {
-        font-size: 56px;
         margin: $base__space-unit 0;
       }
     }

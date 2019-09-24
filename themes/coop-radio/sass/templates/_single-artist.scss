@@ -5,6 +5,7 @@
 .single-artist {
   .page-container {
     @include page-container;
+    @include pad--h;
   }
   .text-container {
     @include text-container;

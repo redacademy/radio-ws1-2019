@@ -19,10 +19,19 @@
   font-weight: normal;
   color: $color__headline;
 }
+
 @mixin font-headline-white {
-  @include font-headline();
+  @include font-headline;
   color: $color__headline-white;
   font-size: 34px;
+}
+
+@mixin font-headline--xl {
+  text-transform: uppercase;
+  line-height: 40px;
+  @include desktop {
+    font-size: 56px;
+  }
 }
 
 @mixin font-body {

@@ -36,6 +36,7 @@
       color: #000000;
     }
     h1 {
+      @include font-headline--xl;
       font-weight: 900;
     }
     p {

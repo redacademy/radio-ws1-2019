@@ -114,6 +114,9 @@
     }
   }
   .socials-mobile {
+    @include desktop{
+      display:none;
+    }
     p {
       text-align: center;
       margin-top: 3rem;

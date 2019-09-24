@@ -1649,6 +1649,10 @@ a {
   list-style: none;
   color: #8b1f7e; }
 
+@media (min-width: 1080px) {
+  .single-artist .socials-mobile {
+    display: none; } }
+
 .single-artist .socials-mobile p {
   text-align: center;
   margin-top: 3rem; }

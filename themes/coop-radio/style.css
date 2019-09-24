@@ -1409,9 +1409,8 @@ a {
 --------------------------------------------------------------*/
 .artist-library__container {
   position: absolute;
-  top: 8vh;
+  top: 5.5rem;
   right: 0;
-  bottom: 0;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1422,8 +1421,7 @@ a {
           flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 650px; }
+          justify-content: center; }
 
 .artist-library__scroll-container {
   position: relative;

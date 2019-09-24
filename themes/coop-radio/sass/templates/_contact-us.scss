@@ -6,14 +6,15 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  @include tablet {
+  @include desktop {
     flex-wrap: unset;
+    margin: 2.5%;
   }
   pre {
     flex-basis: 100%;
     height: 100vh;
 
-    @include tablet {
+    @include desktop {
       flex-basis: 50%;
     }
     iframe {
@@ -26,14 +27,15 @@
       border-width: 0;
       padding: 0;
 
-      @include tablet {
+      @include desktop {
         height: 500px;
       }
     }
   }
-  form {
+  .wpcf7 {
     background-color: #fff;
-    text-align: center;
+    // text-align: center;
+    margin: 0 auto;
 
     @include desktop {
       position: initial;
@@ -46,11 +48,10 @@
 }
 .header-contact {
   display: none;
-  @include tablet {
+  @include desktop {
     display: inline;
   }
 }
-
 .container-contact {
   @include desktop {
     display: flex;

@@ -75,6 +75,11 @@
       display: flex;
       flex-wrap:wrap;
     }
+    .artist-bio-container {
+      @include desktop {
+        display:flex;
+      }
+    }
     .artist-text-item {
       @include desktop {
         width: 50%;
@@ -94,6 +99,7 @@
     .artist-img {
       @include desktop {
         width: 50%;
+        margin:0 0 0 50px;
       }
       img {
         border-radius: 15px;

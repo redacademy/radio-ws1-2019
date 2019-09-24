@@ -31,7 +31,7 @@
   </section><!-- page-container -->
 
   <section class="page-container artist-text-main">
-    <div style="display:flex;">
+    <div class="artist-bio-container">
       <article class="artist-text-item">
         <div class="bio">
           <h3 class="full-name"><?= CFS()->get('full_name'); ?></h3>

@@ -1614,6 +1614,12 @@ a {
         flex-wrap: wrap; } }
 
 @media (min-width: 1080px) {
+  .single-artist .artist-text-main .artist-bio-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media (min-width: 1080px) {
   .single-artist .artist-text-main .artist-text-item {
     width: 50%; } }
 
@@ -1629,7 +1635,8 @@ a {
 
 @media (min-width: 1080px) {
   .single-artist .artist-text-main .artist-img {
-    width: 50%; } }
+    width: 50%;
+    margin: 0 0 0 50px; } }
 
 .single-artist .artist-text-main .artist-img img {
   border-radius: 15px;

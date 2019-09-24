@@ -72,7 +72,8 @@
 }
 
 .artist-library__search-icon {
-  margin: 0 0.5rem;
+  margin: 0 $base__space-unit 0 0;
+  height: $base__space-unit * 1.2;
 }
 
 .artist-library__not-found {

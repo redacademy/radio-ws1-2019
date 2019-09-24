@@ -1503,7 +1503,8 @@ a {
     color: #2c2c2c; }
 
 .artist-library__search-icon {
-  margin: 0 0.5rem; }
+  margin: 0 1.5rem 0 0;
+  height: 1.8rem; }
 
 .artist-library__not-found {
   text-align: center;

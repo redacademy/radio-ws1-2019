@@ -170,3 +170,27 @@ textarea {
     }
   }
 }
+
+/* Contact Form 7*/
+
+.wpcf7-form {
+  p{
+    margin-top: 0;
+    
+    input, textarea {
+      background-color: lighten(#dddddd, 7%);
+      border: 0;
+      border-radius: 2px;
+    }
+  
+    textarea {
+      height: 150px;
+    }
+  
+    button {
+      width: 6rem;
+      height: 3rem;
+    }
+  }
+
+}

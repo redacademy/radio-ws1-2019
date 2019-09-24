@@ -1646,8 +1646,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  list-style: none;
-  color: #8b1f7e; }
+  list-style: none; }
+  .single-artist .artist-socials .social-links .fab, .single-artist .artist-socials .social-links .fas {
+    color: #8b1f7e;
+    font-size: 44px; }
 
 @media (min-width: 1080px) {
   .single-artist .socials-mobile {

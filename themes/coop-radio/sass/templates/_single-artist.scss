@@ -109,7 +109,10 @@
       display: flex;
       justify-content: space-between;
       list-style: none;
-      color:$color__brand-purple;
+      .fab, .fas {
+        color:$color__brand-purple;
+        font-size:44px;
+      }
     }
   }
   .socials-mobile {

@@ -17,7 +17,7 @@
     </div>
 
     <div class="enroll-text">
-      <div><?php the_content() ?></div>
+      <?php the_content() ?>
     </div>
   </div>
 </section>

@@ -519,7 +519,8 @@ input[type='submit'] {
 /* Button Colours */
 .btn-primary {
   background-color: #8b1f7e;
-  color: #fff; }
+  color: #fff;
+  border-radius: 5px; }
   .btn-primary:focus {
     border-color: #99488f;
     background-color: #99488f; }
@@ -586,6 +587,28 @@ textarea {
   font-size: 20px; }
   .dropdown .dropdown-item:hover {
     background-color: rgba(139, 31, 126, 0.5); }
+
+/* Contact Form 7*/
+.wpcf7-form input, .wpcf7-form textarea {
+  background-color: #efefef;
+  border: 0;
+  border-radius: 2px; }
+  .wpcf7-form input:hover, .wpcf7-form textarea:hover {
+    border: 2px solid #8b1f7e;
+    border-radius: 2px; }
+  .wpcf7-form input:active, .wpcf7-form textarea:active {
+    border: 2px solid #8b1f7e;
+    border-radius: 2px; }
+  .wpcf7-form input:focus, .wpcf7-form textarea:focus {
+    border: 2px solid #8b1f7e;
+    border-radius: 2px; }
+
+.wpcf7-form textarea {
+  height: 150px; }
+
+.wpcf7-form button {
+  width: 6rem;
+  height: 3rem; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -1366,7 +1389,10 @@ a {
     .enroll .enroll-main {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
   @media (min-width: 1500px) {
     .enroll .enroll-main {
       margin: 0 3rem; } }
@@ -1374,7 +1400,7 @@ a {
     margin: 1.5rem 0; }
     @media (min-width: 1080px) {
       .enroll .enroll-main .enroll-img {
-        width: 60%; } }
+        width: 48%; } }
     .enroll .enroll-main .enroll-img img {
       border-radius: 10px;
       -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
@@ -1387,8 +1413,7 @@ a {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      width: 50%;
-      margin: 3rem 6rem; } }
+      width: 48%; } }
 
 /* terms & conditions */
 .terms-conditions {

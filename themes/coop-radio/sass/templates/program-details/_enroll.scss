@@ -7,6 +7,7 @@
   .enroll-main {
     @include desktop {
       display: flex;
+      justify-content: space-between;
     }
     @include wide-screen {
       margin: 0 2*$base__space-unit;
@@ -14,7 +15,7 @@
     .enroll-img {
       margin: $base__space-unit 0;
       @include desktop {
-        width: 60%;
+        width: 48%;
       }
       img {
         border-radius: 10px;
@@ -25,8 +26,8 @@
       @include desktop {
         display:flex;
         justify-content:center;
-        width: 50%;
-        margin: 2*$base__space-unit 4*$base__space-unit;
+        width: 48%;
+        
       }
     }
   }

@@ -1409,9 +1409,8 @@ a {
 --------------------------------------------------------------*/
 .artist-library__container {
   position: absolute;
-  top: 8vh;
+  top: 5.5rem;
   right: 0;
-  bottom: 0;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1422,8 +1421,7 @@ a {
           flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 650px; }
+          justify-content: center; }
 
 .artist-library__scroll-container {
   position: relative;
@@ -1488,7 +1486,7 @@ a {
 
 .artist-library__action {
   position: absolute;
-  top: 50%;
+  top: 40%;
   border: none;
   background-color: transparent;
   z-index: 2; }
@@ -1498,6 +1496,16 @@ a {
 
 .artist-library__action--next {
   right: 0; }
+
+@media (min-width: 1080px) {
+  .artist-library__action-icon--s {
+    display: none; } }
+
+.artist-library__action-icon--l {
+  display: none; }
+  @media (min-width: 1080px) {
+    .artist-library__action-icon--l {
+      display: initial; } }
 
 .artist-card {
   display: -webkit-box;

@@ -88,6 +88,7 @@ input[type='submit'] {
 .btn-primary {
   background-color: $color__btn-default;
   color: $color__btn-primary-text;
+  border-radius: 5px;
 
   &:focus {
     border-color: $color__btn-focus;

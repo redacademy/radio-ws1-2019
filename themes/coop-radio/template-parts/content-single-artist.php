@@ -27,7 +27,17 @@
   </section><!-- page-container -->
 
   <section class="page-container">
-    <iframe width="560" height="315" src="<?= CFS()->get('youtube_url'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="text-container program-details__video-container">
+    <iframe
+      class="program-details__video-embed"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/<?= CFS()->get( 'youtube_id' ); ?>"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    </div>
   </section><!-- page-container -->
 
   <section class="page-container artist-text-main">

@@ -36,7 +36,6 @@
     .artist-header-bio {
       background-color: $color__text-background;
       position: absolute;
-      z-index: 5;
       bottom: 0;
       @include desktop {
         background-color: transparent;
@@ -64,7 +63,8 @@
     height: 450px;
     margin: 0 auto;
     @include tablet {
-      width: 800px;
+      width:100%;
+      height: 600px;
       border-radius: 10px;
       overflow: hidden;
     }
@@ -73,6 +73,12 @@
   .artist-text-main {
     @include desktop {
       display: flex;
+      flex-wrap:wrap;
+    }
+    .artist-bio-container {
+      @include desktop {
+        display:flex;
+      }
     }
     .artist-text-item {
       @include desktop {
@@ -86,13 +92,10 @@
         font-size:36px;
       }
     }
-    .underline {
-      display: block;
-      margin: 0 auto;
-    }
     .artist-img {
       @include desktop {
         width: 50%;
+        margin:0 0 0 50px;
       }
       img {
         border-radius: 15px;
@@ -102,15 +105,39 @@
   }
 
   .artist-socials {
-    p {
-      text-transform: capitalize;
-      text-align: center;
-      margin-top: 3rem;
-    }
+    max-width:400px;
     .social-links {
       display: flex;
       justify-content: space-between;
       list-style: none;
+      .fab, .fas {
+        color:$color__brand-purple;
+        font-size:44px;
+      }
+    }
+  }
+  .socials-mobile {
+    margin:0 auto;
+    margin-bottom:4rem;
+    @include desktop{
+      display:none;
+    }
+    p {
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+  .socials-desk {
+    display:none;
+    @include desktop {
+      display:block;
+    }
+    h3 {
+      text-align: left;
+      text-transform:capitalize;
+    }
+    .social-links {
+      margin:0;
     }
   }
 }

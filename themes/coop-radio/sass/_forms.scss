@@ -88,6 +88,7 @@ input[type='submit'] {
 .btn-primary {
   background-color: $color__btn-default;
   color: $color__btn-primary-text;
+  border-radius: 5px;
 
   &:focus {
     border-color: $color__btn-focus;
@@ -167,5 +168,36 @@ textarea {
     &:hover {
       background-color: rgba(139, 31, 126, 0.5);
     }
+  }
+}
+
+/* Contact Form 7*/
+
+.wpcf7-form {
+  input, textarea {
+    background-color: lighten(#dddddd, 7%);
+    border: 0;
+    border-radius: 2px;
+    &:hover {
+      border: 2px solid $color__brand-purple;
+      border-radius: 2px;
+    }
+    &:active {
+      border: 2px solid $color__brand-purple;
+      border-radius: 2px;
+    }
+    &:focus {
+      border: 2px solid $color__brand-purple;
+      border-radius: 2px;
+    }
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  button {
+    width: 6rem;
+    height: 3rem;
   }
 }

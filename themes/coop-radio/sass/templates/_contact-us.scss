@@ -3,12 +3,16 @@
 --------------------------------------------------------------*/
 
 .container-contact {
+  @include pad--h;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   @include desktop {
     flex-wrap: unset;
     margin: 2.5%;
+    & * + * {
+      margin-left: $base__space-unit;
+    }
   }
   pre {
     flex-basis: 100%;

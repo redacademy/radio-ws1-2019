@@ -1786,6 +1786,8 @@ a {
 # Contact Page
 --------------------------------------------------------------*/
 .container-contact {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1798,7 +1800,9 @@ a {
     .container-contact {
       -ms-flex-wrap: unset;
           flex-wrap: unset;
-      margin: 2.5%; } }
+      margin: 2.5%; }
+      .container-contact * + * {
+        margin-left: 1.5rem; } }
   .container-contact pre {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;

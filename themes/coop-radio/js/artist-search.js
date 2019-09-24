@@ -12,6 +12,7 @@ jQuery(document).ready(function($) {
     return;
   }
 
+  const artistScrollTrack = document.getElementsByClassName('slick-track')[0];
   const artistScrollBtnPrev = document.getElementById(
     'artist-library__action--prev'
   );
@@ -26,6 +27,7 @@ jQuery(document).ready(function($) {
 
   artistSearchInput.addEventListener('input', e => {
     const input = e.target.value.trim();
+    const artistCards = document.getElementsByClassName('artist-card');
 
     // HACK: unfilter not working unless triggered on every input
     artistScroll.slick('slickUnfilter');
@@ -36,11 +38,14 @@ jQuery(document).ready(function($) {
       );
     }
 
-    if (document.getElementsByClassName('artist-card').length === 0) {
+    if (artistCards.length === 0) {
       artistScroll.append(noResultsText);
       artistScrollBtnPrev.style.display = 'none';
       artistScrollBtnNext.style.display = 'none';
     } else {
+      if (artistCards.length === 1) {
+        artistScrollTrack.style.transform = '';
+      }
       noResultsText.remove();
       artistScrollBtnPrev.style.display = 'initial';
       artistScrollBtnNext.style.display = 'initial';

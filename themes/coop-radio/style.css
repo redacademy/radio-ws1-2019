@@ -1501,9 +1501,14 @@ a {
     border: none;
     border-bottom: 1px solid #171717;
     color: #2c2c2c; }
+    @media (min-width: 600px) {
+      .artist-library__search-container .artist-library__search-input {
+        min-width: 50%;
+        max-width: 600px; } }
 
 .artist-library__search-icon {
-  margin: 0 0.5rem; }
+  margin: 0 1.5rem 0 0;
+  height: 1.8rem; }
 
 .artist-library__not-found {
   text-align: center;
@@ -1573,6 +1578,9 @@ a {
 .artist-card__genre {
   margin: 0 0 1.5rem 0;
   padding: 0; }
+
+.artist-card__genre-item:not(:first-of-type):before {
+  content: '/'; }
 
 /*--------------------------------------------------------------
 # Single artist

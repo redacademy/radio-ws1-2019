@@ -12,10 +12,9 @@ get_header(); ?>
     <div class="artist-library__search-container">
       <img
         class="artist-library__search-icon"
-        src="<?php echo get_stylesheet_directory_uri().'/images/menu-bar.png'; ?>"
+        src="<?= get_stylesheet_directory_uri().'/images/search-icon-black.png'; ?>"
         alt=""
       />
-    
       <label for="artist-library__search-input" class="screen-reader-text">
         <?php echo esc_html( 'Search Artist' ); ?>
       </label>
@@ -55,7 +54,6 @@ get_header(); ?>
           foreach ( $artists as $post ) : setup_postdata( $post );
             get_template_part( 'template-parts/content', 'artist-library' );
           endforeach; wp_reset_postdata();?>
-        
       </div><!-- artist-library -->
 
       <button

@@ -24,15 +24,16 @@
 
     <?php $terms = get_the_terms( get_the_ID(), 'genre'  );
 
-    if ( gettype( $terms ) == 'array' ) : 
-      foreach ( $terms as $term  ) : ?>
-
-        <p class="artist-card__genre"><?= $term->name; ?></p>
-
-      <?php endforeach; else : ?>
-
-        <p class="artist-card__genre">Misc</p>
-
+    if ( gettype( $terms ) == 'array' ) : ?>
+      <p class="artist-card__genre">
+        <?php foreach ( $terms as $term  ) : ?>
+          <span class="artist-card__genre-item">
+            <?= $term->name; ?>
+          </span>
+        <?php endforeach; ?>
+      </p>
+    <?php else : ?>
+      <p class="artist-card__genre">Misc</p>
     <?php endif; ?>
 
   </a>

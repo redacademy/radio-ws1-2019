@@ -68,11 +68,17 @@
     border: none;
     border-bottom: 1px solid $color__headline;
     color: $color__text-main;
+
+    @include tablet {
+      min-width: 50%;
+      max-width: $tablet-width;
+    }
   }
 }
 
 .artist-library__search-icon {
-  margin: 0 0.5rem;
+  margin: 0 $base__space-unit 0 0;
+  height: $base__space-unit * 1.2;
 }
 
 .artist-library__not-found {
@@ -149,4 +155,8 @@
 .artist-card__genre {
   margin: 0 0 $base__space-unit 0;
   padding: 0;
+}
+
+.artist-card__genre-item:not(:first-of-type):before {
+  content: '/';
 }

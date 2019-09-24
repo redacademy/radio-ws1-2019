@@ -6,7 +6,7 @@
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: top;
-  height: 100vh;
+  height: calc(100vh - #{$footer_height});
   display: flex;
   justify-content: center;
   position: relative;

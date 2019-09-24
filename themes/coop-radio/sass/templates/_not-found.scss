@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 .not-found{
-    height: 100vh;
+    height: calc(100vh - #{$footer_height});
     background-color: #dddddd;
     .front-container{
         img {

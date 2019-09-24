@@ -2383,6 +2383,7 @@ ul {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  width: 100%;
   border-radius: 50%; }
 
 .audio-player__info,

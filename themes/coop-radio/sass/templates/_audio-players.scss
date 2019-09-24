@@ -75,7 +75,12 @@
 .artist-track__info-artist-img {
   object-fit: cover;
   height: 100%;
+  width: 100%;
   border-radius: 50%;
+}
+
+.audio-player__info-artist-img {
+  width: 0;
 }
 
 .audio-player__info,
@@ -196,6 +201,7 @@
   height: 10px;
   border-radius: 50%;
   background-color: $color__brand-purple;
+  box-shadow: 0 0 0 4px #8B1F7E30;
 }
 
 .audio-player__action--play,

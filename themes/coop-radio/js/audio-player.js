@@ -14,6 +14,7 @@
   }
 
   const audioPlayer = document.getElementById('audio-player');
+  const audioPlayerLink = audioPlayer.querySelector('a');
   const coverImg = document.getElementById('audio-player__info-artist-img');
   const trackTitle = document.getElementById('audio-player__info--title');
   const trackArtist = document.getElementById('audio-player__info--artist');
@@ -73,6 +74,7 @@
       .then(res => res.json())
       .then(data => {
         const track = data[0];
+        audioPlayerLink.href = track.source_url;
         audioPlayer.src = track.source_url;
         prograssBarContainer.style.cursor = 'pointer';
         shareButton.href = `https://www.facebook.com/sharer/sharer.php?u=${track.source_url}`;
@@ -88,10 +90,12 @@
               const coverURL = URL.createObjectURL(blob);
 
               coverImg.src = coverURL;
+              coverImg.style.width = '100%';
               trackTitle.innerText = tags.title;
               trackArtist.innerText = tags.artist;
 
               audioPlayer.pause();
+              audioPlayer.currentTime = 0;
               togglePlayButtonIcon('PLAY');
               window.localStorage.setItem('audio-player-playing', false);
             },
@@ -144,6 +148,10 @@
       loadTrack(tracks, lastPlayedIndex);
     }
     localStorage.setItem('audio-player-index', lastPlayedIndex);
+
+    // HACK: force time reset on prev
+    audioPlayer.currentTime = 0;
+    audioPlayer.pause();
   });
 
   nextButton.addEventListener('click', () => {
@@ -154,6 +162,10 @@
       loadTrack(tracks, lastPlayedIndex);
     }
     localStorage.setItem('audio-player-index', lastPlayedIndex);
+
+    // HACK: force time reset on next
+    audioPlayer.currentTime = 0;
+    audioPlayer.pause();
   });
 
   // current time

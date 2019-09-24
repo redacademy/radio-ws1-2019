@@ -994,7 +994,12 @@ a {
     .content-front-page .content-container p {
       color: #000000; }
     .content-front-page .content-container h1 {
+      text-transform: uppercase;
+      line-height: 40px;
       font-weight: 900; }
+      @media (min-width: 1080px) {
+        .content-front-page .content-container h1 {
+          font-size: 56px; } }
     .content-front-page .content-container p {
       max-width: 60%;
       text-align: center; }
@@ -1141,13 +1146,15 @@ a {
         .program-header-info .program-header-text h3.program-title {
           line-height: 60px; } }
     .program-header-info .program-header-text h2.featured-title {
-      color: #fff;
       text-transform: uppercase;
-      margin: 0;
-      line-height: 40px; }
+      line-height: 40px;
+      color: #fff;
+      margin: 0; }
       @media (min-width: 1080px) {
         .program-header-info .program-header-text h2.featured-title {
-          font-size: 56px;
+          font-size: 56px; } }
+      @media (min-width: 1080px) {
+        .program-header-info .program-header-text h2.featured-title {
           margin: 1.5rem 0; } }
     .program-header-info .program-header-text h1.featured-subtitle {
       color: #fff;

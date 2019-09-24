@@ -59,8 +59,8 @@
 
 .audio-player__info-artist-img-container,
 .artist-track__info-artist-img-container {
-  width: $footer_height * 0.8;
-  height: $footer_height * 0.8;
+  width: $footer_height;
+  height: 100%;
   padding: $base__space-unit/4;
   margin-right: $base__space-unit;
 }

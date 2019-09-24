@@ -29,9 +29,10 @@
   </header>
 
   <section>
+    <div class="text-container">
     <h2><?= CFS()->get( 'actions_title' ); ?></h2>
     <p><?= CFS()->get( 'actions_text' ); ?></p>
-
+</div>
     <div class="participate">
     <a href="<?php echo esc_url(home_url('/donate')); ?>">
       <img class="logo-link-involved" src="<?php echo get_stylesheet_directory_uri().'/images/get-involved/co-op icons-06.svg'; ?>" alt="">

@@ -16,7 +16,7 @@
   }
   pre {
     flex-basis: 100%;
-    height: 100vh;
+    height: calc(100vh - #{$footer_height});
 
     @include desktop {
       flex-basis: 50%;

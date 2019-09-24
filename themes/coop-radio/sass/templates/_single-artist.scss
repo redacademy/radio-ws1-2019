@@ -31,7 +31,7 @@
   }
   .artist-hero {
     position: relative;
-    height: 100vh;
+    height: calc(100vh - #{$footer_height});
     background-size: cover;
     background-position: top center;
     .artist-header-bio {

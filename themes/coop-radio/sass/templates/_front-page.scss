@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 .home-main {
-  height: 100vh;
+  height: calc(100vh - #{$footer_height});
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: top;

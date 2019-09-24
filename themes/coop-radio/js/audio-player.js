@@ -14,6 +14,7 @@
   }
 
   const audioPlayer = document.getElementById('audio-player');
+  const audioPlayerLink = audioPlayer.querySelector('a');
   const coverImg = document.getElementById('audio-player__info-artist-img');
   const trackTitle = document.getElementById('audio-player__info--title');
   const trackArtist = document.getElementById('audio-player__info--artist');
@@ -73,6 +74,7 @@
       .then(res => res.json())
       .then(data => {
         const track = data[0];
+        audioPlayerLink.href = track.source_url;
         audioPlayer.src = track.source_url;
         prograssBarContainer.style.cursor = 'pointer';
         shareButton.href = `https://www.facebook.com/sharer/sharer.php?u=${track.source_url}`;

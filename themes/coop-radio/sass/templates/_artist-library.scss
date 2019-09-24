@@ -156,3 +156,7 @@
   margin: 0 0 $base__space-unit 0;
   padding: 0;
 }
+
+.artist-card__genre-item:not(:first-of-type):before {
+  content: '/';
+}

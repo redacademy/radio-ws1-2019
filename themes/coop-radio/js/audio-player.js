@@ -92,6 +92,7 @@
               trackArtist.innerText = tags.artist;
 
               audioPlayer.pause();
+              audioPlayer.currentTime = 0;
               togglePlayButtonIcon('PLAY');
               window.localStorage.setItem('audio-player-playing', false);
             },

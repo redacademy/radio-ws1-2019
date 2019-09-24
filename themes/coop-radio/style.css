@@ -1629,10 +1629,6 @@ a {
     .single-artist .artist-text-main .full-name {
       font-size: 36px; } }
 
-.single-artist .artist-text-main .underline {
-  display: block;
-  margin: 0 auto; }
-
 @media (min-width: 1080px) {
   .single-artist .artist-text-main .artist-img {
     width: 50%;

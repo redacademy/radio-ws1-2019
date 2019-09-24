@@ -35,11 +35,6 @@
       <article class="artist-text-item">
         <div class="bio">
           <h3 class="full-name"><?= CFS()->get('full_name'); ?></h3>
-          <div class="underline">
-            <svg height="20" width="500">
-              <line x1="0" y1="0" x2="200" y2="0" style="stroke:rgb(0,0,0);stroke-width:10" />
-            </svg>
-          </div>
           <p><?= CFS()->get('bio_text_secondary'); ?></p>
         </div><!-- bio -->
 
@@ -52,41 +47,40 @@
           <h3>follow me on</h3>
           <ul class="social-links">
             <li>
-              <a href="<?= CFS()->get('facebook_url'); ?>">
+              <a href="<?= CFS()->get('facebook_url')['url']; ?>">
                 <i class="fab fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="<?= CFS()->get('twitter_url'); ?>">
+              <a href="<?= CFS()->get('twitter_url')['url']; ?>">
                 <i class="fab fa-twitter-square"></i>
               </a>
             </li>
             <li>
-              <a href="<?= CFS()->get('instagram_url'); ?>">
+              <a href="<?= CFS()->get('instagram_url')['url']; ?>">
                 <i class="fab fa-instagram"></i>
               </a>
             </li>
             <li>
-              <a href="<?= CFS()->get('soundcloud_url'); ?>">
+              <a href="<?= CFS()->get('soundcloud_url')['url']; ?>">
                 <i class="fab fa-soundcloud"></i>
               </a>
             </li>
             <li>
-              <a href="<?= CFS()->get('apple_music_url'); ?>">
+              <a href="<?= CFS()->get('apple_music_url')['url']; ?>">
                 <i class="fas fa-music"></i>
               </a>
             </li>
           </ul>
-        </div>
+        </div><!-- artist-socials socials desk bio -->
       </article><!-- text-container artist-text-item -->
-
 
       <article class="artist-img">
         <?php if (has_post_thumbnail()) : ?>
           <?php the_post_thumbnail('large'); ?>
         <?php endif; ?>
       </article>
-    </div>
+    </div><!-- artist-bio-container -->
 
     <article class="artist-track-main">
       <?php
@@ -162,12 +156,11 @@
                     wp_reset_postdata(); ?>
               </div>
             </div>
-          </section>
+          </section><!-- audio-container -->
       <?php endif;
       endif; ?>
 
-  </section>
-  </section>
+  </section><!-- page-container artist-text-main -->
 </article><!-- artist-track-container -->
 
 <section class="artist-socials socials-mobile">

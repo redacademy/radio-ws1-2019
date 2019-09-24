@@ -48,38 +48,36 @@
           <p><?= CFS()->get('additional_info_text'); ?></p>
         </div><!-- bio -->
 
-        <article class="artist-socials socials-desk">
-  <div class="text-container">
-    <p>follow me on my social media</p>
-    <ul class="social-links">
-      <li>
-        <a href="<?= CFS()->get('facebook_url'); ?>">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a href="<?= CFS()->get('twitter_url'); ?>">
-          <i class="fab fa-twitter-square"></i>
-        </a>
-      </li>
-      <li>
-        <a href="<?= CFS()->get('instagram_url'); ?>">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </li>
-      <li>
-        <a href="<?= CFS()->get('soundcloud_url'); ?>">
-          <i class="fab fa-soundcloud"></i>
-        </a>
-      </li>
-      <li>
-        <a href="<?= CFS()->get('apple_music_url'); ?>">
-          <i class="fas fa-music"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
+        <div class="artist-socials socials-desk bio">
+          <h3>follow me on</h3>
+          <ul class="social-links">
+            <li>
+              <a href="<?= CFS()->get('facebook_url'); ?>">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="<?= CFS()->get('twitter_url'); ?>">
+                <i class="fab fa-twitter-square"></i>
+              </a>
+            </li>
+            <li>
+              <a href="<?= CFS()->get('instagram_url'); ?>">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="<?= CFS()->get('soundcloud_url'); ?>">
+                <i class="fab fa-soundcloud"></i>
+              </a>
+            </li>
+            <li>
+              <a href="<?= CFS()->get('apple_music_url'); ?>">
+                <i class="fas fa-music"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </article><!-- text-container artist-text-item -->
 
 

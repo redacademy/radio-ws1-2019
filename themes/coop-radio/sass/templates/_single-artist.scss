@@ -103,9 +103,6 @@
   }
 
   .artist-socials {
-    p {
-      text-transform: capitalize;
-    }
     .social-links {
       display: flex;
       justify-content: space-between;
@@ -119,7 +116,21 @@
     }
     p {
       text-align: center;
-      margin-top: 3rem;
+      text-transform: capitalize;
+      margin: 3rem 0;
+    }
+  }
+  .socials-desk {
+    display:none;
+    @include desktop {
+      display:block;
+    }
+    h3 {
+      text-align: left;
+      text-transform:capitalize;
+    }
+    .social-links {
+      margin:0;
     }
   }
 }

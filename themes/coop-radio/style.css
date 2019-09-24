@@ -1636,9 +1636,6 @@ a {
   -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
           box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
 
-.single-artist .artist-socials p {
-  text-transform: capitalize; }
-
 .single-artist .artist-socials .social-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1655,7 +1652,19 @@ a {
 
 .single-artist .socials-mobile p {
   text-align: center;
-  margin-top: 3rem; }
+  text-transform: capitalize;
+  margin: 3rem 0; }
+
+.single-artist .socials-desk {
+  display: none; }
+  @media (min-width: 1080px) {
+    .single-artist .socials-desk {
+      display: block; } }
+  .single-artist .socials-desk h3 {
+    text-align: left;
+    text-transform: capitalize; }
+  .single-artist .socials-desk .social-links {
+    margin: 0; }
 
 /*--------------------------------------------------------------
 # 404 Page

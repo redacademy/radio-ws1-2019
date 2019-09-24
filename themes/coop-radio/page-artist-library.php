@@ -36,8 +36,13 @@ get_header(); ?>
       >
         <img
           alt="Previous artist"
-          class="artist-library__action-icon"
+          class="artist-library__action-icon artist-library__action-icon--s"
           src="<?php echo get_stylesheet_directory_uri().'/images/floating-button-prev-dark.svg'; ?>"
+        />
+        <img
+          alt="Previous artist"
+          class="artist-library__action-icon artist-library__action-icon--l"
+          src="<?php echo get_stylesheet_directory_uri().'/images/floating-button-prev-light.svg'; ?>"
         />
       </button>
 
@@ -59,8 +64,13 @@ get_header(); ?>
       >
         <img
           alt="Next artist"
-          class="artist-library__action-icon"
+          class="artist-library__action-icon artist-library__action-icon--s"
           src="<?php echo get_stylesheet_directory_uri().'/images/floating-button-next-dark.svg'; ?>"
+        />
+        <img
+          alt="Next artist"
+          class="artist-library__action-icon artist-library__action-icon--l"
+          src="<?php echo get_stylesheet_directory_uri().'/images/floating-button-next-light.svg'; ?>"
         />
       </button>
     </div>

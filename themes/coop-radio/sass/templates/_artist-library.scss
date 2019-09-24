@@ -84,7 +84,7 @@
 
 .artist-library__action {
   position: absolute;
-  top: 50%;
+  top: 40%;
   border: none;
   background-color: transparent;
   z-index: 2;
@@ -96,6 +96,20 @@
 
 .artist-library__action--next {
   right: 0;
+}
+
+.artist-library__action-icon--s {
+  @include desktop {
+    display: none;
+  }
+}
+
+.artist-library__action-icon--l {
+  display: none;
+
+  @include desktop {
+    display: initial;
+  }
 }
 
 .artist-card {

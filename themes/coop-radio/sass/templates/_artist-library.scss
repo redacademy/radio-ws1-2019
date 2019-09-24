@@ -68,6 +68,11 @@
     border: none;
     border-bottom: 1px solid $color__headline;
     color: $color__text-main;
+
+    @include tablet {
+      min-width: 50%;
+      max-width: $tablet-width;
+    }
   }
 }
 

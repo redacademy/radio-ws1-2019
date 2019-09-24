@@ -1,22 +1,11 @@
 /* js for program details page */
 
-// jQuery(document).ready(function ($) {
+const enrollNow = document.getElementsByClassName('enroll-now')[0];
 
-//     $('.enroll-now').addEventListener("click", function(event){
-//             event.preventDefault();
-//             document.querySelector(event.target.hash).scrollIntoView({behavior: 'smooth'})
-
-//         });
-
-//     });
-// });
-
-const enrollNow = document.querySelectorAll('.enroll-now');
-
-
+console.log(enrollNow, 'enroll button');
 enrollNow.addEventListener("click", function (event) {
     event.preventDefault();
-    document.querySelector(event.target.hash).scrollIntoView({ behavior: 'smooth' })
-
+    console.log(event.target);
+    document.getElementById(`${event.target.dataset.target}`).scrollIntoView({ behavior: 'smooth' })
 });
 

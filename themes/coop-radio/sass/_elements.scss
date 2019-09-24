@@ -19,8 +19,10 @@ body {
 }
 
 main {
-  overflow: auto;
+  overflow-x: hidden;
+  max-width: 100vw;
   max-height: 87vh;
+
   @include short {
     max-height: 89vh;
   }

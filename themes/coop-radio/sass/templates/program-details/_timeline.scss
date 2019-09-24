@@ -7,7 +7,7 @@ $timeline__marker-width: $base__space-unit * 2;
   border-right: $timeline__width solid $color__brand-purple;
   list-style: none;
   padding: 0;
-  margin: 0 $base__space-unit/2 0 0;
+  margin: 1.5 * $base__space-unit $base__space-unit/2 0 0;
   text-align:left;
 
   @include desktop {
@@ -16,6 +16,7 @@ $timeline__marker-width: $base__space-unit * 2;
 }
 
 .timeline__list-item {
+  @include pad--h;
   position: relative;
   margin-bottom: $base__space-unit * 2;
 
@@ -34,8 +35,9 @@ $timeline__marker-width: $base__space-unit * 2;
   }
 
   @include desktop {
-    &:nth-child(even) {
+    &:nth-child(odd) {
       .timeline__list-item-wrapper {
+        padding-left: $base__space-unit;
         position: relative;
         left: 100%;
         margin-left: $timeline__marker-width;

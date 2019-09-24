@@ -1,6 +1,7 @@
 /* requirements */
 
 .requirements-main {
+  @include pad--h;
   @include desktop {
     display: flex;
   }

@@ -37,7 +37,7 @@ if (isset($sections) && sizeof($sections) > 0) : ?>
 
 <?php endif; ?>
 
-<section class="signup-descript">
+<section class="signup-note">
   <h2><?= CFS()->get('sign_up_title'); ?></h2>
   <button data-target="section--enroll" class="enroll-now btn-primary btn-large">enroll now</button>
 </section>

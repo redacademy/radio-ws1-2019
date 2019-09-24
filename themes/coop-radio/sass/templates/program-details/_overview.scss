@@ -1,6 +1,7 @@
 /* overview */
 
 .overview-main {
+  @include pad--h;
   @include desktop {
     display: flex;
     justify-content: space-between;

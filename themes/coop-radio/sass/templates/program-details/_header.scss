@@ -23,12 +23,16 @@
 }
 
 .program-details__nav-link-list {
-  position: absolute;
-  display: inline-block;
-  right: $base__space-unit;
-  top: 33vh;
-  display: flex;
-  flex-direction: column;
+  display: none;
+
+  @include tablet {
+    position: absolute;
+    display: inline-block;
+    right: $base__space-unit;
+    top: 33vh;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .program-details__nav-link {
@@ -55,18 +59,18 @@
   }
 
   a {
-    font-family:$font__heading;
-    font-size:22px;
+    font-family: $font__heading;
+    font-size: 22px;
     color: $color__background-body;
-    margin:$base__space-unit;
+    margin: $base__space-unit;
     &:hover {
       text-decoration: underline;
     }
-  } 
+  }
 }
 
 .program-header-info {
-  margin:2.5*$base__space-unit 0;
+  margin: 2.5 * $base__space-unit 0;
   @include desktop {
     @include page-container;
   }
@@ -75,28 +79,28 @@
     max-width: 300px;
     margin-bottom: $base__space-unit;
     @include tablet {
-      max-width:100%;
+      max-width: 100%;
     }
     @include desktop {
-      text-align:left;
+      text-align: left;
     }
 
     h3.program-title {
       color: $color__background-body;
       margin: 0;
-      line-height:40px;
+      line-height: 40px;
       @include desktop {
-        line-height:60px;
+        line-height: 60px;
       }
     }
     h2.featured-title {
       color: $color__background-body;
       text-transform: uppercase;
       margin: 0;
-      line-height:40px;
+      line-height: 40px;
       @include desktop {
-        font-size:56px;
-        margin:$base__space-unit 0;
+        font-size: 56px;
+        margin: $base__space-unit 0;
       }
     }
     h1.featured-subtitle {

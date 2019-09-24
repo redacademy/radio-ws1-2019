@@ -1041,17 +1041,20 @@ a {
   background-position: top center; }
 
 .program-details__nav-link-list {
-  position: absolute;
-  display: inline-block;
-  right: 1.5rem;
-  top: 33vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  display: none; }
+  @media (min-width: 600px) {
+    .program-details__nav-link-list {
+      position: absolute;
+      display: inline-block;
+      right: 1.5rem;
+      top: 33vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .program-details__nav-link {
   display: inline-block;

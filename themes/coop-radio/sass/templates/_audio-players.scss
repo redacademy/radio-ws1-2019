@@ -59,8 +59,9 @@
 
 .audio-player__info-artist-img-container,
 .artist-track__info-artist-img-container {
-  width: $footer_height;
-  height: $footer_height;
+  width: $footer_height * 0.8;
+  height: $footer_height * 0.8;
+  padding: $base__space-unit/4;
   margin-right: $base__space-unit;
 }
 
@@ -73,7 +74,7 @@
 .audio-player__info-artist-img,
 .artist-track__info-artist-img {
   object-fit: cover;
-  min-height: $footer_height;
+  height: 100%;
   border-radius: 50%;
 }
 

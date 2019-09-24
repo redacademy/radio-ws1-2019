@@ -2369,8 +2369,9 @@ ul {
 
 .audio-player__info-artist-img-container,
 .artist-track__info-artist-img-container {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0.375rem;
   margin-right: 1.5rem; }
 
 @media (min-width: 600px) {
@@ -2381,7 +2382,7 @@ ul {
 .artist-track__info-artist-img {
   -o-object-fit: cover;
      object-fit: cover;
-  min-height: 4.5rem;
+  height: 100%;
   border-radius: 50%; }
 
 .audio-player__info,

@@ -50,7 +50,7 @@
 
         <article class="artist-socials socials-desk">
   <div class="text-container">
-    <p>follow me on</p>
+    <p>follow me on my social media</p>
     <ul class="social-links">
       <li>
         <a href="<?= CFS()->get('facebook_url'); ?>">

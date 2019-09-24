@@ -1637,9 +1637,7 @@ a {
           box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
 
 .single-artist .artist-socials p {
-  text-transform: capitalize;
-  text-align: center;
-  margin-top: 3rem; }
+  text-transform: capitalize; }
 
 .single-artist .artist-socials .social-links {
   display: -webkit-box;
@@ -1648,7 +1646,12 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  list-style: none; }
+  list-style: none;
+  color: #8b1f7e; }
+
+.single-artist .socials-mobile p {
+  text-align: center;
+  margin-top: 3rem; }
 
 /*--------------------------------------------------------------
 # 404 Page

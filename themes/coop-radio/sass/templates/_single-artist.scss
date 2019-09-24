@@ -105,13 +105,18 @@
   .artist-socials {
     p {
       text-transform: capitalize;
-      text-align: center;
-      margin-top: 3rem;
     }
     .social-links {
       display: flex;
       justify-content: space-between;
       list-style: none;
+      color:$color__brand-purple;
+    }
+  }
+  .socials-mobile {
+    p {
+      text-align: center;
+      margin-top: 3rem;
     }
   }
 }

@@ -1576,7 +1576,6 @@ a {
   .single-artist .artist-hero .artist-header-bio {
     background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
-    z-index: 5;
     bottom: 0; }
     @media (min-width: 1080px) {
       .single-artist .artist-hero .artist-header-bio {
@@ -1639,26 +1638,29 @@ a {
   -webkit-box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c;
           box-shadow: 0 0.5rem 0.5rem -0.25rem #2c2c2c; }
 
-.single-artist .artist-socials .social-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  list-style: none; }
-  .single-artist .artist-socials .social-links .fab, .single-artist .artist-socials .social-links .fas {
-    color: #8b1f7e;
-    font-size: 44px; }
+.single-artist .artist-socials {
+  max-width: 400px; }
+  .single-artist .artist-socials .social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none; }
+    .single-artist .artist-socials .social-links .fab, .single-artist .artist-socials .social-links .fas {
+      color: #8b1f7e;
+      font-size: 44px; }
 
-@media (min-width: 1080px) {
-  .single-artist .socials-mobile {
-    display: none; } }
-
-.single-artist .socials-mobile p {
-  text-align: center;
-  text-transform: capitalize;
-  margin: 3rem 0; }
+.single-artist .socials-mobile {
+  margin: 0 auto;
+  margin-bottom: 4rem; }
+  @media (min-width: 1080px) {
+    .single-artist .socials-mobile {
+      display: none; } }
+  .single-artist .socials-mobile p {
+    text-align: center;
+    text-transform: capitalize; }
 
 .single-artist .socials-desk {
   display: none; }

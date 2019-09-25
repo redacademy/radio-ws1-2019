@@ -2061,7 +2061,9 @@ article {
 @media (min-width: 1080px) {
     .header-container .wp-post-image {
       height: 100%;
-      width: 100%; } }
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; } }
 
 .page-template-page-get-involved h1 {
   color: black; }

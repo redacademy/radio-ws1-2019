@@ -36,17 +36,20 @@
   .wpcf7 {
     background-color: #fff;
     margin: 0 auto;
+    width: 270px;
 
     @include desktop {
       position: initial;
+      width: 420px;
+    }
+  }
+  input {
+    width: 270px;
+    @include desktop {
+      width: 370px;
     }
   }
 }
-textarea {
-  width: 420px;
-  height: 150px;
-}
-
 .header-contact {
   display: none;
   @include desktop {

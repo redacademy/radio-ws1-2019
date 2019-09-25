@@ -1821,14 +1821,18 @@ a {
 
 .page-id-14 .wpcf7 {
   background-color: #fff;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 270px; }
   @media (min-width: 1080px) {
     .page-id-14 .wpcf7 {
-      position: initial; } }
+      position: initial;
+      width: 420px; } }
 
-textarea {
-  width: 420px;
-  height: 150px; }
+.page-id-14 input {
+  width: 270px; }
+  @media (min-width: 1080px) {
+    .page-id-14 input {
+      width: 370px; } }
 
 .header-contact {
   display: none; }

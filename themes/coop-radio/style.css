@@ -475,7 +475,8 @@ input[type='submit'] {
 
 /* Link Buttons */
 .link-btn-wrapper .btn-primary {
-  color: #fff; }
+  color: #fff;
+  text-transform: capitalize; }
   .link-btn-wrapper .btn-primary:focus {
     border-color: #99488f;
     background-color: #99488f; }
@@ -485,18 +486,6 @@ input[type='submit'] {
   .link-btn-wrapper .btn-primary:disabled {
     border-color: #8b8b8b;
     background-color: #8b8b8b; }
-
-.link-btn-wrapper .btn-secondary {
-  color: #8b1f7e; }
-  .link-btn-wrapper .btn-secondary:focus {
-    border-color: #99488f;
-    color: #99488f; }
-  .link-btn-wrapper .btn-secondary:hover {
-    border-color: #7e3575;
-    color: #7e3575; }
-  .link-btn-wrapper .btn-secondary:disabled {
-    border-color: #8b8b8b;
-    color: #8b8b8b; }
 
 /* Button Sizes */
 .btn-small {
@@ -590,17 +579,21 @@ textarea {
     background-color: rgba(139, 31, 126, 0.5); }
 
 /* Contact Form 7*/
-.wpcf7-form input, .wpcf7-form textarea {
+.wpcf7-form input,
+.wpcf7-form textarea {
   background-color: #efefef;
   border: 0;
   border-radius: 2px; }
-  .wpcf7-form input:hover, .wpcf7-form textarea:hover {
+  .wpcf7-form input:hover,
+  .wpcf7-form textarea:hover {
     border: 2px solid #8b1f7e;
     border-radius: 2px; }
-  .wpcf7-form input:active, .wpcf7-form textarea:active {
+  .wpcf7-form input:active,
+  .wpcf7-form textarea:active {
     border: 2px solid #8b1f7e;
     border-radius: 2px; }
-  .wpcf7-form input:focus, .wpcf7-form textarea:focus {
+  .wpcf7-form input:focus,
+  .wpcf7-form textarea:focus {
     border: 2px solid #8b1f7e;
     border-radius: 2px; }
 
@@ -1799,8 +1792,7 @@ a {
   @media (min-width: 1080px) {
     .container-contact {
       -ms-flex-wrap: unset;
-          flex-wrap: unset;
-      margin: 2.5%; }
+          flex-wrap: unset; }
       .container-contact * + * {
         margin-left: 1.5rem; } }
   .container-contact pre {
@@ -1811,27 +1803,29 @@ a {
       .container-contact pre {
         -ms-flex-preferred-size: 50%;
             flex-basis: 50%; } }
-    .container-contact pre iframe {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      border-width: 0;
-      padding: 0; }
-      @media (min-width: 1080px) {
-        .container-contact pre iframe {
-          height: 500px; } }
-  .container-contact .wpcf7 {
-    background-color: #fff;
-    margin: 0 auto; }
+  .container-contact iframe {
+    position: relative;
+    width: 100%; }
     @media (min-width: 1080px) {
-      .container-contact .wpcf7 {
-        position: initial; } }
-  .container-contact textarea {
-    width: 420px;
-    height: 150px; }
+      .container-contact iframe {
+        height: 500px;
+        -webkit-transform: translateY(13%);
+                transform: translateY(13%); } }
+
+.contact-us-page .wpcf7 {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 270px; }
+  @media (min-width: 1080px) {
+    .contact-us-page .wpcf7 {
+      position: initial;
+      width: 420px; } }
+
+.contact-us-page input {
+  width: 270px; }
+  @media (min-width: 1080px) {
+    .contact-us-page input {
+      width: 370px; } }
 
 .header-contact {
   display: none; }
@@ -1849,24 +1843,24 @@ a {
             justify-content: space-evenly; } }
 
 @media (min-width: 1080px) {
-  .page-id-55 .header-container {
+  .donate-page .header-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse; } }
 
-.page-id-55 .container-1 {
+.donate-page .container-1 {
   margin: 5%; }
   @media (min-width: 1080px) {
-    .page-id-55 .container-1 {
+    .donate-page .container-1 {
       margin: 0; } }
-  .page-id-55 .container-1 h1 {
+  .donate-page .container-1 h1 {
     color: black; }
     @media (min-width: 1080px) {
-      .page-id-55 .container-1 h1 {
+      .donate-page .container-1 h1 {
         color: white; } }
 
-.page-id-55 section {
+.donate-page section {
   margin: 5%; }
 
 .page-id-55 .link-btn-wrapper {
@@ -2027,6 +2021,19 @@ a {
       width: 200px;
       -webkit-transform: translateX(-12%) translateY(-29%);
               transform: translateX(-12%) translateY(-29%); } }
+
+.donate-page .link-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 0 auto; }
+
+.donate-page a {
+  padding: 0.5rem 1rem; }
 
 article {
   text-align: center; }

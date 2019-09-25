@@ -1,4 +1,4 @@
-.page-id-55 {
+.donate-page {
   .header-container {
     @include desktop {
       flex-direction: row-reverse;
@@ -145,4 +145,14 @@
     transform: translateX(-12%) translateY(-29%);
   }
 }
-
+.donate-page {
+  .link-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  a {
+    padding: 0.5rem 1rem;
+  }
+}

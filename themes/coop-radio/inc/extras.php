@@ -22,7 +22,12 @@ function coop_radio_body_classes( $classes ) {
   if ( is_page('program-details')) {
 		$classes[] = 'program-details-page';
 	}
-
+  if ( is_page('contact-us')) {
+		$classes[] = 'contact-us-page';
+  }
+  if ( is_page('donate')) {
+		$classes[] = 'donate-page';
+  }
   return $classes;
 }
 add_filter( 'body_class', 'coop_radio_body_classes' );

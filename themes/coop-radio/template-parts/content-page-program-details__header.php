@@ -29,8 +29,8 @@
       </div>
 
       <div class="program-details__actions">
-        <button class="btn-medium btn-primary program-details__action" type="button">
-          Sign up
+        <button data-target="section--enroll" class="signup-now btn-medium btn-primary" type="button">
+          sign up
         </button>
         <a href="/">Watch the film</a>
       </div>

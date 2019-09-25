@@ -1808,19 +1808,19 @@ a {
         -webkit-transform: translateY(13%);
                 transform: translateY(13%); } }
 
-.page-id-14 .wpcf7 {
+.contact-us-page .wpcf7 {
   background-color: #fff;
   margin: 0 auto;
   width: 270px; }
   @media (min-width: 1080px) {
-    .page-id-14 .wpcf7 {
+    .contact-us-page .wpcf7 {
       position: initial;
       width: 420px; } }
 
-.page-id-14 input {
+.contact-us-page input {
   width: 270px; }
   @media (min-width: 1080px) {
-    .page-id-14 input {
+    .contact-us-page input {
       width: 370px; } }
 
 .header-contact {

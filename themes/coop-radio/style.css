@@ -2008,7 +2008,7 @@ a {
       -webkit-transform: translateX(-12%) translateY(-29%);
               transform: translateX(-12%) translateY(-29%); } }
 
-.link-btn-wrapper {
+.donate-page .link-btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2017,6 +2017,9 @@ a {
           justify-content: center;
   text-align: center;
   margin: 0 auto; }
+
+.donate-page a {
+  padding: 0.5rem 1rem; }
 
 article {
   text-align: center; }

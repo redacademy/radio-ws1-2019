@@ -28,7 +28,7 @@
         </h1>
       </div>
 
-      <div class="program-details__actions">
+      <div class="program-details__actions link-btn-wrapper">
         <button data-target="section--enroll" class="signup-now btn-medium btn-primary" type="button">
           sign up
         </button>

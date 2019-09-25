@@ -19,6 +19,12 @@
   section {
     margin: 5%;
   }
+  .link-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .donate-container {
@@ -139,9 +145,4 @@
     transform: translateX(-12%) translateY(-29%);
   }
 }
-.link-btn-wrapper {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-}
+

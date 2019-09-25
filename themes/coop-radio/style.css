@@ -1808,19 +1808,19 @@ a {
         -webkit-transform: translateY(13%);
                 transform: translateY(13%); } }
 
-.page-id-14 .wpcf7 {
+.contact-us-page .wpcf7 {
   background-color: #fff;
   margin: 0 auto;
   width: 270px; }
   @media (min-width: 1080px) {
-    .page-id-14 .wpcf7 {
+    .contact-us-page .wpcf7 {
       position: initial;
       width: 420px; } }
 
-.page-id-14 input {
+.contact-us-page input {
   width: 270px; }
   @media (min-width: 1080px) {
-    .page-id-14 input {
+    .contact-us-page input {
       width: 370px; } }
 
 .header-contact {
@@ -1839,24 +1839,24 @@ a {
             justify-content: space-evenly; } }
 
 @media (min-width: 1080px) {
-  .page-id-55 .header-container {
+  .donate-page .header-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse; } }
 
-.page-id-55 .container-1 {
+.donate-page .container-1 {
   margin: 5%; }
   @media (min-width: 1080px) {
-    .page-id-55 .container-1 {
+    .donate-page .container-1 {
       margin: 0; } }
-  .page-id-55 .container-1 h1 {
+  .donate-page .container-1 h1 {
     color: black; }
     @media (min-width: 1080px) {
-      .page-id-55 .container-1 h1 {
+      .donate-page .container-1 h1 {
         color: white; } }
 
-.page-id-55 section {
+.donate-page section {
   margin: 5%; }
 
 @media (min-width: 1080px) {
@@ -2008,7 +2008,7 @@ a {
       -webkit-transform: translateX(-12%) translateY(-29%);
               transform: translateX(-12%) translateY(-29%); } }
 
-.link-btn-wrapper {
+.donate-page .link-btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2017,6 +2017,9 @@ a {
           justify-content: center;
   text-align: center;
   margin: 0 auto; }
+
+.donate-page a {
+  padding: 0.5rem 1rem; }
 
 article {
   text-align: center; }

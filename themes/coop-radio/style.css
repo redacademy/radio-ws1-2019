@@ -1863,6 +1863,16 @@ a {
 .donate-page section {
   margin: 5%; }
 
+.page-id-55 .link-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 0 auto; }
+
 @media (min-width: 1080px) {
   .donate-container {
     display: -webkit-box;

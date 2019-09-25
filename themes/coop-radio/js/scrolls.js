@@ -19,8 +19,8 @@ jQuery(document).ready(function ($) {
   $('.training-core-main').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    infinite: false,
-    arrows: true,
+    infinite: true,
+    arrows: false,
     dots: true,
     mobileFirst: true,
     responsive: [

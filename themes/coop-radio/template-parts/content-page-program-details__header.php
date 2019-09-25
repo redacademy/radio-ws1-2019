@@ -32,7 +32,7 @@
         <button data-target="section--enroll" class="signup-now btn-medium btn-primary" type="button">
           sign up
         </button>
-        <a href="/">Watch the film</a>
+        <a href="#section--video" class="watch-film">Watch the film</a>
       </div>
     </div>
   </div>

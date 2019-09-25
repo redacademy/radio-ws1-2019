@@ -44,7 +44,6 @@ input[type='submit'] {
   }
 }
 
-
 /* Button Sizes */
 
 .btn-small {
@@ -157,7 +156,8 @@ textarea {
 /* Contact Form 7*/
 
 .wpcf7-form {
-  input, textarea {
+  input,
+  textarea {
     background-color: lighten(#dddddd, 7%);
     border: 0;
     border-radius: 2px;
@@ -174,11 +174,11 @@ textarea {
       border-radius: 2px;
     }
   }
-  
+
   textarea {
     height: 150px;
   }
-  
+
   button {
     width: 6rem;
     height: 3rem;

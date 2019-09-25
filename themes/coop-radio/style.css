@@ -579,17 +579,21 @@ textarea {
     background-color: rgba(139, 31, 126, 0.5); }
 
 /* Contact Form 7*/
-.wpcf7-form input, .wpcf7-form textarea {
+.wpcf7-form input,
+.wpcf7-form textarea {
   background-color: #efefef;
   border: 0;
   border-radius: 2px; }
-  .wpcf7-form input:hover, .wpcf7-form textarea:hover {
+  .wpcf7-form input:hover,
+  .wpcf7-form textarea:hover {
     border: 2px solid #8b1f7e;
     border-radius: 2px; }
-  .wpcf7-form input:active, .wpcf7-form textarea:active {
+  .wpcf7-form input:active,
+  .wpcf7-form textarea:active {
     border: 2px solid #8b1f7e;
     border-radius: 2px; }
-  .wpcf7-form input:focus, .wpcf7-form textarea:focus {
+  .wpcf7-form input:focus,
+  .wpcf7-form textarea:focus {
     border: 2px solid #8b1f7e;
     border-radius: 2px; }
 

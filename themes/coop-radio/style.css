@@ -1630,7 +1630,7 @@ a {
   background-size: cover;
   background-position: top center; }
   .single-artist .artist-hero .artist-header-bio {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.65);
     position: absolute;
     bottom: 0; }
     @media (min-width: 1080px) {
@@ -1681,7 +1681,8 @@ a {
   margin: 3.5rem auto; }
   @media (min-width: 1080px) {
     .single-artist .artist-text-main .artist-text-item {
-      width: 50%; } }
+      width: 50%;
+      margin: 0 auto; } }
 
 .single-artist .artist-text-main .full-name {
   text-transform: uppercase; }

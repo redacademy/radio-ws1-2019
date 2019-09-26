@@ -37,82 +37,62 @@
     </div>
   </div>
 
+  <div>
+    <a href="#section--header" class="back-top"><img src="<?php echo get_stylesheet_directory_uri() . '/images/white_pullup_icon.svg'; ?>"></a>
+  </div>
+
   <ul class="program-details__nav-link-list">
     <li>
-      <a
-        href="#section--header"
-        class="program-details__nav-link program-details__nav-link--fill"
-      >
+      <a href="#section--header" class="program-details__nav-link program-details__nav-link--fill">
         <span class="screen-reader-text">
           Header
         </span>
       </a>
     </li>
     <li>
-      <a
-        href="#section--overview"
-        class="program-details__nav-link"
-      >
+      <a href="#section--overview" class="program-details__nav-link">
         <span class="screen-reader-text">
           Overview
         </span>
       </a>
     </li>
     <li>
-      <a
-        href="#section--get-started"
-        class="program-details__nav-link"
-      >
+      <a href="#section--get-started" class="program-details__nav-link">
         <span class="screen-reader-text">
           Get started
         </span>
       </a>
     </li>
     <li>
-      <a
-        href="#section--video"
-        class="program-details__nav-link"
-      >
+      <a href="#section--video" class="program-details__nav-link">
         <span class="screen-reader-text">
           Featured video
         </span>
       </a>
     </li>
     <li>
-      <a
-        href="#section--requirements"
-        class="program-details__nav-link"
-      >
+      <a href="#section--requirements" class="program-details__nav-link">
         <span class="screen-reader-text">
           Requirements
         </span>
       </a>
     </li>
     <li>
-      <a
-        href="#section--timeline"
-        class="program-details__nav-link"
-      >
+      <a href="#section--timeline" class="program-details__nav-link">
         <span class="screen-reader-text">
           Timeline
         </span>
       </a>
     </li>
     <li>
-      <a
-        href="#section--training"
-        class="program-details__nav-link"
-      >
+      <a href="#section--training" class="program-details__nav-link">
         <span class="screen-reader-text">
           Training
         </span>
       </a>
     </li>
     <li>
-      <a
-        href="#section--enroll"
-        class="program-details__nav-link"
-      >
+      <a href="#section--enroll" class="program-details__nav-link">
         <span class="screen-reader-text">
           Enroll
         </span>

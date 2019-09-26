@@ -1154,6 +1154,12 @@ a {
       color: #fff;
       margin: 0; }
 
+.back-top {
+  position: fixed;
+  z-index: 99;
+  right: 20px;
+  bottom: 100px; }
+
 /* general styling */
 .program-details__subheading {
   font-family: "Oswald", sans-serif;

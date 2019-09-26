@@ -35,6 +35,7 @@
   }
   .page-container {
     @include page-container;
+    margin:2.5*$base__space-unit $base__space-unit;
   }
   .full-width {
     @include full-width;

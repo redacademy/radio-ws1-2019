@@ -15,7 +15,7 @@
       <a id="section--timeline" class="program-details__internal-link"></a>
       <h2><?= CFS()->get( 'timeline_title' ); ?></h2>
       <p class="text-description text-container"><?= CFS()->get( 'timeline_description' ); ?></p>
-      <a href="/">Learn more</a>
+      <a href="http://www.coopradio.org/member" target="_blank">Learn more</a>
 
       <ul class="timeline__list">
         <?php $i = 0; foreach ( $events as $event ) { $i++; ?>

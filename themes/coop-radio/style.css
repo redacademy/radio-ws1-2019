@@ -1200,7 +1200,8 @@ a {
       margin: 4.5rem 6rem; } }
 
 .program-details-page .page-container {
-  margin: 0 1.5rem; }
+  margin: 0 1.5rem;
+  margin: 3.75rem 1.5rem; }
   @media (min-width: 1080px) {
     .program-details-page .page-container {
       margin: 4.5rem 6rem; } }
@@ -1640,7 +1641,7 @@ a {
   background-size: cover;
   background-position: top center; }
   .single-artist .artist-hero .artist-header-bio {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.65);
     position: absolute;
     bottom: 0; }
     @media (min-width: 1080px) {
@@ -1655,11 +1656,13 @@ a {
         .single-artist .artist-hero .artist-header-bio h2 {
           font-size: 46px; } }
 
-.single-artist .artist-intro p {
-  text-align: left; }
-  @media (min-width: 1080px) {
-    .single-artist .artist-intro p {
-      text-align: center; } }
+.single-artist .artist-intro {
+  margin: 3.5rem auto; }
+  .single-artist .artist-intro p {
+    text-align: left; }
+    @media (min-width: 1080px) {
+      .single-artist .artist-intro p {
+        text-align: center; } }
 
 .single-artist iframe {
   height: 450px;
@@ -1685,9 +1688,12 @@ a {
     display: -ms-flexbox;
     display: flex; } }
 
-@media (min-width: 1080px) {
-  .single-artist .artist-text-main .artist-text-item {
-    width: 50%; } }
+.single-artist .artist-text-main .artist-text-item {
+  margin: 3.5rem auto; }
+  @media (min-width: 1080px) {
+    .single-artist .artist-text-main .artist-text-item {
+      width: 50%;
+      margin: 0 auto; } }
 
 .single-artist .artist-text-main .full-name {
   text-transform: uppercase; }
@@ -1721,7 +1727,7 @@ a {
 
 .single-artist .socials-mobile {
   margin: 0 auto;
-  margin-bottom: 4rem; }
+  margin-top: 3.5rem; }
   @media (min-width: 1080px) {
     .single-artist .socials-mobile {
       display: none; } }

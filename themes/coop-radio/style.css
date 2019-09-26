@@ -2045,7 +2045,7 @@ a {
   text-align: center;
   margin: 0 auto; }
 
-.donate-page a {
+.donate-page .btn-medium {
   padding: 0.5rem 1rem; }
 
 article {

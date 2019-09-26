@@ -1,6 +1,9 @@
 /* get started */
 
 .get-started-main {
+  @include desktop {
+    margin: 0 4*$base__space-unit;
+  }
   @include wide-screen {
     margin: 0 10*$base__space-unit;
   }

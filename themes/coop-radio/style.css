@@ -1154,6 +1154,12 @@ a {
       color: #fff;
       margin: 0; }
 
+.back-top {
+  position: fixed;
+  z-index: 99;
+  right: 20px;
+  bottom: 100px; }
+
 /* general styling */
 .program-details__subheading {
   font-family: "Oswald", sans-serif;
@@ -1242,6 +1248,10 @@ a {
           text-align: center; } }
 
 /* get started */
+@media (min-width: 1080px) {
+  .get-started-main {
+    margin: 0 6rem; } }
+
 @media (min-width: 1500px) {
   .get-started-main {
     margin: 0 15rem; } }

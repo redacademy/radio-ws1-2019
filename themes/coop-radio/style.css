@@ -1242,6 +1242,10 @@ a {
           text-align: center; } }
 
 /* get started */
+@media (min-width: 1080px) {
+  .get-started-main {
+    margin: 0 6rem; } }
+
 @media (min-width: 1500px) {
   .get-started-main {
     margin: 0 15rem; } }
@@ -1863,7 +1867,7 @@ a {
 .donate-page section {
   margin: 5%; }
 
-.page-id-55 .link-btn-wrapper {
+.donate-page .link-btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

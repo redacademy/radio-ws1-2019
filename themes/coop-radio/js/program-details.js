@@ -16,13 +16,11 @@ signUpNow.addEventListener("click", function (event) {
 });
 
 watchFilm.addEventListener("click", function (event) {
-    console.log(event.target.hash);
     event.preventDefault();
     document.querySelector(event.target.hash).scrollIntoView({ behavior: 'smooth' })
 });
 
 backTop.addEventListener("click", function (event) {
-    
     event.preventDefault();
     document.querySelector("main").scrollTo({ top: 0, behavior: 'smooth' })
 });

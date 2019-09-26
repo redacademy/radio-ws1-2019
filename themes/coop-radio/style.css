@@ -1863,7 +1863,7 @@ a {
 .donate-page section {
   margin: 5%; }
 
-.page-id-55 .link-btn-wrapper {
+.donate-page .link-btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2094,8 +2094,8 @@ article {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
   .logo-link-involved:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#b079aa), to(#d8d8d8));
-    background-image: linear-gradient(#b079aa, #d8d8d8); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#8b1f7e), to(#d8d8d8));
+    background-image: linear-gradient(#8b1f7e, #d8d8d8); }
 
 .logo-link-involved3 {
   width: 170px;
@@ -2105,8 +2105,8 @@ article {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#b4b4b4), to(#fff));
   background-image: linear-gradient(#b4b4b4, #fff); }
   .logo-link-involved3:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#b079aa), to(#d8d8d8));
-    background-image: linear-gradient(#b079aa, #d8d8d8); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#8b1f7e), to(#d8d8d8));
+    background-image: linear-gradient(#8b1f7e, #d8d8d8); }
 
 @media (min-width: 1080px) {
   .faq-container {

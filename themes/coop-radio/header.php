@@ -28,7 +28,7 @@
             echo 'banner--dark';
           } elseif (basename($template) === 'page-artist-library.php' || basename($template) === 'page-contact-us.php') {
             echo 'banner--light';
-          } elseif (basename($template) === 'page-program-details.php' || basename($template) === 'page-get-involved.php' || basename($template) === 'single-artist.php') {
+          } elseif (basename($template) === 'page-program-details.php' || basename($template) === 'page-get-involved.php' || basename($template) === 'single-artist.php' || basename($template) === '404.php') {
             echo 'banner--transparent';
           }
         

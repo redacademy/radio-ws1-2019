@@ -1744,13 +1744,13 @@ a {
     max-height: 40%; }
     @media (min-width: 600px) {
       .not-found .front-container img {
-        top: 35%;
+        top: 20%;
         left: 15%;
         height: auto;
         max-width: 100%;
         width: unset;
         max-height: unset; } }
-  .not-found .front-container div {
+  .not-found .front-container .wrapper-404 {
     position: absolute;
     top: 55%;
     left: 20%;
@@ -1764,16 +1764,29 @@ a {
             flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
-    .not-found .front-container div p {
+            align-items: center;
+    font-family: "Oswald", sans-serif; }
+    .not-found .front-container .wrapper-404 p {
       color: #ffffff;
       text-transform: uppercase;
       margin-bottom: 0; }
+      @media (min-width: 1080px) {
+        .not-found .front-container .wrapper-404 p {
+          font-size: 3rem; } }
     @media (min-width: 600px) {
-      .not-found .front-container div {
-        top: 65%;
+      .not-found .front-container .wrapper-404 {
+        top: 45%;
         left: 70%;
         width: unset; } }
+    @media (min-width: 1080px) {
+      .not-found .front-container .wrapper-404 {
+        left: 60%;
+        top: 30%; } }
+    .not-found .front-container .wrapper-404 .link-btn-wrapper {
+      margin-top: 2rem;
+      font-size: 1rem; }
+      .not-found .front-container .wrapper-404 .link-btn-wrapper .btn-primary {
+        padding: 1rem; }
 
 /*--------------------------------------------------------------
 # Contact Page
